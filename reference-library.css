@@ -1,0 +1,34 @@
+/* Source evidence desk: no external UI framework, accessible desktop/mobile grid. */
+.source-library{margin:30px 0 0;background:#0d1924;border:1px solid #294358;border-radius:18px;padding:24px;color:#e3f4ff;scroll-margin-top:100px}
+.source-library h2{font-size:clamp(20px,2vw,28px);margin:4px 0 8px}.source-library p{color:#a5bece}
+.source-library .source-note{border-left:3px solid #ecb063;background:#263034;padding:12px 14px;line-height:1.55;margin:14px 0 20px;color:#f3e3d1}
+.source-library .badge-scope{display:inline-block;padding:6px 10px;background:#143c53;color:#9ee4fd;border:1px solid #356880;border-radius:15px;font:600 11px sans-serif;letter-spacing:.04em}
+.reference-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 15px}
+.reference-tab{border:1px solid #375269;background:#182c3b;color:#dcecf7;padding:9px 13px;border-radius:8px;cursor:pointer;font-weight:700}
+.reference-tab.active{background:#1972b4;color:white;border-color:#3e9ad3}
+.source-search-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.source-search-row input{min-width:180px;flex:1;background:#071723;border:1px solid #39536d;border-radius:8px;padding:12px;color:#fff;font:inherit}
+.source-search-row select,.source-search-row button{padding:12px;background:#0e2940;border:1px solid #39536d;border-radius:8px;color:#e3f4ff;cursor:pointer}
+.source-search-row button:disabled{opacity:.5;cursor:not-allowed}
+.reference-list{border-top:1px solid #2d455a;max-height:530px;overflow:auto}
+.reference-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,190px) minmax(120px,195px);gap:12px;align-items:center;padding:13px 6px;border-bottom:1px solid #283f52}
+.reference-row b{font-weight:700}.reference-row small{font-size:11px;color:#a1bece;display:block;margin-top:4px;line-height:1.45}
+.reference-row .spec-value{color:#a9e4ff;font-size:14px}.reference-row .spec-value.unverified{color:#f7c58d}
+.source-open{background:transparent;border:1px solid #3a718c;color:#9cdefc;font:inherit;font-size:12px;padding:7px 9px;border-radius:6px;cursor:pointer;text-align:left}
+.source-open:hover{background:#164056}.source-status{font-size:12px;color:#bbcad5}
+.library-listfoot{display:flex;gap:10px;align-items:center;justify-content:space-between;padding-top:12px;color:#98b5c6;font-size:12px}
+#referenceMore{background:#155b87;color:#fff;border:0;border-radius:8px;padding:9px 13px;cursor:pointer}
+.doc-row{border-bottom:1px solid #284153;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px}
+.doc-row div{min-width:0;flex:1}.doc-row strong{display:block;font-size:13px}.doc-row small{display:block;color:#a2bac9;margin-top:5px;line-height:1.45;font-size:11px}
+.doc-status{flex-shrink:0;font-size:10px;letter-spacing:.03em;color:#dbccaa}.doc-status.ok{color:#9ae7be}.doc-status.old{color:#ebbd87}
+.library-note{font-size:13px;line-height:1.5}.source-upload{border:1px dashed #497089;background:#0c2635;padding:14px;border-radius:12px;margin:15px 0}
+.source-upload label{display:block;margin-bottom:9px;font-weight:700}.source-upload input{max-width:100%;color:#c6dbe9}
+#manualMessages{color:#b2d3e2;font-size:12px;margin-top:9px;min-height:22px}
+#manualViewer{margin-top:18px}#pdfFrame{width:100%;height:620px;border:1px solid #365268;border-radius:9px;background:#fff}
+.manual-hit{padding:12px 6px;border-bottom:1px solid #2b465a;font-size:13px}.manual-hit b{margin-right:8px}.manual-hit p{font-size:12px;line-height:1.55}
+.library-anchors{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.library-anchors a{background:#12384e;border:1px solid #31657e;color:#d1f0ff;border-radius:8px;padding:8px 11px;font-size:12px;text-decoration:none}
+#manualLibrary,#referenceDesk{scroll-margin-top:90px}
+@media(max-width:760px){.source-library{padding:14px;margin-top:18px}.reference-row{grid-template-columns:minmax(0,1fr) 105px;gap:7px}.reference-row>span:last-child{grid-column:1 / -1}.doc-row{flex-wrap:wrap}.doc-status{font-size:9px}#pdfFrame{height:470px}}
+@media(prefers-reduced-motion:reduce){.source-library *{scroll-behavior:auto!important}}
+
+.chapter-directory{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:8px;margin:15px 0 20px;max-height:285px;overflow:auto}.chapter-directory .chapter-item{display:flex;flex-direction:column;gap:5px;text-align:left;padding:10px}.chapter-item b{font-size:12px}.chapter-item small{font-size:10px;color:#9db8ca}.chapter-directory button{cursor:pointer}.source-search-row input[type=number]{flex:0 0 110px;min-width:90px}.source-library h3{margin:17px 0 9px;font-size:16px}
