@@ -18,10 +18,20 @@
 - Added private per-document on-device PDF reader, original-page jump, optional browser-only PDF.js full-text search, and no-copy policy for copyrighted manuals.
 - Added source safety audit and `tests/validate-sources.mjs`. Retained the photo-based interface, no Blender/WebGL requirement.
 
-## v2.3 — clean replacement on main
-- Replaced old main tree in one commit and preserved its last commit on backup/pre-clean-v2.3-2026-11-14.
-- Restored separate red/silver concept image and real running-app screenshots.
-- Added full 894-page locally-viewable document navigation, backed by the audited 2016 T120 source database.
-- Preserved 230 active torque values, 13 quarantine records, 44 maintenance tasks, 37 tools and 32 T120 owner specs.
-- Excluded 2012 and 2006 model data from 2018 repair references, and avoided copyrighted original PDF redistribution.
-- Added source index CI validation, AGENTS.md and browser launch documentation.
+## v2.3 — clean consolidated replacement
+- Fresh full-replacement Git tree, preserving previous source in a dedicated backup branch.
+- Preserved audited 230 active/13 quarantined 2016 torque data, 44 maintenance tasks, 37 special tools, 32 T120 owner specs.
+- Added a dedicated 894-page navigation explorer linking to the 4 original documents via local file picker.
+- Excluded obsolete repository-only gallery and failed 3D modelling artifacts.
+- Extended CI checks with document-index integrity validation; no source PDF reproduction.
+
+## 2.4.0 — Private photo-teardown scaffold
+- Added a multi-angle, four-stage photo-annotation editor that requires real photographs rather than fabricated geometry.
+- Reused 30 assembly records and the existing source-linked 2016 torque table with an explicit 2018 applicability disclaimer.
+- Added a confidentiality architecture note: no full vehicle identifier or private photo content in the published frontend/repository.
+
+## v2.5 — real 2018 reference atlas
+- Replaced synthetic 3D expectations with externally linked actual 2018 T120 example photos and official 2018 brochure grounding.
+- Added 2018 OEM fiche source atlas, non-committal part-number candidates and clear variant/market restrictions.
+- Added optional publisher-photo reference background to photo-teardown, preserving private local annotation.
+- Added dashboard navigation links for real image and exploded parts research. No third-party images bundled; no private vehicle identifiers in source.
