@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "model": "2018 Triumph Bonneville T120 (liquid-cooled)",
+  "publicationDate": "2026-11-14",
+  "rights": "External photography remains hosted by the original publishers. This index stores source URLs and descriptive metadata; do not mirror without permission.",
+  "confidentiality": "No full or partial private vehicle identifiers are stored. VIN-specific fitment requires privately authorized verification.",
+  "modelReference": "2018 Triumph MY18 manufacturer brochure",
+  "modelReferenceUrl": "https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf",
+  "photos": [
+    {
+      "id": "side-red-silver",
+      "angle": "left",
+      "category": "Full motorcycle",
+      "name": "2018 red/silver · studio side profile",
+      "publisher": "MotoHunt / dealership",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "Factory-style motorcycle, seller photographs; check accessories",
+      "image": "https://storage.googleapis.com/mhimg/p/3860/11033860/7fa9_l.jpg",
+      "page": "https://motohunt.com/l/11033860/2018-Triumph-Bonneville-T120-Cranberry-Red-and-Aluminium-Silver",
+      "note": "Opposite-side identification from photo is not independently verified; use for assembled silhouette only."
+    },
+    {
+      "id": "side-sothebys",
+      "angle": "right",
+      "category": "Full motorcycle",
+      "name": "2018 silver/red · opposing side view",
+      "publisher": "RM Sotheby’s",
+      "year": "2018 auctioned example",
+      "confidence": "2018 auction",
+      "visual": "Actual 2018 motorcycle; optional windscreen and rear accessories visible",
+      "image": "https://cdn.rmsothebys.com/e/5/9/6/e/5/e596e5f67eeb85e19a7a2d1884ca29ec6440f229.webp",
+      "page": "https://rmsothebys.com/auctions/el20/lots/r0283-2018-triumph-bonneville-t120/",
+      "note": "Example motorcycle, not owner-specific. Physical camera side not independently guaranteed by catalogue caption."
+    },
+    {
+      "id": "front-threequarter",
+      "angle": "front34",
+      "category": "Three-quarter",
+      "name": "2018 T120 · front three-quarter view",
+      "publisher": "RM Sotheby’s",
+      "year": "2018 auctioned example",
+      "confidence": "2018 auction",
+      "visual": "Headlamp, twin front discs, fork gaiters, front fender and tank",
+      "image": "https://cdn.rmsothebys.com/0/a/9/d/5/b/0a9d5b70bd9485f2ab5ca1e93e3e7418e1281e06.webp",
+      "page": "https://rmsothebys.com/auctions/el20/lots/r0283-2018-triumph-bonneville-t120/",
+      "note": "Auction example includes windscreen. It is not an exploded view."
+    },
+    {
+      "id": "front-threequarter-2018",
+      "angle": "front34",
+      "category": "Three-quarter",
+      "name": "2018 T120 · street-front angle",
+      "publisher": "MotorcycleSpecs",
+      "year": "2018 model gallery",
+      "confidence": "Model-year gallery",
+      "visual": "Front fork, single headlamp, two discs and Nissin-style caliper shapes",
+      "image": "https://www.motorcyclespecs.co.za/Gallery_M-Z_16/Triumph-Bonneville-T120_18_02.jpg",
+      "page": "https://www.motorcyclespecs.co.za/model/triu/Triumph_Bonneville_T120_18.htm",
+      "note": "Publisher labels the model 2018; photo provenance and fitted accessories independently unchecked."
+    },
+    {
+      "id": "rear-quarter-2018",
+      "angle": "rear34",
+      "category": "Three-quarter",
+      "name": "2018 rear-quarter · suspension and wheel",
+      "publisher": "Just Bikes Australia",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "Rear shock, swingarm, chrome silencer, rear disc and wheel; cropped view",
+      "image": "https://cdn.justauto.com.au/ad-assets/22579--ME02855/field_images/ds_22579__ME02855_020_030.jpg",
+      "page": "https://www.justbikes.com.au/motorcycles-for-sale/2018-triumph-bonneville-t120-road/JBFD5323551",
+      "note": "Close-up crop, not a complete rear-quarter shot; visible accessories may differ."
+    },
+    {
+      "id": "front-wheel",
+      "angle": "frontbrake",
+      "category": "Front suspension & brakes",
+      "name": "2018 T120 · front wheel and fork",
+      "publisher": "MotoHunt / Road Track & Trail",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "Fork gaiters, caliper, ABS ring, two 310-mm discs and spoked wheel",
+      "image": "https://storage.googleapis.com/mhimg/p/3996/6133996/c645_l.jpg",
+      "page": "https://motohunt.com/l/6133996/2018-Triumph-Bonneville-T120-Cranberry-Red-and-Aluminium-Silver",
+      "note": "Listing has some aftermarket additions. Wheel on pictured bike need not match Kineo fitted equipment."
+    },
+    {
+      "id": "fork-reference",
+      "angle": "frontbrake",
+      "category": "Front suspension & brakes",
+      "name": "Earlier liquid-cooled T120 · Nissin detail",
+      "publisher": "ZigWheels",
+      "year": "2016 T120 (same generation)",
+      "confidence": "Older reference",
+      "visual": "Close-up of Nissin caliper, front spindle and disc, not direct 2018 evidence",
+      "image": "https://media.zigcdn.com/media/content/2016/Mar/2016-triumph-bonneville-t120-black-review-pic-image-photo-zigwheels-11032016-m11.jpg?tr=w-930",
+      "page": "https://www.zigwheels.com/reviews-advice/reviews/2016-triumph-bonneville-t120-first-ride-review/24976/",
+      "note": "Explicitly a 2016 T120 Black reference. Do not use to decide 2018 equipment changes."
+    },
+    {
+      "id": "rear-assembly",
+      "angle": "rearsusp",
+      "category": "Rear suspension & drive",
+      "name": "2018 T120 · rear shock / swingarm / rear wheel",
+      "publisher": "Just Bikes Australia",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "One visible rear shock; factory assembly has two, one per side",
+      "image": "https://cdn.justauto.com.au/ad-assets/22579--ME02855/field_images/ds_22579__ME02855_020_030.jpg",
+      "page": "https://www.justbikes.com.au/motorcycles-for-sale/2018-triumph-bonneville-t120-road/JBFD5323551",
+      "note": "Visible side alone does not show the second rear shock; consult opposite-angle and fiche."
+    },
+    {
+      "id": "rear-brake-exhaust",
+      "angle": "rearbrake",
+      "category": "Rear suspension & drive",
+      "name": "2018 T120 · rear running gear close-up",
+      "publisher": "1000PS model-year image",
+      "year": "2018 model gallery",
+      "confidence": "Model-year gallery",
+      "visual": "Rear hub, spoked wheel, rear shock and Vance & Hines silencer",
+      "image": "https://images5.1000ps.net/images_bikekat/2018/37-Triumph/5993-Bonneville_T120/25.jpg",
+      "page": "https://www.1000ps.de/motorradvergleich-triumph-bonneville-t100-2023-vs-triumph-bonneville-t120-2018-193683",
+      "note": "Aftermarket silencer. Photo may not show standard rear brake hardware clearly."
+    },
+    {
+      "id": "engine-close-one",
+      "angle": "engineleft",
+      "category": "Engine & cooling",
+      "name": "2018 model gallery · engine cover",
+      "publisher": "1000PS",
+      "year": "2018 model gallery",
+      "confidence": "Model-year gallery",
+      "visual": "Cylinder finning, brushed cover, adjacent exhaust header",
+      "image": "https://images5.1000ps.net/images_bikekat/2018/37-Triumph/5993-Bonneville_T120/5.jpg",
+      "page": "https://www.1000ps.de/motorradvergleich-royal-enfield-interceptor-650-2022-vs-triumph-bonneville-t120-2018-120861",
+      "note": "Engine close-up; handedness is not derived from image URL."
+    },
+    {
+      "id": "engine-close-other",
+      "angle": "engineright",
+      "category": "Engine & cooling",
+      "name": "2018 T120 · opposite engine cover and intake",
+      "publisher": "MotoHunt / dealership",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "Engine casing, throttle-body appearance, side panel and foot controls",
+      "image": "https://storage.googleapis.com/mhimg/p/3996/6133996/ab91_l.jpg",
+      "page": "https://motohunt.com/l/6133996/2018-Triumph-Bonneville-T120-Cranberry-Red-and-Aluminium-Silver",
+      "note": "Close-up from a modified motorcycle. Do not assume exact side without independent confirmation."
+    },
+    {
+      "id": "cockpit-2018",
+      "angle": "cockpit",
+      "category": "Controls & instruments",
+      "name": "2018 T120 Black · twin-dial instrument pack",
+      "publisher": "Triumph of Westchester",
+      "year": "2018 dealership listing",
+      "confidence": "2018 dealership",
+      "visual": "Speedometer, tachometer, ignition, display, handlebar portions",
+      "image": "https://images.autojini.net/AJC/50412/vehicles/DCDF7365-9E3E-8741-F8DD8F70B8868C02_x.jpg",
+      "page": "https://www.triumphofwestchester.com/used-2018-triumph-bonneville-t120-black-v5851182.html",
+      "note": "T120 Black finish, not the silver/red model; visual controls may vary by market."
+    },
+    {
+      "id": "general-other",
+      "angle": "right",
+      "category": "Full motorcycle",
+      "name": "2018 T120 · alternate side example",
+      "publisher": "Just Bikes Australia",
+      "year": "2018 listing",
+      "confidence": "2018 listing",
+      "visual": "Paint layout, side panels, engine and front-end silhouette",
+      "image": "https://cdn.justauto.com.au/ad-assets%2F19474--53939%2Ffield_images%2Fds_19474_brisanmotorcyclesnewcastle_53939_017_017.jpg",
+      "page": "https://www.justbikes.com.au/motorcycles-for-sale/2018-triumph-bonneville-t120/JBFD5013560",
+      "note": "Lighting and aftermarket options may differ from your own motorcycle."
+    }
+  ],
+  "fiches": [
+    {
+      "category": "Front suspension & brakes",
+      "name": "Front forks & lower yoke",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke",
+      "details": "Separate LH/RH stanchions; VIN-conditioned alternatives within 2018 catalogue. Use one fitted variant per side; two front fork legs, not four.",
+      "evidence": "2018-specific parts fiche"
+    },
+    {
+      "category": "Front suspension & brakes",
+      "name": "Front Nissin calipers and discs",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc",
+      "details": "Two 310-mm discs; LH and RH 2-piston Nissin calipers, pads, fixings, disc dampers. Manufacturer MY18 brochure corroborates type.",
+      "evidence": "MY18 brochure + 2018 fiche"
+    },
+    {
+      "category": "Front suspension & brakes",
+      "name": "Front wheel / axle / spacers",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-wheel",
+      "details": "Year-specific front-wheel exploded diagram; check India/Brazil market bulletin and modified wheel supplier.",
+      "evidence": "2018-specific parts fiche"
+    },
+    {
+      "category": "Rear suspension & drive",
+      "name": "Rear suspension units",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "details": "Twin rear shocks; catalogue entry “Rear Suspension Unit.” Do not show extra shocks from alternative assemblies.",
+      "evidence": "MY18 brochure + 2018 catalogue index"
+    },
+    {
+      "category": "Rear suspension & drive",
+      "name": "Rear wheel / swingarm",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "details": "Find “Rear Wheel” and “Swingarm Assembly.” Exact fitment may vary with aftermarket wheels.",
+      "evidence": "2018 catalogue index"
+    },
+    {
+      "category": "Rear suspension & drive",
+      "name": "Rear Nissin caliper and disc",
+      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc",
+      "details": "Single 255-mm disc; Nissin 2-piston floating rear caliper, caliper carrier and pad-set drawings.",
+      "evidence": "MY18 brochure + 2018 fiche"
+    },
+    {
+      "category": "Engine & cooling",
+      "name": "Engine covers",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers",
+      "details": "Clutch/generator covers, sealing, fasteners. Some finishes are special editions, not fitted together.",
+      "evidence": "2018-specific parts fiche"
+    },
+    {
+      "category": "Engine & cooling",
+      "name": "Cylinder head, cooling system and intake",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "details": "Navigate 2018 cylinder-head/valve, cooling, throttle-body, fuel-system drawings.",
+      "evidence": "2018 catalogue index"
+    },
+    {
+      "category": "Controls & instruments",
+      "name": "Handlebars, mirrors and upper yoke",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/handlebars-top-yoke-mirrors",
+      "details": "Clamps, yoke, mirrors; VIN-conditioned variants. Fastener dimensions are not tool-drive specifications.",
+      "evidence": "2018-specific parts fiche"
+    },
+    {
+      "category": "Controls & instruments",
+      "name": "Instruments",
+      "url": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/instruments",
+      "details": "2018 market-specific instrument assembly variants (mph/kmh); verify market and trim before ordering.",
+      "evidence": "2018-specific parts fiche"
+    },
+    {
+      "category": "Full motorcycle",
+      "name": "2018 T120 complete assembly index",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "details": "Complete catalogue landing page with engine, chassis, controls, brakes, cooling and suspension fiches.",
+      "evidence": "2018 catalogue index"
+    }
+  ],
+  "parts": [
+    {
+      "id": "front-caliper-lh",
+      "name": "Front Nissin caliper assembly — LH",
+      "partNumber": "T2027533",
+      "group": "Front suspension & brakes",
+      "count": "1",
+      "condition": "2018 fiche candidate; confirm with dealer",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+    },
+    {
+      "id": "front-caliper-rh",
+      "name": "Front Nissin caliper assembly — RH",
+      "partNumber": "T2027544",
+      "group": "Front suspension & brakes",
+      "count": "1",
+      "condition": "2018 fiche candidate; confirm with dealer",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+    },
+    {
+      "id": "front-rotor",
+      "name": "Front brake disc Ø310 mm",
+      "partNumber": "T2023388",
+      "group": "Front suspension & brakes",
+      "count": "2",
+      "condition": "2018 fiche candidate; check installed wheel/brake configuration",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+    },
+    {
+      "id": "rear-rotor",
+      "name": "Rear brake disc Ø255 mm",
+      "partNumber": "T2021051",
+      "group": "Rear suspension & drive",
+      "count": "1",
+      "condition": "2018 fiche candidate; check brake configuration",
+      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc"
+    },
+    {
+      "id": "rear-caliper",
+      "name": "Rear Nissin caliper assembly",
+      "partNumber": "T2022950",
+      "group": "Rear suspension & drive",
+      "count": "1",
+      "condition": "2018 fiche candidate; dealer verification needed",
+      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc"
+    },
+    {
+      "id": "fork-rh-early",
+      "name": "Right fork stanchion — earlier fiche variant",
+      "partNumber": "T2041363",
+      "group": "Front suspension & brakes",
+      "count": "Alternative only",
+      "condition": "2018 fiche says through 941382; not simultaneous with later part",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+    },
+    {
+      "id": "fork-rh-late",
+      "name": "Right fork stanchion — later fiche variant",
+      "partNumber": "T2042373",
+      "group": "Front suspension & brakes",
+      "count": "Alternative only",
+      "condition": "2018 fiche says from 941383; not simultaneous with earlier part",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+    },
+    {
+      "id": "fork-lh-early",
+      "name": "Left fork stanchion — earlier fiche variant",
+      "partNumber": "T2041362",
+      "group": "Front suspension & brakes",
+      "count": "Alternative only",
+      "condition": "2018 fiche says through 941382; not simultaneous with later part",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+    },
+    {
+      "id": "fork-lh-late",
+      "name": "Left fork stanchion — later fiche variant",
+      "partNumber": "T2042372",
+      "group": "Front suspension & brakes",
+      "count": "Alternative only",
+      "condition": "2018 fiche says from 941383; not simultaneous with earlier part",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+    },
+    {
+      "id": "clutch-cover",
+      "name": "Brushed clutch cover assembly",
+      "partNumber": "T1267543",
+      "group": "Engine & cooling",
+      "count": "1 if matching finish",
+      "condition": "2018 fiche candidate; verify fitted finish",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers"
+    },
+    {
+      "id": "alternator-cover",
+      "name": "Brushed alternator cover",
+      "partNumber": "T1267100",
+      "group": "Engine & cooling",
+      "count": "1 if matching finish",
+      "condition": "Special editions have alternate finish",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers"
+    },
+    {
+      "id": "front-spindle",
+      "name": "Front wheel axle",
+      "partNumber": "T2000580",
+      "group": "Front suspension & brakes",
+      "count": "1",
+      "condition": "2018 stock fiche reference, not verified for aftermarket Kineo assembly",
+      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-wheel"
+    }
+  ],
+  "factoryFacts": [
+    {
+      "label": "Front brakes",
+      "value": "Twin 310-mm discs; 2 Nissin 2-piston floating calipers; ABS"
+    },
+    {
+      "label": "Rear brakes",
+      "value": "Single 255-mm disc; Nissin 2-piston floating caliper; ABS"
+    },
+    {
+      "label": "Forks",
+      "value": "Two KYB 41-mm cartridge fork legs, 120-mm travel"
+    },
+    {
+      "label": "Rear suspension",
+      "value": "Two KYB rear shocks, preload adjustable, 120-mm wheel travel"
+    },
+    {
+      "label": "Cooling",
+      "value": "1198-cc liquid-cooled 270° parallel-twin"
+    },
+    {
+      "label": "Scope",
+      "value": "Factory MY18. Any Kineo wheels or TEC fork springs are aftermarket and require their own sources."
+    }
+  ],
+  "technicalBulletins": [
+    {
+      "title": "Triumph Technical Bulletin 180.9 (October 2017) — front wheel brake damper revision",
+      "source": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125291-9999.pdf",
+      "summary": "A front-wheel assembly revision introduced brake dampers at different production breakpoints: India/Brazil from 831860; other markets from 829122. The bulletins specify stock Triumph wheel arrangements; aftermarket Kineo wheels require supplier/dealer evidence. No individual fitment claim is made."
+    }
+  ],
+  "communityNotes": [
+    {
+      "title": "Owner discussion: T120 front-wheel removal",
+      "url": "https://www.reddit.com/r/Triumph/comments/xb247x",
+      "scope": "Community anecdote, not manufacturer-approved service instructions or tool/torque evidence"
+    },
+    {
+      "title": "T120 owners: front spindle removal issue",
+      "url": "https://www.thetriumphforum.com/threads/front-wheel-axle-spindle-stuck.20518/",
+      "scope": "Reported issue; do not adopt workaround without confirming proper factory service procedure"
+    }
+  ]
+}
