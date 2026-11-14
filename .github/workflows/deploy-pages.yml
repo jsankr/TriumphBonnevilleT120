@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: '22'
       - run: node --check app.js
+      - run: node --check component-evidence.js
+      - run: node tests/validate-component-evidence.mjs
       - run: node --check copilot.js
       - run: node --check source-library.js
       - run: node --check manual-library.js
