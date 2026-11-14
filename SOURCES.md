@@ -23,3 +23,13 @@ S1’s schedule identifies drive-chain slack check/adjustment as a daily check, 
 - `manual-verification-required`: do not use as a repair specification.
 - `catalogue-candidate`: candidate only; verify through Triumph EPC/dealer.
 - `price-unverified`: do not present as a live or confirmed retail price.
+
+
+## User-provided document references (editions audited 14 Nov 2026)
+
+- **T120 Motorcycle Service Manual** — Triumph 04.2016 Issue 1, 728 printed/PDF pages. Indexed torque settings at pp.57–74 (p.70 quarantined misheading), service tool numbers pp.27–33, maintenance pp.84–85. See `docs/SOURCE-AUDIT.md` for records, edition limitations and methodology. Original copyrighted PDF deliberately not committed to repository.
+- **Owner's Handbook** — publication 3855577-EN, 11.2016 Issue 1, 162 pages; T120-specific specifications from pp.156–159. Original copyrighted PDF deliberately not committed.
+- **Earlier Bonneville/T100 EFI service data sheet**, Issue 9, 12.2012, 3 pages — reference only; **does not govern a 2018 T120**.
+- **Older-model scheduled maintenance check sheet**, 2006, 1 page — reference only; **T120 not listed**.
+- Source reader instructions: `docs/LOCAL-PDF-READER.md`. Full original pages, figures, tables, warnings and procedures are opened only from the individual owner's selected local PDFs, not scraped/re-hosted.
+- **Warning:** 2016 sources do not independently establish 2018 VIN/market/revision applicability or aftermarket Kineo/TEC fitting. Some safety-critical tool sizes remain unknown.
