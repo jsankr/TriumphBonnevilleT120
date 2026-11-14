@@ -1,17 +1,39 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
-## Clean consolidated release v2.3 — 14 November 2026
+## Verified 2018 photo and OEM parts source atlas — v2.5
 
-**[▶ Launch Workshop Explorer in browser](https://jsankr.github.io/TriumphBonnevilleT120/)** · [894-page manual index](manual-index.html) · [Original PDF reader](docs/LOCAL-PDF-READER.md) · [Source audit](docs/SOURCE-AUDIT.md)
+[**Browse actual 2018 T120 example photos and OEM exploded diagrams**](real-photo-gallery.html) · [**Photo-based teardown studio**](photo-teardown.html) · [**MY18 manufacturer brochure**](https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf)
 
-The current `main` branch is a clean replacement of the prior site, preserving the previous commit in `backup/pre-clean-v2.3-2026-11-14`. The photo-led (not Blender/3D) dashboard has 30 source-conscious assembly records. Its audited factual database contains **230 active 2016 T120 torque entries**, **13 quarantined inconsistent entries**, **44 scheduled maintenance tasks**, **37 special tools**, **32 owner-handbook specifications**, and a full **894-page index** across the 728-page 2016 service manual, 162-page 2016 owners handbook, 3-page 2012 legacy sheet, and 1-page 2006 legacy checklist.
+Version 2.5 adds 13 externally sourced motorcycle image references (with year/aftermarket caveats), 11 source-linked 2018 catalogue drawing entries, and 12 conditional OEM-part-number candidates. Images remain on publisher websites and are **not copied into the repository**; they may be unavailable if third-party hotlinking is blocked. This project has **no permission to redistribute third-party photography**, and captions never imply another person's motorcycle is this owner's. No private VIN is displayed, stored or transmitted; individual fitment still requires private Triumph/dealer confirmation.
 
-**Scope rule:** 2016 T120 values are references, not confirmed for the specific 2018 India-market VIN or aftermarket equipment. The 2012/2006 sheets are historical and excluded from 2018 T120 repair values. The four copyright-protected PDFs are **not published to GitHub**; the app opens your original copies locally. The motorcycle graphic is concept artwork, not a verified photo; the assistant is local retrieval, not a cloud AI service.
+The 2018 factory Nissin calipers and 41-mm KYB forks are confirmed from the manufacturer's MY18 document. The 2018 parts fiche can include multiple *alternative* fork numbers: only one physical fork leg exists on each side. Do not apply any 2012/2006 legacy torques to the 2018 motorcycle. Modified Kineo wheels and TEC springs are **not** covered by stock-fitting assumptions.
 
-**Live-site caveat:** The URL above is the expected GitHub Pages URL, and is not proof that Pages is enabled or accessible for the repository's current private visibility.
+### Visual research coverage
+- Full motorcycle profiles, front three-quarter and rear assembly detail
+- Front wheel and Nissin brake / fork examples
+- Rear wheel, twin-shock system and brakes
+- Engine covers and exposed cooling-adjacent areas
+- Genuine 2018 dealership instrument-cluster photograph
+- Model-year 2018 exploded parts diagrams with directly linked sources
+
+The *Photo Teardown Studio* defaults to external 2018 example photographs where available; uploading your own photo overrides the example locally. The app **does not fake hidden mechanical components** or assert an unexploded photograph is an exploded assembly.
+
+
+## Real-photo teardown studio (private vehicle fitment)
+
+[**Open the browser-based Photo Teardown Studio**](photo-teardown.html) — no Blender or WebGL. Choose your own actual-bike photographs for 12 camera angles and four disassembly stages; search 30 components; place genuine-location annotations; inspect source-cautioned service data. Photos stay in the current browser session and are never uploaded to this repository. See [photo and private-fitment controls](docs/PRIVATE-FITMENT-AND-PHOTOS.md).
+
+The studio **does not contain, request, display or transmit a full vehicle identifier**. Exact VIN-specific fitment is pending a separately authorized, privately provisioned server-side parts catalogue integration. Do not put private identifiers in GitHub files, issues or screenshots. The studio cannot derive actual exploded geometry from one assembled photo.
+
+## Version 2.3 — consolidated clean replacement (14 November 2026)
+
+**[▶ Launch browser application](https://jsankr.github.io/TriumphBonnevilleT120/)** · **[Browse all 894 original PDF page references](manual-index.html)** · **[GitHub source](https://github.com/jsankr/TriumphBonnevilleT120)**
+
+This release replaces the earlier repository contents with the newer, tested photo-led T120 dashboard plus the **audited 2016 source-reference database** and a separate **894-page document navigation explorer**. The 230 **active** torque entries exclude 13 inconsistent rows from service-manual page 70; 44 scheduled-maintenance tasks, 37 special tools, and 32 T120 owner-specification records retain source edition/page links. The older 2012 and 2006 documents are included in the page navigator **only as historical material**, not repair specifications for a 2018 T120. The four copyrighted original PDFs are **not redistributed**; use the app's local PDF picker to inspect complete original pages privately.
+
+**No Blender or fabricated 3D motorcycle model.** The motorcycle artwork is a crop of the user-supplied concept image; it is illustrative, not authenticated OEM photography. The evidence assistant is a local deterministic search, not live AI. The repo is currently private; GitHub Pages requires deployment support and settings to be configured before the browser link is confirmed live.
 
 ---
-
 
 
 [![Launch browser application](https://img.shields.io/badge/OPEN-WORKSHOP_APP-1c78c6?style=for-the-badge)](https://jsankr.github.io/TriumphBonnevilleT120/)
