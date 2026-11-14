@@ -10,7 +10,7 @@ let displayLimit = 30;
 let activeSearchToken = 0;
 const warning = '2016 T120 reference only. Confirm applicability to your 2018 VIN, market, and fitted aftermarket parts before service.';
 const keys = ['service2016','owner2016','sheet2012','checklist2006'];
-const datasetKeys = {torque:'torqueSettings',maintenance:'scheduledMaintenance',specs:'t120OwnerSpecs',tools:'specialServiceTools'};
+const datasetKeys = {torque:'torqueSettings',maintenance:'scheduledMaintenance',specs:'t120OwnerSpecs',tools:'specialServiceTools',errata:'quarantinedTorquePage70'};
 function sourceBadge(id){ return id === 'service2016' ? '2016 SERVICE' : id === 'owner2016' ? '2016 OWNER' : 'HISTORICAL — NOT T120'; }
 function makeSourceButton(id,page){
   return `<button type="button" class="source-open" data-source="${clean(id)}" data-page="${Number(page)}">${clean(sourceBadge(id))} · p.${Number(page)} ↗</button>`;
@@ -62,6 +62,8 @@ function renderRows(){
    html+=`<article class="reference-row"><div><b>${clean(r.task)}</b><small>${clean(r.category)} · ${clean(tags||'See full table')}</small></div><span class="source-status">2016 schedule</span><span>${makeSourceButton(r.sourceId,r.page)}</span></article>`;
   }else if(selectedDataset==='specs'){
    html+=`<article class="reference-row"><div><b>${clean(r.name)}</b><small>T120 column · 2016 owner’s handbook</small></div><strong class="spec-value">${clean(r.value)}</strong><span>${makeSourceButton(r.sourceId,r.page)}</span></article>`;
+  }else if(selectedDataset==='errata'){
+   html+=`<article class="reference-row"><div><b>${clean(r.part)}</b><small>RAW printed text: ${clean(r.category)} heading is incorrect. ${clean(r.issue)} These are NOT T120 front-brake torque specifications.</small></div><strong class="spec-value unverified">${clean(r.valueText)} · QUARANTINED</strong><span>${makeSourceButton(r.sourceId,r.page)}<small>Not a verified front-brake fastener</small></span></article>`;
   }else{
    html+=`<article class="reference-row"><div><b>${clean(r.partNumber)}</b><small>${clean(r.description)} · Exact procedure-to-tool fitment not inferred</small></div><span class="source-status">Special tool</span><span>${makeSourceButton(r.sourceId,r.page)}</span></article>`;
   }
@@ -157,6 +159,7 @@ async function boot(){
  try{
    const r=await fetch('./data/source-reference.json',{cache:'no-cache'});if(!r.ok)throw new Error(`HTTP ${r.status}`);
    library=await r.json();window.T120SourceReference=library;
+   document.querySelector('.reference-tabs')?.insertAdjacentHTML('beforeend','<button type="button" class="reference-tab" data-dataset="errata" role="tab" aria-selected="false">Quarantined errata (<span id="errataCount">…</span>)</button>');
    renderCounts();docsList();renderRows();renderChapters();
  }catch(e){$('libraryStatus').textContent=`Source database unavailable: ${e.message}`;return}
  document.querySelectorAll('.reference-tab').forEach(b=>b.addEventListener('click',()=>{selectedDataset=b.dataset.dataset;displayLimit=30;renderRows()}));
