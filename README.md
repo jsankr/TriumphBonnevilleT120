@@ -1,53 +1,65 @@
-# T120 Workshop Explorer (2018)
+# Triumph Bonneville T120 (2018) — Workshop Explorer
 
-An independent, responsive workshop companion for the 2018 Triumph Bonneville T120. It combines a schematic interactive 3D orientation model, a component index, a maintenance checklist and links to technical references.
+[![Open browser application](https://img.shields.io/badge/OPEN-WORKSHOP%20APP-198fd0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jsankr.github.io/TriumphBonnevilleT120/)
+[![View actual screenshots](https://img.shields.io/badge/VIEW-BROWSER%20SCREENSHOTS-24455e?style=for-the-badge)](gallery.html)
 
-> **Important:** This is an enthusiast reference tool, not a Triumph publication. It is not a substitute for the exact 2018 T120 factory workshop manual, VIN-specific parts catalogue or an authorised Triumph technician. Do not use it as the sole source for repairs.
+> **Evidence-first enthusiast companion, not a factory repair manual.** The new app replaces the former blocky 3D motorcycle with a photo-led glass-style dashboard. **No Blender, WebGL, Three.js, external JavaScript packages, or API key is required.**
 
-## Run locally
-Serve this folder over HTTP (ES modules and `parts.json` are fetched at runtime):
+## [▶ Open the T120 Workshop Explorer in your browser](https://jsankr.github.io/TriumphBonnevilleT120/)
 
-```bash
+**Browser address:** https://jsankr.github.io/TriumphBonnevilleT120/
+
+**Screenshots:** [View tested desktop, tablet and mobile application screenshots](gallery.html).
+
+The launch link requires GitHub Pages to be enabled and deployed. This repository is currently **private**; GitHub Pages availability for private repositories depends on the owner's GitHub plan. The address is an **expected URL, not a verified live site**. For immediate offline use, download `index.html` and open it locally in Chrome, Firefox or Safari. All app CSS, scripts, component data and motorcycle visual are embedded in that file.
+
+### What the actual app looks like
+
+| Desktop | Tablet | Mobile |
+| --- | --- | --- |
+| [See real desktop screenshot](gallery.html) | [See 820px tablet screenshot](gallery.html) | [See 390px mobile screenshot](gallery.html) |
+
+These are **real Chromium render captures** from the app, not AI-generated UI mockups. The motorcycle illustration **inside the app** is cropped from a **user-supplied concept dashboard screenshot**: it is a photo-like visual reference, **not an authenticated photo of a particular 2018 T120** and not technical evidence.
+
+## What works in v2.1
+
+- **Photo-led overview:** real browser dashboard styling, supplied reference motorcycle artwork and six approximate clickable part hotspots. This is **2D**, not a rotatable 3D or an exploded mechanical model.
+- **30 assembly-level records:** searchable parts catalogue, category filters, component selection and source-labelled details.
+- **2018 brake specification:** manufacturer MY18 reference identifies **two front Nissin two-piston floating calipers with twin 310 mm discs**, and **one rear Nissin two-piston floating caliper with a single 255 mm disc**, with ABS. Do not use newer T120 Brembo specifications for 2018.
+- **Correct inventory conventions:** two front fork legs and two rear shocks; VIN-dependent alternate part numbers are not additional fitted parts.
+- **Tools and torque inspector:** intentionally displays **NOT VERIFIED** for unsupported fastener torque and drive sizes. No guessed axle/fork pinch/caliper values.
+- **Handbook torque reference desk:** eight explicitly labelled values from the August 2019 T120-family handbook; *not verified against the particular 2018 market/VIN workshop documentation*.
+- **Maintenance checklist:** local browser storage; this is for planning, not a substitute for a 2018 factory maintenance plan.
+- **Evidence assistant:** local deterministic source/part search with links. **Not a live LLM or connected AI service.**
+- **Recall context:** US NHTSA 19V-133 / Triumph Recall 560 with VIN/market caveats.
+
+## Browser support
+
+Uses built-in HTML, CSS and vanilla JavaScript; no WebGL/Blender/external runtime. Chromium desktop (1500px), tablet-width (820px) and phone-width (390px) tests passed for data loading, hotspot navigation, Nissin search, evidence retrieval and lack of horizontal overflow. **Firefox, Safari and physical-device testing remain outstanding**, so cross-browser support is intended rather than fully certified.
+
+## Run without hosting
+
+Download [`index.html`](index.html) from this repository and open it directly. It is a **single self-contained HTML file**, including the local parts index and all UI assets. An ordinary web server also works:
+
+```sh
 python -m http.server 8000
+# open http://localhost:8000
 ```
 
-Open <http://localhost:8000>.
+GitHub Pages, if supported by the repository plan, can publish this same `index.html` by selecting **Settings → Pages → Source: GitHub Actions**. The workflow file is in `.github/workflows/deploy-pages.yml`.
 
-## GitHub Pages deployment
-1. Upload the contents of this folder to the repository root (not the ZIP file).
-2. Push to the default branch.
-3. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. Wait for the Pages deployment to complete, then test the published URL on desktop and mobile.
+## Factual integrity and legal notes
 
-No build step or backend is required. Three.js is loaded from jsDelivr and fonts from Google Fonts, so those resources require internet access.
+Technical records are assembly-level reference material. **Unknown** does not mean zero. Never determine socket sizes, tightening sequences, torque values, or VIN fitment from a screenshot, alternative model year or an AI model. Treat Kineo wheels and TEC springs as modifications requiring their own manufacturer references.
 
-## Features
-- Interactive Three.js schematic model with orbit, zoom and camera presets.
-- Progressive component separation slider.
-- Clickable/searchable component index and inspector.
-- Function, maintenance notes, interval, torque-reference status, tool notes, part-number status and price status.
-- Local-browser maintenance checklist.
-- Safety Recall 560 / NHTSA 19V-133 information panel.
-- Responsive layout for phones, tablets and desktop.
+For citations and caveats see [SOURCES.md](SOURCES.md), [BRAKE-VERIFICATION.md](BRAKE-VERIFICATION.md), [DATA-NOTES.md](DATA-NOTES.md), [RECALL-560.md](RECALL-560.md), and [VALIDATION-REPORT.md](VALIDATION-REPORT.md). [Official Triumph MY18 range document](https://triumph.euwest01.umbraco.io/media/1615/gamma-bonneville-t100.pdf). [Later owner's handbook](https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf).
 
-## Model and technical-data accuracy
-**The 3D scene is illustrative geometry generated in the browser. It is not an OEM CAD model, a measured engineering model or a photogrammetric scan.** It must not be used to infer dimensions, clearances, fitment, assembly order or repair procedures.
+No copyrighted OEM repair manuals or CAD files are bundled. Triumph is a trademark of its owner; this independent project is unaffiliated with Triumph.
 
-Torque values are selectively reproduced from Triumph Owner’s Handbook publication **3855663-EN issue 1 (August 2019)**, which covers the Bonneville T120 family. This is a later handbook edition, not a 2018 workshop manual. The data records now carry explicit provenance status; values remain handbook references and require confirmation against the correct 2018 market/VIN documentation before use. Front axle, front fork pinch, brake caliper, brake disc, steering and structural fasteners remain unverified in this project.
+## Planned next
 
-The 2016 T120 Service Manual link in the reference library is a third-party hosted copy of a Triumph-copyrighted document. It is linked for reference only and is not bundled or redistributed here. Confirm model-year applicability and later technical updates with Triumph.
+Replace the concept motorcycle artwork with a user-owned **actual photo** of the 2018 bike, add additional photographic angles (with new source-specific hotspots), verify VIN/market factory documentation, and optionally build a secured citation-grounded AI service with credentials stored on a backend.
 
-OEM part numbers and India prices are not fabricated. Catalogue providers are independent and their entries may be variant-, market- and VIN-range-specific. Confirm all orders against the motorcycle VIN with an authorised Triumph dealer. Prices require a dated supplier/dealer quote and GST/availability confirmation.
+## Historical v1.2.1
 
-## Safety Recall 560
-NHTSA campaign **19V-133 / Triumph SRAN560** identifies certain 2016–2019 Bonneville T120/T120 Black motorcycles in the United States. The reported condition involves the clutch cable contacting the main harness cover and damaging wiring; the remedy was an updated securing guide. This is **not proof that every 2018 T120 in every market is affected**. Ask Triumph India/an authorised dealer to check the exact VIN and recall/service-campaign completion status. See [`RECALL-560.md`](RECALL-560.md).
-
-## Data files
-- `parts.json` — component records, including torque evidence status.
-- `SOURCES.md` — source register, scope and applicability notes.
-- `RECALL-560.md` — recall summary and market/VIN caveats.
-- `DATA-NOTES.md` — verified, provisional and unknown data.
-- `index.html`, `app.js`, `styles.css` — application interface and behaviour.
-
-## Licensing and trademarks
-This is an independent community project. Triumph, Bonneville and T120 are trademarks of their respective owner; no affiliation or endorsement is implied. Triumph handbook/service-manual content is copyrighted and is not reproduced in full. The 3D geometry and UI are original illustrative work. Add a project licence only after reviewing all assets and dependencies; do not claim a licence over third-party copyrighted materials.
+The v1.2.1 ZIP remains available from the earlier ChatGPT project package. It is **not yet included as a GitHub repository asset**; this v2.1 app intentionally replaces its low-detail 3D viewer.
