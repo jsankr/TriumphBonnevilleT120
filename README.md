@@ -123,3 +123,14 @@ These tests check data shape and specific printed values. They **cannot certify*
 ## Legal and safety
 
 The source documents bear copyright notices restricting redistribution. They have **not** been bundled, copied into GitHub or translated into wholesale plain-text replicas. The indexed dataset is a factual source catalogue, not a scanned manual replacement. Original documents remain privately available for all pages through your own selected PDFs. The repository is independent of Triumph Motorcycles Ltd.
+## Selected assembly: torque and tool evidence (v2.6)
+
+The **Torque & tools** tab is now connected to the existing `data/source-reference.json` technical reference database. Every one of the 30 high-level assemblies has an explicit cross-reference. Selecting a motorcycle part displays individual *named fasteners* from the April 2016 T120 service manual, each with a cited page and a **Read original p.X** control. Where relevant, the panel also lists Triumph's special service tool number and purpose. Special-tool numbers are **not** bit or socket dimensions.
+
+**Scope limitation:** These are **2016 T120 service-manual references**, not independently confirmed 2018 India-market specifications. Confirm the applicable workshop revision, production changes, and any aftermarket components before service. A blank tool size stays **NOT VERIFIED** rather than being guessed.
+
+For illustration, the service manual lists front wheel spindle/axle bolt **65 Nm** and fork-to-wheel spindle pinch bolts **23 Nm** (page 69), rear suspension upper/lower mounting bolts **28 Nm** (page 68), and front brake caliper mounting bolts **21 Nm** in the front-wheel installation procedure (page 611). Values are displayed under the matching components, with the 2018 applicability warning. Do not apply the figures to a modified wheel or caliper without applicable confirmation.
+
+The anomalous service-manual page 70 headed “Front Brakes” contains unrelated engine-cover rows. Those rows remain quarantined and are **never** mapped to front brake fasteners. The exact hex/socket sizes of many fasteners are absent from the indexed table and remain unverified.
+
+**To inspect the original evidence:** Use **My PDF library** to load your own 2016 T120 service manual locally, then select a component and click its cited page button. The original copyrighted manuals are not uploaded to GitHub.
