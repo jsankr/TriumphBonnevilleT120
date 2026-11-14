@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101112"><meta name="description" content="Interactive Triumph Bonneville T120 2018 digital workshop explorer with 3D assembly, maintenance, torque references and parts catalogue links.">
+<title>T120 Workshop Explorer · 2018</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+ <a class="brand" href="#" aria-label="T120 Workshop home"><span class="brand-mark">T</span><span><b>T120</b><small>WORKSHOP EXPLORER</small></span></a>
+ <div class="model-chip"><span class="live-dot"></span> BONNEVILLE T120 <span class="chip-year">2018</span></div>
+ <div class="top-actions"><button id="helpBtn" class="icon-btn" title="About this tool">?</button><a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer">GITHUB ↗</a></div>
+</header>
+<main>
+<section class="hero">
+ <div class="eyebrow"><span class="eyebrow-line"></span> DIGITAL SERVICE BAY / 001</div>
+ <div class="hero-row"><div><h1>Know every<br><em>part.</em></h1><p class="hero-copy">Explore the machine beneath the chrome. A technical companion for the 2018 Bonneville T120.</p></div>
+ <div class="hero-meta"><span>MODEL YEAR</span><b>2018</b><span>ENGINE</span><b>1200 cc · 270° twin</b></div></div>
+</section>
+<section class="recall-banner" aria-labelledby="recall-title">
+ <div class="recall-mark">!</div>
+ <div class="recall-copy"><span class="section-kicker">SAFETY INFORMATION · VIN CHECK REQUIRED</span><h2 id="recall-title">Safety Recall 560 / NHTSA 19V-133</h2><p>The US recall record covers certain 2016–2019 Bonneville T120/T120 Black motorcycles. A clutch-cable guide issue could damage the main wiring harness. This does <strong>not</strong> establish that every 2018 India-market bike is affected. Ask Triumph India/an authorised dealer to check your VIN and remedy status.</p><a href="RECALL-560.md">Read recall scope and source notes ↗</a></div>
+</section>
+<section class="workspace">
+ <div class="viewer-column">
+  <div class="viewer-head"><div><span class="section-kicker">01 / INTERACTIVE MODEL</span><h2>Assembly view</h2></div><div class="view-state" id="viewState"><span class="live-dot"></span> MODEL READY</div></div>
+  <div class="viewer-frame">
+   <div class="viewer-grid"></div><div id="threeMount" aria-label="Interactive 3D motorcycle model"></div>
+   <div class="viewer-overlay top-left"><span class="tiny-label">TRIUMPH / BONNEVILLE</span><b>T120 <i>·</i> 2018</b></div>
+   <div class="viewer-overlay bottom-left"><span class="tiny-label">DRAG TO ORBIT</span><span class="tiny-label">SCROLL TO ZOOM</span></div>
+   <div class="viewer-overlay bottom-right"><span class="axis">X <i>—</i> Y <i>—</i> Z</span></div>
+   <div id="loading" class="loading"><div class="loader"></div><span>BUILDING MODEL</span></div>
+   <div id="webglFallback" class="fallback hidden">3D graphics are unavailable in this browser. Try a current Safari, Chrome or Firefox browser with WebGL enabled.</div>
+  </div>
+  <div class="viewer-controls">
+   <div class="control-group"><button class="control-btn active" data-view="side">SIDE</button><button class="control-btn" data-view="front">FRONT</button><button class="control-btn" data-view="rear">REAR</button><button class="control-btn" data-view="top">TOP</button></div>
+   <div class="control-group"><button id="resetView" class="control-btn">↺ RESET</button><button id="explodeBtn" class="control-btn accent">EXPLODE</button></div>
+  </div>
+  <div class="explode-panel"><div class="explode-label"><span>TEARDOWN PROGRESSION</span><b id="explodePct">0%</b></div><input id="explodeRange" type="range" min="0" max="100" value="0" aria-label="Teardown progression"><div class="range-ends"><span>ASSEMBLED</span><span>EXPLODED</span></div></div>
+  <div class="viewer-note"><span class="note-icon">i</span><span>Interactive geometry is an illustrative, browser-generated assembly for navigation and learning. It is <b>not an OEM CAD model or photogrammetric scan</b>. Use the linked factory documentation for exact construction and repair procedures.</span></div>
+ </div>
+ <aside class="detail-column">
+  <div class="detail-head"><div><span class="section-kicker">02 / COMPONENT INTELLIGENCE</span><h2>Part explorer</h2></div><span class="count-pill" id="partCount">COMPONENTS</span></div>
+  <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search parts, systems, functions…" autocomplete="off"><kbd>/</kbd></label>
+  <div class="category-row" id="categoryFilters"><button class="filter active" data-filter="All">ALL</button><button class="filter" data-filter="Engine & transmission">ENGINE</button><button class="filter" data-filter="Wheels & brakes">BRAKES</button><button class="filter" data-filter="Suspension & steering">SUSPENSION</button><button class="filter" data-filter="Electrical">ELECTRICAL</button></div>
+  <div id="partsList" class="parts-list" aria-label="Motorcycle parts list"></div>
+  <div class="part-detail" id="partDetail">
+   <div class="detail-placeholder"><div class="placeholder-icon">＋</div><b>Select a component</b><p>Choose a part in the model or catalogue to inspect its function, service notes, torque references and part identification.</p></div>
+  </div>
+ </aside>
+</section>
+<section class="panel" style="padding:18px;margin:16px 0"><strong>DATA INTEGRITY / WORKSHOP SAFETY</strong><p>This is a schematic 30-assembly explorer, NOT a complete parts inventory, verified exploded drawing, or step-by-step repair manual. The 3D model is illustrative and cannot be used to count or locate fasteners. For each assembly, tool-drive sizes and unverified fastener torques remain explicitly unknown. 2018 parts fiche quantities: 2 rear shocks and 2 front fork legs. VIN-dependent alternative fork part numbers are mutually exclusive, not extra installed forks. Never tighten a safety-critical fastener using an inferred value.</p><a href="https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke" target="_blank" rel="noopener noreferrer">2018 front forks fiche ↗</a> · <a href="https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit" target="_blank" rel="noopener noreferrer">2018 rear suspension fiche ↗</a></section>
+<section class="lower-grid">
+ <article class="panel maintenance-panel">
+  <div class="panel-head"><div><span class="section-kicker">03 / SERVICE PLANNER</span><h2>Maintenance schedule</h2></div><span class="status-tag">OWNER'S HANDBOOK</span></div>
+  <div class="service-summary"><div><span>TRACK YOUR SERVICE</span><b>Routine checks & intervals</b></div><div class="service-progress"><strong id="checkProgress">0 / 8</strong><small>CHECKED</small></div></div>
+  <div class="checklist" id="checklist"></div>
+  <p class="panel-footnote">Intervals are taken from the Triumph owner's handbook schedule covering the T120. Calendar/mileage items are due at whichever limit occurs first. Conditions and market variations may apply.</p>
+ </article>
+ <article class="panel torque-panel">
+  <div class="panel-head"><div><span class="section-kicker">04 / SPECIFICATION DESK</span><h2>Torque references</h2></div><span class="status-tag verified">HANDBOOK VALUES</span></div>
+  <div class="torque-list">
+   <div class="torque-row"><span>Rear wheel spindle nut</span><b>110 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Chain adjuster lock nuts</span><b>20 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Chain guard</span><b>9 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Oil filter</span><b>10 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Spark plug</span><b>12 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Sump plug</span><b>25 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Battery terminals</span><b>4.5 <small>Nm</small></b></div>
+   <div class="torque-row"><span>Clutch lever nut</span><b>3.5 <small>Nm</small></b></div>
+  </div>
+  <div class="warning-note">Do not extrapolate these values to unlisted fasteners. Front axle, fork pinch bolts, brake calipers and structural fasteners require the correct 2018 T120 workshop-manual procedure and VIN/market confirmation.</div>
+ </article>
+</section>
+<section class="resources panel">
+ <div class="panel-head"><div><span class="section-kicker">05 / FACTORY & PARTS REFERENCES</span><h2>Reference library</h2></div></div>
+ <div class="resource-grid">
+  <a class="resource-card" href="https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf" target="_blank" rel="noreferrer"><span class="resource-icon">PDF</span><span><b>Triumph owner's handbook · 3855663-EN</b><small>Official 2019 edition · T120 family · check 2018 applicability</small></span><span class="arrow">↗</span></a>
+  <a class="resource-card" href="https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles" target="_blank" rel="noreferrer"><span class="resource-icon">OEM</span><span><b>2018 T120 parts catalogue</b><small>Exploded parts drawings · part numbers · assemblies</small></span><span class="arrow">↗</span></a>
+  <a class="resource-card" href="https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/main-frame-assembly" target="_blank" rel="noreferrer"><span class="resource-icon">FIG</span><span><b>OEM frame & assembly diagrams</b><small>Independent fiche · verify VIN and market</small></span><span class="arrow">↗</span></a>
+  <a class="resource-card" href="https://www.ifixit.com/Document/MTKPyTmGPKUElr4I/Triumph-Bonneville-T120-en-01.pdf" target="_blank" rel="noreferrer"><span class="resource-icon">MAN</span><span><b>T120 service manual · 2016 issue 1</b><small>Third-party hosted copyrighted manual · applicability caveat</small></span><span class="arrow">↗</span></a>
+ </div>
+ <p class="source-note">The service manual link is a third-party hosted copy of a Triumph-copyrighted 2016 manual and is not redistributed here; verify 2018 applicability and revisions. Parts websites are independent catalogue providers, not Triumph. Confirm every part number against the motorcycle VIN and correct market/variant. Prices are not fabricated; obtain a dated quote from an authorised dealer or supplier.</p>
+</section>
+<footer><span>BUILT FOR THE BONNEVILLE COMMUNITY</span><span>INDEPENDENT REFERENCE TOOL · NOT AFFILIATED WITH TRIUMPH MOTORCYCLES LTD.</span><span>V1.2.0 · EVIDENCE AUDIT 2026-11</span></footer>
+</main>
+</div>
+<dialog id="helpDialog"><div class="dialog-head"><b>About this workshop explorer</b><button id="closeHelp" class="icon-btn">×</button></div><p>This open-source companion combines an illustrative interactive 3D assembly with a structured parts knowledge base and links to published references.</p><ul><li>3D geometry is schematic and not dimensionally exact.</li><li>Torque values shown are limited to values published in the linked owner's handbook.</li><li>Part numbers and prices are VIN/market/supplier dependent unless explicitly identified.</li><li>For repair, use the factory workshop manual and a qualified technician for safety-critical systems.</li></ul><p>Progress and checklist state are stored locally in this browser only.</p></dialog>
+<script type="module" src="app.js"></script>
+</body></html>

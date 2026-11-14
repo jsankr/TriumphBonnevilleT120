@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "fuel-tank",
+    "name": "Fuel tank",
+    "group": "Bodywork",
+    "position": [
+      0,
+      1.55,
+      0
+    ],
+    "offset": [
+      0,
+      0.8,
+      0
+    ],
+    "function": "Stores fuel and feeds the in-tank pump and fuel-injection system.",
+    "maintenance": "Inspect for leaks, corrosion, damaged mounts and hose chafing during scheduled services.",
+    "interval": "Daily visual check; scheduled service inspection",
+    "torque": "Mounting fasteners: use VIN-specific workshop manual",
+    "tool": "Fastener-dependent; verify before removal",
+    "partNo": "Variant / VIN dependent",
+    "price": "Dealer quote required",
+    "risk": "Fuel-system work requires depressurising and safe fuel handling.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "seat",
+    "name": "Seat assembly",
+    "group": "Bodywork",
+    "position": [
+      -0.78,
+      1.55,
+      0
+    ],
+    "offset": [
+      0,
+      0.65,
+      0
+    ],
+    "function": "Supports rider and passenger and covers the battery/electrical service area.",
+    "maintenance": "Inspect latch engagement, underside, mounts and upholstery; keep latch mechanism clean.",
+    "interval": "Regular inspection",
+    "torque": "Not published in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Variant / VIN dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "headlight",
+    "name": "Headlamp assembly",
+    "group": "Electrical",
+    "position": [
+      1.48,
+      1.47,
+      0
+    ],
+    "offset": [
+      0.65,
+      0.2,
+      0
+    ],
+    "function": "Provides forward road illumination; standard handbook specification lists H4 12 V 60/55 W halogen for the base T120.",
+    "maintenance": "Check beam aim, lens condition, connector security and operation of high/low beam.",
+    "interval": "Daily lighting check",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Market / VIN dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "front-wheel",
+    "name": "Front wheel & tyre",
+    "group": "Wheels & brakes",
+    "position": [
+      1.65,
+      0.55,
+      0
+    ],
+    "offset": [
+      0.9,
+      0,
+      0
+    ],
+    "function": "Supports the front of the motorcycle and provides steering, braking and road contact.",
+    "maintenance": "Inspect tyre pressure, tread, damage, wheel runout, bearings and (if spoked) spoke condition/tension.",
+    "interval": "Daily tyre check; wheel/bearing inspection at scheduled service",
+    "torque": "Front axle torque: obtain from 2018 T120 workshop manual for VIN",
+    "tool": "Axle hex/socket size must be verified against fitted spindle",
+    "partNo": "Wheel / hub variant dependent",
+    "price": "Dealer / wheel supplier quote",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "front-brake",
+    "name": "Front brakes — twin Nissin calipers and discs",
+    "group": "Wheels & brakes",
+    "position": [
+      1.65,
+      0.57,
+      0.22
+    ],
+    "offset": [
+      0.65,
+      0,
+      0.3
+    ],
+    "function": "Factory MY18 T120: twin 310 mm front discs, two Nissin 2-piston floating calipers, ABS. Assembly-level record; individual fasteners and pads not yet inventoried.",
+    "maintenance": "Inspect pad wear, disc condition, leaks, hose routing and caliper piston movement. Brake fluid renewal is every 2 years in the handbook schedule.",
+    "interval": "Daily function/level check; scheduled inspection; fluid every 2 years",
+    "torque": "Caliper / disc fasteners: workshop-manual value required",
+    "tool": "Fastener-specific; use correct brake tools",
+    "partNo": "Caliper / disc variant dependent",
+    "price": "Dealer quote required",
+    "risk": "Brake work is safety-critical. Do not ride until correctly assembled and tested.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null,
+    "factorySpecification": {
+      "caliperBrand": "Nissin",
+      "caliperCount": 2,
+      "pistonsPerCaliper": 2,
+      "discCount": 2,
+      "discDiameterMm": 310,
+      "abs": true,
+      "source": "Triumph MY18 Bonneville family specifications (manufacturer brochure): https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf",
+      "scope": "2018 T120 manufacturer brochure; confirm VIN/market"
+    }
+  },
+  {
+    "id": "forks",
+    "name": "Front forks & lower yoke",
+    "group": "Suspension & steering",
+    "position": [
+      1.4,
+      1.0,
+      0
+    ],
+    "offset": [
+      0.55,
+      0.4,
+      0
+    ],
+    "function": "Guide the front wheel and absorb road inputs while maintaining steering geometry.",
+    "maintenance": "Inspect for oil leaks, scoring, damage, smooth movement and steering-head play. Fork oil is a scheduled mileage item.",
+    "interval": "Daily leak/function check; fork oil at 32,000 km / 64,000 km schedule columns",
+    "torque": "Fork pinch bolts / caps: NOT VERIFIED — workshop manual required",
+    "tool": "Front fork clamp/tool sizes: NOT VERIFIED",
+    "partNo": "VIN-dependent LH/RH variants (see catalogue)",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null,
+    "fittedQuantity": 2,
+    "cataloguePartNumbers": [
+      {
+        "number": "T2041363",
+        "description": "Right-hand stanchion assembly",
+        "vinCondition": "VIN sequence ≤ 941382"
+      },
+      {
+        "number": "T2042373",
+        "description": "Right-hand stanchion assembly",
+        "vinCondition": "VIN sequence ≥ 941383"
+      },
+      {
+        "number": "T2041362",
+        "description": "Left-hand stanchion assembly",
+        "vinCondition": "VIN sequence ≤ 941382"
+      },
+      {
+        "number": "T2042372",
+        "description": "Left-hand stanchion assembly",
+        "vinCondition": "VIN sequence ≥ 941383"
+      }
+    ],
+    "catalogueUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+  },
+  {
+    "id": "radiator",
+    "name": "Radiator & cooling circuit",
+    "group": "Cooling",
+    "position": [
+      0.82,
+      0.92,
+      0
+    ],
+    "offset": [
+      0.35,
+      0.3,
+      0
+    ],
+    "function": "Rejects engine heat through liquid coolant and airflow.",
+    "maintenance": "Check coolant level when cold, leaks, hose chafing, fins and fan operation. Coolant renewal is every 3 years in the handbook.",
+    "interval": "Daily level/leak check; coolant every 3 years",
+    "torque": "Hose / radiator fasteners: workshop-manual value required",
+    "tool": "Clamp / socket tools as specified",
+    "partNo": "Market / VIN dependent",
+    "price": "Dealer quote required",
+    "risk": "Never open a hot cooling system. Scalding coolant may be expelled.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "engine",
+    "name": "1200 cc parallel-twin engine",
+    "group": "Engine & transmission",
+    "position": [
+      0,
+      0.92,
+      0
+    ],
+    "offset": [
+      0,
+      0.55,
+      0
+    ],
+    "function": "Liquid-cooled 8-valve parallel twin, 270° firing interval, wet sump; produces the motorcycle's power.",
+    "maintenance": "Check for leaks daily; oil and filter at first service, annual service and scheduled mileage intervals. Valve clearance checks are scheduled at 32,000 and 64,000 km columns.",
+    "interval": "Daily leak check; oil/filter annual or scheduled; valve clearance 32,000 / 64,000 km",
+    "torque": "Engine internal fasteners require the factory workshop manual",
+    "tool": "Specialist tools and calibrated torque wrench for internal work",
+    "partNo": "Engine assembly code is VIN dependent",
+    "price": "Major assembly: dealer quote",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "exhaust",
+    "name": "Exhaust headers & silencers",
+    "group": "Exhaust",
+    "position": [
+      -0.05,
+      0.52,
+      0.48
+    ],
+    "offset": [
+      -0.35,
+      -0.15,
+      0.55
+    ],
+    "function": "Routes exhaust gases, attenuates noise and forms part of the engine's emissions system.",
+    "maintenance": "Inspect for leaks, loose mounts, corrosion, heat damage and damaged joints.",
+    "interval": "Daily leak awareness; scheduled inspection",
+    "torque": "Exhaust clamp / mounting torque: workshop-manual value required",
+    "tool": "Socket / hex tools depend on mount",
+    "partNo": "Market / emissions variant dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "rear-wheel",
+    "name": "Rear wheel & tyre",
+    "group": "Wheels & brakes",
+    "position": [
+      -1.55,
+      0.55,
+      0
+    ],
+    "offset": [
+      -0.9,
+      0,
+      0
+    ],
+    "function": "Transmits drive through the rear sprocket and provides rear road contact.",
+    "maintenance": "Check pressure, tread, damage, wheel bearings, alignment and chain/sprocket condition.",
+    "interval": "Daily tyre check; chain wear every 800 km",
+    "torque": "Rear spindle nut 110 Nm; chain adjuster lock nuts 20 Nm (2019 handbook reference; confirm 2018 VIN/market applicability).",
+    "tool": "Torque wrench plus correct spindle socket; verify fitted hardware",
+    "partNo": "Wheel / hub variant dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "110 Nm spindle nut; 20 Nm chain-adjuster lock nuts",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1, T120 chain adjustment procedure/specifications; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "rear-brake",
+    "name": "Rear brake — Nissin caliper and disc",
+    "group": "Wheels & brakes",
+    "position": [
+      -1.55,
+      0.55,
+      0.22
+    ],
+    "offset": [
+      -0.6,
+      0,
+      0.3
+    ],
+    "function": "Factory MY18 T120: single 255 mm rear disc, one Nissin 2-piston floating caliper, ABS. Assembly-level record; individual fasteners and pads not yet inventoried.",
+    "maintenance": "Inspect pad wear, disc, caliper leaks and fluid. Brake fluid renewal every 2 years.",
+    "interval": "Daily function check; scheduled inspection; fluid every 2 years",
+    "torque": "Caliper / disc fasteners: workshop-manual value required",
+    "tool": "Fastener-specific; verify before service",
+    "partNo": "Variant dependent",
+    "price": "Dealer quote required",
+    "risk": "Brake work is safety-critical.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null,
+    "factorySpecification": {
+      "caliperBrand": "Nissin",
+      "caliperCount": 1,
+      "pistonsPerCaliper": 2,
+      "discCount": 1,
+      "discDiameterMm": 255,
+      "abs": true,
+      "source": "Triumph MY18 Bonneville family specifications (manufacturer brochure): https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf",
+      "scope": "2018 T120 manufacturer brochure; confirm VIN/market"
+    }
+  },
+  {
+    "id": "chain",
+    "name": "Final-drive chain & sprockets",
+    "group": "Drivetrain",
+    "position": [
+      -0.95,
+      0.58,
+      0.24
+    ],
+    "offset": [
+      -0.45,
+      0,
+      0.45
+    ],
+    "function": "Transfers gearbox output to the rear wheel. Handbook lists a 525 chain specification for the T120.",
+    "maintenance": "Check slack and adjust daily; inspect chain wear every 800 km; lubricate every 300 km. Clean and lubricate more often in rain/dust.",
+    "interval": "Slack: check/adjust daily; wear inspection every 800 km; lubricate every 300 km and after wet riding or when dry (2019 handbook schedule; confirm 2018 market applicability).",
+    "torque": "Rear adjuster lock nuts: 20 Nm; rear spindle nut: 110 Nm",
+    "tool": "Rear axle socket + adjuster spanner; sizes depend on fitted hardware",
+    "partNo": "Chain spec in handbook: RK 525 KRW2, 100 links (confirm market / replacement chain)",
+    "price": "Aftermarket/OEM varies",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "20 Nm adjuster lock nuts; 110 Nm rear spindle nut; 9 Nm chain guard",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1, T120 chain adjustment and wear inspection; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "swingarm",
+    "name": "Swingarm & rear suspension",
+    "group": "Suspension & steering",
+    "position": [
+      -0.85,
+      0.82,
+      0
+    ],
+    "offset": [
+      -0.45,
+      0.35,
+      0
+    ],
+    "function": "Locates the rear wheel and allows controlled vertical movement through the rear shocks.",
+    "maintenance": "Inspect shock leaks, bushings, pivot play, fasteners and smooth movement.",
+    "interval": "Daily visual/function check; scheduled inspection",
+    "torque": "Pivot / shock mounting torques: workshop-manual value required",
+    "tool": "Fastener-specific; calibrated torque wrench",
+    "partNo": "Frame / suspension variant dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "battery",
+    "name": "Battery & charging system",
+    "group": "Electrical",
+    "position": [
+      -0.62,
+      1.12,
+      -0.22
+    ],
+    "offset": [
+      -0.2,
+      0.7,
+      -0.35
+    ],
+    "function": "Supplies electrical energy for starting and electrical loads; charging system restores charge while running.",
+    "maintenance": "Keep terminals clean/tight, inspect battery condition and charging voltage; avoid short circuits.",
+    "interval": "Periodic condition check; terminals inspected at service",
+    "torque": "Battery terminals: 4.5 Nm (handbook specification)",
+    "tool": "Small spanner/socket; use insulated tools",
+    "partNo": "Handbook battery type: YTX12-BS, 12 V 10 Ah (confirm exact market fitment)",
+    "price": "India retail price varies",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "4.5 Nm",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1; T120 family table; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "airbox",
+    "name": "Airbox & air cleaner",
+    "group": "Intake & fuel",
+    "position": [
+      -0.38,
+      1.2,
+      -0.3
+    ],
+    "offset": [
+      -0.3,
+      0.6,
+      -0.45
+    ],
+    "function": "Filters incoming air before it reaches the throttle bodies.",
+    "maintenance": "Inspect air cleaner and intake ducts; replace air cleaner at scheduled mileage intervals.",
+    "interval": "32,000 km / 64,000 km schedule columns",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Air-filter part number VIN dependent",
+    "price": "Dealer / aftermarket varies",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "throttle",
+    "name": "Throttle bodies & fuel injection",
+    "group": "Intake & fuel",
+    "position": [
+      0.2,
+      1.03,
+      -0.2
+    ],
+    "offset": [
+      0.15,
+      0.55,
+      -0.3
+    ],
+    "function": "Meters air and fuel through electronic fuel injection to control engine output.",
+    "maintenance": "Inspect fuel lines for leaks/chafing, clean throttle plates and balance throttle bodies at scheduled intervals.",
+    "interval": "Fuel-system checks and throttle-body balance at scheduled 16,000 / 32,000 / 48,000 / 64,000 km services",
+    "torque": "Fuel-system fasteners: workshop-manual value required",
+    "tool": "Diagnostic tool and specialist equipment may be required",
+    "partNo": "Market / VIN dependent",
+    "price": "Dealer quote required",
+    "risk": "Fuel system contains pressurised petrol. Specialist work recommended.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "clutch",
+    "name": "Wet multi-plate clutch",
+    "group": "Engine & transmission",
+    "position": [
+      -0.12,
+      0.82,
+      0.42
+    ],
+    "offset": [
+      -0.2,
+      0.3,
+      0.55
+    ],
+    "function": "Connects/disconnects engine drive to the six-speed gearbox through a wet multi-plate pack.",
+    "maintenance": "Check clutch lever free play and cable operation; adjust as necessary.",
+    "interval": "Daily operation check; scheduled service inspection",
+    "torque": "Clutch internal fasteners: workshop-manual value required; clutch lever nut 3.5 Nm",
+    "tool": "Cable adjuster tools; clutch service requires specialist tools",
+    "partNo": "VIN / clutch revision dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "3.5 Nm clutch-lever nut only",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1; T120 family torque table; not an internal clutch fastener specification."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "gearbox",
+    "name": "Six-speed gearbox",
+    "group": "Engine & transmission",
+    "position": [
+      0.18,
+      0.78,
+      0.0
+    ],
+    "offset": [
+      0.15,
+      0.25,
+      0
+    ],
+    "function": "Provides six ratios between engine and final drive; constant-mesh transmission.",
+    "maintenance": "Check oil condition via engine service schedule; investigate abnormal noise, jumping out of gear or leaks.",
+    "interval": "Engine oil service schedule",
+    "torque": "Internal gearbox fasteners: factory workshop manual required",
+    "tool": "Specialist tools for internal repair",
+    "partNo": "Transmission parts VIN dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "instruments",
+    "name": "Instrument cluster & controls",
+    "group": "Electrical",
+    "position": [
+      1.25,
+      1.72,
+      0
+    ],
+    "offset": [
+      0.55,
+      0.75,
+      0
+    ],
+    "function": "Displays speed, engine speed, warning indicators and rider information; houses control switches.",
+    "maintenance": "Check display, warning lamps, switch function and harness routing.",
+    "interval": "Daily function check",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Market / instrument variant dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "front-indicators",
+    "name": "Front indicators",
+    "group": "Electrical",
+    "position": [
+      1.45,
+      1.28,
+      0.25
+    ],
+    "offset": [
+      0.7,
+      0.4,
+      0.3
+    ],
+    "function": "Signals turning intentions to other road users.",
+    "maintenance": "Check operation, lens condition and mounting security.",
+    "interval": "Daily lighting check",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Market / homologation dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "rear-light",
+    "name": "Rear lamp & indicators",
+    "group": "Electrical",
+    "position": [
+      -1.55,
+      1.38,
+      0
+    ],
+    "offset": [
+      -0.75,
+      0.55,
+      0
+    ],
+    "function": "Provides rear position/brake lighting and turn indication.",
+    "maintenance": "Check operation, lens condition, connectors and mounting security.",
+    "interval": "Daily lighting check",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Market / homologation dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "frame",
+    "name": "Main frame & subframe",
+    "group": "Chassis",
+    "position": [
+      0,
+      1.05,
+      0
+    ],
+    "offset": [
+      0,
+      0.15,
+      0
+    ],
+    "function": "Structural backbone supporting engine, steering, suspension, rider and bodywork.",
+    "maintenance": "Inspect for cracks, corrosion, damage, loose fasteners and accident deformation.",
+    "interval": "Visual inspection at service and after any impact",
+    "torque": "Structural fasteners: workshop-manual value required",
+    "tool": "Calibrated torque wrench and fastener-specific tools",
+    "partNo": "Frame number / VIN specific",
+    "price": "Dealer quote required",
+    "risk": "Structural repairs require specialist assessment.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "side-stand",
+    "name": "Side stand & switch",
+    "group": "Chassis",
+    "position": [
+      -0.35,
+      0.34,
+      0.2
+    ],
+    "offset": [
+      -0.3,
+      -0.2,
+      0.3
+    ],
+    "function": "Supports motorcycle when parked; interlock switch contributes to starting/running safety logic.",
+    "maintenance": "Check return spring, pivot lubrication, switch operation and secure mounting.",
+    "interval": "Daily operation check; pivot clean/grease at service",
+    "torque": "Not listed in owner's handbook",
+    "tool": "Fastener-dependent",
+    "partNo": "Variant dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "oil-filter",
+    "name": "Oil filter",
+    "group": "Lubrication",
+    "position": [
+      0.42,
+      0.55,
+      0.42
+    ],
+    "offset": [
+      0.35,
+      -0.1,
+      0.55
+    ],
+    "function": "Removes contaminants from engine oil.",
+    "maintenance": "Replace with every scheduled engine oil renewal; lightly lubricate sealing ring as specified by filter maker.",
+    "interval": "First service, annual service and scheduled mileage services",
+    "torque": "10 Nm (handbook specification)",
+    "tool": "Correct oil-filter cup/wrench; verify filter type",
+    "partNo": "Filter part number varies by supplier",
+    "price": "India retail varies",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "10 Nm",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1; T120 family torque table; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "spark-plugs",
+    "name": "Spark plugs (pair)",
+    "group": "Ignition",
+    "position": [
+      0.12,
+      1.2,
+      0.34
+    ],
+    "offset": [
+      0.2,
+      0.55,
+      0.5
+    ],
+    "function": "Ignites the air-fuel mixture in each cylinder.",
+    "maintenance": "Inspect/renew according to scheduled service; inspect plug condition and gap.",
+    "interval": "32,000 km / 64,000 km schedule columns",
+    "torque": "12 Nm (handbook specification)",
+    "tool": "Correct thin-wall spark-plug socket; handbook plug NGK LMAR8A-9",
+    "partNo": "NGK LMAR8A-9 (handbook specification)",
+    "price": "India retail varies",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "12 Nm",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1; T120 family torque table; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "sump-plug",
+    "name": "Sump drain plug",
+    "group": "Lubrication",
+    "position": [
+      0,
+      0.37,
+      0.12
+    ],
+    "offset": [
+      0,
+      -0.25,
+      0.15
+    ],
+    "function": "Seals the engine oil sump drain opening.",
+    "maintenance": "Inspect sealing washer and threads at oil changes; replace sealing washer if specified.",
+    "interval": "At every oil change",
+    "torque": "25 Nm (handbook specification)",
+    "tool": "Correct hex/socket for fitted plug; verify physically",
+    "partNo": "Plug/washer VIN dependent",
+    "price": "Low-cost service item",
+    "torqueEvidence": {
+      "status": "handbook-reference-not-2018-workshop-manual-confirmed",
+      "value": "25 Nm",
+      "sourceNote": "2019 Triumph Owner’s Handbook 3855663-EN issue 1; T120 family torque table; confirm 2018 market/VIN applicability."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "coolant-tank",
+    "name": "Coolant expansion tank",
+    "group": "Cooling",
+    "position": [
+      0.75,
+      0.82,
+      -0.25
+    ],
+    "offset": [
+      0.45,
+      0.2,
+      -0.35
+    ],
+    "function": "Allows coolant expansion and contraction while maintaining the cooling system reserve.",
+    "maintenance": "Check level only when cold; inspect tank and hoses for leaks/cracks.",
+    "interval": "Daily level check; coolant renew every 3 years",
+    "torque": "Not listed in owner's handbook",
+    "tool": "No special tool for level check",
+    "partNo": "VIN dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "rear-shocks",
+    "name": "Twin rear shock absorbers",
+    "group": "Suspension & steering",
+    "position": [
+      -0.85,
+      1.05,
+      0.32
+    ],
+    "offset": [
+      -0.55,
+      0.45,
+      0.35
+    ],
+    "function": "Control rear suspension movement and maintain tyre contact with the road.",
+    "maintenance": "Inspect for oil leaks, damage, loose mounts and smooth damping.",
+    "interval": "Daily visual/function check; scheduled service",
+    "torque": "Rear shock mounting bolts: NOT VERIFIED — do not use estimated torque",
+    "tool": "Socket-head M8 mounting bolts; hex drive size not verified",
+    "partNo": "T2050479 (2018 catalogue; confirm VIN)",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null,
+    "fittedQuantity": 2,
+    "cataloguePartNumbers": [
+      {
+        "number": "T2050479",
+        "description": "Rear suspension unit",
+        "quantity": 2
+      }
+    ],
+    "catalogueFasteners": [
+      {
+        "number": "T3330244",
+        "description": "M8 x 20 socket-head mounting bolt",
+        "quantity": 4,
+        "toolSize": "Unknown — M8 is thread diameter, not hex drive size",
+        "torqueNm": null
+      },
+      {
+        "number": "T3550331",
+        "description": "8.5 x 30 x 2 washer",
+        "quantity": 4,
+        "toolSize": "Not applicable",
+        "torqueNm": null
+      }
+    ],
+    "catalogueUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit"
+  },
+  {
+    "id": "front-master",
+    "name": "Front brake master cylinder",
+    "group": "Wheels & brakes",
+    "position": [
+      1.35,
+      1.75,
+      0.24
+    ],
+    "offset": [
+      0.65,
+      0.8,
+      0.3
+    ],
+    "function": "Converts lever force into hydraulic pressure for the front brake caliper(s).",
+    "maintenance": "Check fluid level, leaks, lever feel and hose condition. Renew brake fluid every 2 years.",
+    "interval": "Daily level/function check; fluid every 2 years",
+    "torque": "Banjo / clamp torque: factory workshop manual required",
+    "tool": "Correct flare/line tools; avoid contaminating brake fluid",
+    "partNo": "Market / ABS variant dependent",
+    "price": "Dealer quote required",
+    "risk": "Brake hydraulics are safety-critical.",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  },
+  {
+    "id": "abs",
+    "name": "ABS modulator & sensors",
+    "group": "Wheels & brakes",
+    "position": [
+      0.42,
+      1.15,
+      -0.38
+    ],
+    "offset": [
+      0.25,
+      0.55,
+      -0.55
+    ],
+    "function": "Monitors wheel speed and modulates hydraulic pressure to help prevent wheel lock under braking.",
+    "maintenance": "Inspect wiring/sensor mounts and warning lamp; diagnose faults with compatible Triumph diagnostic equipment.",
+    "interval": "Daily warning-light check; scheduled diagnostic scan",
+    "torque": "Sensor / modulator fasteners: workshop-manual value required",
+    "tool": "Diagnostic tool; fastener-specific tools",
+    "partNo": "ABS hardware VIN / market dependent",
+    "price": "Dealer quote required",
+    "torqueEvidence": {
+      "status": "manual-verification-required",
+      "value": null,
+      "sourceNote": "No applicable 2018 T120 factory workshop-manual torque value verified for this component."
+    },
+    "serviceReadiness": "reference-only-not-a-removal-instruction",
+    "toolSizeStatus": "not-verified-for-2018-vin",
+    "removalToolSize": null,
+    "installationToolSize": null,
+    "fastenerTorqueNm": null
+  }
+]
