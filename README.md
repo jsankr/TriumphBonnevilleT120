@@ -1,65 +1,89 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
-[![Open browser application](https://img.shields.io/badge/OPEN-WORKSHOP%20APP-198fd0?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jsankr.github.io/TriumphBonnevilleT120/)
-[![View actual screenshots](https://img.shields.io/badge/VIEW-BROWSER%20SCREENSHOTS-24455e?style=for-the-badge)](gallery.html)
+[![Launch browser application](https://img.shields.io/badge/OPEN-WORKSHOP_APP-1c78c6?style=for-the-badge)](https://jsankr.github.io/TriumphBonnevilleT120/)
 
-> **Evidence-first enthusiast companion, not a factory repair manual.** The new app replaces the former blocky 3D motorcycle with a photo-led glass-style dashboard. **No Blender, WebGL, Three.js, external JavaScript packages, or API key is required.**
+**[Open the Workshop Explorer in your browser](https://jsankr.github.io/TriumphBonnevilleT120/)** · [Source audit](docs/SOURCE-AUDIT.md) · [Private PDF guide](docs/LOCAL-PDF-READER.md)
 
-## [▶ Open the T120 Workshop Explorer in your browser](https://jsankr.github.io/TriumphBonnevilleT120/)
+An independent, no-Blender, responsive workshop reference application for a **2018 Triumph Bonneville T120**, with a photo-led dashboard, Nissin brake model identity, searchable assembly records, 2016 Triumph service/owner manual factual indexes, maintenance records and an optional private, complete-PDF reader.
 
-**Browser address:** https://jsankr.github.io/TriumphBonnevilleT120/
+## Read the source qualifications before service work
 
-**Screenshots:** [View tested desktop, tablet and mobile application screenshots](gallery.html).
+**Not a Triumph factory product or a stand-alone workshop instruction.** This project does not validate model/year/market/VIN-specific procedures, aftermarket component compatibility, or revised service bulletins. Do not use the app's values alone for safety-critical repairs. Source year and page are always identified.
 
-The launch link requires GitHub Pages to be enabled and deployed. This repository is currently **private**; GitHub Pages availability for private repositories depends on the owner's GitHub plan. The address is an **expected URL, not a verified live site**. For immediate offline use, download `index.html` and open it locally in Chrome, Firefox or Safari. All app CSS, scripts, component data and motorcycle visual are embedded in that file.
+The user's four source documents were audited:
 
-### What the actual app looks like
+| File source | Edition | Pages | How it is used |
+|---|---|---:|---|
+| T120 Motorcycle Service Manual | Triumph 04.2016 Issue 1 | **728** | 230 indexed active torque rows, 44 maintenance tasks, 37 special tools, full 26-chapter index |
+| Owner’s Handbook (includes T120) | Triumph 11.2016 Issue 1, 3855577-EN | **162** | 32 T120-specific fields from pages 156–159 and full contents index |
+| Bonneville/T100 EFI Service Data Sheet | Issue 9, 12.2012 | **3** | Historic **not applicable to T120**; can be opened locally |
+| Older Bonneville maintenance checklist | 2006 | **1** | Historic **not applicable to T120**; can be opened locally |
 
-| Desktop | Tablet | Mobile |
-| --- | --- | --- |
-| [See real desktop screenshot](gallery.html) | [See 820px tablet screenshot](gallery.html) | [See 390px mobile screenshot](gallery.html) |
+The copyright-protected source PDF files are **not included in this repository**. Instead, select your own documents in the **My PDF library** section. All original pages, images, warnings, diagrams and procedures remain available unabridged in a local PDF viewer. Optional client-side text search scans all loaded pages without transmitting the original PDFs to a server. This preserves the full source reading experience without illicitly republishing the manuals. See [private PDF usage](docs/LOCAL-PDF-READER.md).
 
-These are **real Chromium render captures** from the app, not AI-generated UI mockups. The motorcycle illustration **inside the app** is cropped from a **user-supplied concept dashboard screenshot**: it is a photo-like visual reference, **not an authenticated photo of a particular 2018 T120** and not technical evidence.
+## Searchable technical records
 
-## What works in v2.1
+The indexed database `data/source-reference.json` contains:
 
-- **Photo-led overview:** real browser dashboard styling, supplied reference motorcycle artwork and six approximate clickable part hotspots. This is **2D**, not a rotatable 3D or an exploded mechanical model.
-- **30 assembly-level records:** searchable parts catalogue, category filters, component selection and source-labelled details.
-- **2018 brake specification:** manufacturer MY18 reference identifies **two front Nissin two-piston floating calipers with twin 310 mm discs**, and **one rear Nissin two-piston floating caliper with a single 255 mm disc**, with ABS. Do not use newer T120 Brembo specifications for 2018.
-- **Correct inventory conventions:** two front fork legs and two rear shocks; VIN-dependent alternate part numbers are not additional fitted parts.
-- **Tools and torque inspector:** intentionally displays **NOT VERIFIED** for unsupported fastener torque and drive sizes. No guessed axle/fork pinch/caliper values.
-- **Handbook torque reference desk:** eight explicitly labelled values from the August 2019 T120-family handbook; *not verified against the particular 2018 market/VIN workshop documentation*.
-- **Maintenance checklist:** local browser storage; this is for planning, not a substitute for a 2018 factory maintenance plan.
-- **Evidence assistant:** local deterministic source/part search with links. **Not a live LLM or connected AI service.**
-- **Recall context:** US NHTSA 19V-133 / Triumph Recall 560 with VIN/market caveats.
+- **230 torque records** from 2016 T120 manual pages 57–74, with source-page links, row notes and procedure flags. The 13 incorrectly labelled engine-cover entries on page 70 are quarantined; they are not given as front-brake torque settings.
+- **44 maintenance tasks** from 2016 manual pages 84–85, including first-service/annual/mileage schedule columns and explicitly time-based operations.
+- **32 2016 T120 owner-handbook specifications** from pages 156–159, including engine, coolant, fuel, 6-speed transmission, tyre sizes and cold tyre pressures.
+- **37 service tool numbers/descriptions** from 2016 manual pages 27–33. The tool register does not assume socket sizes for unrelated fasteners.
+- **26 complete 2016 T120 service chapter ranges** covering every PDF page from 1 to 728, plus 14 owner-handbook chapter ranges covering all 162 pages.
 
-## Browser support
+Every structured value has a source ID, edition and PDF page. **2016 is not automatically 2018-VIN verified.** Earlier-generation 2012 and 2006 material is excluded from live T120 technical results; only available in the local reader.
 
-Uses built-in HTML, CSS and vanilla JavaScript; no WebGL/Blender/external runtime. Chromium desktop (1500px), tablet-width (820px) and phone-width (390px) tests passed for data loading, hotspot navigation, Nissin search, evidence retrieval and lack of horizontal overflow. **Firefox, Safari and physical-device testing remain outstanding**, so cross-browser support is intended rather than fully certified.
+### Source-backed examples (2016 T120 service manual only)
 
-## Run without hosting
+| Fastener | Stated 2016 reference | Source PDF page |
+|---|---:|---:|
+| Front wheel spindle/axle bolt | 65 Nm | 69 |
+| Fork to wheel spindle pinch bolts | 23 Nm | 69 |
+| Rear suspension unit upper mounting | 28 Nm | 68 |
+| Rear suspension unit lower mounting | 28 Nm | 68 |
+| Rear wheel spindle lock nut | 110 Nm | 69 |
+| Rear brake caliper to carrier | 40 Nm | 71 |
 
-Download [`index.html`](index.html) from this repository and open it directly. It is a **single self-contained HTML file**, including the local parts index and all UI assets. An ordinary web server also works:
+For your actual 2018 bike, confirm applicability with the appropriate Triumph service information, VIN, market and aftermarket configuration. **Do not infer the tool's hex/socket size from the torque table.** See [full audit](docs/SOURCE-AUDIT.md).
 
-```sh
+## Application features
+
+- 2D photographic-style motorcycle dashboard based on a user-supplied concept image, with hotspots and selectable assemblies; **no fake 3D model**, Blender or Three.js dependency.
+- 30 source-constrained 2018 T120 assembly-level part records, including 2018 Nissin two-piston floating brake calipers; the geometry shown is illustrative and not measured OEM CAD.
+- Full-text filter over all 230 torque entries, 44 scheduled-maintenance tasks, 32 owner-manual T120 specifications and 37 specialist tools.
+- Paper-trail from every technical result to an original document and exact PDF page.
+- Local PDF document reader plus cross-document search of all 894 pages when the four originals are selected (728+162+3+1), with original content remaining only on the user's device.
+- 2016 service manual page 70 discrepancy warning, 2012/2006 model-scope exclusion, unknown 2018-VIN applicability warnings.
+- User checklist saved in browser local storage, NHTSA recall context, and rule-based reference search assistant (**not a live LLM**).
+- Responsive modern HTML/CSS/JS for Chrome, Firefox, Safari desktop and mobile. PDF.js-based local full-text scanning requires an online CDN and has not yet been verified on every target browser.
+
+## Deploy/run
+
+No build step or backend is required. Publish the files to the root of `main`, then configure GitHub **Settings → Pages** to deploy from `main` / `(root)` or a suitable GitHub Actions deployment workflow. On a private repo, confirm GitHub Pages eligibility. The URL is:
+
+**https://jsankr.github.io/TriumphBonnevilleT120/**
+
+To run locally:
+
+```bash
 python -m http.server 8000
-# open http://localhost:8000
+# http://localhost:8000
 ```
 
-GitHub Pages, if supported by the repository plan, can publish this same `index.html` by selecting **Settings → Pages → Source: GitHub Actions**. The workflow file is in `.github/workflows/deploy-pages.yml`.
+Use a local HTTP server because the app loads `parts.json` and `data/source-reference.json` via `fetch()`. The separate original PDFs are selected through the browser and are never committed.
 
-## Factual integrity and legal notes
+## Validate development changes
 
-Technical records are assembly-level reference material. **Unknown** does not mean zero. Never determine socket sizes, tightening sequences, torque values, or VIN fitment from a screenshot, alternative model year or an AI model. Treat Kineo wheels and TEC springs as modifications requiring their own manufacturer references.
+```bash
+node --check app.js
+node --check copilot.js
+node --check source-library.js
+node tests/validate-data.mjs
+node tests/validate-sources.mjs
+```
 
-For citations and caveats see [SOURCES.md](SOURCES.md), [BRAKE-VERIFICATION.md](BRAKE-VERIFICATION.md), [DATA-NOTES.md](DATA-NOTES.md), [RECALL-560.md](RECALL-560.md), and [VALIDATION-REPORT.md](VALIDATION-REPORT.md). [Official Triumph MY18 range document](https://triumph.euwest01.umbraco.io/media/1615/gamma-bonneville-t100.pdf). [Later owner's handbook](https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf).
+These tests check data shape and specific printed values. They **cannot certify** revision/VIN applicability or every diagram/procedure.
 
-No copyrighted OEM repair manuals or CAD files are bundled. Triumph is a trademark of its owner; this independent project is unaffiliated with Triumph.
+## Legal and safety
 
-## Planned next
-
-Replace the concept motorcycle artwork with a user-owned **actual photo** of the 2018 bike, add additional photographic angles (with new source-specific hotspots), verify VIN/market factory documentation, and optionally build a secured citation-grounded AI service with credentials stored on a backend.
-
-## Historical v1.2.1
-
-The v1.2.1 ZIP remains available from the earlier ChatGPT project package. It is **not yet included as a GitHub repository asset**; this v2.1 app intentionally replaces its low-detail 3D viewer.
+The source documents bear copyright notices restricting redistribution. They have **not** been bundled, copied into GitHub or translated into wholesale plain-text replicas. The indexed dataset is a factual source catalogue, not a scanned manual replacement. Original documents remain privately available for all pages through your own selected PDFs. The repository is independent of Triumph Motorcycles Ltd.
