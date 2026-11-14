@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b121d">
+<meta name="description" content="Private photo-based teardown navigator for a 2018 liquid-cooled Bonneville T120. No VIN or photos are uploaded to a server.">
+<title>T120 · Private Photo Teardown</title>
+<link rel="stylesheet" href="photo-teardown.css">
+<script type="module" src="photo-teardown.js"></script>
+</head>
+<body>
+<div class="shell">
+ <header class="topbar">
+  <div class="brand"><div class="mark">T<span>120</span></div><div><small>INDEPENDENT WORKSHOP EXPLORER</small><strong>PRIVATE PHOTO TEARDOWN</strong></div></div>
+  <div class="top-actions"><span class="privacy"><i></i> Personal uploads stay in your browser session</span><a class="small-link" href="real-photo-gallery.html">Real 2018 reference atlas ↗</a><a class="small-link" href="index.html">Main workshop <span aria-hidden="true">↗</span></a></div>
+ </header>
+ <div class="layout">
+  <aside class="view-panel pane" aria-label="Photo view selection">
+    <div class="pane-head"><p class="eyebrow">01 · CAMERA ANGLE</p><h2>Bike views</h2><p>2018-model example photographs load automatically where verified; replace with your own if available.</p></div>
+    <div class="view-options" id="viewOptions" role="group" aria-label="Choose camera angle"></div>
+    <div class="aside-separator"></div>
+    <div class="pane-head"><p class="eyebrow">02 · DISASSEMBLY STATE</p><h2>Teardown stages</h2></div>
+    <div class="stage-options" id="stageOptions" role="group" aria-label="Choose teardown stage"></div>
+    <p class="helper">The default assembled examples are externally hosted photographs of other 2018 motorcycles. Their publishers may block embedding. A real disassembled stage requires verified photos of removed parts; no fake exploded geometry will be generated.</p><p class="helper">For a true exploded view, use a photograph of actual separated components or a legitimately licensed, verified assembly diagram. A single assembled photo cannot show hidden mechanical interfaces.</p>
+  </aside>
+  <main class="workspace">
+    <div class="title-row"><div><p class="eyebrow">2018 · 1200cc liquid-cooled parallel twin</p><h1>Explore the real machine.</h1><p>Photographic annotation, evidence-linked parts, and verified-source boundaries.</p></div><span class="scope">MY18 · Nissin factory brakes</span></div>
+    <section class="photo-pane pane" aria-label="Photo teardown workspace">
+      <div class="photo-toolbar">
+        <div><strong id="angleTitle">Left side</strong><span id="stageTitle">· Assembled</span></div>
+        <div class="photo-controls">
+          <button id="editHotspot" class="outline" type="button" aria-pressed="false">Place part marker</button>
+          <button id="clearMarkers" class="outline" type="button">Clear view markers</button>
+          <label class="upload">Add real photo <input id="photoInput" type="file" accept="image/*" aria-label="Select a real motorcycle photo for the current view"></label>
+        </div>
+      </div>
+      <div class="photo-stage" id="photoStage">
+        <img id="photoImage" alt="User-selected photograph of this bike and teardown stage" hidden>
+        <div id="photoEmpty" class="photo-empty"><div class="photo-glyph" aria-hidden="true">⌗</div><strong>No photo uploaded for this view</strong><p>Select a photograph of your motorcycle using “Add real photo”. Local uploads are not sent anywhere. Optional publisher photos load directly from their original websites.</p><label class="upload large">Choose a photo <input id="emptyPhotoInput" type="file" accept="image/*" aria-label="Choose a photo for the current view"></label></div>
+        <div id="markers" class="markers" aria-label="Part markers on selected photograph"></div>
+      </div>
+      <div class="photo-footer"><span id="photoStatus">Checking external 2018 references…</span><span><a href="#" id="referenceSourceLink" target="_blank" rel="noopener noreferrer" hidden>Publisher image and licence ↗</a> · No 3D or synthetic geometry</span></div>
+    </section>
+    <div class="lower-grid">
+      <section class="pane catalogue" aria-labelledby="catalogueHeading"><div class="section-head"><div><p class="eyebrow">03 · COMPONENT INDEX</p><h2 id="catalogueHeading">Searchable assemblies</h2></div><span id="partCount">Loading…</span></div>
+        <label class="sr-only" for="partSearch">Search parts and assemblies</label><input id="partSearch" type="search" placeholder="Search Nissin, fork, axle, chain…" autocomplete="off">
+        <label class="sr-only" for="groupSelect">Filter part group</label><select id="groupSelect"><option value="">All groups</option></select>
+        <div class="part-list" id="partList" aria-label="Search results"></div>
+      </section>
+      <section class="pane evidence" aria-labelledby="evidenceHeading"><div class="section-head"><div><p class="eyebrow">04 · PRIMARY EVIDENCE</p><h2 id="evidenceHeading">Manual references</h2></div></div>
+        <p class="helper">Search across the indexed April 2016 T120 service manual. These are <strong>older-edition references, not confirmed 2018 VIN-specific instructions</strong>. No torque is automatically assigned to an assembly.</p>
+        <div class="search-row"><label class="sr-only" for="torqueSearch">Search documented torque fasteners</label><input id="torqueSearch" type="search" placeholder="Search fastener description"><button id="torqueButton" type="button">Search</button></div>
+        <div id="torqueResults" class="torque-results" aria-live="polite"><p class="muted">Enter the exact fastener description to inspect cited torque records.</p></div>
+      </section>
+    </div>
+  </main>
+  <aside class="detail-pane pane" aria-label="Selected component details">
+    <div class="pane-head"><p class="eyebrow">05 · SELECTED PART</p><h2>Part inspector</h2><p>Click a part or an image marker.</p></div>
+    <div id="selectedPart" class="selected-part" aria-live="polite"><p class="muted">Choose a component from the search index.</p></div>
+    <div class="aside-separator"></div>
+    <div class="pane-head"><p class="eyebrow">PHOTO ANNOTATION</p><h2>Mark real locations</h2><p>Select a part, choose <strong>Place part marker</strong>, then tap its actual location in the uploaded photograph. Marker locations are session-only until exported.</p></div>
+    <button id="exportAnnotations" class="outline full" type="button">Export marker coordinates (JSON)</button>
+    <p class="helper">The export contains view/stage coordinates and part IDs only—not photos, filenames, URLs or private vehicle identifiers.</p>
+    <div class="privacy-note"><strong>Private fitment boundary</strong><p>The website does not receive, contain, save, or display any full vehicle identifier. VIN-specific OEM fitment remains unverified until checked privately against an authorized catalogue. Do not infer exact part numbers from model year alone.</p></div>
+  </aside>
+ </div>
+ <footer><span>T120 workshop reference · Photo-based development prototype</span><span>Factory MY18: Nissin braking system · 2 front fork legs · 2 rear shocks</span></footer>
+</div>
+</body>
+</html>
