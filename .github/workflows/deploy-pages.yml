@@ -1,4 +1,4 @@
-name: Deploy T120 Workshop Explorer
+name: Validate and deploy T120 Workshop Explorer
 on:
   push:
     branches: [main]
@@ -9,20 +9,24 @@ permissions:
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
-  verify:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify browser files
-        run: |
-          test -f index.html
-          test -f gallery.html
-          grep -q 'embedded-parts' index.html
-          grep -q 'Nissin' index.html
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check app.js
+      - run: node --check copilot.js
+      - run: node --check source-library.js
+      - run: node --check manual-library.js
+      - run: node tests/validate-data.mjs
+      - run: node tests/validate-sources.mjs
+      - run: node tests/validate-manual-index.mjs
   deploy:
-    needs: verify
+    needs: validate
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -30,8 +34,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: '.'
       - id: deployment
         uses: actions/deploy-pages@v4

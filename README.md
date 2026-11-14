@@ -1,5 +1,19 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
+## Clean consolidated release v2.3 — 14 November 2026
+
+**[▶ Launch Workshop Explorer in browser](https://jsankr.github.io/TriumphBonnevilleT120/)** · [894-page manual index](manual-index.html) · [Original PDF reader](docs/LOCAL-PDF-READER.md) · [Source audit](docs/SOURCE-AUDIT.md)
+
+The current `main` branch is a clean replacement of the prior site, preserving the previous commit in `backup/pre-clean-v2.3-2026-11-14`. The photo-led (not Blender/3D) dashboard has 30 source-conscious assembly records. Its audited factual database contains **230 active 2016 T120 torque entries**, **13 quarantined inconsistent entries**, **44 scheduled maintenance tasks**, **37 special tools**, **32 owner-handbook specifications**, and a full **894-page index** across the 728-page 2016 service manual, 162-page 2016 owners handbook, 3-page 2012 legacy sheet, and 1-page 2006 legacy checklist.
+
+**Scope rule:** 2016 T120 values are references, not confirmed for the specific 2018 India-market VIN or aftermarket equipment. The 2012/2006 sheets are historical and excluded from 2018 T120 repair values. The four copyright-protected PDFs are **not published to GitHub**; the app opens your original copies locally. The motorcycle graphic is concept artwork, not a verified photo; the assistant is local retrieval, not a cloud AI service.
+
+**Live-site caveat:** The URL above is the expected GitHub Pages URL, and is not proof that Pages is enabled or accessible for the repository's current private visibility.
+
+---
+
+
+
 [![Launch browser application](https://img.shields.io/badge/OPEN-WORKSHOP_APP-1c78c6?style=for-the-badge)](https://jsankr.github.io/TriumphBonnevilleT120/)
 
 **[Open the Workshop Explorer in your browser](https://jsankr.github.io/TriumphBonnevilleT120/)** · [Source audit](docs/SOURCE-AUDIT.md) · [Private PDF guide](docs/LOCAL-PDF-READER.md)
