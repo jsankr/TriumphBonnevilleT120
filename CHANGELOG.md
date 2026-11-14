@@ -1,18 +1,19 @@
 # Changelog
 
-## 1.1.0 — 2026-11-14
-- Added Safety Recall 560 / NHTSA 19V-133 information with US-market and VIN applicability warning.
-- Added source register and data provenance statuses for every component torque field.
-- Clarified that handbook torque values are from the 2019 T120-family Owner’s Handbook, not a 2018 factory workshop manual.
-- Added the 2016 T120 service-manual reference as an external link only; no copyrighted manual content is bundled.
-- Corrected documentation around chain slack (daily check/adjust), wear inspection (800 km) and lubrication (300 km, plus wet/dry conditions) to match the linked handbook schedule.
-- Expanded README deployment, data and licensing caveats.
+## 2.1.0 — Photo-led UI rebuild
+- Removed the low-detail procedural 3D motorcycle and all Blender/WebGL/Three.js dependencies.
+- Rebuilt the actual browser UI to match the user's glass/technical screenshot direction: hero motorcycle reference, approximate hotspots, searchable assembly catalogue, part inspector, safety evidence register, maintenance desk and honest local evidence search.
+- Integrated the user-provided motorcycle reference illustration as a labelled visual (not a verified OEM photo).
+- Preserved 30 evidence-audited component records and Nissin MY18 brake correction.
+- Added automated source integrity checks, desktop/mobile Chromium captures and conditional GitHub Pages workflow.
+- Kept original v1.2.1 archive unmodified for historical download.
 
-## 1.2.0 evidence audit
-- Added verified rear shock quantity, 2018 fiche references and VIN-conditioned front fork part alternatives.
-- Added explicit unknown tool-size/fastener-torque fields and visible service-readiness warnings.
-- Added validation report and caveats about schematic geometry and incomplete assembly coverage.
+## 1.2.1 — Nissin brake data
+- Corrected model-year brake records to reflect Nissin MY18 factory specification, not later Brembo front components.
 
-## v1.2.1 — 2018 brake manufacturer correction
-- Corrected front and rear brake assembly descriptions to MY18 Nissin configuration with manufacturer brochure source.
-- Preserved unknown torque and tool sizes; 3D brake geometry remains unverified.
+## v2.2 — Document evidence integration (2026-11-14)
+- Audited four user-provided PDFs, totaling 894 source pages. Disambiguated 2016 T120 references from older 2012 and 2006 documents explicitly outside T120 scope.
+- Added 230 PDF-table-extracted torque records, 44 schedule entries, 32 T120 owner-handbook specs, 37 special service tools and full service/owner PDF chapter navigation; source provenance and page cited for every record.
+- Quarantined 13 mislabelled page-70 engine-cover entries erroneously placed beneath a Front Brakes heading in the 2016 manual.
+- Added private per-document on-device PDF reader, original-page jump, optional browser-only PDF.js full-text search, and no-copy policy for copyrighted manuals.
+- Added source safety audit and `tests/validate-sources.mjs`. Retained the photo-based interface, no Blender/WebGL requirement.
