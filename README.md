@@ -1,5 +1,14 @@
 **Link repair:** Previously linked OEM mirrors blocked some visitors. Use the in-app exploded callouts and two 2018 catalogue choices instead. External reachability is network-dependent.\n\n# Triumph Bonneville T120 (2018) — Workshop Explorer
 
+
+## v2.9 — electrical/fuse references, 2018 parts navigator and corrected torque panel
+
+**[Electrical & Fuses](electrical.html)** is a searchable original-source reference for the 2016 T120 service-manual fuse table (9 positions), main harness sensor/component legend, and documented wiring pages (671, 724–728). Choose your own locally stored PDF to open original diagrams in the browser without copying them to GitHub. These references are **not certified for a 2018 VIN**; the actual 2018 fuse cover and manual take priority.
+
+**[2018 Genuine Parts Navigator](catalogue.html)** indexes selected systems from the [2018 motorcycle supplier catalogue](https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles). Genuine part metadata are candidate references; illustrations, watermarks and current seller checkout prices remain at the authorized provider. Use the [in-app exploded parts explorer](exploded.html) for the 171 existing sourced part candidates in eight assemblies.
+
+**Dashboard fix:** selected-assembly torque values from the 2016 T120 manual now appear **before** the missing 2018-specific values. The label “2016 MANUAL REFS · CHECK MY18” clarifies that the application contains supporting torque records without claiming VIN-specific confirmation or undocumented tool socket/hex sizes. No private vehicle identifiers, third-party complete site copies or images with removed watermarks are included.
+
 ## NEW: 2018 OEM exploded teardown explorer (v2.7)
 
 **[▶ Launch interactive exploded parts, tools and torque references](exploded.html)** · [Open as hosted page](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html)
