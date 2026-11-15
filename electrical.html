@@ -672,8 +672,9 @@ $('localPdf').addEventListener('change',async e=>{
  const file=e.target.files?.[0];if(!file)return;
  if(!file.name.toLowerCase().endsWith('.pdf')&&file.type!=='application/pdf'){$('pdfStatus').textContent='Please choose a PDF file.';return}
  const sig=new Uint8Array(await file.slice(0,5).arrayBuffer());if(String.fromCharCode(...sig)!=='%PDF-'){$('pdfStatus').textContent='File is not a valid PDF.';return}
- if(pdfUrl)URL.revokeObjectURL(pdfUrl);pdfUrl=URL.createObjectURL(file);if(pendingPage!==null)openLocal(pendingPage);
- $('pdfStatus').textContent='Local PDF available. Choose a source drawing below. Confirm this is the correct 2016 T120 service manual; page numbers rely on that edition.';
+ if(pdfUrl)URL.revokeObjectURL(pdfUrl);pdfUrl=URL.createObjectURL(file);
+ $('pdfStatus').textContent='Your local PDF is selected. Check that it is the 728-page April 2016 T120 manual; it remains on your device.';
+ if(pendingPage!==null)openLocal(pendingPage);
 });
 function openLocal(page){
  if(!pdfUrl){pendingPage=page;$('pdfStatus').textContent='Select your own April 2016 T120 service manual. Page '+page+' will open automatically after selection.';$('localManual').scrollIntoView({block:'center'});$('localPdf').click();return}
