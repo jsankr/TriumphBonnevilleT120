@@ -26,3 +26,6 @@
 - Validate via `node tests/validate-exploded.mjs` and browser tests before publication.
 
 - OEM parts supplier mirrors may block visitors; never link interactive buttons to oem-bike-parts.cz/.pl/.hr. All assemblies need in-app callout fallback and two distinctly labeled catalogues. Run link validation tests before merging.
+
+- The electrical navigator indexes April 2016 T120 service manual wiring and fuse references, never silently extrapolate to 2018 or generate a fake pin-level netlist. Original PDFs load privately.
+- Do not clone a seller's complete catalogue, remove its watermarks, republish its proprietary schematic drawings or make unverified live price claims.
