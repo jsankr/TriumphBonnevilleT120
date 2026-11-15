@@ -46,3 +46,8 @@
 - Replaced blocked 2018 exploded-fiche mirror links in eight assemblies and photographic parts reference index with two catalogue choices.
 - Removed unreliable third-party iframe and preserved interactive parts data locally.
 - Replaced timeout-prone MY18 brochure link and added link regression CI test.
+
+## v2.9 — Evidence, fuse and catalogue usability corrections
+- Fix dashboard torque tab to show existing named 2016 T120 fastener references ahead of unconfirmed 2018 fields.
+- Add original accessible electrical and fuse index and private original-PDF viewer.
+- Add source-linked 2018 parts-category navigator; seller illustrations and real-time pricing remain with owner.
