@@ -21,6 +21,7 @@ jobs:
       - run: node --check app.js
       - run: node --check component-evidence.js
       - run: node --check exploded.js
+      - run: node tests/validate-electrical.mjs
       - run: node tests/validate-exploded.mjs
       - run: node tests/validate-links.mjs
       - run: node tests/validate-component-evidence.mjs
