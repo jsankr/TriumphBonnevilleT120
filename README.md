@@ -1,5 +1,12 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
+## NEW: 2018 OEM exploded teardown explorer (v2.7)
+
+**[▶ Launch interactive exploded parts, tools and torque references](exploded.html)** · [Open as hosted page](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html)
+
+Eight 2018-specific sourced assembly fiches, 171 original catalogue entries grouped into numbered callouts (including conditional part alternatives) and 27 separately named tightening operations referencing the **April 2016 T120 service manual**. Includes front forks/yoke, both brakes (2018 Nissin), wheels, twin rear shocks, cooling and engine covers. Select a part, search OEM numbers, use the callout spread control or open the third-party genuine exploded drawing. The rendered parts-callout layout is **not measured physical CAD**. Exact socket/Allen/Torx bit sizes and individual 2018 VIN applicability remain unverified, and modified wheels/forks require their own sources. A confidential vehicle identifier is neither collected nor embedded. The original OEM technical drawings and copyrighted manuals are not copied into this repository.
+
+
 ## Verified 2018 photo and OEM parts source atlas — v2.5
 
 [**Browse actual 2018 T120 example photos and OEM exploded diagrams**](real-photo-gallery.html) · [**Photo-based teardown studio**](photo-teardown.html) · [**MY18 manufacturer brochure**](https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf)
