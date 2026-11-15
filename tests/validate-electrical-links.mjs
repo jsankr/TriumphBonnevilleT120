@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {dirname,resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {Script} from 'node:vm';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const html=readFileSync(resolve(root,'electrical.html'),'utf8');
+const match=html.match(/<script>([\s\S]*?)<\/script>/);
+assert(match,'Standalone electrical page must have its inline controller');
+new Script(match[1],{filename:'electrical-inline.js'});
+const start=match[1].indexOf('const __ref=')+'const __ref='.length;
+const end=match[1].indexOf('\n;\nconst $=');
+assert(end>start,'Expected inline source data block');
+const d=JSON.parse(match[1].slice(start,end));
+assert.equal(d.fuses.length,9);
+assert.equal(d.diagrams.length,6);
+assert.equal(d.harnessItems.length,51);
+assert.equal(d.candidateParts.filter(p=>p.assembly==='Electrical Equipment').length,8);
+for(const name of ['localPdf','localManual','pdfStatus','selectedSpare','fusePanel','partsPanel','diagramPanel','harnessPanel'])assert(html.includes('id="'+name+'"'),'Missing control '+name);
+for(const action of ['pendingPage=page','if(pendingPage!==null)openLocal(pendingPage)','data-page="$'+'{f.page}"','data-page="$'+'{d.page}"','data-page="$'+'{x.page}"','data-part="$'+'{clean(x.partNumber)}"','data-part]'])assert(html.includes(action),'Missing action '+action);
+assert(!html.includes('window.fetch=async'),'Do not replace the browser global fetch API');
+const staticHTML=html.slice(0,html.indexOf('<script>'));
+for(const [,href] of staticHTML.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)){
+ assert(href&&href!=='#'&&!href.startsWith('javascript:'),'Empty or inert link: '+href);
+ if(/^https?:\/\//.test(href))continue;
+ const [path,fragment]=href.split('#');
+ if(path)assert(existsSync(resolve(root,path)),'Missing local target: '+href);
+ if(fragment&&(!path||path==='electrical.html'))assert(html.includes('id="'+fragment+'"'),'Missing anchor: '+href);
+}
+assert(!/VIN\s*[:=]\s*[A-HJ-NPR-Z0-9]{17}/i.test(html),'Never embed a private vehicle identifier');
+console.log('Electrical UI links validated: 9 fuse sources, 6 wiring pages, 51 harness sources, 8 electrical spare actions; JS parses and all static internal links exist.');
