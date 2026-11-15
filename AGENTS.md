@@ -17,3 +17,10 @@
 
 - The external photo atlas (`real-photo-gallery.html`, `data/real-reference-index.json`) links to third-party 2018 pictures and catalogues. Do not copy licensed photos or represent references as this individual motorcycle. All parts/sizes/torques require evidence and fitment verification.
 - The full confidential vehicle identifier must never appear in code, logs, screenshots, URLs, public issues or README. Client-side GitHub Pages has no private VIN vault.
+## v2.7 exploded explorer invariants
+- `exploded.html` is a standalone browser-ready build; editable sources are `exploded.js`, `exploded.css`, and `data/exploded-2018.json`. Keep the embedded build synchronized with those files when changing any one of them.
+- Original 2018 fiche callouts and conditional OEM part-number alternatives are grouped by callout rather than shown as extra fitted parts. Two front fork legs and two rear shock absorbers, never duplicate installed items.
+- Torques belong to **named fastener operations** in the original 2016 T120 workshop manual, not generally to entire spares. No hardcoded or inferred Allen/socket sizes; `M8×30` is a thread/length, not drive size.
+- Third-party actual exploded diagrams must be opened by direct OEM page links; never copy copyrighted fiche illustrations or manuals into GitHub.
+- Do not collect, transmit, persist, or publish confidential vehicle identifiers.
+- Validate via `node tests/validate-exploded.mjs` and browser tests before publication.
