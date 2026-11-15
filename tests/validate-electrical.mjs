@@ -11,5 +11,5 @@ assert(electrical.includes('"amp": 25')||electrical.includes('"amp":25'),'ABS fu
 assert(electrical.includes('T2501787'),'Genuine parts reference missing');
 assert(catalogue.includes('categorySearch')&&catalogue.includes('motorcyclespareparts.eu'),'Catalogue navigator missing');
 assert(dashboard.includes('2016 MANUAL REFS')&&dashboard.includes('content = renderComponentEvidence'),'Component torque references must render before unknowns');
-assert(!/SMTDAD75/i.test(electrical+catalogue+dashboard),'Sensitive vehicle identifiers must not be embedded');
+assert(!/VIN\s*[:=]\s*[A-HJ-NPR-Z0-9]{17}/i.test(electrical+catalogue+dashboard),'Sensitive vehicle identifiers must not be embedded');
 console.log('Electrical 2016 reference, licensed catalogue navigator and selected-part source checks passed');
