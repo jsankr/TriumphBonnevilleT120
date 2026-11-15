@@ -150,3 +150,7 @@ For illustration, the service manual lists front wheel spindle/axle bolt **65 Nm
 The anomalous service-manual page 70 headed “Front Brakes” contains unrelated engine-cover rows. Those rows remain quarantined and are **never** mapped to front brake fasteners. The exact hex/socket sizes of many fasteners are absent from the indexed table and remain unverified.
 
 **To inspect the original evidence:** Use **My PDF library** to load your own 2016 T120 service manual locally, then select a component and click its cited page button. The original copyrighted manuals are not uploaded to GitHub.
+
+### Electrical source links (v3.0)
+
+[Open the Electrical & Fuse Explorer](electrical.html). Every fuse row (9), source drawing (6) and main-harness item (51) now has an active source-page control; the first click prompts you to select your own PDF then opens the requested page privately. All eight electrical spare-part candidates have locally accessible details and optional catalogue references; fork stanchion alternatives remain outside the electrical-only list. The cited service manual is **April 2016**, not independently validated for an individual 2018 motorcycle. See the [electrical link audit](docs/ELECTRICAL-LINK-AUDIT.md). The copyrighted PDF is not hosted in this repository.
