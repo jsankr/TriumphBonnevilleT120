@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const electrical=readFileSync(new URL('../electrical.html',import.meta.url),'utf8');
+const catalogue=readFileSync(new URL('../catalogue.html',import.meta.url),'utf8');
+const dashboard=readFileSync(new URL('../app.js',import.meta.url),'utf8');
+assert(electrical.includes('id="localPdf"'),'Local private PDF selector required');
+assert(electrical.includes('id="fuses"'),'Fuse table missing');
+assert(electrical.includes('id="harnessSearch"'),'Harness search missing');
+assert(electrical.includes('"position": 7')||electrical.includes('"position":7'),'Fuse position 7 missing');
+assert(electrical.includes('"amp": 25')||electrical.includes('"amp":25'),'ABS fuse reference missing');
+assert(electrical.includes('T2501787'),'Genuine parts reference missing');
+assert(catalogue.includes('categorySearch')&&catalogue.includes('motorcyclespareparts.eu'),'Catalogue navigator missing');
+assert(dashboard.includes('2016 MANUAL REFS')&&dashboard.includes('content = renderComponentEvidence'),'Component torque references must render before unknowns');
+assert(!/SMTDAD75/i.test(electrical+catalogue+dashboard),'Sensitive vehicle identifiers must not be embedded');
+console.log('Electrical 2016 reference, licensed catalogue navigator and selected-part source checks passed');
