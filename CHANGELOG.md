@@ -35,3 +35,9 @@
 - Added 2018 OEM fiche source atlas, non-committal part-number candidates and clear variant/market restrictions.
 - Added optional publisher-photo reference background to photo-teardown, preserving private local annotation.
 - Added dashboard navigation links for real image and exploded parts research. No third-party images bundled; no private vehicle identifiers in source.
+## v2.7 — 2018 OEM exploded teardown atlas
+- Shipped standalone responsive exploded callout viewer with source-linked original OEM drawings and part selection.
+- Added 8 curated OEM assembly fiches and 171 source-derived catalogue records; grouped production variants.
+- Added 27 labelled 2016 T120 Service Manual tightening references, specialist-tool identifiers and explicit unknown drive-size labels.
+- Updated README and dashboard to open the explorer, source audit and CI data guard.
+- Current frontend displays genuine sourced catalogue entries, not full 3D/photoreal CAD or a complete 2018 vehicle bill of materials.
