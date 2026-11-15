@@ -1,1 +1,2 @@
 Choose and add an open-source license before publishing or accepting contributions. Do not imply Triumph endorsement or ownership of third-party catalogue assets.
+open source
