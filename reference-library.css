@@ -32,3 +32,7 @@
 @media(prefers-reduced-motion:reduce){.source-library *{scroll-behavior:auto!important}}
 
 .chapter-directory{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:8px;margin:15px 0 20px;max-height:285px;overflow:auto}.chapter-directory .chapter-item{display:flex;flex-direction:column;gap:5px;text-align:left;padding:10px}.chapter-item b{font-size:12px}.chapter-item small{font-size:10px;color:#9db8ca}.chapter-directory button{cursor:pointer}.source-search-row input[type=number]{flex:0 0 110px;min-width:90px}.source-library h3{margin:17px 0 9px;font-size:16px}
+
+/* Mobile selector containment: never force the whole dashboard wider than the viewport. */
+.source-search-row select,#pageSource,#docPicker{min-width:0;max-width:100%;width:100%;overflow:hidden;text-overflow:ellipsis}
+.source-search-row{min-width:0;max-width:100%}

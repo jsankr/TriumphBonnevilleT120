@@ -1,0 +1,663 @@
+{
+  "schemaVersion": "1.0.0",
+  "notice": "Source-referenced 2016 T120 electrical data and 2018 spare part candidates, not certified VIN-specific wiring/fuse layout. Reference records only; no complete wiring images or copyrighted catalogue drawings redistributed.",
+  "fuses": [
+    {
+      "position": 1,
+      "circuit": "Dipped/main headlamp beams",
+      "amp": 15,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 2,
+      "circuit": "Ignition switch and starting circuit",
+      "amp": 10,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 3,
+      "circuit": "Auxiliary lights",
+      "amp": 10,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 4,
+      "circuit": "Engine management system",
+      "amp": 15,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 5,
+      "circuit": "Accessory socket",
+      "amp": 5,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 6,
+      "circuit": "Cooling fan",
+      "amp": 15,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 7,
+      "circuit": "Anti-lock braking system (ABS)",
+      "amp": 25,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 8,
+      "circuit": "Instruments and alarm",
+      "amp": 15,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    },
+    {
+      "position": 9,
+      "circuit": "USB port socket",
+      "amp": 5,
+      "source": "service2016",
+      "page": 671,
+      "applicability": "2016 T120 only; verify the actual 2018 fuse cover"
+    }
+  ],
+  "harnessItems": [
+    {
+      "callout": 1,
+      "category": "ECM",
+      "label": "Engine Electronic Control Module",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 2,
+      "category": "Sensor",
+      "label": "Intake air temperature sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 3,
+      "category": "Sensor",
+      "label": "Engine coolant temperature sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 4,
+      "category": "Cooling",
+      "label": "Cooling fan",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 5,
+      "category": "Relay",
+      "label": "Cooling fan relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 6,
+      "category": "Relay",
+      "label": "Engine ECM main relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 7,
+      "category": "Fuel",
+      "label": "Fuel pump",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 8,
+      "category": "Relay",
+      "label": "Fuel pump relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 9,
+      "category": "Brake",
+      "label": "Rear brake switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 10,
+      "category": "Lighting",
+      "label": "Brake light",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 11,
+      "category": "Lighting",
+      "label": "Rear light",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 16,
+      "category": "Relay",
+      "label": "Dip/main headlamp relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 19,
+      "category": "Starter",
+      "label": "Starter motor solenoid relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 21,
+      "category": "Charging",
+      "label": "Engine alternator connector",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 22,
+      "category": "Starter",
+      "label": "Starter motor solenoid",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 23,
+      "category": "Power",
+      "label": "Harness battery negative connection",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 24,
+      "category": "Power",
+      "label": "Battery",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 25,
+      "category": "Starter",
+      "label": "Starter motor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 26,
+      "category": "Power",
+      "label": "Fuse box",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 27,
+      "category": "Relay",
+      "label": "Headlamp main relay",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 28,
+      "category": "Switch",
+      "label": "Ignition switch connector",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 29,
+      "category": "Security",
+      "label": "Immobiliser antenna",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 30,
+      "category": "Power",
+      "label": "Rider accessory socket",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 31,
+      "category": "Security",
+      "label": "Immobiliser",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 32,
+      "category": "Brake",
+      "label": "Front brake switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 33,
+      "category": "Switch",
+      "label": "Engine OFF switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 34,
+      "category": "Switch",
+      "label": "Engine start switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 41,
+      "category": "Switch",
+      "label": "Clutch switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 47,
+      "category": "Power",
+      "label": "USB charging connector",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 48,
+      "category": "ABS",
+      "label": "Rear wheel speed sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 49,
+      "category": "ABS",
+      "label": "Front wheel speed sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 50,
+      "category": "ABS",
+      "label": "ABS modulator",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 51,
+      "category": "Diagnostics",
+      "label": "Diagnostic connector",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 52,
+      "category": "Lighting",
+      "label": "Headlamp bulb",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 58,
+      "category": "Instruments",
+      "label": "Instruments",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 59,
+      "category": "Sensor",
+      "label": "Oil pressure switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 60,
+      "category": "Sensor",
+      "label": "MAP sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 61,
+      "category": "Sensor",
+      "label": "Ambient air pressure sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 62,
+      "category": "Sensor",
+      "label": "Roll over switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 63,
+      "category": "Sensor",
+      "label": "Side stand switch",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 64,
+      "category": "Sensor",
+      "label": "Fuel level sender",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 65,
+      "category": "Sensor",
+      "label": "Gear position sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 66,
+      "category": "Ignition",
+      "label": "Ignition coil 2",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 67,
+      "category": "Ignition",
+      "label": "Ignition coil 1",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 68,
+      "category": "Sensor",
+      "label": "Oxygen sensor 2",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 69,
+      "category": "Sensor",
+      "label": "Oxygen sensor 1",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 70,
+      "category": "Fuel",
+      "label": "Injector 2",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 71,
+      "category": "Fuel",
+      "label": "Injector 1",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 72,
+      "category": "Emissions",
+      "label": "Purge valve",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 73,
+      "category": "Throttle",
+      "label": "Drive-by-wire throttle motor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    },
+    {
+      "callout": 74,
+      "category": "Throttle",
+      "label": "Throttle position sensor",
+      "source": "service2016",
+      "page": 726,
+      "applicability": "2016 T120 wiring legend only"
+    }
+  ],
+  "diagrams": [
+    {
+      "name": "Fuse box positions and ratings",
+      "page": 671,
+      "source": "service2016",
+      "note": "Source diagram provides physical layout; app table only maps printed positions."
+    },
+    {
+      "name": "ABS wiring colour legend and pin numbering",
+      "page": 724,
+      "source": "service2016",
+      "note": "Must consult original drawing before electrical diagnosis."
+    },
+    {
+      "name": "ABS system circuit diagram",
+      "page": 725,
+      "source": "service2016",
+      "note": "Original manual diagram; not reproduced."
+    },
+    {
+      "name": "Main harness component legend",
+      "page": 726,
+      "source": "service2016",
+      "note": "Source list; not a verified point-to-point wiring netlist."
+    },
+    {
+      "name": "Main harness circuit diagram (sheet 1)",
+      "page": 727,
+      "source": "service2016",
+      "note": "Original manual wiring drawing; not reproduced."
+    },
+    {
+      "name": "Main harness circuit diagram (sheet 2)",
+      "page": 728,
+      "source": "service2016",
+      "note": "Original manual wiring drawing; not reproduced."
+    }
+  ],
+  "candidateParts": [
+    {
+      "partNumber": "T2501787",
+      "name": "Main Harness, ABS",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2501310",
+      "name": "Fuse, Mini, 10 A",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": 2,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2501315",
+      "name": "Fuse, Mini, 15 A",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": 3,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2501325",
+      "name": "Fuse, Mini, 25 A",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2501305",
+      "name": "Fuse, Mini, 5 A",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": 2,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2500932",
+      "name": "Earth Lead",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2500933",
+      "name": "Starter Lead",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2500934",
+      "name": "Battery Lead, Positive",
+      "assembly": "Electrical Equipment",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2041363",
+      "name": "Stanchion Assembly, RH (early production candidate)",
+      "assembly": "Front Forks & Lower Yoke",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2042373",
+      "name": "Stanchion Assembly, RH (later production candidate)",
+      "assembly": "Front Forks & Lower Yoke",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2041362",
+      "name": "Stanchion Assembly, LH (early production candidate)",
+      "assembly": "Front Forks & Lower Yoke",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    },
+    {
+      "partNumber": "T2042372",
+      "name": "Stanchion Assembly, LH (later production candidate)",
+      "assembly": "Front Forks & Lower Yoke",
+      "quantityOnFiche": null,
+      "applicability": "2018 catalogue candidate; fitment/part supersession unverified",
+      "price": null,
+      "currency": null,
+      "source": "2018 OEM spare-part catalogue"
+    }
+  ],
+  "sources": {
+    "service2016": {
+      "name": "Bonneville T120 Service Manual 04.2016 issue 1",
+      "localPdf": true,
+      "copyright": "Triumph Motorcycles; not redistributed"
+    },
+    "catalogue2018": {
+      "name": "MSP Triumph Bonneville T120 2018 parts index",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles"
+    },
+    "owner2018external": {
+      "name": "2018 T120 owners handbook listing",
+      "url": "https://www.manualslib.com/products/Triumph-Bonneville-T120-2018-10420317.html"
+    }
+  }
+}

@@ -51,3 +51,9 @@
 - Fix dashboard torque tab to show existing named 2016 T120 fastener references ahead of unconfirmed 2018 fields.
 - Add original accessible electrical and fuse index and private original-PDF viewer.
 - Add source-linked 2018 parts-category navigator; seller illustrations and real-time pricing remain with owner.
+
+## v3.1 — Full module QA and OWASP 2025 security improvements (15 November 2026)
+- Exercised seven browser pages, 90 desktop/mobile UI actions and 166 rendered link destinations; all tested interactions passed.
+- Fixed PDF link/chooser flows, responsive dashboard selectors, HTML injection sinks, image-error handlers, source URL validation and unsafe file types.
+- Added per-page CSP, no-referrer, least-privilege Actions permissions, static security gates and Playwright Chromium smoke tests before Pages deployment.
+- See docs/FULL-QA-SECURITY-AUDIT.md for detailed results, residual external dependencies and untested browser/hosting limitations.

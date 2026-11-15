@@ -29,3 +29,8 @@
 
 - The electrical navigator indexes April 2016 T120 service manual wiring and fuse references, never silently extrapolate to 2018 or generate a fake pin-level netlist. Original PDFs load privately.
 - Do not clone a seller's complete catalogue, remove its watermarks, republish its proprietary schematic drawings or make unverified live price claims.
+
+## QA and security gate (v3.1)
+- Always run `node tests/validate-security-and-routes.mjs`, every `tests/validate-*.mjs`, and the Chromium smoke scripts in `tests/browser_audit.py` and `tests/security_browser_audit.py`.
+- Never add executable event-handler attributes, `javascript:` URLs, unescaped source-data HTML, public vehicle identifiers, secrets or third-party PDF/manual rehosting.
+- Keep reliable app-internal navigation when any external supplier blocks access. Maintain CSP hashes if an inline script changes.

@@ -154,3 +154,12 @@ The anomalous service-manual page 70 headed “Front Brakes” contains unrelate
 ### Electrical source links (v3.0)
 
 [Open the Electrical & Fuse Explorer](electrical.html). Every fuse row (9), source drawing (6) and main-harness item (51) now has an active source-page control; the first click prompts you to select your own PDF then opens the requested page privately. All eight electrical spare-part candidates have locally accessible details and optional catalogue references; fork stanchion alternatives remain outside the electrical-only list. The cited service manual is **April 2016**, not independently validated for an individual 2018 motorcycle. See the [electrical link audit](docs/ELECTRICAL-LINK-AUDIT.md). The copyrighted PDF is not hosted in this repository.
+
+
+## v3.1 — Full app test and OWASP Top 10:2025 audit
+
+- [Full QA and security report](docs/FULL-QA-SECURITY-AUDIT.md) · [Browser app](https://jsankr.github.io/TriumphBonnevilleT120/) · [Exploded view](exploded.html) · [Electrical reference](electrical.html)
+- All seven site pages were tested with 90 interaction checks in desktop/mobile Chromium and 166 rendered links; cross-browser native Safari/Firefox and third-party provider access remain unverified.
+- Fixed PDF source navigation, mobile selector overflow, DOM markup injection, external URL handling and tab-nabbing exposure. Per-page CSP is enforced where supported.
+- New source, link, injection and Chromium browser tests are required before GitHub Pages deployment. External vendor blocks cannot be bypassed; internal parts references remain available.
+- No private vehicle identifier is embedded or handled by the static application.

@@ -6,6 +6,7 @@ const liveFiles = new Map();
 let library = null;
 let pdfjs = null;
 let selectedDataset = 'torque';
+let pendingSource = null;
 let displayLimit = 30;
 let activeSearchToken = 0;
 const warning = '2016 T120 reference only. Confirm applicability to your 2018 VIN, market, and fitted aftermarket parts before service.';
@@ -83,6 +84,7 @@ async function importSingleFile(file,id){
  if(!file)return;
  if(file.type!=='application/pdf'&&!file.name.toLowerCase().endsWith('.pdf')){showSourceWarning('Only PDF documents are supported.');return}
  // The user explicitly assigns this PDF to the document type. Keep source identity clearly labelled.
+ if(file.size>75*1024*1024){showSourceWarning('PDF is larger than the 75 MB local limit.');return}
  const head=new Uint8Array(await file.slice(0,5).arrayBuffer());
  if(String.fromCharCode(...head)!=='%PDF-'){showSourceWarning(`${file.name}: does not have a PDF signature.`);return}
  const prev=liveFiles.get(id);
@@ -90,6 +92,7 @@ async function importSingleFile(file,id){
  liveFiles.set(id,{id,doc:null,file,url:URL.createObjectURL(file)});
  showSourceWarning(`Assigned ${file.name} to ${library.sources[id].title}. Pages are viewable offline. For full-text search the optional Mozilla PDF.js library must be available.`);
  docsList();
+ if(pendingSource?.id===id){const page=pendingSource.page;pendingSource=null;openReference(id,page)}
 }
 async function pdfForSearch(record){
  if(record.doc)return record.doc;
@@ -107,8 +110,11 @@ function openReference(id,page){
  const meta=library?.sources[id];
  if(!meta)return;
  if(!doc){
+  pendingSource={id,page};
   $('sourceInstructions').textContent=`The ${meta.title} is not yet loaded. Select your own PDF above to open page ${page}. The file stays on this device.`;
   $('manualLibrary').scrollIntoView({behavior:'smooth',block:'start'});
+  const picker=document.querySelector(`#documentRows input[data-file-for="${id}"]`);
+  if(picker)picker.click();
   return;
  }
  const pg=Math.max(1,Math.min(meta.pages,Number(page)||1));

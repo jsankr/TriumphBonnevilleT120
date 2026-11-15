@@ -1,57 +1,22 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2018 T120 Spare Parts Navigator</title><style>
-:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color-scheme:dark;--bg:#08131f;--panel:#102538;--edge:#29465b;--txt:#eff8ff;--sub:#a9c4d9;--a:#52c2ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 20% -20%,#164064 0%,#07111b 52%);color:var(--txt)}
-a{color:#81d7ff} button,input,select{font:inherit}button{cursor:pointer}header{padding:15px clamp(16px,3vw,44px);display:flex;gap:20px;align-items:center;border-bottom:1px solid var(--edge);flex-wrap:wrap}header strong{font-size:20px}header nav{display:flex;gap:16px;flex-wrap:wrap}main{max-width:1500px;margin:auto;padding:clamp(14px,3vw,32px)}h1{font-size:clamp(28px,4vw,46px);margin:6px 0}h2{font-size:19px;margin:0 0 15px}p{line-height:1.6;color:var(--sub)}.tag{font-size:12px;letter-spacing:.08em;color:#68d8ff;text-transform:uppercase}.notice{padding:15px 18px;border:1px solid #886a42;background:#3a291c77;border-radius:12px;color:#ffd6a5;margin:18px 0}.layout{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}.panel{border:1px solid var(--edge);background:var(--panel);border-radius:14px;padding:19px;min-width:0}.fuse-table{width:100%;border-collapse:collapse}.fuse-table th,.fuse-table td{padding:11px 8px;border-bottom:1px solid #315168;text-align:left;font-size:14px}.fuse-table th{color:#80ccff}.pill{padding:5px 8px;border:1px solid #3b7f9d;border-radius:8px;font-variant-numeric:tabular-nums;display:inline-block;min-width:56px;text-align:center;color:#e6f7ff}.tools{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0}input{background:#0a1928;color:#fff;border:1px solid #45718a;border-radius:9px;padding:10px 12px;width:100%}.unit{padding:13px 11px;border-bottom:1px solid #2f4c60;display:flex;justify-content:space-between;gap:15px;font-size:14px;align-items:center}.unit small{color:#8bacbf}.unit .part-code{color:#81d7ff;font-size:13px;flex:none}.parts{max-height:490px;overflow:auto}.diagram-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.diagram{padding:14px;background:#0a1928;border:1px solid #39566b;border-radius:10px}.diagram b{display:block}.diagram small{display:block;margin:7px 0;color:#a9c4d9}.actions{margin-top:12px} .actions a{display:inline-block;border:1px solid #407493;background:#113750;border-radius:9px;padding:8px 11px;text-decoration:none}.full{grid-column:1/-1} .source-caption{font-size:12px;color:#c4dded}.hint{color:#d2b685;font-size:12px;margin-top:9px} .empty{padding:24px;color:#b9cbda} @media(max-width:850px){.layout{grid-template-columns:1fr}.diagram-grid{grid-template-columns:1fr}}</style></head><body><header><strong>TRIUMPH / T120 — WORKSHOP EXPLORER</strong><nav><a href="index.html">Dashboard</a><a href="exploded.html">Exploded parts</a><a href="electrical.html">Electrical &amp; fuses</a></nav></header><main><div class="tag">2018 genuine spare parts · source catalogue index</div><h1>Spare-parts navigator</h1><p>Browse the main 2018 Triumph T120 system categories and search the original application's 171 indexed part candidates across eight assemblies. Genuine diagrams and current prices remain on licensed supplier sites. The app does not copy their illustrations or remove watermarks.</p><div class="notice">Not a VIN-matched electronic parts catalogue. Optional accessories and production alternatives are not extra installed parts. The supplier's prices, taxes, stock and currency can change; no stale figures are presented as current. Validate part supersession and fitment with a Triumph dealer before ordering.</div><div class="layout"><section class="panel"><h2>Browse 2018 category index</h2><input id="categorySearch" type="search" placeholder="Filter by assembly name…" aria-label="Filter categories"><div id="categoryList" class="parts"></div><p class="actions"><a href="https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles" target="_blank" rel="noopener noreferrer">Open original 2018 supplier catalogue ↗</a></p></section><section class="panel"><h2>Interactive verified-source explorer</h2><p>The in-app component list contains 171 source-linked catalogue candidates for eight assemblies, with torque references indexed separately. For browser reliability it works independently of the third-party site.</p><div class="actions"><a href="exploded.html">Explore in-app parts / teardown ↗</a></div><h2 style="margin-top:28px">Source provenance</h2><p>2018 parts categories: supplier index; 2016 torque and tools: uploaded Triumph T120 manual; 2018 Nissin brakes: manufacturer MY18 brochure. No tool sizes, costs or diagrams are invented.</p><div class="actions"><a href="electrical.html">See fuses / wiring reference ↗</a></div></section></div></main><script type="module">Promise.resolve({
-  "source": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
-  "description": "Curated component/category navigation, not a clone or reproduction of seller protected catalogue. No diagrams republished, no watermarks removed.",
-  "categories": [
-    "ABS System",
-    "Airbox",
-    "Alternator & Starter Motor",
-    "Balancer",
-    "Cam Cover",
-    "Camshaft & Camshaft Drive",
-    "Clutch",
-    "Clutch Controls",
-    "Cooling System",
-    "Crankcase & Fittings",
-    "Crankcase Bolts",
-    "Crankshaft, Connecting Rods & Pistons",
-    "Cylinder Head & Valves",
-    "Electrical Equipment",
-    "Engine Covers",
-    "Engine Management System",
-    "Exhaust System",
-    "Foot Controls",
-    "Front Brake Caliper & Disc",
-    "Front Forks & Lower Yoke",
-    "Front Master Cylinder Assembly",
-    "Front Wheel",
-    "Fuel Pump",
-    "Fuel Tank",
-    "Gear Selectors & Pedal",
-    "Handlebars, Top Yoke & Mirrors",
-    "Headlights",
-    "Indicators",
-    "Instruments",
-    "Lubrication System",
-    "Main Frame Assembly",
-    "Mudguards",
-    "Rear Brake Caliper & Disc",
-    "Rear Brake Master Cylinder, Reservoir & Pedal",
-    "Rear Suspension Unit",
-    "Rear Wheel",
-    "Seat Assembly & Toolkit",
-    "Service Tools",
-    "Side Fairing Panels",
-    "Silencers",
-    "Stands",
-    "Starter Drive Gears",
-    "Sump & Fittings",
-    "Swingarm Assembly",
-    "Throttle Bodies",
-    "Transmission",
-    "Tyres"
-  ]
-}
-).then(d=>{const input=document.getElementById('categorySearch'),list=document.getElementById('categoryList');const render=()=>{const q=input.value.toLowerCase();list.innerHTML=d.categories.filter(x=>x.toLowerCase().includes(q)).map(x=>'<div class="unit"><b>'+x.replaceAll('&','&amp;')+'</b><small>2018 category</small></div>').join('')||'<p class="empty">No match</p>'};input.addEventListener('input',render);render();});</script></body></html>
+<!doctype html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;; form-action &#x27;self&#x27;; script-src &#x27;self&#x27; https://cdnjs.cloudflare.com &#x27;sha256-Uux8hxcjG/bMOf4E8TCBX8D0gtjIOYArmO3KZB4XIuY=&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; https: data: blob:; font-src &#x27;self&#x27; data:; connect-src &#x27;self&#x27; https://cdnjs.cloudflare.com; frame-src &#x27;self&#x27; blob:; worker-src &#x27;self&#x27; blob: https://cdnjs.cloudflare.com; upgrade-insecure-requests"/><meta name="referrer" content="no-referrer"/><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2018 T120 Spare Parts Navigator</title><link rel="stylesheet" href="electrical.css"></head><body><header><strong>TRIUMPH / T120 — WORKSHOP EXPLORER</strong><nav><a href="index.html">Dashboard</a><a href="exploded.html">Exploded parts</a><a href="electrical.html">Electrical &amp; fuses</a></nav></header><main><div class="tag">2018 genuine spare parts · source catalogue index</div><h1>Spare-parts navigator</h1><p>Browse the main 2018 Triumph T120 system categories and search the original application's 171 indexed part candidates across eight assemblies. Genuine diagrams and current prices remain on licensed supplier sites. The app does not copy their illustrations or remove watermarks.</p><div class="notice">Not a VIN-matched electronic parts catalogue. Optional accessories and production alternatives are not extra installed parts. The supplier's prices, taxes, stock and currency can change; no stale figures are presented as current. Validate part supersession and fitment with a Triumph dealer before ordering.</div><div class="layout"><section class="panel"><h2>Browse 2018 category index</h2><input id="categorySearch" type="search" placeholder="Filter by assembly name…" aria-label="Filter categories"><div id="categoryList" class="parts"></div><p class="actions"><a href="https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles" target="_blank" rel="noopener noreferrer">Open original 2018 supplier catalogue ↗</a></p></section><section class="panel"><h2>Interactive verified-source explorer</h2><p>The in-app component list contains 171 source-linked catalogue candidates for eight assemblies, with torque references indexed separately. For browser reliability it works independently of the third-party site.</p><div class="actions"><a href="exploded.html">Explore in-app parts / teardown ↗</a></div><h2 style="margin-top:28px">Source provenance</h2><p>2018 parts categories: supplier index; 2016 torque and tools: uploaded Triumph T120 manual; 2018 Nissin brakes: manufacturer MY18 brochure. No tool sizes, costs or diagrams are invented.</p><div class="actions"><a href="electrical.html">See fuses / wiring reference ↗</a></div></section></div></main><script type="module">
+const input=document.getElementById('categorySearch');
+const list=document.getElementById('categoryList');
+function say(message){const p=document.createElement('p');p.className='empty';p.textContent=message;list.replaceChildren(p)}
+fetch('./data/catalogue-categories.json',{cache:'no-cache'})
+ .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+ .then(d=>{
+   if(!Array.isArray(d.categories))throw new Error('Invalid category data');
+   const render=()=>{
+     const q=input.value.trim().toLowerCase();list.replaceChildren();
+     const entries=d.categories.filter(x=>typeof x==='string'&&x.toLowerCase().includes(q));
+     for(const category of entries){
+       const row=document.createElement('div');row.className='unit';
+       const title=document.createElement('b');title.textContent=category;
+       const meta=document.createElement('small');meta.textContent='2018 catalogue category';
+       row.append(title,meta);list.append(row);
+     }
+     if(!entries.length)say('No matching categories.');
+   };
+   input.addEventListener('input',render);render();
+ }).catch(()=>say('Category index unavailable. Use the local exploded-parts explorer instead.'));
+</script></body></html>

@@ -2,6 +2,7 @@
 // No VIN input, persistence, inference or tracking. No invented hex-drive sizes.
 'use strict';
 const $=id=>document.getElementById(id);
+const safeUrl=(input)=>{try{const u=new URL(String(input));return u.protocol==='https:'?u.href:'catalogue.html'}catch{return 'catalogue.html'}};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','"':'&quot;'}[c]));
 const zones={front:['front-forks','front-wheel','front-brakes'],rear:['rear-shocks','rear-brakes','rear-wheel'],engine:['cooling','engine-covers']};
 const icons={'front-forks':'⚙','front-wheel':'◎','front-brakes':'◉','rear-shocks':'⌁','rear-brakes':'◉','rear-wheel':'◎','cooling':'◈','engine-covers':'▣'};
@@ -17,8 +18,8 @@ function chooseAssembly(id){
  const a=source?.assemblies.find(a=>a.id===id);if(!a)return;
  assembly=a;selectedCallout=groups(a)[0]?.number||null;query='';$('partSearch').value='';
  $('assemblyTitle').textContent=a.title;$('assemblyContext').textContent=`${a.system} · original 2018 OEM fiche numbered spares · ${a.parts.length} catalogue candidates`;
- $('hubTitle').textContent=a.title;$('ficheLink').href=a.oemFicheUrl;$('ficheAltLink').href=a.alternateCatalogueUrl;$('sideSourceLink').href=a.oemFicheUrl;
- $('supplierAdvice').textContent='External catalogue links open the 2018 model index; select '+a.title+'. If blocked, use the alternate catalogue or indexed parts in this app.';
+ $('hubTitle').textContent=a.title;$('ficheLink').href=safeUrl(a.oemFicheUrl);$('ficheAltLink').href=safeUrl(a.alternateCatalogueUrl);$('sideSourceLink').href=safeUrl(a.oemFicheUrl);
+ $('supplierAdvice').textContent='External provider: '+(a.catalogueDestination||'2018 model catalogue')+'. If this site blocks your browser, try the authorized dealer alternative or use local callouts.';
  showAssemblyList();render();$('liveMsg').textContent=`Now exploring ${a.title}`;
 }
 function showAssemblyList(){
@@ -48,12 +49,12 @@ function renderInspector(){
  const header=`<div class="eyebrow">FICHE CALLOUT ${esc(g.number)} · ${esc(assembly.system)}</div><h2>${esc(main.name)}</h2>`;
  const details=one?`<span class="part-number">${esc(main.partNumber)}</span>`:`<span class="part-number">${g.variants.length} catalogue variants</span><div class="variants">${g.variants.map(p=>`<div class="variant"><b>${esc(p.partNumber)}</b><small>${esc(p.name)}</small>${p.fitmentNote?`<small>${esc(p.fitmentNote)}</small>`:''}</div>`).join('')}</div>`;
  const qty=one&&main.quantity?String(main.quantity):'See OEM fiche — may vary';
- $('inspector').innerHTML=`<div class="inspection-card">${header}${details}<div class="field"><span>Quantity</span><b>${esc(qty)}</b></div><div class="field"><span>Part / assembly fitment</span><b class="unknown">Catalogue candidate</b></div><div class="field"><span>Fastener thread or dimensions</span><b>${esc(main.name.match(/(?:M\d+(?:[×x]\d+)?|\d+×\d+(?:×\d+)?)/i)?.[0]||'Not specified here')}</b></div><div class="field"><span>Tool type / driver size</span><b class="unknown">Not verified for this spare</b></div><div class="field"><span>Related mounting operation</span><b class="${related.length?'':'unknown'}">${related.length?related.map(r=>esc(r.label)+': '+r.torqueNm+' Nm (2016, p.'+r.page+')').join('; '):'No explicit operation-to-callout match established'}</b></div><div class="field"><span>Model</span><b>Bonneville T120 LC / 2018</b></div>${(main.fitmentNote||g.variants.length>1)?`<div class="fitnote">${g.variants.length>1?'Multiple alternative part numbers for the same original diagram callout. They are NOT multiple fitted spares.':''} ${esc(main.fitmentNote||'Check source fiche applicability.')}</div>`:''}<p>All part numbers are from the linked 2018-specific catalogue, not independently verified against an individual motorcycle or modified Kineo/TEC hardware.</p><div class="source-mini"><a href="${esc(assembly.oemFicheUrl)}" target="_blank" rel="noopener noreferrer">Browse 2018 model catalogue, select assembly ↗</a></div></div>`;
+ $('inspector').innerHTML=`<div class="inspection-card">${header}${details}<div class="field"><span>Quantity</span><b>${esc(qty)}</b></div><div class="field"><span>Part / assembly fitment</span><b class="unknown">Catalogue candidate</b></div><div class="field"><span>Fastener thread or dimensions</span><b>${esc(main.name.match(/(?:M\d+(?:[×x]\d+)?|\d+×\d+(?:×\d+)?)/i)?.[0]||'Not specified here')}</b></div><div class="field"><span>Tool type / driver size</span><b class="unknown">Not verified for this spare</b></div><div class="field"><span>Related mounting operation</span><b class="${related.length?'':'unknown'}">${related.length?related.map(r=>esc(r.label)+': '+esc(r.torqueNm)+' Nm (2016, p.'+esc(r.page)+')').join('; '):'No explicit operation-to-callout match established'}</b></div><div class="field"><span>Model</span><b>Bonneville T120 LC / 2018</b></div>${(main.fitmentNote||g.variants.length>1)?`<div class="fitnote">${g.variants.length>1?'Multiple alternative part numbers for the same original diagram callout. They are NOT multiple fitted spares.':''} ${esc(main.fitmentNote||'Check source fiche applicability.')}</div>`:''}<p>All part numbers are from the linked 2018-specific catalogue, not independently verified against an individual motorcycle or modified Kineo/TEC hardware.</p><div class="source-mini"><a href="${esc(safeUrl(assembly.oemFicheUrl))}" target="_blank" rel="noopener noreferrer">Browse 2018 T120 catalogue (select this assembly) ↗</a></div></div>`;
 }
 function renderOperations(){
  const ops=assembly.operations;
  $('torqueCount').textContent=String(ops.length);
- $('fastenerOperations').innerHTML=ops.length?ops.map(op=>`<div class="operation"><strong>${esc(op.label)}</strong><div class="spec">${op.torqueNm} Nm</div><small>Triumph T120 Service Manual · <b>April 2016, Issue 1</b> · printed page ${op.page}</small><small>Required driver size: <b>NOT VERIFIED</b>; thread diameter alone does not define socket/hex size.</small><small>2018 India-market, production changes and aftermarket applicability require confirmation before performing work.</small><a href="index.html#manualLibrary" title="Load and view your copy of this service manual">Open local manual library (p.${op.page}) ↗</a></div>`).join(''):'<p class="subtle">No verified torque operation mapped to this assembly. Search the original manual before servicing.</p>';
+ $('fastenerOperations').innerHTML=ops.length?ops.map(op=>`<div class="operation"><strong>${esc(op.label)}</strong><div class="spec">${esc(op.torqueNm)} Nm</div><small>Triumph T120 Service Manual · <b>April 2016, Issue 1</b> · printed page ${esc(op.page)}</small><small>Required driver size: <b>NOT VERIFIED</b>; thread diameter alone does not define socket/hex size.</small><small>2018 India-market, production changes and aftermarket applicability require confirmation before performing work.</small><a href="index.html#manualLibrary" title="Load and view your copy of this service manual">Open local manual library (p.${op.page}) ↗</a></div>`).join(''):'<p class="subtle">No verified torque operation mapped to this assembly. Search the original manual before servicing.</p>';
 }
 function renderTools(){
  const tools=assembly.specialTools;
@@ -78,4 +79,3 @@ async function boot(){
  chooseAssembly('front-forks');
 }
 boot();
-

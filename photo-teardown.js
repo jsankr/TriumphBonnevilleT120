@@ -28,7 +28,7 @@ function buttons(container,data,field){
   }
 }
 function imageChange(file){
-  if(!file||!file.type.startsWith('image/')){$('photoStatus').textContent='Choose an image file.';return;}
+  if(!file||!['image/jpeg','image/png','image/webp','image/gif'].includes(file.type)){$('photoStatus').textContent='Choose a PNG, JPEG, WebP or GIF photo (SVG is not accepted).';return;}
   if(file.size>18*1024*1024){$('photoStatus').textContent='Image exceeds the 18 MB per-photo limit.';return;}
   const k=key(),prev=state.images.get(k);if(prev)URL.revokeObjectURL(prev);
   state.images.set(k,URL.createObjectURL(file));
@@ -38,10 +38,11 @@ function imageChange(file){
 function renderImage(){
   const localUri=state.images.get(key());
   const ref=state.stage==='assembled' ? state.references.find(x=>x.angle===state.angle && x.confidence!=='Older reference') : null;
-  const uri=localUri || ref?.image;
+  const trustedRef = ref && /^https:\/\//i.test(ref.image||'') && /^https:\/\//i.test(ref.page||'');
+  const uri=localUri || (trustedRef ? ref.image : null);
   const sourceLink=$('referenceSourceLink');
-  sourceLink.hidden=!(ref&&!localUri);
-  if(ref&&!localUri){sourceLink.href=ref.page;sourceLink.textContent=`Source: ${ref.publisher} ↗`;}
+  sourceLink.hidden=!(trustedRef&&!localUri);
+  if(trustedRef&&!localUri){sourceLink.href=ref.page;sourceLink.textContent=`Source: ${ref.publisher} ↗`;}
   const im=$('photoImage');
   const empty=$('photoEmpty');
   if(uri){im.src=uri;im.hidden=false;empty.hidden=true;
