@@ -1,6 +1,6 @@
 // Local evidence retrieval only. Not an LLM, web-search agent, or service procedure generator.
 const defaultSource = "https://github.com/jsankr/TriumphBonnevilleT120/blob/main/SOURCES.md";
-const brakeSource = "https://triumph.euwest01.umbraco.io/media/1615/gamma-bonneville-t100.pdf";
+const brakeSource = "https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf";
 const stop = new Set(["what","are","the","for","with","how","does","this","that","from","need","size","required","which","and","my","i","of","to","is","a","in","on","at","all","parts","part","2018","t120","triumph","bonneville"]);
 function terms(s){return [...new Set((s.toLowerCase().match(/[a-z0-9]+/g)||[]).filter(w=>w.length>2&&!stop.has(w)))];}
 function candidate(part,query){const text=[part.name,part.group,part.id,part.function,part.maintenance,part.tool].join(" ").toLowerCase();const toks=terms(query);return toks.reduce((score,t)=>score+(text.includes(t)?(part.name.toLowerCase().includes(t)?4:1):0),0);}
@@ -15,8 +15,8 @@ export function answerEvidenceQuery(query,parts){
  const isShock=/\b(rear suspension|shock|shocks)\b/.test(q);
  const items=[];
  if(isBrake){items.push({title:"Factory MY18 brake configuration",summary:"The MY18 T120 specification lists TWO front 310 mm discs with TWO Nissin 2-piston floating calipers, and ONE rear 255 mm disc with ONE Nissin 2-piston floating caliper; ABS. No Brembo fitted as the specified 2018 T120 factory caliper in this reference.",status:"MY18 manufacturer-range brochure (model/market applicability still to verify)",url:brakeSource});}
- if(isFork){items.push({title:"Front suspension quantity",summary:"Two fork legs (left and right). The 2018 catalogue lists VIN-dependent alternative part numbers; alternatives are not extra installed legs.",status:"Independent 2018 parts fiche; VIN confirmation required",url:"https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"});}
- if(isShock){items.push({title:"Rear suspension quantity",summary:"Two rear shock units fitted in the stock assembly. Illustrated explosion vectors are not workshop disassembly instructions.",status:"Independent 2018 parts fiche; VIN confirmation required",url:"https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit"});}
+ if(isFork){items.push({title:"Front suspension quantity",summary:"Two fork legs (left and right). The 2018 catalogue lists VIN-dependent alternative part numbers; alternatives are not extra installed legs.",status:"Independent 2018 parts fiche; VIN confirmation required",url:"https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles"});}
+ if(isShock){items.push({title:"Rear suspension quantity",summary:"Two rear shock units fitted in the stock assembly. Illustrated explosion vectors are not workshop disassembly instructions.",status:"Independent 2018 parts fiche; VIN confirmation required",url:"https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles"});}
  if(safetyProcedure || wantsTorque || wantsTool){
   items.push({title:"Service specification verification",summary:"The repository does not establish a complete fastener-specific 2018 VIN/market removal-and-installation procedure. Front axle, fork pinch and brake caliper/tool-drive values are deliberately not supplied as repair specifications. Do not substitute a later-model torque or a fastener thread size for a tool-drive size.",status:"NOT VERIFIED — consult correct workshop manual and authorised dealer",url:defaultSource});
  }

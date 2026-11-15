@@ -45,7 +45,7 @@
       "id": "front-forks",
       "title": "Front forks & lower yoke",
       "system": "Front suspension",
-      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -197,7 +197,8 @@
         {
           "callout": "13",
           "partNumber": "T2041676",
-          "name": "Inner tube component, LH",          "quantity": null,
+          "name": "Inner tube component, LH",
+          "quantity": null,
           "fitmentNote": "To sequence 941382",
           "sizeVerified": false
         },
@@ -396,7 +397,8 @@
         {
           "callout": "37",
           "partNumber": "T2040304",
-          "name": "Locknut M30",          "quantity": null,
+          "name": "Locknut M30",
+          "quantity": null,
           "fitmentNote": null,
           "sizeVerified": false
         },
@@ -510,13 +512,18 @@
           "driveSize": null,
           "usage": "Reference only; verify exact step in procedure"
         }
-      ]
+      ],
+      "sourceHostReference": "oem-bike-parts.cz (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "front-wheel",
       "title": "Front wheel & axle",
       "system": "Wheels",
-      "oemFicheUrl": "https://oem-bike-parts.hr/en/parts/triumph/2018/bonneville-t120-2018/front-wheel",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -595,7 +602,8 @@
         },
         {
           "callout": "8",
-          "partNumber": "T3500401",          "name": "Internal circlip diameter 42",
+          "partNumber": "T3500401",
+          "name": "Internal circlip diameter 42",
           "quantity": null,
           "fitmentNote": null,
           "sizeVerified": false
@@ -684,13 +692,18 @@
           "driveSize": null,
           "usage": "Reference only; verify exact step in procedure"
         }
-      ]
+      ],
+      "sourceHostReference": "oem-bike-parts.hr (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "front-brakes",
       "title": "Nissin front brakes & twin discs",
       "system": "Brakes",
-      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -794,7 +807,8 @@
         {
           "callout": "12",
           "partNumber": "T2020086",
-          "name": "Pad spring D-spec",          "quantity": 2,
+          "name": "Pad spring D-spec",
+          "quantity": 2,
           "fitmentNote": null,
           "sizeVerified": false
         },
@@ -867,13 +881,18 @@
           "toolDriveSize": null
         }
       ],
-      "specialTools": []
+      "specialTools": [],
+      "sourceHostReference": "oem-bike-parts.cz (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "rear-shocks",
       "title": "Twin rear shock absorbers",
       "system": "Rear suspension",
-      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -931,13 +950,18 @@
           "driveSize": null,
           "usage": "Reference only; verify exact step in procedure"
         }
-      ]
+      ],
+      "sourceHostReference": "oem-bike-parts.pl (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "rear-brakes",
       "title": "Nissin rear brake and disc",
       "system": "Brakes",
-      "oemFicheUrl": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -993,7 +1017,8 @@
         {
           "callout": "7",
           "partNumber": "T2020050",
-          "name": "Piston set",          "quantity": null,
+          "name": "Piston set",
+          "quantity": null,
           "fitmentNote": null,
           "sizeVerified": false
         },
@@ -1067,13 +1092,18 @@
           "toolDriveSize": null
         }
       ],
-      "specialTools": []
+      "specialTools": [],
+      "sourceHostReference": "oem-bike-parts.hr (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "rear-wheel",
       "title": "Rear wheel, sprocket & chain",
       "system": "Final drive",
-      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-wheel",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -1192,7 +1222,8 @@
         },
         {
           "callout": "21",
-          "partNumber": "T3500203",          "name": "Internal circlip 52×2",
+          "partNumber": "T3500203",
+          "name": "Internal circlip 52×2",
           "quantity": null,
           "fitmentNote": null,
           "sizeVerified": false
@@ -1339,13 +1370,18 @@
           "driveSize": null,
           "usage": "Reference only; verify exact step in procedure"
         }
-      ]
+      ],
+      "sourceHostReference": "oem-bike-parts.pl (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "cooling",
       "title": "Liquid cooling system",
       "system": "Cooling",
-      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/cooling-system",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -1391,7 +1427,8 @@
           "sizeVerified": false
         },
         {
-          "callout": "6",          "partNumber": "T2100676",
+          "callout": "6",
+          "partNumber": "T2100676",
           "name": "Thermostat",
           "quantity": null,
           "fitmentNote": null,
@@ -1573,13 +1610,18 @@
           "toolDriveSize": null
         }
       ],
-      "specialTools": []
+      "specialTools": [],
+      "sourceHostReference": "oem-bike-parts.pl (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     },
     {
       "id": "engine-covers",
       "title": "Engine covers & seals",
       "system": "Engine",
-      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers",
+      "oemFicheUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
       "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
       "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
@@ -1590,7 +1632,8 @@
           "name": "Brushed clutch cover assembly",
           "quantity": null,
           "fitmentNote": null,
-          "sizeVerified": false        },
+          "sizeVerified": false
+        },
         {
           "callout": "2",
           "partNumber": "T3600095",
@@ -1789,7 +1832,8 @@
           "name": "Cap-head screw M5×10",
           "quantity": null,
           "fitmentNote": null,
-          "sizeVerified": false        }
+          "sizeVerified": false
+        }
       ],
       "operations": [
         {
@@ -1828,7 +1872,12 @@
           "driveSize": null,
           "usage": "Reference only; verify exact step in procedure"
         }
-      ]
+      ],
+      "sourceHostReference": "oem-bike-parts.cz (historical citation, access-blocked)",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "catalogueDestination": "2018 model index — select assembly",
+      "externalDiagramAvailableInApp": false,
+      "externalSiteMayBlock": true
     }
   ]
 }

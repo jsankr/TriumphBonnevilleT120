@@ -181,23 +181,32 @@
     {
       "category": "Front suspension & brakes",
       "name": "Front forks & lower yoke",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Separate LH/RH stanchions; VIN-conditioned alternatives within 2018 catalogue. Use one fitted variant per side; two front fork legs, not four.",
-      "evidence": "2018-specific parts fiche"
+      "evidence": "2018-specific parts fiche",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Front suspension & brakes",
       "name": "Front Nissin calipers and discs",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Two 310-mm discs; LH and RH 2-piston Nissin calipers, pads, fixings, disc dampers. Manufacturer MY18 brochure corroborates type.",
-      "evidence": "MY18 brochure + 2018 fiche"
+      "evidence": "MY18 brochure + 2018 fiche",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Front suspension & brakes",
       "name": "Front wheel / axle / spacers",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-wheel",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Year-specific front-wheel exploded diagram; check India/Brazil market bulletin and modified wheel supplier.",
-      "evidence": "2018-specific parts fiche"
+      "evidence": "2018-specific parts fiche",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Rear suspension & drive",
@@ -216,16 +225,22 @@
     {
       "category": "Rear suspension & drive",
       "name": "Rear Nissin caliper and disc",
-      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Single 255-mm disc; Nissin 2-piston floating rear caliper, caliper carrier and pad-set drawings.",
-      "evidence": "MY18 brochure + 2018 fiche"
+      "evidence": "MY18 brochure + 2018 fiche",
+      "originalSourceHost": "oem-bike-parts.hr",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Engine & cooling",
       "name": "Engine covers",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Clutch/generator covers, sealing, fasteners. Some finishes are special editions, not fitted together.",
-      "evidence": "2018-specific parts fiche"
+      "evidence": "2018-specific parts fiche",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Engine & cooling",
@@ -237,16 +252,22 @@
     {
       "category": "Controls & instruments",
       "name": "Handlebars, mirrors and upper yoke",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/handlebars-top-yoke-mirrors",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "Clamps, yoke, mirrors; VIN-conditioned variants. Fastener dimensions are not tool-drive specifications.",
-      "evidence": "2018-specific parts fiche"
+      "evidence": "2018-specific parts fiche",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Controls & instruments",
       "name": "Instruments",
-      "url": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/instruments",
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
       "details": "2018 market-specific instrument assembly variants (mph/kmh); verify market and trim before ordering.",
-      "evidence": "2018-specific parts fiche"
+      "evidence": "2018-specific parts fiche",
+      "originalSourceHost": "oem-bike-parts.pl",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "category": "Full motorcycle",
@@ -264,7 +285,10 @@
       "group": "Front suspension & brakes",
       "count": "1",
       "condition": "2018 fiche candidate; confirm with dealer",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "front-caliper-rh",
@@ -273,7 +297,10 @@
       "group": "Front suspension & brakes",
       "count": "1",
       "condition": "2018 fiche candidate; confirm with dealer",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "front-rotor",
@@ -282,7 +309,10 @@
       "group": "Front suspension & brakes",
       "count": "2",
       "condition": "2018 fiche candidate; check installed wheel/brake configuration",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "rear-rotor",
@@ -291,7 +321,10 @@
       "group": "Rear suspension & drive",
       "count": "1",
       "condition": "2018 fiche candidate; check brake configuration",
-      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.hr",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "rear-caliper",
@@ -300,7 +333,10 @@
       "group": "Rear suspension & drive",
       "count": "1",
       "condition": "2018 fiche candidate; dealer verification needed",
-      "url": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.hr",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "fork-rh-early",
@@ -309,7 +345,10 @@
       "group": "Front suspension & brakes",
       "count": "Alternative only",
       "condition": "2018 fiche says through 941382; not simultaneous with later part",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "fork-rh-late",
@@ -318,7 +357,10 @@
       "group": "Front suspension & brakes",
       "count": "Alternative only",
       "condition": "2018 fiche says from 941383; not simultaneous with earlier part",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "fork-lh-early",
@@ -327,7 +369,10 @@
       "group": "Front suspension & brakes",
       "count": "Alternative only",
       "condition": "2018 fiche says through 941382; not simultaneous with later part",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "fork-lh-late",
@@ -336,7 +381,10 @@
       "group": "Front suspension & brakes",
       "count": "Alternative only",
       "condition": "2018 fiche says from 941383; not simultaneous with earlier part",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "clutch-cover",
@@ -345,7 +393,10 @@
       "group": "Engine & cooling",
       "count": "1 if matching finish",
       "condition": "2018 fiche candidate; verify fitted finish",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "alternator-cover",
@@ -354,7 +405,10 @@
       "group": "Engine & cooling",
       "count": "1 if matching finish",
       "condition": "Special editions have alternate finish",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     },
     {
       "id": "front-spindle",
@@ -363,7 +417,10 @@
       "group": "Front suspension & brakes",
       "count": "1",
       "condition": "2018 stock fiche reference, not verified for aftermarket Kineo assembly",
-      "url": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-wheel"
+      "url": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+      "originalSourceHost": "oem-bike-parts.cz",
+      "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2018",
+      "sourceLinkNote": "Model-level catalogue index, not a direct drawing; select matching assembly"
     }
   ],
   "factoryFacts": [

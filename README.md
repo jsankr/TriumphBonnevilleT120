@@ -1,4 +1,4 @@
-# Triumph Bonneville T120 (2018) — Workshop Explorer
+**Link repair:** Previously linked OEM mirrors blocked some visitors. Use the in-app exploded callouts and two 2018 catalogue choices instead. External reachability is network-dependent.\n\n# Triumph Bonneville T120 (2018) — Workshop Explorer
 
 ## NEW: 2018 OEM exploded teardown explorer (v2.7)
 
