@@ -1,0 +1,1834 @@
+{
+  "schemaVersion": 1,
+  "project": "Triumph Bonneville T120 2018 liquid cooled independent exploded reference",
+  "lastResearchDate": "2026-11-15",
+  "sourceType": "2018 specific OEM parts fiche for parts; 2016 Triumph service manual for torque references",
+  "confidentiality": "No VIN stored or expected in client, assets or repository",
+  "licence": "Catalog images remain on third-party websites; this project only provides names, callout and linked sources",
+  "modelIndexUrl": "https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles",
+  "additionalFicheCategories": [
+    "ABS System",
+    "Airbox",
+    "Alternator & Starter Motor",
+    "Balancer",
+    "Camshaft & Camshaft Drive",
+    "Clutch",
+    "Clutch Controls",
+    "Crankcase & Fittings",
+    "Cylinder Head & Valves",
+    "Electrical Equipment",
+    "Engine Management System",
+    "Exhaust System",
+    "Foot Controls",
+    "Front Master Cylinder Assy",
+    "Fuel Pump",
+    "Fuel Tank",
+    "Gear Selectors & Pedal",
+    "Handlebars, Top Yoke & Mirrors",
+    "Headlights",
+    "Indicators",
+    "Instruments",
+    "Lubrication system",
+    "Main Frame Assembly",
+    "Mudguards",
+    "Rear Brake Master Cylinder",
+    "Seat Assembly & Toolkit",
+    "Stands",
+    "Starter Drive Gears",
+    "Sump & Fittings",
+    "Swingarm Assembly",
+    "Throttle Bodies",
+    "Transmission"
+  ],
+  "assemblies": [
+    {
+      "id": "front-forks",
+      "title": "Front forks & lower yoke",
+      "system": "Front suspension",
+      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2041363",
+          "name": "Stanchion assembly RH",
+          "quantity": 1,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "1",
+          "partNumber": "T2042373",
+          "name": "Stanchion assembly RH",
+          "quantity": 1,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2041362",
+          "name": "Stanchion assembly LH",
+          "quantity": 1,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2042372",
+          "name": "Stanchion assembly LH",
+          "quantity": 1,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2041674",
+          "name": "Cap",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T2047113",
+          "name": "O-ring, fork seal",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "5",
+          "partNumber": "T2040072",
+          "name": "Nut, cap assembly",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T2041678",
+          "name": "Spacer",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2047151",
+          "name": "Washer",
+          "quantity": null,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2047111",
+          "name": "Guide, spring",
+          "quantity": null,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "8",
+          "partNumber": "T2041673",
+          "name": "Spacer",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2042777",
+          "name": "Spring",
+          "quantity": 2,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2041672",
+          "name": "Spring",
+          "quantity": 2,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T2041669",
+          "name": "Cylinder component, RH",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2042776",
+          "name": "Cylinder component, LH",
+          "quantity": null,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2041677",
+          "name": "Cylinder component, LH",
+          "quantity": null,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T2042785",
+          "name": "Inner tube component, RH",
+          "quantity": null,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T2041668",
+          "name": "Inner tube component, RH",
+          "quantity": null,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T2041676",
+          "name": "Inner tube component, LH",          "quantity": null,
+          "fitmentNote": "To sequence 941382",
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T2042775",
+          "name": "Inner tube component, LH",
+          "quantity": null,
+          "fitmentNote": "From sequence 941383",
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T2045157",
+          "name": "Fork gaiter clip",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "15",
+          "partNumber": "T2044087",
+          "name": "Fork gaiter",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "16",
+          "partNumber": "T2041670",
+          "name": "Oil lock component",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "17",
+          "partNumber": "T2047104",
+          "name": "Oil lock, fork",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "18",
+          "partNumber": "T2047109",
+          "name": "Fork dust seal",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "19",
+          "partNumber": "T2040248",
+          "name": "Snap ring",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "20",
+          "partNumber": "T2044161",
+          "name": "Fork oil seal",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "21",
+          "partNumber": "T2047107",
+          "name": "Backup ring",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "22",
+          "partNumber": "T2047106",
+          "name": "Guide bushing",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "23",
+          "partNumber": "T2041667",
+          "name": "Outer tube RH",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "24",
+          "partNumber": "T2041675",
+          "name": "Outer tube LH",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "25",
+          "partNumber": "T2045046",
+          "name": "Oil lock capscrew",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "26",
+          "partNumber": "T2045045",
+          "name": "Sealing washer B",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "27",
+          "partNumber": "T3050133",
+          "name": "Capscrew",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "28",
+          "partNumber": "T2041488",
+          "name": "Lower yoke assembly",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "29",
+          "partNumber": "T3600063",
+          "name": "Dust seal 55 mm",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "30",
+          "partNumber": "T3800052",
+          "name": "Bearing 55×30×17",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "31",
+          "partNumber": "T2048899",
+          "name": "Capscrew M10×30 stainless encapsulated",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "32",
+          "partNumber": "T3800091",
+          "name": "Steering bearing",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "33",
+          "partNumber": "T3600234",
+          "name": "Dust cover, steering bearing",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "34",
+          "partNumber": "T2042138",
+          "name": "Headstock bearing cover",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "35",
+          "partNumber": "T2040301",
+          "name": "Adjuster nut M30 lower",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "36",
+          "partNumber": "T2041306",
+          "name": "Headstock washer",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "37",
+          "partNumber": "T2040304",
+          "name": "Locknut M30",          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "38",
+          "partNumber": "T3450060",
+          "name": "Cap",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "39",
+          "partNumber": "T2700332",
+          "name": "Amber oval reflector",
+          "quantity": 2,
+          "fitmentNote": "Except Brazil and Thailand",
+          "sizeVerified": false
+        },
+        {
+          "callout": "40",
+          "partNumber": "T2040399",
+          "name": "Fork gaiter clip screw M4",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Upper yoke centre nut",
+          "torqueNm": 90,
+          "referenceId": "SM2016-P67-R1",
+          "page": 67,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Upper yoke pinch bolt",
+          "torqueNm": 24,
+          "referenceId": "SM2016-P67-R2",
+          "page": 67,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Lower yoke pinch bolt",
+          "torqueNm": 45,
+          "referenceId": "SM2016-P67-R3",
+          "page": 67,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Fork top cap",
+          "torqueNm": 22,
+          "referenceId": "SM2016-P67-R16",
+          "page": 67,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Damping cylinder bolt",
+          "torqueNm": 30,
+          "referenceId": "SM2016-P67-R5",
+          "page": 67,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Fork to spindle pinch bolts",
+          "torqueNm": 23,
+          "referenceId": "SM2016-P69-R2",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": [
+        {
+          "toolNumber": "T3880184",
+          "description": "Fork seals drift",
+          "source": "2016 T120 Service Manual p.29",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        },
+        {
+          "toolNumber": "3880160-T0301",
+          "description": "Fork oil filler/evacuator",
+          "source": "2016 T120 Service Manual p.29",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        },
+        {
+          "toolNumber": "T3880171",
+          "description": "Fork holding tool",
+          "source": "2016 T120 Service Manual p.33",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        },
+        {
+          "toolNumber": "T3880633",
+          "description": "Damper tube wrench",
+          "source": "2016 T120 Service Manual p.33",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        }
+      ]
+    },
+    {
+      "id": "front-wheel",
+      "title": "Front wheel & axle",
+      "system": "Wheels",
+      "oemFicheUrl": "https://oem-bike-parts.hr/en/parts/triumph/2018/bonneville-t120-2018/front-wheel",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2007013",
+          "name": "Front wheel spares kit",
+          "quantity": null,
+          "fitmentNote": "Early sequence; non-India markets, see OEM fiche",
+          "sizeVerified": false
+        },
+        {
+          "callout": "1",
+          "partNumber": "T2000897",
+          "name": "Front wheel assembly 18×2.75",
+          "quantity": null,
+          "fitmentNote": "Later sequence; non-India markets, see OEM fiche",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2000992",
+          "name": "Chrome rim 18×2.75",
+          "quantity": null,
+          "fitmentNote": "Later sequence; non-India markets",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2000386",
+          "name": "Steel front rim 18×2.75",
+          "quantity": null,
+          "fitmentNote": "Earlier sequence; non-India markets",
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2000563",
+          "name": "Front spoke 170.6 mm",
+          "quantity": 16,
+          "fitmentNote": "From sequence 823602",
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2001034",
+          "name": "Front spoke 169.3 mm",
+          "quantity": 16,
+          "fitmentNote": "To sequence 823601",
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T2005003",
+          "name": "Steel spoke nipple",
+          "quantity": 32,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T3800702",
+          "name": "Ball bearing 20×42×12",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T3600703",
+          "name": "Oil seal 30×42×6",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "8",
+          "partNumber": "T3500401",          "name": "Internal circlip diameter 42",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2003511",
+          "name": "Wheel spacer 20×81",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T2000227",
+          "name": "Spacer 30 OD, 20.2 ID",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2000580",
+          "name": "Front wheel axle",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T2000028",
+          "name": "Rim protection band",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T2000529",
+          "name": "Front inner tube 18-inch",
+          "quantity": null,
+          "fitmentNote": "OEM spoked-wheel configuration",
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T2000516",
+          "name": "Black wheel balance weight",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Front-wheel spindle/axle bolt",
+          "torqueNm": 65,
+          "referenceId": "SM2016-P69-R1",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Fork spindle pinch bolts",
+          "torqueNm": 23,
+          "referenceId": "SM2016-P69-R2",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": [
+        {
+          "toolNumber": "T3880053",
+          "description": "Wheel bearing extraction kit",
+          "source": "2016 T120 Service Manual p.32",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        },
+        {
+          "toolNumber": "T3880075",
+          "description": "Bearing installer",
+          "source": "2016 T120 Service Manual p.32",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        }
+      ]
+    },
+    {
+      "id": "front-brakes",
+      "title": "Nissin front brakes & twin discs",
+      "system": "Brakes",
+      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-brake-caliper-disc",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2023388",
+          "name": "Front disc solid 310 mm",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2027533",
+          "name": "Front caliper assembly LH",
+          "quantity": 1,
+          "fitmentNote": "2018 fiche candidate; verify VIN supersession",
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2027544",
+          "name": "Front caliper assembly RH",
+          "quantity": 1,
+          "fitmentNote": "2018 fiche candidate; verify VIN supersession",
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T2025438",
+          "name": "Caliper bracket LH",
+          "quantity": 1,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "5",
+          "partNumber": "T2025439",
+          "name": "Caliper bracket RH",
+          "quantity": 1,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T2021793",
+          "name": "Brake pad set multipack 10",
+          "quantity": null,
+          "fitmentNote": "Bulk alternative; NOT extra fitted pads",
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T2027535",
+          "name": "Brake pad set LH",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T2021835",
+          "name": "Brake pad set multipack 20",
+          "quantity": null,
+          "fitmentNote": "Bulk alternative; NOT extra fitted pads",
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2027545",
+          "name": "Brake pad set RH",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2020505",
+          "name": "Brake repair seal kit",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T2020084",
+          "name": "Pad pin set D-spec",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2020014",
+          "name": "Bleed screw",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T2020086",
+          "name": "Pad spring D-spec",          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T2021707",
+          "name": "Sliding seal set",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T3205653",
+          "name": "Flanged bolt M8×30 silver",
+          "quantity": 2,
+          "fitmentNote": "Thread size is NOT a socket size",
+          "sizeVerified": false
+        },
+        {
+          "callout": "15",
+          "partNumber": "T2020609",
+          "name": "Brake-disc bolt M8×30 encapsulated",
+          "quantity": 10,
+          "fitmentNote": "New fasteners per 2016 T120 procedure p535",
+          "sizeVerified": false
+        },
+        {
+          "callout": "16",
+          "partNumber": "T2025804",
+          "name": "Front brake damper",
+          "quantity": 2,
+          "fitmentNote": "Earlier production; fiche says non-India only — verify local bulletin",
+          "sizeVerified": false
+        },
+        {
+          "callout": "16",
+          "partNumber": "T2021948",
+          "name": "Brake disc damper LH",
+          "quantity": null,
+          "fitmentNote": "Later non-India alternative",
+          "sizeVerified": false
+        },
+        {
+          "callout": "17",
+          "partNumber": "T2021949",
+          "name": "Brake disc damper RH",
+          "quantity": null,
+          "fitmentNote": "Later non-India alternative",
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Front caliper mounting bolts",
+          "torqueNm": 21,
+          "referenceId": "manual-procedure-611",
+          "page": 611,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Front brake disc fixings",
+          "torqueNm": 22,
+          "referenceId": "manual-procedure-535",
+          "page": 535,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": []
+    },
+    {
+      "id": "rear-shocks",
+      "title": "Twin rear shock absorbers",
+      "system": "Rear suspension",
+      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2050479",
+          "name": "Rear suspension unit",
+          "quantity": 2,
+          "fitmentNote": "Two fitted, not three",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T3330244",
+          "name": "Socket-head bolt M8×20",
+          "quantity": 4,
+          "fitmentNote": "Bolt thread dimension; hex drive size not established",
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T3550331",
+          "name": "Washer 8.5×30×2",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Rear shock upper mounting bolt",
+          "torqueNm": 28,
+          "referenceId": "SM2016-P68-R6",
+          "page": 68,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Rear shock lower mounting bolt",
+          "torqueNm": 28,
+          "referenceId": "SM2016-P68-R7",
+          "page": 68,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": [
+        {
+          "toolNumber": "T3880104",
+          "description": "Swinging arm adjuster wrench",
+          "source": "2016 T120 Service Manual p.28",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        }
+      ]
+    },
+    {
+      "id": "rear-brakes",
+      "title": "Nissin rear brake and disc",
+      "system": "Brakes",
+      "oemFicheUrl": "https://oem-bike-parts.hr/cz/parts/triumph/2018/bonneville-t120-2018/rear-brake-caliper-disc",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2021051",
+          "name": "Rear disc 255 mm",
+          "quantity": 1,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2024030",
+          "name": "Rear caliper carrier",
+          "quantity": 1,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2020609",
+          "name": "Brake-disc bolt M8×30 encapsulated",
+          "quantity": 4,
+          "fitmentNote": "New fasteners per 2016 T120 procedure p548",
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T2022950",
+          "name": "Rear brake caliper",
+          "quantity": 1,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "5",
+          "partNumber": "T2020014",
+          "name": "Bleed screw",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T2020954",
+          "name": "Pad spring set",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2020050",
+          "name": "Piston set",          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "8",
+          "partNumber": "T2020505",
+          "name": "Brake repair/seal kit",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2022955",
+          "name": "Rear brake pad set",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T2020966",
+          "name": "Brake pad pin set (two pins)",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2021707",
+          "name": "Sliding seal set",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T3205687",
+          "name": "Flanged bolt M10×19",
+          "quantity": 2,
+          "fitmentNote": "Thread size is NOT drive size",
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Rear caliper to carrier",
+          "torqueNm": 40,
+          "referenceId": "SM2016-P71-R8",
+          "page": 71,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Rear disc to wheel fixings",
+          "torqueNm": 22,
+          "referenceId": "SM2016-P71-R9",
+          "page": 71,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Rear pad retaining pins",
+          "torqueNm": 18,
+          "referenceId": "SM2016-P71-R11",
+          "page": 71,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": []
+    },
+    {
+      "id": "rear-wheel",
+      "title": "Rear wheel, sprocket & chain",
+      "system": "Final drive",
+      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-wheel",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2011005",
+          "name": "Rear spoked wheel assembly",
+          "quantity": null,
+          "fitmentNote": "Stock wheel reference, not aftermarket Kineo",
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2011007",
+          "name": "Rear rim 17×4.25",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T2010424",
+          "name": "Rear spoke 152 mm",
+          "quantity": 32,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T2005003",
+          "name": "Steel spoke nipple",
+          "quantity": 32,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "5",
+          "partNumber": "T3800703",
+          "name": "Bearing 20×47×14",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",
+          "partNumber": "T3500402",
+          "name": "Internal circlip diameter 47",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2010348",
+          "name": "Internal rear wheel spacer",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T2011048",
+          "name": "Rear wheel adjuster block kit",
+          "quantity": null,
+          "fitmentNote": "Catalogued for production subset; check source",
+          "sizeVerified": false
+        },
+        {
+          "callout": "15",
+          "partNumber": "T3555035",
+          "name": "Washer 19×34×3",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "16",
+          "partNumber": "T3350118",
+          "name": "Plain locknut M18",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "17",
+          "partNumber": "T2010601",
+          "name": "Sprocket carrier assembly graphite",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "18",
+          "partNumber": "T2012144",
+          "name": "Sprocket carrier stud",
+          "quantity": 6,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "19",
+          "partNumber": "T2010630",
+          "name": "Ring bearing",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "20",
+          "partNumber": "T3800029",
+          "name": "Ball bearing 25×52×15",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "21",
+          "partNumber": "T3500203",          "name": "Internal circlip 52×2",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "22",
+          "partNumber": "T3600073",
+          "name": "Oil seal 35×52×6",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "23",
+          "partNumber": "T2010314",
+          "name": "Cush-drive rubber",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "24",
+          "partNumber": "T2012537",
+          "name": "Rear sprocket 37T 525",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "25",
+          "partNumber": "T2011461",
+          "name": "Final drive chain 525 100L spare",
+          "quantity": null,
+          "fitmentNote": "Alternate supply",
+          "sizeVerified": false
+        },
+        {
+          "callout": "25",
+          "partNumber": "T2011460",
+          "name": "Final drive chain 525 100L",
+          "quantity": null,
+          "fitmentNote": "Alternate supply",
+          "sizeVerified": false
+        },
+        {
+          "callout": "25",
+          "partNumber": "T2011462",
+          "name": "Final drive soft-link 525",
+          "quantity": null,
+          "fitmentNote": "Connection component",
+          "sizeVerified": false
+        },
+        {
+          "callout": "26",
+          "partNumber": "T3350250",
+          "name": "Flanged locknut M10",
+          "quantity": 6,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "27",
+          "partNumber": "T2010192",
+          "name": "Rim protection band 17-inch",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "28",
+          "partNumber": "T2010493",
+          "name": "Inner tube 17-inch",
+          "quantity": null,
+          "fitmentNote": "OEM wheel, not Kineo tubeless configuration",
+          "sizeVerified": false
+        },
+        {
+          "callout": "29",
+          "partNumber": "T2000516",
+          "name": "Black wheel balance weight",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "30",
+          "partNumber": "T2017592",
+          "name": "Chain & sprocket kit",
+          "quantity": null,
+          "fitmentNote": "Alternative kit grouping, not extra installed chain",
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Rear wheel spindle locknut",
+          "torqueNm": 110,
+          "referenceId": "SM2016-P69-R3",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Rear sprocket to carrier",
+          "torqueNm": 55,
+          "referenceId": "SM2016-P69-R4",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Sprocket carrier stud",
+          "torqueNm": 30,
+          "referenceId": "SM2016-P69-R5",
+          "page": 69,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Chain adjuster locknut",
+          "torqueNm": 20,
+          "referenceId": "SM2016-P68-R3",
+          "page": 68,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": [
+        {
+          "toolNumber": "T3880053",
+          "description": "Wheel bearing extraction kit",
+          "source": "2016 T120 Service Manual p.32",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        },
+        {
+          "toolNumber": "T3880635",
+          "description": "Chain cutting and riveting tool",
+          "source": "2016 T120 Service Manual p.33",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        }
+      ]
+    },
+    {
+      "id": "cooling",
+      "title": "Liquid cooling system",
+      "system": "Cooling",
+      "oemFicheUrl": "https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/cooling-system",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T2101333",
+          "name": "Radiator",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "2",
+          "partNumber": "T2101666",
+          "name": "Radiator fan",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T3010702",
+          "name": "Flanged sleeve 6.4×10×8.5",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "4",
+          "partNumber": "T3020153",
+          "name": "Grommet 13×3×10",
+          "quantity": 3,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "5",
+          "partNumber": "T3205067",
+          "name": "Screw",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "6",          "partNumber": "T2100676",
+          "name": "Thermostat",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T2100201",
+          "name": "Thermostat seal",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "8",
+          "partNumber": "T3205083",
+          "name": "Flanged bolt M6×28 silver",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T2101255",
+          "name": "Water outlet cover",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T2101266",
+          "name": "Coolant manifold",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T2101277",
+          "name": "Coolant manifold sealing ring",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T3200134",
+          "name": "Encapsulated bolt M6×25",
+          "quantity": 5,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T3000005",
+          "name": "Dowel 6×16",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T2101233",
+          "name": "Internal coolant feed pipe",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "15",
+          "partNumber": "T3600124",
+          "name": "O-ring 21.5×3",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "30",
+          "partNumber": "T3330727",
+          "name": "Screw M6×20",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "31",
+          "partNumber": "T3700440",
+          "name": "Clamp 11–12.5 mm",
+          "quantity": 3,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "32",
+          "partNumber": "T3700190",
+          "name": "Rear brake hose clip",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "33",
+          "partNumber": "T2100433",
+          "name": "Overflow quickfit elbow",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "34",
+          "partNumber": "T3450141",
+          "name": "Quickfit TPE grommet",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "35",
+          "partNumber": "T3010707",
+          "name": "Flanged sleeve 6.4×10×6",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "36",
+          "partNumber": "A9610046",
+          "name": "Hybrid OAT coolant 12×1 L carton",
+          "quantity": null,
+          "fitmentNote": "Consumable carton, not component; check current coolant spec",
+          "sizeVerified": false
+        }
+      ],
+      "operations": [
+        {
+          "label": "Radiator upper mounting",
+          "torqueNm": 6,
+          "referenceId": "SM2016-P64-R1",
+          "page": 64,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Thermostat housing to head",
+          "torqueNm": 9,
+          "referenceId": "SM2016-P64-R2",
+          "page": 64,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Coolant expansion tank mounting",
+          "torqueNm": 4,
+          "referenceId": "SM2016-P64-R3",
+          "page": 64,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Radiator grille fixings",
+          "torqueNm": 5,
+          "referenceId": "SM2016-P64-R8",
+          "page": 64,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Coolant manifold to crankcase",
+          "torqueNm": 9,
+          "referenceId": "SM2016-P64-R6",
+          "page": 64,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": []
+    },
+    {
+      "id": "engine-covers",
+      "title": "Engine covers & seals",
+      "system": "Engine",
+      "oemFicheUrl": "https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/engine-covers",
+      "catalogueApplicability": "2018 T120 family; validate market/VIN, supersessions and aftermarket before ordering",
+      "diagramRights": "Third-party OEM fiche drawing; linked, not copied into this repository",
+      "completeness": "Curated subset; open OEM fiche for full diagram / all variants",
+      "parts": [
+        {
+          "callout": "1",
+          "partNumber": "T1267543",
+          "name": "Brushed clutch cover assembly",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false        },
+        {
+          "callout": "2",
+          "partNumber": "T3600095",
+          "name": "Dust seal",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "3",
+          "partNumber": "T3800110",
+          "name": "Bearing MK 1210",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "U1",
+          "partNumber": "T3800156",
+          "name": "Needle roller bearing 7×11×9",
+          "quantity": null,
+          "fitmentNote": "Catalogue part number observed; original diagram callout number was not verifiable from retrieved listing",
+          "sizeVerified": false
+        },
+        {
+          "callout": "U2",
+          "partNumber": "T3800001",
+          "name": "Needle bearing 20×14×12",
+          "quantity": null,
+          "fitmentNote": "Catalogue part number observed; original diagram callout number was not verifiable from retrieved listing",
+          "sizeVerified": false
+        },
+        {
+          "callout": "U3",
+          "partNumber": "T3600088",
+          "name": "Oil seal 14×22×4.5",
+          "quantity": null,
+          "fitmentNote": "Catalogue part number observed; original diagram callout number was not verifiable from retrieved listing",
+          "sizeVerified": false
+        },
+        {
+          "callout": "7",
+          "partNumber": "T1269876",
+          "name": "Clutch cover gasket",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "U4",
+          "partNumber": "T1261989",
+          "name": "Chrome clutch-cover badge",
+          "quantity": null,
+          "fitmentNote": "Accessory/finish alternative; exact original diagram callout not independently established",
+          "sizeVerified": false
+        },
+        {
+          "callout": "8",
+          "partNumber": "T1261987",
+          "name": "Bronze clutch-cover badge",
+          "quantity": null,
+          "fitmentNote": "Finish alternative; confirm appearance",
+          "sizeVerified": false
+        },
+        {
+          "callout": "9",
+          "partNumber": "T3051055",
+          "name": "Cap-head screw M5×10",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "10",
+          "partNumber": "T1268666",
+          "name": "Clutch cover plug M12×1.75",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "11",
+          "partNumber": "T3205072",
+          "name": "Flanged bolt M6×40 silver",
+          "quantity": 19,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "12",
+          "partNumber": "T3205073",
+          "name": "Flanged bolt M6 (exact length not confirmed from extracted fiche)",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "13",
+          "partNumber": "T3205082",
+          "name": "Flanged bolt M6×35 encapsulated",
+          "quantity": 2,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "14",
+          "partNumber": "T3000005",
+          "name": "Dowel 6×16",
+          "quantity": 6,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "18",
+          "partNumber": "T1267100",
+          "name": "Brushed alternator cover",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "19",
+          "partNumber": "T1268765",
+          "name": "Generator cover gasket",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "20",
+          "partNumber": "T1261945",
+          "name": "Bronze alternator badge",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "23",
+          "partNumber": "T3330649",
+          "name": "Pan-head Torx screw M5×12",
+          "quantity": null,
+          "fitmentNote": "Torx drive named, exact bit size not established",
+          "sizeVerified": false
+        },
+        {
+          "callout": "24",
+          "partNumber": "T1262206",
+          "name": "Brushed front sprocket cover",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "25",
+          "partNumber": "T3200148",
+          "name": "Bolt M6×30 silver",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "26",
+          "partNumber": "T1261616",
+          "name": "Rubber bung",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "27",
+          "partNumber": "T1261662",
+          "name": "Sprocket cover grommet",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "28",
+          "partNumber": "T3010901",
+          "name": "Flanged sleeve 6.4×9×14.6",
+          "quantity": 4,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "29",
+          "partNumber": "T1261313",
+          "name": "Sprocket-cover mesh",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false
+        },
+        {
+          "callout": "30",
+          "partNumber": "T3050341",
+          "name": "Cap-head screw M5×10",
+          "quantity": null,
+          "fitmentNote": null,
+          "sizeVerified": false        }
+      ],
+      "operations": [
+        {
+          "label": "Clutch cover to crankcase",
+          "torqueNm": 10,
+          "referenceId": "SM2016-P60-R1",
+          "page": 60,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Alternator cover to crankcase",
+          "torqueNm": 10,
+          "referenceId": "SM2016-P60-R10",
+          "page": 60,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        },
+        {
+          "label": "Front sprocket cover to crankcase",
+          "torqueNm": 9,
+          "referenceId": "SM2016-P60-R7",
+          "page": 60,
+          "source": "Triumph Bonneville T120 Service Manual, 04.2016 Issue 1",
+          "applicability": "2016 manual reference; not confirmed for 2018 market/VIN",
+          "toolDriveSize": null
+        }
+      ],
+      "specialTools": [
+        {
+          "toolNumber": "T3880313",
+          "description": "Oil filter wrench (adjacent lubrication operation)",
+          "source": "2016 T120 Service Manual p.29",
+          "driveSize": null,
+          "usage": "Reference only; verify exact step in procedure"
+        }
+      ]
+    }
+  ]
+}
