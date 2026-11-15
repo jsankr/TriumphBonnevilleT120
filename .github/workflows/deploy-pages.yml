@@ -22,6 +22,7 @@ jobs:
       - run: node --check component-evidence.js
       - run: node --check exploded.js
       - run: node tests/validate-exploded.mjs
+      - run: node tests/validate-links.mjs
       - run: node tests/validate-component-evidence.mjs
       - run: node --check copilot.js
       - run: node --check source-library.js

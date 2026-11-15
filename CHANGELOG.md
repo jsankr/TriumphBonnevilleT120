@@ -41,3 +41,8 @@
 - Added 27 labelled 2016 T120 Service Manual tightening references, specialist-tool identifiers and explicit unknown drive-size labels.
 - Updated README and dashboard to open the explorer, source audit and CI data guard.
 - Current frontend displays genuine sourced catalogue entries, not full 3D/photoreal CAD or a complete 2018 vehicle bill of materials.
+
+## v2.8 — Broken external link repair
+- Replaced blocked 2018 exploded-fiche mirror links in eight assemblies and photographic parts reference index with two catalogue choices.
+- Removed unreliable third-party iframe and preserved interactive parts data locally.
+- Replaced timeout-prone MY18 brochure link and added link regression CI test.

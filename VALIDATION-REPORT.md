@@ -9,8 +9,8 @@
 - The 2019 official Triumph owner handbook has a limited torque table, but it is not 2018 VIN-specific workshop confirmation. No torque values should be extrapolated from those entries.
 
 ## Source links
-- 2018 rear suspension fiche: https://oem-bike-parts.pl/en/parts/triumph/2018/bonneville-t120-2018/rear-suspension-unit
-- 2018 front fork fiche: https://oem-bike-parts.cz/en/parts/triumph/2018/bonneville-t120-2018/front-forks-lower-yoke
+- 2018 rear suspension fiche: https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles
+- 2018 front fork fiche: https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles
 - Official 2019 owner handbook: https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf
 
 ## Remaining blockers before service-grade release

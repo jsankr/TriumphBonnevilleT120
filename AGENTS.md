@@ -24,3 +24,5 @@
 - Third-party actual exploded diagrams must be opened by direct OEM page links; never copy copyrighted fiche illustrations or manuals into GitHub.
 - Do not collect, transmit, persist, or publish confidential vehicle identifiers.
 - Validate via `node tests/validate-exploded.mjs` and browser tests before publication.
+
+- OEM parts supplier mirrors may block visitors; never link interactive buttons to oem-bike-parts.cz/.pl/.hr. All assemblies need in-app callout fallback and two distinctly labeled catalogues. Run link validation tests before merging.
