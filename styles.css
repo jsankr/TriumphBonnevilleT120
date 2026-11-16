@@ -194,3 +194,4 @@ td.on .dot.yes{background:var(--line-gold);box-shadow:0 0 0 3px rgb(var(--gold-r
 }
 @media (max-width:420px){.spec-groups{grid-template-columns:1fr}}
 .hotspot[data-part="front-brake"] .tip{left:auto;right:-8px;transform:none}
+.inspector-head{flex-wrap:wrap}.inspector-head>div{min-width:0;flex:1 1 220px}.ev{max-width:100%}@media (max-width:480px){.ev{white-space:normal;line-height:1.3}}
