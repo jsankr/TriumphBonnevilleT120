@@ -33,3 +33,12 @@ S1’s schedule identifies drive-chain slack check/adjustment as a daily check, 
 - **Older-model scheduled maintenance check sheet**, 2006, 1 page — reference only; **T120 not listed**.
 - Source reader instructions: `docs/LOCAL-PDF-READER.md`. Full original pages, figures, tables, warnings and procedures are opened only from the individual owner's selected local PDFs, not scraped/re-hosted.
 - **Warning:** 2016 sources do not independently establish 2018 VIN/market/revision applicability or aftermarket Kineo/TEC fitting. Some safety-critical tool sizes remain unknown.
+
+
+## Added in v3.0
+- Photograph, left side: AmenMoto, *2017 Bonneville T120 CSNDCC1*, Wikimedia Commons, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:2017_Bonneville_T120_CSNDCC1.jpg
+- Photograph, right-side engine: Bengt Nyman, *Triumph EM1B9077*, Wikimedia Commons, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Triumph_EM1B9077_(49794022932).jpg
+- Tool sizes (owner forum): TriumphRat, *T120 front wheel removal* https://www.triumphrat.net/threads/t120-front-wheel-removal.834194/ and *T120 Rear Wheel Removal* https://www.triumphrat.net/threads/t120-rear-wheel-removal.957970/ — recorded from search excerpts; the forum refuses automated re-reading.
+- Tool sizes (accessory maker's guide): *How to remove the rear wheel on a Triumph Bonneville T100 / T120*, install guide naming British Customs, read 16 November 2026. https://install-guides.gorgias.help/en-US/how-to-remove-the-rear-wheel-on-a-triumph-bonneville-t100--t120-128461
+- Typeface: Archivo, Omnibus-Type, SIL Open Font Licence 1.1 (`assets/fonts/OFL-Archivo.txt`).
+- Photograph, right side in Cranberry Red / Aluminium Silver: takenji1989, *Neil with Triumph Bonneville T120*, Flickr, CC BY-NC-SA 2.0. https://www.flickr.com/photos/105592384@N07/51444289036 — background and bystander removed.

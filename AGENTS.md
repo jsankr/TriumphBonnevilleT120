@@ -6,7 +6,7 @@
 - The 2012 Bonneville/T100 sheet and 2006 checklist are not 2018 T120 service sources.
 - Factory MY18 Nissin dual front/single rear calipers; two front fork legs and two rear shocks. No later-year Brembo substitution.
 - Keep all original copyrighted PDFs on the user device, not in GitHub. Respect their rights restrictions.
-- Hero motorcycle artwork is a user-supplied concept reference, not an authenticated manufacturer photo. No Blender or inaccurate 3D.
+- Motorcycle images are real, openly licensed photographs with credits in README.md and data/teardown-map.json; none is the owner's motorcycle. No Blender or inaccurate 3D.
 - Run `node tests/validate-data.mjs`, `node tests/validate-sources.mjs` and `node tests/validate-manual-index.mjs` before committing.
 - Show complete feature/test/deploy status truthfully, preserve source citations, and verify GitHub Pages separately from source publication.
 

@@ -1,93 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head><meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;; form-action &#x27;self&#x27;; script-src &#x27;self&#x27; https://cdnjs.cloudflare.com ; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; https: data: blob:; font-src &#x27;self&#x27; data:; connect-src &#x27;self&#x27; https://cdnjs.cloudflare.com; frame-src &#x27;self&#x27; blob:; worker-src &#x27;self&#x27; blob: https://cdnjs.cloudflare.com; upgrade-insecure-requests"/><meta name="referrer" content="no-referrer"/>
-<meta charset="utf-8" />
+<meta charset="utf-8" /><script src="theme.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#08111b" />
-<meta name="description" content="2018 Triumph Bonneville T120 evidence-first, photo-led workshop explorer. Search components, manufacturer specifications, tool and torque provenance without invented repair values." />
-<title>Bonneville T120 | Workshop Explorer 2018</title>
+<meta name="theme-color" content="#0d0f12" />
+<meta name="description" content="2018 Triumph Bonneville T120 workshop explorer: real-photo teardown, service planner, torque values and tool sizes, each traced to its source." />
+<title>Bonneville T120 2018 · Workshop Explorer</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="reference-library.css" />
 <link rel="stylesheet" href="component-evidence.css" />
 </head>
 <body>
-<div class="app-shell">
- <aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="mark">T</div><div><span class="eyebrow">INDEPENDENT WORKSHOP</span><strong>BONNEVILLE<span class="brand-t"> / T120</span></strong><small>Explorer <span>2018</span></small></div></div>
-  <div class="side-title">WORKSPACE</div>
-  <nav id="sideNav" aria-label="Main navigation">
-   <button class="nav-link selected" data-target="overview"><span class="nav-symbol">⌂</span><span>Overview</span><span class="nav-index">01</span></button>
-   <button class="nav-link" data-target="catalogue"><span class="nav-symbol">▦</span><span>Parts catalogue</span><span class="nav-index">02</span></button>
-   <button class="nav-link" data-target="inspector"><span class="nav-symbol">⌁</span><span>Tools & torque</span><span class="nav-index">03</span></button>
-   <button class="nav-link" data-target="maintenance"><span class="nav-symbol">☷</span><span>Maintenance</span><span class="nav-index">04</span></button>
-   <button class="nav-link" data-target="assistant"><span class="nav-symbol">✧</span><span>Evidence assistant</span><span class="nav-index">05</span></button>
-   <button class="nav-link" data-target="referenceDesk"><span class="nav-symbol">▤</span><span>Manual data & torques</span><span class="nav-index">06</span></button>
-   <a class="nav-link" href="electrical.html" style="text-decoration:none"><span class="nav-symbol">ϟ</span><span>Electrical &amp; fuses</span><span class="nav-index">08</span></a>
-   <a class="nav-link" href="catalogue.html" style="text-decoration:none"><span class="nav-symbol">▦</span><span>2018 OEM catalogue</span><span class="nav-index">09</span></a>
-   <button class="nav-link" data-target="manualLibrary"><span class="nav-symbol">▧</span><span>My PDF library</span><span class="nav-index">07</span></button>
+<header class="site-top">
+  <a class="wordmark" href="index.html"><b>Bonneville T120</b><span>2018 workshop explorer</span></a>
+  <div class="top-search"><label class="sr-only" for="globalSearch">Search assemblies</label><input id="globalSearch" type="search" placeholder="Search 30 assemblies" autocomplete="off"/><kbd>/</kbd></div>
+  <nav class="site-nav" aria-label="Sections">
+    <a href="index.html" aria-current="page">Dashboard</a><a href="exploded.html">Teardown</a><a href="catalogue.html">Parts catalogue</a><a href="electrical.html">Electrical</a><a href="manual-index.html">Manual index</a>
+  </nav><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+  <button id="menuToggle" class="menu-toggle" type="button" aria-label="Jump to a section" aria-expanded="false" aria-controls="sidebar">Sections</button>
+</header>
+<div class="coachline" aria-hidden="true"></div>
+
+<aside class="section-bar" id="sidebar" aria-label="On this page">
+  <nav id="sideNav">
+    <button class="nav-link selected" type="button" data-target="overview">Overview</button>
+    <button class="nav-link" type="button" data-target="servicePlanner">Service planner</button>
+    <button class="nav-link" type="button" data-target="catalogue">Assemblies</button>
+    <button class="nav-link" type="button" data-target="maintenance">Garage checklist</button>
+    <button class="nav-link" type="button" data-target="assistant">Ask the records</button>
+    <button class="nav-link" type="button" data-target="referenceDesk">Manual data</button>
+    <button class="nav-link" type="button" data-target="manualLibrary">My PDF manuals</button>
   </nav>
-  <div class="side-grow"></div>
-  <div style="padding:11px 14px;border:1px solid #247bb2;border-radius:9px;margin:8px 10px;background:#10394f"><a href="exploded.html" style="display:block;text-decoration:none;color:#87d4ff;font-weight:750;font-size:12px">▣ EXPLODED TEARDOWN ↗</a><small style="color:#a5c1cf;font-size:10px;line-height:1.5">Real 2018 fiche part numbers · source-linked tools / torque</small></div>
-  <div class="scope-box"><span class="status-dot"></span><span>FACTORY CONFIGURATION<br><b>MY18 · Nissin ABS</b><small>VIN and market not confirmed</small></span></div>
-  <div class="side-footer">Independent reference project<br>Not a factory repair manual</div>
- </aside>
+</aside>
 
- <div class="work-area">
-  <header class="topbar">
-   <button id="menuToggle" class="icon-button mobile-menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
-   <div class="top-identity"><strong>Workshop Explorer</strong><span><i></i> Bonneville T120 <em>/ 2018</em></span></div>
-   <a href="exploded.html" style="padding:9px 12px;border:1px solid #2d7196;border-radius:8px;text-decoration:none;font-size:11px;white-space:nowrap;color:#92d6ff">Exploded assemblies ↗</a>
-   <div class="top-search-wrap"><span class="search-icon">⌕</span><label class="sr-only" for="globalSearch">Search workshop parts</label><input id="globalSearch" type="search" placeholder="Search 30 assemblies…" autocomplete="off"/><kbd>/</kbd></div>
-   <div class="header-right"><span class="source-pill"><span>●</span> Evidence-first</span><a href="https://github.com/jsankr/TriumphBonnevilleT120" target="_blank" rel="noopener noreferrer" class="github-link" title="Open repository">GitHub ↗</a></div>
-  </header>
-  <main>
-   <div class="breadcrumb">PROJECT <span>/</span> MODEL YEAR 2018 <span>/</span> WORKSPACE <b>01</b></div>
-   <div class="page-intro"><div><div class="intro-kicker">THE MODERN CLASSIC · DIGITAL WORKSHOP</div><h1>Know every <em>part.</em></h1><p>Explore the 2018 Bonneville T120 with searchable evidence, a photo-led component guide, and traceable specifications.</p></div><div class="model-label"><span class="model-dot"></span><div><small>MODEL PROFILE</small><strong>T120 · MY18</strong><span>1200cc · Parallel twin</span></div></div></div>
-   <div class="truth-bar"><span class="truth-icon">!</span><div><b>Accuracy comes first.</b> The motorcycle visual is concept reference artwork supplied for this interface. It is not OEM CAD, a verified photograph or a teardown diagram. Missing fastener specifications remain unknown.</div><a href="#references">Sources ↗</a></div>
+<main class="page">
+  <section class="hero" id="overview" aria-labelledby="heroTitle">
+    <div class="hero-copy">
+      <p class="hero-kicker">2018 model year, liquid-cooled 1200 HT, Cranberry Red / Aluminium Silver</p>
+      <h1 id="heroTitle">Bonneville T120</h1>
+      <p class="hero-lede">Every assembly, torque value, tool and service task for the 2018 T120, with the page or post each one comes from. Where no source exists, it says so.</p>
+      <div class="hero-actions"><a class="btn-primary" href="exploded.html">Open the teardown</a><a class="btn-ghost" href="#servicePlanner">Plan a service</a></div>
+      <dl class="hero-facts" id="heroFacts" aria-live="polite"></dl>
+    </div>
+    <figure class="hero-stage glass" id="bikeStage">
+      <div class="photo-box">
+        <img src="assets/photo/t120-cranberry-hero.webp" width="859" height="512" alt="Right side of a Triumph Bonneville T120 in Cranberry Red over Aluminium Silver with a gold coach line, the 2016 to 2018 colour scheme" draggable="false"/>
+        <button class="hotspot" type="button" data-part="seat" style="--x:28.3%;--y:34.6%" aria-label="Select seat"><span class="tip">Seat</span></button>
+        <button class="hotspot" type="button" data-part="fuel-tank" style="--x:56.8%;--y:28.7%" aria-label="Select fuel tank"><span class="tip">Fuel tank</span></button>
+        <button class="hotspot" type="button" data-part="engine" style="--x:55.6%;--y:52.1%" aria-label="Select engine"><span class="tip">Engine</span></button>
+        <button class="hotspot" type="button" data-part="forks" style="--x:76.6%;--y:44.3%" aria-label="Select front forks"><span class="tip">Front forks</span></button>
+        <button class="hotspot" type="button" data-part="front-brake" style="--x:88.6%;--y:77.5%" aria-label="Select Nissin front brakes"><span class="tip">Nissin front brakes</span></button>
+        <button class="hotspot" type="button" data-part="rear-shocks" style="--x:23.9%;--y:58.0%" aria-label="Select rear shocks"><span class="tip">Twin rear shocks</span></button>
+      </div>
+      <figcaption><span>Photo: takenji1989, <a href="https://www.flickr.com/photos/105592384@N07/51444289036" target="_blank" rel="noopener noreferrer">Flickr</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 2.0</a>. Background and bystander removed. The 2016–2018 Cranberry Red / Aluminium Silver scheme; not the owner's motorcycle.</span><button id="resetSelection" type="button" class="btn-ghost small">Reset selection</button></figcaption>
+    </figure>
+  </section>
 
-   <div class="dashboard" id="overview">
-    <section class="panel visual-panel" aria-labelledby="photoTitle">
-     <div class="panel-head"><div><div class="eyebrow">01 / VISUAL EXPLORER</div><h2 id="photoTitle">The motorcycle</h2></div><span class="tag">IMAGE-BASED · NO BLENDER</span></div>
-     <div class="bike-stage" id="bikeStage">
-      <div class="stage-overline"><span>CRANBERRY RED <span>×</span> SILVER</span><span>MY18 REFERENCE CONCEPT</span></div>
-      <img src="assets/bonneville-reference.webp" alt="Photo-style reference illustration of a red-and-silver Triumph Bonneville T120 from the supplied dashboard concept, not a verified OEM photograph" draggable="false"/>
-      <div class="image-cover" aria-hidden="true"></div>
-      <button class="hotspot" data-part="seat" style="--x:24%;--y:37%" aria-label="Select seat assembly"><span>+</span><span class="tip">Seat</span></button>
-      <button class="hotspot" data-part="fuel-tank" style="--x:47%;--y:29%" aria-label="Select fuel tank"><span>+</span><span class="tip">Fuel tank</span></button>
-      <button class="hotspot" data-part="engine" style="--x:51%;--y:70%" aria-label="Select engine"><span>+</span><span class="tip">Engine</span></button>
-      <button class="hotspot" data-part="forks" style="--x:75%;--y:57%" aria-label="Select front forks"><span>+</span><span class="tip">Forks</span></button>
-      <button class="hotspot" data-part="front-brake" style="--x:83%;--y:82%" aria-label="Select Nissin front brakes"><span>+</span><span class="tip">Nissin brakes</span></button>
-      <button class="hotspot" data-part="rear-shocks" style="--x:28%;--y:72%" aria-label="Select rear shocks"><span>+</span><span class="tip">Twin shocks</span></button>
-      <div class="stage-caption"><span><b>PHOTO NAVIGATION</b> · Approximate selection hotspots</span><span class="capsule"><span class="cyan-dot"></span> 2018 T120</span></div>
-     </div>
-     <div class="visual-actions"><span><span class="tiny-circle">i</span> This is a 2D reference image, not a rotatable 3D model.</span><button id="resetSelection" type="button">↺ Reset selection</button></div>
+  <section class="specs" aria-labelledby="specsTitle">
+    <div class="section-head"><h2 id="specsTitle">Workshop figures</h2><p>From the T120 column of the November 2016 owner's handbook. Check the 2018 handbook for your motorcycle.</p></div>
+    <div class="spec-groups" id="keySpecs"><p class="muted">Loading figures…</p></div>
+  </section>
+
+  <section class="planner glass" id="servicePlanner" aria-labelledby="plannerTitle">
+    <div class="section-head"><h2 id="plannerTitle">Service planner</h2><p>Triumph's scheduled maintenance table, April 2016 service manual pages 84–85. Pick a service to see what it includes.</p></div>
+    <div class="planner-tabs" id="plannerTabs" role="tablist" aria-label="Scheduled service"></div>
+    <div class="planner-body">
+      <div class="matrix-wrap"><div class="matrix" id="plannerMatrix"></div></div>
+      <div class="planner-list" id="plannerList" aria-live="polite"></div>
+    </div>
+    <p class="fine" id="plannerNotes"></p>
+  </section>
+
+  <div class="workbench">
+    <section class="panel glass catalogue-panel" id="catalogue" aria-labelledby="catalogueTitle">
+      <div class="panel-head"><h2 id="catalogueTitle">Assemblies <span class="title-count tnum" id="resultCount">30</span></h2></div>
+      <div class="filter-row" id="filterRow" role="group" aria-label="Filter by system">
+        <button type="button" data-filter="All" class="active">All</button><button type="button" data-filter="Wheels &amp; brakes">Brakes</button><button type="button" data-filter="Suspension &amp; steering">Suspension</button><button type="button" data-filter="Engine &amp; transmission">Engine</button><button type="button" data-filter="Electrical">Electrical</button>
+      </div>
+      <label class="sr-only" for="partSearch">Filter assemblies</label>
+      <input class="field-input" type="search" id="partSearch" placeholder="Filter by name or system" autocomplete="off"/>
+      <div class="part-scroll" id="partList" role="list" aria-label="Assemblies matching filters"></div>
+      <div class="catalogue-footer"><span id="catalogueStatus">30 assembly records</span></div>
     </section>
 
-    <section class="panel catalogue-panel" id="catalogue" aria-labelledby="catalogueTitle">
-      <div class="panel-head"><div><div class="eyebrow">02 / EXPLORE COMPONENTS</div><h2 id="catalogueTitle">Parts catalogue <span class="title-count" id="resultCount">30</span></h2></div><span class="tag">ASSEMBLY LEVEL</span></div>
-      <div class="filter-row" id="filterRow"><button data-filter="All" class="active">All</button><button data-filter="Wheels & brakes">Brakes</button><button data-filter="Suspension & steering">Suspension</button><button data-filter="Engine & transmission">Engine</button><button data-filter="Electrical">Electrical</button></div>
-      <label class="sr-only" for="partSearch">Filter assemblies</label><div class="parts-search"><span>⌕</span><input type="search" id="partSearch" placeholder="Search components…" /></div>
-      <div class="part-scroll" id="partList" role="list" aria-label="Parts matching filters"></div>
-      <div class="catalogue-footer"><span id="catalogueStatus">30 assembly records</span><span>NO DUPLICATE PARTS</span></div>
+    <section class="panel glass inspector-panel" id="inspector" aria-labelledby="selectedName">
+      <div class="panel-head inspector-head"><div><span id="selectedGroup" class="group-label">Suspension &amp; steering</span><h2 id="selectedName">Front forks</h2></div><span class="ev" id="evidenceTag">Check source</span></div>
+      <div class="detail-tabs" id="detailTabs" role="group" aria-label="Detail"><button type="button" class="active" data-tab="overview">Overview</button><button type="button" data-tab="torque">Torque and tools</button><button type="button" data-tab="service">Service notes</button></div>
+      <div id="detailContent" class="detail-content" aria-live="polite"></div>
+      <div class="inspector-footer"><a href="exploded.html">See part numbers in the teardown</a><button id="nextPart" type="button" aria-label="Select next assembly">Next assembly</button></div>
     </section>
+  </div>
 
-    <section class="panel inspector-panel" id="inspector" aria-labelledby="inspectorTitle">
-     <div class="panel-head"><div><div class="eyebrow">03 / COMPONENT INTELLIGENCE</div><h2 id="inspectorTitle">Selected assembly</h2></div><span class="tag tag-orange" id="evidenceTag">CHECK SOURCE</span></div>
-     <div class="part-detail-heading"><div class="detail-avatar">⌁</div><div><span id="selectedGroup" class="eyebrow">SUSPENSION & STEERING</span><h3 id="selectedName">Front forks & lower yoke</h3></div></div>
-     <div class="detail-tabs" id="detailTabs"><button class="active" data-tab="overview">Overview</button><button data-tab="torque">Torque & tools</button><button data-tab="service">Service notes</button></div>
-     <div id="detailContent" class="detail-content" aria-live="polite"></div>
-     <div class="inspector-footer"><span>Source records · 2018 applicability requires VIN check</span><button id="nextPart" aria-label="Select next assembly">Next →</button></div>
+  <div class="lower-grid">
+    <section class="panel glass torque-panel" id="torqueReference" aria-labelledby="torqueTitle">
+      <div class="panel-head"><h2 id="torqueTitle">Torque quick reference</h2></div>
+      <div class="torque-table" id="torqueTable"></div>
+      <p class="fine">April 2016 T120 service manual values. Confirm them for your 2018 motorcycle before tightening.</p>
     </section>
-   </div>
+    <section class="panel glass maintenance-panel" id="maintenance" aria-labelledby="maintTitle">
+      <div class="panel-head"><h2 id="maintTitle">Garage checklist</h2><span class="muted small">Saved in this browser</span></div>
+      <p class="fine">A pre-ride list for you, not Triumph's service schedule.</p>
+      <div id="maintenanceList" class="maintenance-list"></div>
+      <div class="maintenance-foot"><span id="maintenanceProgress">0 of 5 checked</span><button id="clearMaintenance" type="button" class="btn-ghost small">Clear checks</button></div>
+    </section>
+    <section class="panel glass assistant-panel" id="assistant" aria-labelledby="askTitle">
+      <div class="panel-head"><h2 id="askTitle">Ask the records</h2><span class="muted small">Searches this project's data, no AI model</span></div>
+      <div id="chatLog" class="chat-log" role="log" aria-live="polite"></div>
+      <div class="quick-asks"><button type="button" data-ask="What brakes are fitted to the 2018 T120?">2018 brakes</button><button type="button" data-ask="What is the torque for the front axle?">Front axle torque</button><button type="button" data-ask="How many rear shocks are fitted?">Rear suspension</button></div>
+      <form id="askForm" class="ask-form"><label for="askInput" class="sr-only">Question</label><input id="askInput" placeholder="Ask about a part, torque or tool" required maxlength="280"/><button type="submit">Search</button></form>
+    </section>
+  </div>
 
-   <div class="lower-grid">
-    <section class="panel torque-panel" id="torqueReference"><div class="panel-head"><div><div class="eyebrow">04 / EVIDENCE REGISTER</div><h2>Torque quick references</h2></div><span class="tag tag-orange">2016 T120 MANUAL*</span></div><div class="torque-table" id="torqueTable"></div><p class="fineprint">*April 2016 T120 service-manual reference values. <strong>Must be confirmed for your 2018 market/VIN.</strong> The separate manual-data desk includes 2016 T120 service-manual entries, not independently certified for your MY18 VIN.</p></section>
-    <section class="panel maintenance-panel" id="maintenance"><div class="panel-head"><div><div class="eyebrow">05 / GARAGE CHECKLIST</div><h2>Maintenance desk</h2></div><span class="tag">SAVED LOCALLY</span></div><p class="subtext">A personal planning checklist, not a replacement for the VIN-specific service schedule.</p><div id="maintenanceList" class="maintenance-list"></div><div class="maintenance-foot"><span id="maintenanceProgress">0 of 5 checked</span><button id="clearMaintenance">Clear checks</button></div></section>
-    <section class="panel assistant-panel" id="assistant"><div class="panel-head"><div><div class="eyebrow">06 / EVIDENCE ASSISTANT</div><h2>Workshop search <span class="assistant-star">✳</span></h2></div><span class="tag">LOCAL · NOT LIVE AI</span></div><div class="assistant-info"><div class="assistant-mark">✳</div><p>Ask about Nissin brakes, component locations, or missing tool and torque evidence. Answers are retrieved from project records—not invented by an AI model.</p></div><div id="chatLog" class="chat-log" role="log" aria-live="polite"></div><div class="quick-asks"><button data-ask="What brakes are fitted to the 2018 T120?">2018 Nissin brakes</button><button data-ask="What is the torque for the front axle?">Front axle torque</button><button data-ask="How many rear shocks are fitted?">Rear suspension</button></div><form id="askForm" class="ask-form"><label for="askInput" class="sr-only">Ask evidence question</label><input id="askInput" placeholder="Ask a workshop question…" required maxlength="280"/><button type="submit" aria-label="Search evidence">↗</button></form></section>
-   </div>
-
-   <section class="source-library" id="referenceDesk" aria-labelledby="sourceLibraryHeading">
-      <span class="badge-scope">FACTUAL REFERENCE DESK · DOCUMENT EDITIONS TRACKED</span>
+  <section class="source-library glass" id="referenceDesk" aria-labelledby="sourceLibraryHeading">
+      
       <h2 id="sourceLibraryHeading">Technical data from your four manuals</h2>
       <p id="libraryStatus">Loading audited source records…</p>
       <div class="source-note"><strong>Important source applicability.</strong> Torque and maintenance records come from the <strong>April 2016 T120 service manual</strong> and the T120 column of the <strong>November 2016 owner's handbook</strong>. They are not validated for every 2018 VIN or modified motorcycle. The 2012 data sheet and 2006 checklist are for earlier models and are deliberately <strong>excluded</strong> from MY18 repair data. Tool sizes are not guessed. Service-manual p.70 is quarantined because its "Front Brakes" table actually contains engine-cover entries.</div>
@@ -102,8 +129,8 @@
       <div id="referenceResults" class="reference-list" aria-live="polite"></div>
       <div class="library-listfoot"><span id="referenceCount">Loading…</span><button type="button" id="referenceMore" hidden>Show more records</button></div>
     </section>
-    <section class="source-library" id="manualLibrary" aria-labelledby="manualLibraryHeading">
-      <span class="badge-scope">PRIVATE ON-DEVICE DOCUMENT READER · ALL PAGES AVAILABLE</span>
+    <section class="source-library glass" id="manualLibrary" aria-labelledby="manualLibraryHeading">
+      
       <h2 id="manualLibraryHeading">Load and search your complete PDFs</h2>
       <p>This opens the <strong>original pages and diagrams</strong> from your four PDF files; unlike a summarized database, the original content is not reduced or omitted. Select your documents once per browser session. <strong>Nothing is uploaded, transmitted to GitHub, or saved to a server.</strong> The full PDF contents remain on your device.</p>
       <div class="source-upload"><strong>Choose each original PDF in the matching document row below.</strong><div id="manualMessages" role="status" aria-live="polite">Original PDF files are intentionally not bundled with the public application due to copyright restrictions. You can view PDF pages without PDF.js; full-text scanning requires the optional PDF.js library.</div></div>
@@ -115,12 +142,16 @@
       <div id="manualResults" aria-live="polite"></div>
       <div id="manualViewer" hidden><h3>Original PDF page</h3><p id="sourceInstructions">Select a source page.</p><p><a id="openManualTab" href="#manualLibrary" target="_blank" rel="noopener">Open PDF in separate browser tab ↗</a></p><iframe id="pdfFrame" title="Local motorcycle manual" hidden></iframe></div>
     </section>
-   <div class="bottom-grid" id="references"><div class="bottom-lead"><div class="eyebrow">SOURCE GOVERNANCE</div><h2>Real evidence. <em>Clear limits.</em></h2><p>Do not use design screenshots, approximate hotspots, or unverified values as instructions for safety-critical work.</p><div class="reference-links"><a href="https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf" target="_blank" rel="noopener noreferrer">MY18 Triumph brochure ↗</a><a href="https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf" target="_blank" rel="noopener noreferrer">Later owner’s handbook ↗</a><a href="https://github.com/jsankr/TriumphBonnevilleT120/blob/main/SOURCES.md" target="_blank" rel="noopener noreferrer">Source register ↗</a></div></div><div class="recall-box"><span class="eyebrow">SAFETY & RECALLS</span><h3>US Recall 560 / 19V-133</h3><p>Certain 2016–2019 T120 variants. Affected VINs and applicability to an India-market motorcycle must be checked with Triumph or an authorised dealer.</p><a href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">Check recall information ↗</a></div></div>
-   <footer class="footer"><span>© Independent T120 Workshop Explorer · 2018 vehicle reference</span><span>NO BLENDER · SOURCE-TRACED · VERSION 2.3</span><span>Design visual from user-supplied concept screenshot</span></footer>
-  </main>
- </div>
-</div>
+
+  <section class="closing" id="references">
+    <div class="glass closing-card"><h2>Sources and limits</h2><p>Do not use outlines on a photograph, or any value marked inferred or owner-reported, as instructions for safety-critical work without checking the manual for your motorcycle.</p>
+      <div class="reference-links"><a href="https://www.triumph-motorcycles.com.vn/data/categories/897/TRM_10759398_MY18Classics_Master_US_SP.pdf" target="_blank" rel="noopener noreferrer">MY18 Triumph brochure</a><a href="https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf" target="_blank" rel="noopener noreferrer">Later owner's handbook</a><a href="https://github.com/jsankr/TriumphBonnevilleT120/blob/main/SOURCES.md" target="_blank" rel="noopener noreferrer">Source register</a></div></div>
+    <div class="glass closing-card recall-box"><h2>US recall 560 / 19V-133</h2><p>Covers certain 2016–2019 T120 variants. Whether it applies to an India-market motorcycle must be checked with Triumph or an authorised dealer.</p><a href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener noreferrer">Check recall information</a></div>
+  </section>
+  <footer class="footer">Independent owner's reference, not affiliated with or endorsed by Triumph Motorcycles. </footer>
+</main>
 <script type="module" src="app.js"></script>
 <script type="module" src="source-library.js"></script>
+<script defer src="dashboard.js"></script>
 </body>
 </html>

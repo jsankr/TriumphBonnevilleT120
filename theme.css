@@ -1,0 +1,108 @@
+/* T120 Workshop Explorer — shared glass design system with light and dark themes.
+   Dark is graphite glass; light is frosted aluminium. The one accent in both is the brass of the
+   tank's hand-painted coach line. The motorcycle photograph supplies the only strong colour. */
+@font-face{font-family:"Archivo";src:url("assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2-variations"),url("assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
+
+:root,[data-theme="dark"]{
+  color-scheme:dark;
+  --base:#0d0f12;--base-rgb:13 15 18;
+  --fg:#eceff2;--fg-rgb:236 239 242;--fg-2:#b2bac2;--fg-3:#868f98;
+  --line-gold:#cfa95f;--gold-rgb:207 169 95;--on-gold:#17130a;
+  --acc-rgb:112 122 134;--acc2-rgb:207 169 95;
+  --accent-fill:#353b43;--accent-edge:#cfa95f;
+  --sel-grad:linear-gradient(140deg,rgb(112 122 134 / .42),rgb(112 122 134 / .18));
+  --btn-grad:linear-gradient(135deg,#e2c07c,#b98e44);--btn-fg:#17130a;
+  --well-rgb:0 0 0;
+  --glass:rgb(236 239 242 / .055);--glass-2:rgb(236 239 242 / .1);
+  --glass-edge:rgb(236 239 242 / .12);--glass-edge-hi:rgb(236 239 242 / .24);
+  --shadow:0 30px 60px -32px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.07);
+  --thead:rgba(24,28,33,.97);--option-bg:#1b1f24;--socket:#030405;
+  --dim:brightness(.5) saturate(.55);
+  --photo-shadow:drop-shadow(0 30px 30px rgba(0,0,0,.6));
+  --title-shadow:0 2px 30px rgba(0,0,0,.45);
+  --bg-layers:
+    radial-gradient(900px 600px at 8% -10%,rgba(92,110,130,.32),transparent 60%),
+    radial-gradient(800px 700px at 105% 5%,rgba(207,169,95,.10),transparent 60%),
+    radial-gradient(1100px 800px at 50% 115%,rgba(70,84,100,.30),transparent 60%),
+    linear-gradient(180deg,#101317,#0b0d10);
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --base:#e9ecef;--base-rgb:233 236 239;
+  --fg:#14181c;--fg-rgb:20 24 28;--fg-2:#3f4851;--fg-3:#5a646e;
+  --line-gold:#76581a;--gold-rgb:118 88 26;--on-gold:#ffffff;
+  --acc-rgb:255 255 255;--acc2-rgb:118 88 26;
+  --accent-fill:#ffffff;--accent-edge:#76581a;
+  --sel-grad:linear-gradient(140deg,rgba(255,255,255,.95),rgba(255,255,255,.7));
+  --btn-grad:linear-gradient(135deg,#2a3038,#14181c);--btn-fg:#f4f5f6;
+  --well-rgb:255 255 255;
+  --glass:rgba(255,255,255,.5);--glass-2:rgba(255,255,255,.78);
+  --glass-edge:rgb(20 24 28 / .1);--glass-edge-hi:rgb(20 24 28 / .2);
+  --shadow:0 24px 48px -30px rgba(30,42,58,.35),inset 0 1px 0 rgba(255,255,255,.9);
+  --thead:rgba(246,247,248,.97);--option-bg:#ffffff;--socket:#9aa2ab;
+  --dim:saturate(.2) contrast(.55) brightness(1.32);
+  --photo-shadow:drop-shadow(0 26px 22px rgba(30,42,58,.28));
+  --title-shadow:none;
+  --bg-layers:
+    radial-gradient(900px 600px at 6% -10%,rgba(160,182,206,.55),transparent 60%),
+    radial-gradient(800px 700px at 105% 0%,rgba(222,196,140,.35),transparent 60%),
+    radial-gradient(1100px 800px at 50% 115%,rgba(176,190,206,.55),transparent 60%),
+    linear-gradient(180deg,#f3f5f7,#e3e7eb);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme]){
+  color-scheme:light;--base:#e9ecef;--base-rgb:233 236 239;--fg:#14181c;--fg-rgb:20 24 28;--fg-2:#3f4851;--fg-3:#5a646e;
+  --line-gold:#76581a;--gold-rgb:118 88 26;--on-gold:#fff;--acc-rgb:255 255 255;--acc2-rgb:118 88 26;--accent-fill:#fff;--accent-edge:#76581a;
+  --sel-grad:linear-gradient(140deg,rgba(255,255,255,.95),rgba(255,255,255,.7));--btn-grad:linear-gradient(135deg,#2a3038,#14181c);--btn-fg:#f4f5f6;
+  --well-rgb:255 255 255;--glass:rgba(255,255,255,.5);--glass-2:rgba(255,255,255,.78);--glass-edge:rgb(20 24 28 / .1);--glass-edge-hi:rgb(20 24 28 / .2);
+  --shadow:0 24px 48px -30px rgba(30,42,58,.35),inset 0 1px 0 rgba(255,255,255,.9);--thead:rgba(246,247,248,.97);--option-bg:#fff;--socket:#9aa2ab;
+  --dim:saturate(.2) contrast(.55) brightness(1.32);--photo-shadow:drop-shadow(0 26px 22px rgba(30,42,58,.28));--title-shadow:none;
+  --bg-layers:radial-gradient(900px 600px at 6% -10%,rgba(160,182,206,.55),transparent 60%),radial-gradient(800px 700px at 105% 0%,rgba(222,196,140,.35),transparent 60%),radial-gradient(1100px 800px at 50% 115%,rgba(176,190,206,.55),transparent 60%),linear-gradient(180deg,#f3f5f7,#e3e7eb)}}
+:root{
+  --blur:blur(22px) saturate(160%);
+  --r-shell:22px;--r-panel:16px;--r-ctl:10px;
+  --display:"Archivo",system-ui,sans-serif;
+  --text:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* Older page stylesheets read these names */
+  --bg:var(--base);--panel:var(--glass);--edge:var(--glass-edge);--txt:var(--fg);--sub:var(--fg-2);--a:var(--fg);
+  --surface:var(--glass);--surface2:var(--glass-2);--line:var(--glass-edge);--blue:var(--fg);--glow:var(--accent-fill);--red:var(--accent-edge);
+}
+html{background:var(--base)}
+body{font-family:var(--text);font-stretch:100%;color:var(--fg);background:transparent!important;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--bg-layers)}
+a{color:var(--fg)}
+::selection{background:rgb(var(--gold-rgb) / .35);color:var(--fg)}
+:focus-visible{outline:2px solid var(--line-gold);outline-offset:2px;border-radius:6px}
+button,input,select,textarea{font-family:inherit}
+.tnum{font-variant-numeric:tabular-nums}
+html.theme-anim,html.theme-anim *{transition:background-color .35s ease,border-color .35s ease,color .35s ease!important}
+
+.glass{background:var(--glass);border:1px solid var(--glass-edge);border-radius:var(--r-panel);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--shadow)}
+.coachline{height:5px;border-top:1px solid var(--line-gold);border-bottom:1px solid var(--line-gold);opacity:.7}
+
+.site-top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:20px;padding:12px clamp(14px,3vw,34px);background:rgb(var(--base-rgb) / .6);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);border-bottom:1px solid var(--glass-edge)}
+.site-top .wordmark{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--fg);white-space:nowrap}
+.site-top .wordmark b{font-family:var(--display);font-stretch:125%;font-weight:760;font-size:17px;letter-spacing:.01em}
+.site-top .wordmark span{font-size:12.5px;color:var(--fg-3)}
+.site-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.site-nav a{padding:7px 12px;border-radius:999px;text-decoration:none;font-size:13.5px;color:var(--fg-2);border:1px solid transparent}
+.site-nav a:hover{color:var(--fg);background:var(--glass)}
+.site-nav a[aria-current="page"]{color:var(--fg);background:var(--glass-2);border-color:var(--line-gold)}
+.theme-toggle{flex:none;display:inline-grid;place-items:center;width:36px;height:36px;border-radius:999px;border:1px solid var(--glass-edge-hi);background:var(--glass);color:var(--fg);cursor:pointer;padding:0}
+.theme-toggle:hover{background:var(--glass-2)}
+.theme-toggle svg{width:18px;height:18px}
+.theme-toggle .moon{display:none}
+[data-theme="light"] .theme-toggle .sun{display:none}
+[data-theme="light"] .theme-toggle .moon{display:block}
+@media (max-width:760px){.site-top{flex-wrap:wrap;gap:8px}.site-nav{margin-left:0;overflow-x:auto;flex-wrap:nowrap;width:100%;padding-bottom:2px;order:3}.site-nav a{white-space:nowrap}.theme-toggle{margin-left:auto}}
+
+.ev{display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:1;padding:5px 9px;border-radius:999px;white-space:nowrap;border:1px solid var(--glass-edge-hi);color:var(--fg-2)}
+.ev::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid currentColor}
+.ev.manual{color:var(--fg);border-color:var(--line-gold)}
+.ev.manual::before{background:var(--line-gold);border-color:var(--line-gold)}
+.ev.inferred{border-style:dashed}
+.ev.inferred::before{border-style:dashed;border-radius:2px}
+.ev.none{color:var(--fg-3)}
+.ev.none::before{border-radius:1px;transform:rotate(45deg)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (forced-colors:active){.glass,.site-top{border:1px solid CanvasText}}

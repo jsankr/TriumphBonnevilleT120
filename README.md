@@ -1,4 +1,41 @@
-**Link repair:** Previously linked OEM mirrors blocked some visitors. Use the in-app exploded callouts and two 2018 catalogue choices instead. External reachability is network-dependent.\n\n# Triumph Bonneville T120 (2018) — Workshop Explorer
+# Triumph Bonneville T120 (2018) — Workshop Explorer
+
+**Link repair:** Previously linked OEM mirrors blocked some visitors. Use the in-app exploded callouts and two 2018 catalogue choices instead. External reachability is network-dependent.
+
+## v3.1 — your paint scheme, light and dark glass themes (16 November 2026)
+
+- **Cranberry Red / Aluminium Silver.** The dashboard and the default teardown view now use a real photograph of a T120 in the 2016–2018 Cranberry Red over Aluminium Silver scheme with the gold coach line, shot from the right (chain) side. Seven of the eight assemblies are outlined on it, with 19 markers for right-hand parts (right stanchion, right caliper, chain, clutch and sprocket covers). The rear brake is on the left, so it stays on the left-side photo.
+- **Light and dark themes.** Graphite glass and frosted aluminium glass, with brass from the coach line as the only accent. The site follows the device setting until the visitor uses the switch in the header; the choice is remembered in that browser (`theme.js`). Text contrast is at least 5:1 for all body and label colours in both themes.
+- Teardown now has three photographs: right side (Cranberry Red), left side, engine close-up.
+
+| Photo | Author | Licence | Changes |
+|---|---|---|---|
+| [T120, Cranberry Red / Aluminium Silver, right side](https://www.flickr.com/photos/105592384@N07/51444289036) | takenji1989 | [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/) | Background and the person standing behind the motorcycle removed; resized and cropped. The adapted files `assets/photo/t120-cranberry-*.webp` are shared under CC BY-NC-SA 2.0, so they may not be used commercially. |
+
+## v3.0 — glass redesign and real-photo teardown (16 November 2026)
+
+**[Open the dashboard](https://jsankr.github.io/TriumphBonnevilleT120/)** · **[Open the teardown](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html)**
+
+- **Teardown on real photographs.** The eight 2018 catalogue assemblies are outlined on two openly licensed photographs of the liquid-cooled T120 (left side, right-side engine). *Take it apart* lifts each assembly out of the photo; 24 numbered markers place individual catalogue callouts. Outlines and markers are hand-placed and approximate.
+- **Each part shows its own torque and tool.** 31 callout-to-torque links tie a catalogue part to the April 2016 service-manual row that tightens it. Each link records why it was made and is labelled *named* (the manual or catalogue names the same component) or *inferred* (the project's reading). The full manual torque table for each system is one click away.
+- **Tool sizes with sources.** Eight hand-tool sizes from owner forum posts and an accessory maker's install guide, each labelled with its source type and link (`data/tool-size-reports.json`). Triumph's own data files still hold no tool sizes.
+- **Service planner.** Triumph's 44-task scheduled-maintenance table (service manual pp. 84–85) as an interactive matrix: pick Daily, First service, Annual, 16,000/48,000, 32,000 or 64,000 km to see what is due.
+- **Workshop figures.** Oil, coolant, plug, fuel, tyre, chain, brake-fluid and battery figures from the T120 column of the 2016 owner's handbook, with page numbers.
+- **Design.** Glass interface; typeface Archivo (SIL Open Font Licence, bundled in `assets/fonts`).
+- **Tests.** New `tests/validate-teardown.mjs` checks the photo map and tool data against the parts catalogue and manual table; it runs in CI with the existing suites.
+
+### Photographs and licences
+| Photo | Author | Licence | Changes |
+|---|---|---|---|
+| [2017 Bonneville T120, left side](https://commons.wikimedia.org/wiki/File:2017_Bonneville_T120_CSNDCC1.jpg) | AmenMoto | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Resized, background removed. The adapted file `assets/photo/t120-left-cutout.webp` is shared under CC BY-SA 4.0. |
+| [T120 engine, right side](https://commons.wikimedia.org/wiki/File:Triumph_EM1B9077_(49794022932).jpg) | Bengt Nyman | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | Resized. |
+
+Neither photograph shows the owner's motorcycle. The left-side photo is a 2017 model of the same liquid-cooled generation; the right-side photo's model year is not stated by the photographer.
+
+This is an independent owner's reference, not affiliated with or endorsed by Triumph Motorcycles.
+
+---
+
 
 
 ## v2.9 — electrical/fuse references, 2018 parts navigator and corrected torque panel
@@ -47,7 +84,7 @@ The studio **does not contain, request, display or transmit a full vehicle ident
 
 This release replaces the earlier repository contents with the newer, tested photo-led T120 dashboard plus the **audited 2016 source-reference database** and a separate **894-page document navigation explorer**. The 230 **active** torque entries exclude 13 inconsistent rows from service-manual page 70; 44 scheduled-maintenance tasks, 37 special tools, and 32 T120 owner-specification records retain source edition/page links. The older 2012 and 2006 documents are included in the page navigator **only as historical material**, not repair specifications for a 2018 T120. The four copyrighted original PDFs are **not redistributed**; use the app's local PDF picker to inspect complete original pages privately.
 
-**No Blender or fabricated 3D motorcycle model.** The motorcycle artwork is a crop of the user-supplied concept image; it is illustrative, not authenticated OEM photography. The evidence assistant is a local deterministic search, not live AI. The repo is currently private; GitHub Pages requires deployment support and settings to be configured before the browser link is confirmed live.
+**No Blender or fabricated 3D motorcycle model.** Since v3.0 every motorcycle image in the app is a real, openly licensed photograph (credited in the v3.1 and v3.0 tables above); none is the owner's motorcycle. The evidence assistant is a local deterministic search, not live AI. The repo is currently private; GitHub Pages requires deployment support and settings to be configured before the browser link is confirmed live.
 
 ---
 
@@ -100,7 +137,7 @@ For your actual 2018 bike, confirm applicability with the appropriate Triumph se
 
 ## Application features
 
-- 2D photographic-style motorcycle dashboard based on a user-supplied concept image, with hotspots and selectable assemblies; **no fake 3D model**, Blender or Three.js dependency.
+- Dashboard built on a real, openly licensed photograph of a T120 in Cranberry Red / Aluminium Silver, with hotspots and selectable assemblies; **no fake 3D model**, Blender or Three.js dependency.
 - 30 source-constrained 2018 T120 assembly-level part records, including 2018 Nissin two-piston floating brake calipers; the geometry shown is illustrative and not measured OEM CAD.
 - Full-text filter over all 230 torque entries, 44 scheduled-maintenance tasks, 32 owner-manual T120 specifications and 37 specialist tools.
 - Paper-trail from every technical result to an original document and exact PDF page.

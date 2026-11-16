@@ -1,23 +1,35 @@
-# Evidence and model validation — 2026-11-14
+# Validation report — v3.1 (16 November 2026)
 
-## Findings
-- Previous generated concept screenshots are NOT screenshots of the application and cannot establish actual component quantities, positions or working features.
-- 2018 rear suspension fiche: rear shock T2050479 quantity 2; M8 x 20 mounting bolt T3330244 quantity 4; washer T3550331 quantity 4. **M8 is a thread size, not a verified socket/hex drive size.**
-- 2018 front fork fiche: LH and RH fork assemblies, with alternative part numbers split at VIN sequence 941382/941383. Display exactly two fitted fork legs, not four alternative variants at once.
-- 3D model remains schematic and incomplete; physical geometry/fastener positions and explosion vectors are not OEM validated. Do not use for real teardown sequencing.
-- Tool sizes for removal and installation and torques for unverified fasteners remain null. Not all fasteners are modelled or catalogued.
-- The 2019 official Triumph owner handbook has a limited torque table, but it is not 2018 VIN-specific workshop confirmation. No torque values should be extrapolated from those entries.
+All checks below were run on the release commit. Every check passed.
 
-## Source links
-- 2018 rear suspension fiche: https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles
-- 2018 front fork fiche: https://www.motorcyclespareparts.eu/en/triumph-parts/2018-bonneville-t120-motorcycles
-- Official 2019 owner handbook: https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf
+## Data validators (`tests/validate-*.mjs`, run in CI)
+| Check | Result |
+|---|---|
+| Component evidence | 30 assemblies, source-linked torques, tools and quarantine rules |
+| Parts index | 30 unique assemblies; Nissin brake, fork and shock records; tool/torque guard |
+| Electrical links | 9 fuses, 6 source diagrams, 51 harness components, 8 electrical part candidates; all internal links valid |
+| Electrical data | 9 fuses, 51 harness components, 6 manual drawings, 8 electrical parts |
+| Exploded catalogue | 8 assemblies, 171 catalogue entries, 27 source-labelled torque references |
+| Links | 22 HTML/Markdown sources, 121 local links |
+| Manual index | 894 indexed pages, 230 audited torque rows, 13 quarantined, 44 service rows, 37 tools, 32 owner specs |
+| Security and routes | 7 pages, 101 internal resources, 190 anchors, no embedded secrets |
+| Sources | 230 active torque rows, 13 quarantined, 44 maintenance rows, 32 owner specs, 37 special tools |
+| Teardown | 3 openly licensed photos, 17 outlines, 43 markers, 31 callout-to-torque links, 8 sourced tool sizes |
 
-## Remaining blockers before service-grade release
-1. Licensed/verified dimensionally accurate 2018 T120 CAD or photographic exploded reference.
-2. Correct 2018 workshop manual revision, India market and VIN applicability.
-3. Fastener-level database with head drive, size, removal/installation procedure, tightening sequence, torque, thread treatment and provenance.
-4. Verify any aftermarket Kineo wheels or TEC fork modifications separately; OEM specifications cannot automatically be reused.
-5. Browser/WebGL and real-device interaction testing.
+## Browser tests (headless Chrome)
+- Smoke test: 7 pages at 1440 px and 390 px, 90 interactions, 0 failures, no console errors, no horizontal overflow.
+- Security test: 184 dynamic links, 2 injection tests (hostile URL and HTML in data), no issues.
+- Teardown value check: all 156 catalogue positions opened one by one; every torque, page number, part number and tool size shown on screen matches the data files exactly; all 43 markers sit inside their assembly outline.
+- Theme test: follows the system setting, switches on click, and the choice persists across pages, in both starting modes.
 
-**Status: reference prototype, not service-grade.**
+## Text contrast (calculated, WCAG 2.x)
+Lowest body/label ratio is 5.1:1 (muted text, both themes); brass text 5.6:1 in light and 8.7:1 in dark.
+
+## Data clean-up in this release
+- External reference photos re-checked: 11 of 12 load. The dead one (a 2018 dealer listing photo that now returns 404) was removed from `data/real-reference-index.json`.
+- Removed files nothing referenced: the concept illustration `assets/bonneville-reference.webp`, three screenshots of the previous design, and the old `v1.2.1` zip.
+
+## Limits that remain
+- Torque values are from the April 2016 T120 service manual and must be confirmed for a given 2018 motorcycle.
+- Tool sizes: 8 found in public sources; three TriumphRat entries could only be read through search excerpts.
+- No photograph is of the owner's motorcycle.

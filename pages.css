@@ -1,0 +1,49 @@
+/* Re-skins the older secondary pages (catalogue, electrical, manual index, photo atlas, photo annotations)
+   onto the shared glass palette. Loaded after each page's own stylesheet. */
+body{font-family:var(--text)!important}
+a{color:var(--fg-2)}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.005em}
+h1{font-stretch:122%;font-weight:740}
+h2{font-stretch:110%}
+h1 em,.intro h1 em{color:var(--fg)!important;font-style:normal}
+.tag,.eyebrow,.intro small,.label,.fiche .meta,.card-content .meta{color:var(--fg-3)!important;text-transform:none!important;letter-spacing:0!important;font-weight:500!important;font-size:13px!important}
+
+/* Surfaces → glass */
+.panel,.pane,.card,.hero-card,.toolbar,.controls,.results,.fiche,.fact,.part-detail,.diagram,.torque-record,.notice:not(.warning),.privacy-note{
+  background:var(--glass)!important;border:1px solid var(--glass-edge)!important;-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);box-shadow:var(--shadow)}
+.panel,.pane,.card,.hero-card,.toolbar,.controls,.results{border-radius:var(--r-panel)!important}
+.topbar{background:transparent!important;border:0!important}
+.notice,.warning,.part-notice,.scope,.unsafe,.manual-older,.card-content .warning{background:rgb(var(--acc-rgb) / .25)!important;border:1px solid rgb(var(--acc2-rgb) / .45)!important;color:var(--fg-2)!important}
+.notice b,.notice strong,.warning b,.warning strong{color:var(--fg)}
+.photo-stage,.media{background:radial-gradient(70% 70% at 50% 55%,rgb(var(--acc-rgb) / .35),rgb(var(--base-rgb) / .6) 75%)!important}
+
+/* Controls */
+input,select,input[type=search]{background:rgb(var(--well-rgb) / .25)!important;border:1px solid var(--glass-edge)!important;color:var(--fg)!important;border-radius:var(--r-ctl)}
+select option{background:var(--option-bg)}
+input::placeholder{color:var(--fg-3)}
+button,.actions a,.jump-links a,.links a,.small-link,.nav a{background:transparent;border-color:var(--glass-edge)!important;color:var(--fg-2)!important}
+button:not(.hotspot):not(.marker){background:var(--glass)!important;border:1px solid var(--glass-edge)!important;color:var(--fg-2)!important}
+button:not(.hotspot):not(.marker):hover,.actions a:hover,.links a:hover,.jump-links a:hover{background:var(--glass-2)!important;color:var(--fg)!important}
+button.active,button.selected,button[aria-pressed=true],button[aria-selected=true],.view-options button.active,.stage-options button.active,.upload,#torqueButton{
+  background:linear-gradient(135deg,rgb(var(--acc-rgb) / .9),rgb(var(--acc-rgb) / .55))!important;border-color:var(--line-gold)!important;color:var(--fg)!important}
+.actions a,.jump-links a{background:var(--glass)!important;border:1px solid var(--glass-edge)!important}
+.part-select{background:transparent!important;border:0!important;color:var(--fg)!important}
+.part-item{background:rgb(var(--fg-rgb) / .04)!important;border-color:var(--glass-edge)!important}
+.part-item.active{background:rgb(var(--acc-rgb) / .6)!important;border-color:rgb(var(--acc2-rgb) / .7)!important}
+
+/* Text tones */
+p,.helper,.intro p,.desc,.card-content .desc,.diagram small,.part-detail dt,.unit small,.part-item small,.torque-record small,.photo-footer,.credit,.manual-item-sub,.manual-item-detail,td small,.fiche p,.source-caption{color:var(--fg-2)!important}
+.unit .part-code,.fuse-table th,.fact b,.part-detail .detail-title,.torque-record .value,.detail-value{color:var(--fg)!important}
+.pill,.flag,.fact-pills span,.capsule,.count{background:transparent!important;border-color:var(--glass-edge-hi)!important;color:var(--fg-2)!important}
+.hint,.warning-text,.torque-record .caution{color:var(--line-gold)!important}
+th{background:var(--thead)!important;color:var(--fg-2)!important}
+tr:hover{background:rgb(var(--fg-rgb) / .04)!important}
+.marker{background:var(--accent-fill)!important;border-color:var(--fg)!important}
+.marker.selected{background:var(--line-gold)!important;color:var(--on-gold)!important}
+.aside-separator{background:var(--glass-edge)!important}
+.privacy i{background:var(--line-gold)!important}
+footer,.footer{border-color:var(--glass-edge)!important;color:var(--fg-3)!important}
+.monogram{border-color:var(--line-gold)!important;color:var(--fg)!important}
+.no-results{border-color:var(--glass-edge-hi)!important;color:var(--fg-3)!important}
+#loadMessage{background:var(--accent-fill)!important}
+.site-top{padding:12px clamp(14px,3vw,34px)!important}

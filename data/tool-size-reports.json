@@ -1,0 +1,113 @@
+{
+ "schemaVersion": 1,
+ "updated": "2026-11-16",
+ "notice": "Hand-tool sizes for the liquid-cooled T120 from public sources that are not Triumph: owner forum posts and an accessory maker's install guide. They are not confirmed for any individual motorcycle and say nothing about aftermarket parts. Check the fit on the fastener before applying force.",
+ "tier": "owner-reported",
+ "retrieval": "TriumphRat entries were recorded from search-engine excerpts; the forum refused direct automated access when re-checked on 2026-11-16, so they have not been re-read in full. The install-guide entries were read directly on 2026-11-16.",
+ "reports": [
+  {
+   "id": "TR-834194-axle",
+   "assembly": "front-wheel",
+   "callout": "11",
+   "op": 0,
+   "tool": "17 mm hex key",
+   "fits": "Front axle, driven from the right-hand side",
+   "sourceTitle": "T120 front wheel removal (TriumphRat forum)",
+   "url": "https://www.triumphrat.net/threads/t120-front-wheel-removal.834194/",
+   "crossCheck": "The same post gives 48 lb-ft for the axle and 17 lb-ft for the pinch bolt, which convert to the manual's 65 Nm and 23 Nm.",
+   "kind": "forum",
+   "checked": "search excerpt; re-read refused 2026-11-16"
+  },
+  {
+   "id": "TR-834194-set",
+   "assembly": "front-wheel",
+   "callout": null,
+   "op": null,
+   "tool": "12 mm wrench or socket, 6 mm hex key",
+   "fits": "Rest of the front-wheel removal tool list. The post does not say which fastener each one fits.",
+   "sourceTitle": "T120 front wheel removal (TriumphRat forum)",
+   "url": "https://www.triumphrat.net/threads/t120-front-wheel-removal.834194/",
+   "crossCheck": null,
+   "kind": "forum",
+   "checked": "search excerpt; re-read refused 2026-11-16"
+  },
+  {
+   "id": "TR-957970-axlenut",
+   "assembly": "rear-wheel",
+   "callout": "16",
+   "op": 0,
+   "tool": "1-1/16 in box-end wrench",
+   "fits": "Rear axle nut",
+   "sourceTitle": "T120 Rear Wheel Removal (TriumphRat forum)",
+   "url": "https://www.triumphrat.net/threads/t120-rear-wheel-removal.957970/",
+   "crossCheck": null,
+   "kind": "forum",
+   "checked": "search excerpt; re-read refused 2026-11-16"
+  },
+  {
+   "id": "TR-957970-chain",
+   "assembly": "rear-wheel",
+   "callout": "14",
+   "op": 3,
+   "tool": "12 mm and 13 mm open-end wrenches",
+   "fits": "Chain adjustment",
+   "sourceTitle": "T120 Rear Wheel Removal (TriumphRat forum)",
+   "url": "https://www.triumphrat.net/threads/t120-rear-wheel-removal.957970/",
+   "crossCheck": null,
+   "kind": "forum",
+   "checked": "search excerpt; re-read refused 2026-11-16"
+  },
+  {
+   "id": "TR-957970-caliper",
+   "assembly": "rear-brakes",
+   "callout": "4",
+   "op": 0,
+   "tool": "14 mm",
+   "fits": "The two rear caliper mounts",
+   "sourceTitle": "T120 Rear Wheel Removal (TriumphRat forum)",
+   "url": "https://www.triumphrat.net/threads/t120-rear-wheel-removal.957970/",
+   "crossCheck": null,
+   "kind": "forum",
+   "checked": "search excerpt; re-read refused 2026-11-16"
+  },
+  {
+   "id": "BC-128461-axlenut",
+   "assembly": "rear-wheel",
+   "callout": "16",
+   "op": 0,
+   "tool": "27 mm socket",
+   "fits": "Rear wheel axle nut",
+   "sourceTitle": "How to remove the rear wheel on a Triumph Bonneville T100 / T120 (install guide naming British Customs)",
+   "url": "https://install-guides.gorgias.help/en-US/how-to-remove-the-rear-wheel-on-a-triumph-bonneville-t100--t120-128461",
+   "kind": "vendor-guide",
+   "checked": "read 2026-11-16",
+   "crossCheck": "Agrees with the forum report of a 1-1/16 in wrench, which is 27.0 mm."
+  },
+  {
+   "id": "BC-128461-adjuster",
+   "assembly": "rear-wheel",
+   "callout": "14",
+   "op": 3,
+   "tool": "13 mm wrench",
+   "fits": "Lock nuts on the left and right chain adjuster bolts",
+   "sourceTitle": "How to remove the rear wheel on a Triumph Bonneville T100 / T120 (install guide naming British Customs)",
+   "url": "https://install-guides.gorgias.help/en-US/how-to-remove-the-rear-wheel-on-a-triumph-bonneville-t100--t120-128461",
+   "kind": "vendor-guide",
+   "checked": "read 2026-11-16",
+   "crossCheck": null
+  },
+  {
+   "id": "BC-128461-guard",
+   "assembly": "rear-wheel",
+   "callout": null,
+   "op": null,
+   "tool": "5 mm Allen key",
+   "fits": "The two bolts holding the chain guard to the swinging arm",
+   "sourceTitle": "How to remove the rear wheel on a Triumph Bonneville T100 / T120 (install guide naming British Customs)",
+   "url": "https://install-guides.gorgias.help/en-US/how-to-remove-the-rear-wheel-on-a-triumph-bonneville-t100--t120-128461",
+   "kind": "vendor-guide",
+   "checked": "read 2026-11-16",
+   "crossCheck": null
+  }
+ ]
+}

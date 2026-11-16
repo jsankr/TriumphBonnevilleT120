@@ -33,6 +33,8 @@ jobs:
       - run: node tests/validate-data.mjs
       - run: node tests/validate-sources.mjs
       - run: node tests/validate-manual-index.mjs
+      - run: node --check dashboard.js
+      - run: node tests/validate-teardown.mjs
   browser-smoke:
     needs: validate
     # Playwright 1.57 Chromium supports Ubuntu 24.04; ubuntu-latest has moved to 26.04.

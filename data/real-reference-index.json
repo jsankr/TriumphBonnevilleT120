@@ -151,19 +151,6 @@
       "note": "Close-up from a modified motorcycle. Do not assume exact side without independent confirmation."
     },
     {
-      "id": "cockpit-2018",
-      "angle": "cockpit",
-      "category": "Controls & instruments",
-      "name": "2018 T120 Black · twin-dial instrument pack",
-      "publisher": "Triumph of Westchester",
-      "year": "2018 dealership listing",
-      "confidence": "2018 dealership",
-      "visual": "Speedometer, tachometer, ignition, display, handlebar portions",
-      "image": "https://images.autojini.net/AJC/50412/vehicles/DCDF7365-9E3E-8741-F8DD8F70B8868C02_x.jpg",
-      "page": "https://www.triumphofwestchester.com/used-2018-triumph-bonneville-t120-black-v5851182.html",
-      "note": "T120 Black finish, not the silver/red model; visual controls may vary by market."
-    },
-    {
       "id": "general-other",
       "angle": "right",
       "category": "Full motorcycle",

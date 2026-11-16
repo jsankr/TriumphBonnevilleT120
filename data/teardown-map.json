@@ -1,0 +1,849 @@
+{
+ "schemaVersion": 1,
+ "updated": "2026-11-16",
+ "purpose": "Places the eight catalogue assemblies and the callouts that can be identified by eye on two real, openly licensed photographs. Positions are hand-placed approximations on a photograph, not measured geometry. Callouts without a pin are inside the assembly or not identifiable in these photographs.",
+ "views": {
+  "cranberry": {
+   "title": "Right side, Cranberry Red / Aluminium Silver",
+   "image": "assets/photo/t120-cranberry-right.webp",
+   "width": 1024,
+   "height": 870,
+   "frame": [
+    -60,
+    170,
+    1100,
+    930
+   ],
+   "cutout": true,
+   "subject": "Triumph Bonneville T120 in Cranberry Red / Aluminium Silver",
+   "relevance": "The 2016–2018 T120 colour scheme with the gold coach line, from the right (chain) side. Model year is not stated by the photographer. It is not the owner's motorcycle.",
+   "changes": "Background and the person standing behind the motorcycle removed; nothing on the motorcycle altered.",
+   "credit": {
+    "author": "takenji1989",
+    "licence": "CC BY-NC-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+    "source": "https://www.flickr.com/photos/105592384@N07/51444289036",
+    "taken": "2021"
+   }
+  },
+  "left": {
+   "title": "Left side, Jet Black / Pure White example",
+   "image": "assets/photo/t120-left-cutout.webp",
+   "width": 1920,
+   "height": 1440,
+   "frame": [
+    -160,
+    -20,
+    2140,
+    1540
+   ],
+   "cutout": true,
+   "subject": "2017 Triumph Bonneville T120, Jet Black / Pure White",
+   "relevance": "Same liquid-cooled T120 generation as the 2018 model year (twin Nissin front discs, twin shocks). It is not the owner's motorcycle.",
+   "changes": "Resized; background removed. The rider's helmet on the seat is part of the original photograph.",
+   "credit": {
+    "author": "AmenMoto",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Bonneville_T120_CSNDCC1.jpg",
+    "taken": "2017-04-02"
+   }
+  },
+  "right": {
+   "title": "Engine close-up, right side",
+   "image": "assets/photo/t120-right-engine.webp",
+   "width": 1920,
+   "height": 1590,
+   "frame": [
+    -60,
+    -110,
+    2100,
+    1700
+   ],
+   "cutout": false,
+   "subject": "Triumph Bonneville T120, engine and radiator from the right",
+   "relevance": "Side panel lettering reads T120; brushed covers and 1200 HT engine badge as on the 2016-2020 generation. Model year is not stated by the photographer. It is not the owner's motorcycle.",
+   "changes": "Resized only.",
+   "credit": {
+    "author": "Bengt Nyman",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Triumph_EM1B9077_(49794022932).jpg",
+    "taken": "2020-04-18"
+   }
+  }
+ },
+ "placements": [
+  {
+   "assembly": "front-wheel",
+   "view": "left",
+   "shape": "M30,991 A298,180 0 1 0 626,991 A298,180 0 1 0 30,991 Z",
+   "lift": [
+    -150,
+    60
+   ],
+   "layer": 1
+  },
+  {
+   "assembly": "front-brakes",
+   "view": "left",
+   "shape": "M180,1010 A150,100 0 1 0 480,1010 A150,100 0 1 0 180,1010 Z",
+   "lift": [
+    170,
+    290
+   ],
+   "layer": 2
+  },
+  {
+   "assembly": "front-forks",
+   "view": "left",
+   "shape": "M565,470 L650,480 L640,610 L530,760 L478,860 L405,1062 L345,1055 L415,850 L452,720 L500,610 Z",
+   "lift": [
+    -150,
+    -235
+   ],
+   "layer": 3
+  },
+  {
+   "assembly": "rear-wheel",
+   "view": "left",
+   "shape": "M1393,950 A232,235 0 1 0 1857,950 A232,235 0 1 0 1393,950 Z",
+   "lift": [
+    250,
+    80
+   ],
+   "layer": 1
+  },
+  {
+   "assembly": "rear-brakes",
+   "view": "left",
+   "shape": "M1572,935 A88,82 0 1 0 1748,935 A88,82 0 1 0 1572,935 Z",
+   "lift": [
+    -70,
+    360
+   ],
+   "layer": 2
+  },
+  {
+   "assembly": "rear-shocks",
+   "view": "left",
+   "shape": "M1488,742 L1560,748 L1628,985 L1578,1008 L1500,810 Z",
+   "lift": [
+    345,
+    -215
+   ],
+   "layer": 3
+  },
+  {
+   "assembly": "engine-covers",
+   "view": "left",
+   "shape": "M790,905 L1000,880 L1150,895 L1195,960 L1190,1040 L1150,1085 L860,1098 L792,1030 Z",
+   "lift": [
+    0,
+    240
+   ],
+   "layer": 2,
+   "label": "Alternator cover"
+  },
+  {
+   "assembly": "cooling",
+   "view": "left",
+   "shape": "M648,705 L702,705 L702,892 L648,892 Z",
+   "lift": [
+    0,
+    0
+   ],
+   "layer": 1,
+   "label": "Radiator edge, mostly hidden from this side"
+  },
+  {
+   "assembly": "engine-covers",
+   "view": "right",
+   "shape": "M545,900 L640,826 L860,812 L1050,870 L1222,965 L1232,1012 L1180,1200 L1000,1342 L880,1410 L820,1400 L700,1282 L590,1090 Z M12,885 L200,792 L480,800 L548,895 L566,1050 L480,1112 L230,1122 L60,1042 Z",
+   "lift": [
+    -40,
+    -150
+   ],
+   "layer": 2,
+   "label": "Clutch cover and front sprocket cover"
+  },
+  {
+   "assembly": "cooling",
+   "view": "right",
+   "shape": "M1585,175 L1900,150 L1900,700 L1650,1010 L1512,1040 L1535,600 Z",
+   "lift": [
+    150,
+    -70
+   ],
+   "layer": 1,
+   "label": "Radiator"
+  },
+  {
+   "assembly": "front-wheel",
+   "view": "cranberry",
+   "shape": "M680,655 A128,126 0 1 0 936,655 A128,126 0 1 0 680,655 Z",
+   "lift": [
+    150,
+    40
+   ],
+   "layer": 1
+  },
+  {
+   "assembly": "front-brakes",
+   "view": "cranberry",
+   "shape": "M734,658 A68,66 0 1 0 870,658 A68,66 0 1 0 734,658 Z",
+   "lift": [
+    205,
+    150
+   ],
+   "layer": 2,
+   "label": "Right disc and caliper"
+  },
+  {
+   "assembly": "front-forks",
+   "view": "cranberry",
+   "shape": "M700,410 L742,402 L750,470 L778,560 L832,662 L808,690 L760,645 L728,565 L706,490 Z",
+   "lift": [
+    130,
+    -225
+   ],
+   "layer": 3
+  },
+  {
+   "assembly": "rear-wheel",
+   "view": "cranberry",
+   "shape": "M126,662 A128,126 0 1 0 382,662 A128,126 0 1 0 126,662 Z M330,628 L418,612 L422,660 L330,676 Z",
+   "lift": [
+    -165,
+    40
+   ],
+   "layer": 1,
+   "label": "Wheel, sprocket and chain side"
+  },
+  {
+   "assembly": "rear-shocks",
+   "view": "cranberry",
+   "shape": "M306,512 L340,515 L298,610 L275,668 L250,662 L272,600 Z",
+   "lift": [
+    -150,
+    -225
+   ],
+   "layer": 3
+  },
+  {
+   "assembly": "engine-covers",
+   "view": "cranberry",
+   "shape": "M515,640 L540,610 L618,610 L632,640 L622,692 L575,705 L528,692 Z M424,628 L444,602 L502,598 L518,620 L514,662 L480,676 L430,668 Z",
+   "lift": [
+    0,
+    165
+   ],
+   "layer": 2,
+   "label": "Clutch cover and front sprocket cover"
+  },
+  {
+   "assembly": "cooling",
+   "view": "cranberry",
+   "shape": "M646,505 L684,505 L686,615 L650,615 Z",
+   "lift": [
+    0,
+    0
+   ],
+   "layer": 1,
+   "label": "Radiator edge, mostly hidden from this side"
+  }
+ ],
+ "primaryView": {
+  "front-forks": "cranberry",
+  "front-wheel": "cranberry",
+  "front-brakes": "cranberry",
+  "rear-shocks": "cranberry",
+  "rear-brakes": "left",
+  "rear-wheel": "cranberry",
+  "cooling": "right",
+  "engine-covers": "right"
+ },
+ "pins": [
+  {
+   "assembly": "front-forks",
+   "callout": "2",
+   "view": "left",
+   "x": 468,
+   "y": 805,
+   "note": "Left inner tube; covered by the gaiter in this photograph"
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "15",
+   "view": "left",
+   "x": 482,
+   "y": 700
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "24",
+   "view": "left",
+   "x": 406,
+   "y": 1000
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "39",
+   "view": "left",
+   "x": 434,
+   "y": 936
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "11",
+   "view": "left",
+   "x": 355,
+   "y": 1012,
+   "note": "Axle end at the hub centre"
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "2",
+   "view": "left",
+   "x": 290,
+   "y": 1112
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "3",
+   "view": "left",
+   "x": 236,
+   "y": 923
+  },
+  {
+   "assembly": "front-brakes",
+   "callout": "1",
+   "view": "left",
+   "x": 262,
+   "y": 1046,
+   "note": "Left disc; the second disc is on the far side"
+  },
+  {
+   "assembly": "front-brakes",
+   "callout": "2",
+   "view": "left",
+   "x": 452,
+   "y": 976,
+   "note": "Left caliper, behind the fork leg"
+  },
+  {
+   "assembly": "rear-shocks",
+   "callout": "1",
+   "view": "left",
+   "x": 1556,
+   "y": 880,
+   "note": "Left unit; the second unit is on the far side"
+  },
+  {
+   "assembly": "rear-shocks",
+   "callout": "2",
+   "view": "left",
+   "x": 1512,
+   "y": 762,
+   "note": "Upper mounting"
+  },
+  {
+   "assembly": "rear-shocks",
+   "callout": "2",
+   "view": "left",
+   "x": 1592,
+   "y": 988,
+   "note": "Lower mounting"
+  },
+  {
+   "assembly": "rear-brakes",
+   "callout": "1",
+   "view": "left",
+   "x": 1692,
+   "y": 905,
+   "note": "Rear disc is on the left of this generation; the chain runs on the right"
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "2",
+   "view": "left",
+   "x": 1794,
+   "y": 958
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "3",
+   "view": "left",
+   "x": 1640,
+   "y": 850
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "14",
+   "view": "left",
+   "x": 1612,
+   "y": 1013,
+   "note": "Adjuster block at the swinging-arm end"
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "18",
+   "view": "left",
+   "x": 1010,
+   "y": 978
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "20",
+   "view": "left",
+   "x": 885,
+   "y": 1045
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "1",
+   "view": "right",
+   "x": 770,
+   "y": 1010
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "8",
+   "view": "right",
+   "x": 1010,
+   "y": 1045
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "24",
+   "view": "right",
+   "x": 230,
+   "y": 985
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "29",
+   "view": "right",
+   "x": 350,
+   "y": 905
+  },
+  {
+   "assembly": "cooling",
+   "callout": "1",
+   "view": "right",
+   "x": 1760,
+   "y": 560
+  },
+  {
+   "assembly": "cooling",
+   "callout": "1",
+   "view": "left",
+   "x": 674,
+   "y": 772,
+   "note": "Radiator edge behind the exhaust header"
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "15",
+   "view": "cranberry",
+   "x": 733,
+   "y": 505
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "1",
+   "view": "cranberry",
+   "x": 758,
+   "y": 558,
+   "note": "Right inner tube; covered by the gaiter in this photograph"
+  },
+  {
+   "assembly": "front-forks",
+   "callout": "23",
+   "view": "cranberry",
+   "x": 790,
+   "y": 625
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "11",
+   "view": "cranberry",
+   "x": 812,
+   "y": 667,
+   "note": "Axle end at the hub centre"
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "2",
+   "view": "cranberry",
+   "x": 866,
+   "y": 742
+  },
+  {
+   "assembly": "front-wheel",
+   "callout": "3",
+   "view": "cranberry",
+   "x": 852,
+   "y": 596
+  },
+  {
+   "assembly": "front-brakes",
+   "callout": "3",
+   "view": "cranberry",
+   "x": 758,
+   "y": 632,
+   "note": "Right caliper, behind the fork leg"
+  },
+  {
+   "assembly": "front-brakes",
+   "callout": "1",
+   "view": "cranberry",
+   "x": 850,
+   "y": 700,
+   "note": "Right disc; the second disc is on the far side"
+  },
+  {
+   "assembly": "rear-shocks",
+   "callout": "1",
+   "view": "cranberry",
+   "x": 290,
+   "y": 590,
+   "note": "Right unit; the second unit is on the far side"
+  },
+  {
+   "assembly": "rear-shocks",
+   "callout": "2",
+   "view": "cranberry",
+   "x": 321,
+   "y": 522,
+   "note": "Upper mounting"
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "2",
+   "view": "cranberry",
+   "x": 160,
+   "y": 668
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "3",
+   "view": "cranberry",
+   "x": 215,
+   "y": 610
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "25",
+   "view": "cranberry",
+   "x": 395,
+   "y": 640,
+   "note": "Chain runs on this side"
+  },
+  {
+   "assembly": "rear-wheel",
+   "callout": "14",
+   "view": "cranberry",
+   "x": 268,
+   "y": 656,
+   "note": "Adjuster block at the swinging-arm end"
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "1",
+   "view": "cranberry",
+   "x": 560,
+   "y": 672
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "8",
+   "view": "cranberry",
+   "x": 597,
+   "y": 642
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "24",
+   "view": "cranberry",
+   "x": 490,
+   "y": 656
+  },
+  {
+   "assembly": "engine-covers",
+   "callout": "29",
+   "view": "cranberry",
+   "x": 455,
+   "y": 622
+  },
+  {
+   "assembly": "cooling",
+   "callout": "1",
+   "view": "cranberry",
+   "x": 666,
+   "y": 560,
+   "note": "Radiator edge behind the exhaust header"
+  }
+ ],
+ "calloutLinks": {
+  "_about": "Which torque rows apply to which catalogue callout. 'op' is an index into that assembly's operations in data/exploded-2018.json; 'ref' is a torque row id in data/source-reference.json. Triumph does not publish this cross-reference: each link records the basis on which it was made. 'named' means the manual row or the catalogue names the same component; 'inferred' means the link is the project's reading and Triumph does not state it.",
+  "front-forks": {
+   "28": [
+    {
+     "op": 2,
+     "basis": "The lower yoke pinch bolts clamp in this component",
+     "kind": "named"
+    }
+   ],
+   "35": [
+    {
+     "ref": "SM2016-P67-R11",
+     "basis": "Named in the manual row: headstock bearing adjuster and lock nut",
+     "kind": "named"
+    }
+   ],
+   "37": [
+    {
+     "ref": "SM2016-P67-R11",
+     "basis": "Named in the manual row: headstock bearing adjuster and lock nut",
+     "kind": "named"
+    }
+   ]
+  },
+  "front-wheel": {
+   "11": [
+    {
+     "op": 0,
+     "basis": "Same component: front wheel spindle / axle",
+     "kind": "named"
+    }
+   ]
+  },
+  "front-brakes": {
+   "1": [
+    {
+     "op": 1,
+     "basis": "Disc fixings hold this disc",
+     "kind": "named"
+    }
+   ],
+   "2": [
+    {
+     "op": 0,
+     "basis": "Mounting bolts for this caliper",
+     "kind": "named"
+    }
+   ],
+   "3": [
+    {
+     "op": 0,
+     "basis": "Mounting bolts for this caliper",
+     "kind": "named"
+    }
+   ],
+   "15": [
+    {
+     "op": 1,
+     "basis": "Catalogue names this part as the brake-disc bolt",
+     "kind": "named"
+    }
+   ]
+  },
+  "rear-shocks": {
+   "1": [
+    {
+     "op": 0,
+     "basis": "Upper mounting of this unit",
+     "kind": "named"
+    },
+    {
+     "op": 1,
+     "basis": "Lower mounting of this unit",
+     "kind": "named"
+    }
+   ],
+   "2": [
+    {
+     "op": 0,
+     "basis": "Only mounting bolt on this fiche",
+     "kind": "inferred"
+    },
+    {
+     "op": 1,
+     "basis": "Only mounting bolt on this fiche",
+     "kind": "inferred"
+    }
+   ]
+  },
+  "rear-brakes": {
+   "1": [
+    {
+     "op": 1,
+     "basis": "Disc fixings hold this disc",
+     "kind": "named"
+    }
+   ],
+   "3": [
+    {
+     "op": 1,
+     "basis": "Catalogue names this part as the brake-disc bolt",
+     "kind": "named"
+    }
+   ],
+   "4": [
+    {
+     "op": 0,
+     "basis": "Caliper-to-carrier fixing of this caliper",
+     "kind": "named"
+    }
+   ],
+   "2": [
+    {
+     "op": 0,
+     "basis": "Caliper-to-carrier fixing on this carrier",
+     "kind": "named"
+    }
+   ],
+   "10": [
+    {
+     "op": 2,
+     "basis": "Same component: pad retaining pins",
+     "kind": "named"
+    }
+   ]
+  },
+  "rear-wheel": {
+   "14": [
+    {
+     "op": 3,
+     "basis": "Chain adjuster hardware",
+     "kind": "inferred"
+    }
+   ],
+   "16": [
+    {
+     "op": 0,
+     "basis": "The only spindle-size (M18) lock nut on this fiche; not stated by Triumph",
+     "kind": "inferred"
+    }
+   ],
+   "18": [
+    {
+     "op": 2,
+     "basis": "Same component: sprocket carrier stud",
+     "kind": "named"
+    }
+   ],
+   "24": [
+    {
+     "op": 1,
+     "basis": "Sprocket-to-carrier fixing of this sprocket",
+     "kind": "named"
+    }
+   ],
+   "26": [
+    {
+     "op": 1,
+     "basis": "Six M10 lock nuts for the six carrier studs; not stated by Triumph",
+     "kind": "inferred"
+    }
+   ]
+  },
+  "cooling": {
+   "1": [
+    {
+     "op": 0,
+     "basis": "Radiator upper mounting",
+     "kind": "named"
+    }
+   ],
+   "10": [
+    {
+     "op": 4,
+     "basis": "Same component: coolant manifold",
+     "kind": "named"
+    }
+   ]
+  },
+  "engine-covers": {
+   "1": [
+    {
+     "op": 0,
+     "basis": "Same component: clutch cover",
+     "kind": "named"
+    }
+   ],
+   "10": [
+    {
+     "ref": "SM2016-P60-R3",
+     "basis": "Same component: clutch cover plug",
+     "kind": "named"
+    }
+   ],
+   "18": [
+    {
+     "op": 1,
+     "basis": "Same component: alternator cover",
+     "kind": "named"
+    }
+   ],
+   "24": [
+    {
+     "op": 2,
+     "basis": "Same component: front sprocket cover",
+     "kind": "named"
+    }
+   ],
+   "29": [
+    {
+     "ref": "SM2016-P60-R8",
+     "basis": "Same component: mesh cover to sprocket cover",
+     "kind": "named"
+    }
+   ],
+   "8": [
+    {
+     "ref": "SM2016-P60-R2",
+     "basis": "Clutch cover embellisher fixing; the badge is the embellisher by the project's reading",
+     "kind": "inferred"
+    }
+   ],
+   "20": [
+    {
+     "ref": "SM2016-P60-R6",
+     "basis": "Alternator cover embellisher fixing; the badge is the embellisher by the project's reading",
+     "kind": "inferred"
+    }
+   ]
+  }
+ },
+ "systemCategories": {
+  "_about": "Manual torque-table sections (data/source-reference.json 'category') listed in full under each assembly.",
+  "front-forks": [
+   "Front Suspension"
+  ],
+  "front-wheel": [
+   "Wheels"
+  ],
+  "front-brakes": [
+   "ABS System"
+  ],
+  "rear-shocks": [
+   "Rear Suspension"
+  ],
+  "rear-brakes": [
+   "Rear Brakes"
+  ],
+  "rear-wheel": [
+   "Wheels",
+   "Final Drive",
+   "Rear Suspension"
+  ],
+  "cooling": [
+   "Cooling System"
+  ],
+  "engine-covers": [
+   "Engine Covers"
+  ]
+ }
+}

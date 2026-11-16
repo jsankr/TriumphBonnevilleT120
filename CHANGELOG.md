@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.1.0 — 16 November 2026
+- Real photo of a T120 in Cranberry Red / Aluminium Silver (2016–2018 scheme) for the dashboard and the default teardown view; 7 assembly outlines and 19 markers on it.
+- Light and dark glass themes with a header switch that follows the system setting until chosen (`theme.js`); all stylesheets moved to semantic colour tokens.
+- Removed the Cordovan Red interface palette and the blurred photo backdrop.
+
+## 3.0.0 — 16 November 2026
+- Glass redesign of all seven pages in Cordovan Red / Silver Ice with a shared header, theme (`theme.css`) and re-skin layer (`pages.css`).
+- Teardown rebuilt on two openly licensed real photographs: assembly outlines, animated separation, zoom to assembly, 24 callout markers, keyboard access.
+- New `data/teardown-map.json` (outlines, markers, 31 callout-to-torque links with basis and kind) and `data/tool-size-reports.json` (8 sourced tool sizes).
+- Dashboard: real photo hero, handbook workshop figures, interactive service planner from the 44-row schedule.
+- Removed the concept illustration from the dashboard and teardown.
+- New CI step: `tests/validate-teardown.mjs`.
+
+
 ## 2.1.0 — Photo-led UI rebuild
 - Removed the low-detail procedural 3D motorcycle and all Blender/WebGL/Three.js dependencies.
 - Rebuilt the actual browser UI to match the user's glass/technical screenshot direction: hero motorcycle reference, approximate hotspots, searchable assembly catalogue, part inspector, safety evidence register, maintenance desk and honest local evidence search.
