@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head><meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;; form-action &#x27;self&#x27;; script-src &#x27;self&#x27; https://cdnjs.cloudflare.com ; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; https: data: blob:; font-src &#x27;self&#x27; data:; connect-src &#x27;self&#x27; https://cdnjs.cloudflare.com; frame-src &#x27;self&#x27; blob:; worker-src &#x27;self&#x27; blob: https://cdnjs.cloudflare.com; upgrade-insecure-requests"/><meta name="referrer" content="no-referrer"/>
-<meta charset="utf-8"/><script src="theme.js"></script>
+<meta charset="utf-8"/><script src="theme.js"></script><script src="model.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 <meta name="theme-color" content="#0d0f12"/>
 <meta name="description" content="Bonneville T120 2018 teardown on a real photograph: eight assemblies, 2018 catalogue part numbers, service-manual torque values and tool sizes, each with its source."/>
@@ -12,14 +12,15 @@
 </head>
 <body>
 <header class="site-top">
-  <a class="wordmark" href="index.html"><b>Bonneville T120</b><span>2018 workshop explorer</span></a>
+  <a class="wordmark" href="index.html"><b id="wordName">Bonneville T120</b><span id="wordSub">2018 workshop explorer</span></a>
   <nav class="site-nav" aria-label="Sections">
     <a href="index.html">Dashboard</a><a href="exploded.html" aria-current="page">Teardown</a><a href="catalogue.html">Parts catalogue</a><a href="electrical.html">Electrical</a><a href="manual-index.html">Manual index</a>
   </nav><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
 </header>
 <div class="coachline" aria-hidden="true"></div>
+<div class="model-bar"><span class="model-bar-label">Motorcycle</span><div class="model-switch" id="modelSwitch" role="radiogroup" aria-label="Motorcycle model"></div></div>
 
-<p class="safety"><strong>Check before you torque.</strong> Values come from Triumph's April 2016 T120 service manual and are not confirmed for every 2018 motorcycle. Tool sizes come from owner reports and an accessory maker's guide, and are marked that way. Stock values do not apply to aftermarket wheels or brakes.</p>
+<p class="safety" id="safetyNote"><strong>Check before you torque.</strong> Values come from Triumph's April 2016 T120 service manual and are not confirmed for every 2018 motorcycle. Tool sizes come from owner reports and an accessory maker's guide, and are marked that way. Stock values do not apply to aftermarket wheels or brakes.</p>
 
 <main class="workspace">
  <aside class="rail glass" aria-label="Assemblies">
@@ -62,9 +63,9 @@
     </div>
 
     <div id="ficheScene" class="fiche" hidden role="tabpanel" aria-labelledby="tabFiche">
-      <h2>2018 parts catalogues</h2>
+      <h2 id="ficheTitle">2018 parts catalogues</h2>
       <p>The supplier's diagrams are not embedded here; their sites block some browsers and the drawings are theirs. Every part number, callout and torque row on this page works without them.</p>
-      <p>Open the 2018 Bonneville T120 catalogue and choose the assembly by name. The dealer catalogue is the fallback if the first site refuses your browser.</p>
+      <p id="ficheIntro">Open the 2018 Bonneville T120 catalogue and choose the assembly by name. The dealer catalogue is the fallback if the first site refuses your browser.</p>
       <div class="source-actions"><a id="ficheLink" target="_blank" rel="noopener noreferrer" class="primary-link">Open 2018 T120 catalogue</a><a id="ficheAltLink" target="_blank" rel="noopener noreferrer" class="ghost">Open dealer catalogue</a><button type="button" id="showLocalSpareList" class="ghost">Back to the photo</button></div>
       <p id="supplierAdvice" class="advice"></p>
     </div>

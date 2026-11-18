@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.2.0 — 18 November 2026
+- Model switch for Bonneville T120 (2018), Bonneville (A3, 2014–2016) and Bonneville T100 (A3, 2014–2016), shared by the dashboard and the teardown (`model.js`, `data/models.json`).
+- New per-model data files `data/models/bonneville-a3.json` and `data/models/bonneville-t100-a3.json`: handbook specifications, the 36-row maintenance chart, model-year 2015 catalogue part numbers for eight assemblies, 38 torque values each with a source tier, 28 callout links each with a basis, and the teardown map.
+- Two openly licensed photographs, outlined and marked; the rear-wheel outline leaves the silencer in place.
+- Dashboard: torque-by-source table and source list for the air-cooled models; T120-only sections are hidden for them.
+- Tests: `tests/validate-models.mjs` and `tests/model_browser_audit.py`, which clicks every assembly and callout on both models, both run in CI.
+
 ## 3.1.0 — 16 November 2026
 - Real photo of a T120 in Cranberry Red / Aluminium Silver (2016–2018 scheme) for the dashboard and the default teardown view; 7 assembly outlines and 19 markers on it.
 - Light and dark glass themes with a header switch that follows the system setting until chosen (`theme.js`); all stylesheets moved to semantic colour tokens.

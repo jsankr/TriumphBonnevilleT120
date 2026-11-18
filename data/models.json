@@ -1,0 +1,31 @@
+{
+ "schemaVersion": 1,
+ "default": "t120-2018",
+ "storageKey": "t120-model",
+ "models": [
+  {
+   "id": "t120-2018",
+   "name": "Bonneville T120",
+   "short": "T120",
+   "years": "2018",
+   "engine": "1200 cc liquid-cooled",
+   "data": null
+  },
+  {
+   "id": "bonneville-a3",
+   "name": "Bonneville",
+   "short": "Bonneville",
+   "years": "2014–2016",
+   "engine": "865 cc air-cooled",
+   "data": "data/models/bonneville-a3.json"
+  },
+  {
+   "id": "bonneville-t100-a3",
+   "name": "Bonneville T100",
+   "short": "T100",
+   "years": "2014–2016",
+   "engine": "865 cc air-cooled",
+   "data": "data/models/bonneville-t100-a3.json"
+  }
+ ]
+}

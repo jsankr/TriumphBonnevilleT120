@@ -1,5 +1,31 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
+## v3.2 — three motorcycles: T120, air-cooled Bonneville and T100 (18 November 2026)
+
+A switch under the header picks the motorcycle. The dashboard and the teardown follow it, and the choice is kept in the address (`?model=`) and in this browser. The T120 is unchanged.
+
+| Model | Years | Teardown photo | Parts catalogue | Torques |
+|---|---|---|---|---|
+| Bonneville T120 | 2018 | three photos | 2018 catalogue | April 2016 T120 service manual |
+| Bonneville (A3) | 2014–2016, 865 cc air-cooled | 2014 Bonneville, right side | Model year 2015, 195 part rows | 38 values |
+| Bonneville T100 (A3) | 2014–2016, 865 cc air-cooled | 2011 T100, right side | Model year 2015, 237 part rows | 38 values |
+
+**Where the air-cooled data comes from.** No Triumph service manual for these models was available, so every torque carries one of three source tiers, shown as a badge next to the value:
+- **Triumph documents.** The owner's handbook 3851861-IN (January 2015), for specifications, the maintenance chart, 85 Nm rear spindle nut and 5 Nm chain adjusters. Triumph Technical News 162 (March 2015, published by NHTSA), which changes the clutch and alternator cover bolts to 8 Nm and the chain from 525 to 520 at VIN 694352.
+- **Aftermarket.** The Haynes manual torque table, as reproduced by Moto Usher. It supplies most chassis and brake values. Where Haynes contradicts itself (front master cylinder clamp, 12 or 15 Nm) or was superseded by Triumph (cover bolts), both figures are shown.
+- **Owner forum.** One New Bonneville Riders post quoting factory figures, used only as a cross-check.
+
+Part numbers come from the model-year 2015 catalogue at Hermy's Triumph eStore, an authorised dealer, with a link to each diagram. Prices are not stored. One tool size is published: a 22 mm spanner for the M16 wheel spindle nut, from an aftermarket axle-nut listing. Owner posts giving 24 mm could not be re-read, so they are not used.
+
+**Not shown on the photos.** The rear brake is on the left side, and the oil cooler is hidden behind the frame tubes. Those assemblies still list every part and torque, and say why they are not marked. On these 865 cc twins the final drive chain and the badged alternator cover are on the right side, as the catalogue's "Cover RH" listing and the photographs show.
+
+| Photo | Author | Licence | Changes |
+|---|---|---|---|
+| [2014 Triumph Bonneville](https://commons.wikimedia.org/wiki/File:2014_Triumph_Bonneville.jpg) | QK2222VX | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Resized; hero cropped. `assets/photo/bonneville-2014-*.webp` are shared under CC BY-SA 4.0. Aftermarket mirrors, seat and indicators are fitted. |
+| [Triumph Bonneville T100 (2011)](https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T100_(2011).jpg) | Hogyn Lleol | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Resized; hero cropped. `assets/photo/t100-2011-*.webp` are shared under CC BY-SA 4.0. A 2011 bike of the same 865 cc generation, with a flyscreen and rack; no openly licensed 2014–2016 T100 side view was found. |
+
+Neither photograph shows the owner's motorcycle.
+
 **Link repair:** Previously linked OEM mirrors blocked some visitors. Use the in-app exploded callouts and two 2018 catalogue choices instead. External reachability is network-dependent.
 
 ## v3.1 — your paint scheme, light and dark glass themes (16 November 2026)

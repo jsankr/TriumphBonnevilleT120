@@ -35,6 +35,8 @@ jobs:
       - run: node tests/validate-manual-index.mjs
       - run: node --check dashboard.js
       - run: node tests/validate-teardown.mjs
+      - run: node --check model.js
+      - run: node tests/validate-models.mjs
   browser-smoke:
     needs: validate
     # Playwright 1.57 Chromium supports Ubuntu 24.04; ubuntu-latest has moved to 26.04.
@@ -50,6 +52,7 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - run: python tests/browser_audit.py
       - run: python tests/security_browser_audit.py
+      - run: python tests/model_browser_audit.py
   deploy:
     needs: [validate, browser-smoke]
     permissions:

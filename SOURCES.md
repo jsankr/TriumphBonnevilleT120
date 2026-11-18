@@ -42,3 +42,13 @@ S1’s schedule identifies drive-chain slack check/adjustment as a daily check, 
 - Tool sizes (accessory maker's guide): *How to remove the rear wheel on a Triumph Bonneville T100 / T120*, install guide naming British Customs, read 16 November 2026. https://install-guides.gorgias.help/en-US/how-to-remove-the-rear-wheel-on-a-triumph-bonneville-t100--t120-128461
 - Typeface: Archivo, Omnibus-Type, SIL Open Font Licence 1.1 (`assets/fonts/OFL-Archivo.txt`).
 - Photograph, right side in Cranberry Red / Aluminium Silver: takenji1989, *Neil with Triumph Bonneville T120*, Flickr, CC BY-NC-SA 2.0. https://www.flickr.com/photos/105592384@N07/51444289036 — background and bystander removed.
+
+## Added in v3.2: air-cooled Bonneville and T100 (2014–2016)
+| Source | Tier | Used for |
+|---|---|---|
+| [Triumph Owner's Handbook 3851861-IN, January 2015](https://api.triumphtechnicalinformation.com/handbooks/documents/62eba81a278c6802309ec806/pdf) (Triumph's handbook service) | Triumph | Specifications (pages 109–120), maintenance chart (pages 63–64), oil filter 10 Nm with tool T3880313, sump plug 25 Nm (page 68), rear spindle nut 85 Nm and chain adjusters 5 Nm (page 76). The 7 Nm reservoir-cover figure on page 82 is for the Scrambler and is not used. |
+| [Triumph Technical News 162, March 2015](https://static.nhtsa.gov/odi/tsbs/2015/MC-10192918-9999.pdf) (NHTSA copy) | Triumph | Item 2: clutch and alternator cover bolts 8 Nm on Bonneville EFI and T100 EFI. Item 9: 525 chain up to VIN 694351, 520 chain from VIN 694352. Its 6 Nm chain guard figure is for the Street Triple and is not used. |
+| [Haynes torque table via Moto Usher](https://www.motousher.com/blogs/know-more/torque-settings-for-air-cooled-triumph-cruisers) | Aftermarket | Fork, steering, wheel, brake, swingarm, final drive, oil cooler and cover values not given by Triumph documents. |
+| [New Bonneville Riders thread 204](https://www.newbonnevilleriders.com/forum/threads/triumph-factory-specs-torque-etc.204/) | Owner forum | Cross-check only (oil feed banjo 30 Nm; clutch cover 9 Nm, superseded). Read from a search excerpt because the forum blocks automated reading. |
+| [Hermy's Triumph eStore](https://www.triumphestore.com/catalog/triumph/bonneville/2015) (authorised dealer) | Catalogue | Part numbers, names and quantities for eight assemblies per model, model year 2015. Prices are not stored. |
+| [British Legends, JMP axle nut listing](https://www.britishlegends.fr/en/go/product/161424464) | Aftermarket | M16 × 1.5 spindle nut, 22 mm spanner, for 2001–2016 Bonnevilles. |

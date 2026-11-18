@@ -34,3 +34,9 @@
 - Always run `node tests/validate-security-and-routes.mjs`, every `tests/validate-*.mjs`, and the Chromium smoke scripts in `tests/browser_audit.py` and `tests/security_browser_audit.py`.
 - Never add executable event-handler attributes, `javascript:` URLs, unescaped source-data HTML, public vehicle identifiers, secrets or third-party PDF/manual rehosting.
 - Keep reliable app-internal navigation when any external supplier blocks access. Maintain CSP hashes if an inline script changes.
+
+## v3.2 multi-model invariants
+- Model IDs live in `data/models.json` and in `model.js`; `tests/validate-models.mjs` keeps them identical. The T120 keeps its original data files and element IDs.
+- Air-cooled model files (`data/models/*.json`) must name a source for every torque (`sources` key with tier triumph, aftermarket or forum). Never relabel a Haynes or forum value as Triumph data, and never store dealer prices.
+- A figure that Triumph superseded or that a source contradicts stays visible as an alternative, not deleted.
+- Rebuild those files with the project's build script rather than hand-editing values; run `tests/validate-models.mjs` and `tests/model_browser_audit.py`.

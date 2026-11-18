@@ -1,0 +1,3252 @@
+{
+ "schemaVersion": 1,
+ "id": "bonneville-t100-a3",
+ "updated": "2026-11-18",
+ "name": "Bonneville T100",
+ "years": "2014–2016",
+ "family": "Air-cooled 865 cc twin (A3 production run)",
+ "catalogueLabel": "2015 Bonneville T100 (A3)",
+ "handbookColumn": "Bonneville T100",
+ "notice": "Torque values come from three tiers, each marked: Triumph documents (owner handbook, Technical News bulletin), the aftermarket Haynes manual, and owner forum posts. No Triumph service manual for these models was available to this project; where only Haynes gives a value, treat it as aftermarket.",
+ "sources": {
+  "handbook": {
+   "tier": "triumph",
+   "short": "Triumph owner's handbook",
+   "title": "Triumph Owner's Handbook, Bonneville, Bonneville SE, Bonneville T100, Thruxton and Scrambler, 3851861-IN (January 2015, India market)",
+   "url": "https://api.triumphtechnicalinformation.com/handbooks/documents/62eba81a278c6802309ec806/pdf"
+  },
+  "tn162": {
+   "tier": "triumph",
+   "short": "Triumph Technical News 162",
+   "title": "Triumph Technical News 162, March 2015 (dealer bulletin, published by NHTSA)",
+   "url": "https://static.nhtsa.gov/odi/tsbs/2015/MC-10192918-9999.pdf"
+  },
+  "haynes": {
+   "tier": "aftermarket",
+   "short": "Haynes manual, via Moto Usher",
+   "title": "Haynes Service & Repair Manual torque table for the air-cooled Bonneville family, as reproduced by Moto Usher (aftermarket retailer)",
+   "url": "https://www.motousher.com/blogs/know-more/torque-settings-for-air-cooled-triumph-cruisers"
+  },
+  "nbr": {
+   "tier": "forum",
+   "short": "Owner post, New Bonneville Riders",
+   "title": "'Triumph factory specs, torque etc.' (New Bonneville Riders forum, owner quoting the factory manual; read from a search excerpt because the forum blocks automated reading)",
+   "url": "https://www.newbonnevilleriders.com/forum/threads/triumph-factory-specs-torque-etc.204/"
+  }
+ },
+ "specs": [
+  {
+   "name": "Engine type",
+   "value": "Air-cooled parallel twin, 360° firing",
+   "page": 110,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Displacement",
+   "value": "865 cc",
+   "page": 110,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Bore × stroke",
+   "value": "90 × 68 mm",
+   "page": 110,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Compression ratio",
+   "value": "10.2:1",
+   "page": 110,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Maximum power",
+   "value": "44.7 kW (60.7 PS) at 7,500 rpm, IS 14599",
+   "page": 109,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Maximum torque",
+   "value": "61.1 Nm at 5,551 rpm",
+   "page": 109,
+   "group": "Engine",
+   "source": "handbook"
+  },
+  {
+   "name": "Engine oil grade",
+   "value": "Semi or fully synthetic 10W/40 or 10W/50, API SH or higher and JASO MA",
+   "page": 119,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Engine oil dry fill",
+   "value": "4.5 litres",
+   "page": 110,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Engine oil/filter change",
+   "value": "3.8 litres",
+   "page": 110,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Engine oil change only",
+   "value": "3.3 litres",
+   "page": 110,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Oil filter",
+   "value": "10 Nm, Triumph tool T3880313 to remove",
+   "page": 68,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Sump drain plug",
+   "value": "25 Nm, new sealing washer",
+   "page": 68,
+   "group": "Engine oil",
+   "source": "handbook"
+  },
+  {
+   "name": "Fuel grade",
+   "value": "Unleaded, 91 RON minimum",
+   "page": 113,
+   "group": "Ignition and fuel",
+   "source": "handbook"
+  },
+  {
+   "name": "Fuel tank capacity",
+   "value": "16 litres",
+   "page": 113,
+   "group": "Ignition and fuel",
+   "source": "handbook"
+  },
+  {
+   "name": "Spark plug",
+   "value": "NGK DPR8EA-9, 20 Nm",
+   "page": 113,
+   "group": "Ignition and fuel",
+   "source": "handbook"
+  },
+  {
+   "name": "Spark plug gap",
+   "value": "0.8–0.9 mm",
+   "page": 113,
+   "group": "Ignition and fuel",
+   "source": "handbook"
+  },
+  {
+   "name": "Front tyre size",
+   "value": "Metzeler ME 33 Laser 100/90-19",
+   "page": 116,
+   "group": "Tyres",
+   "source": "handbook"
+  },
+  {
+   "name": "Rear tyre size",
+   "value": "Metzeler ME Z2 130/80-R17",
+   "page": 116,
+   "group": "Tyres",
+   "source": "handbook"
+  },
+  {
+   "name": "Front cold tyre pressure",
+   "value": "2.27 bar (33 psi), solo and laden",
+   "page": 116,
+   "group": "Tyres",
+   "source": "handbook"
+  },
+  {
+   "name": "Rear cold tyre pressure",
+   "value": "2.82 bar (41 psi), solo and laden",
+   "page": 116,
+   "group": "Tyres",
+   "source": "handbook"
+  },
+  {
+   "name": "Factory chain",
+   "value": "DID 525 VM2 or DID 520 VM2, 104 links",
+   "page": 114,
+   "group": "Chain, brakes and battery",
+   "source": "handbook"
+  },
+  {
+   "name": "Final drive ratio",
+   "value": "2.39:1 (18/43)",
+   "page": 114,
+   "group": "Chain, brakes and battery",
+   "source": "handbook"
+  },
+  {
+   "name": "Primary drive ratio",
+   "value": "1.74:1 (62/108)",
+   "page": 114,
+   "group": "Chain, brakes and battery",
+   "source": "handbook"
+  },
+  {
+   "name": "Brake fluid",
+   "value": "DOT 4",
+   "page": 119,
+   "group": "Chain, brakes and battery",
+   "source": "handbook"
+  },
+  {
+   "name": "Battery type",
+   "value": "12 V 10 Ah",
+   "page": 118,
+   "group": "Chain, brakes and battery",
+   "source": "handbook"
+  },
+  {
+   "name": "Wheelbase",
+   "value": "1,500 mm",
+   "page": 109,
+   "group": "Chassis",
+   "source": "handbook"
+  },
+  {
+   "name": "Seat height",
+   "value": "775 mm",
+   "page": 109,
+   "group": "Chassis",
+   "source": "handbook"
+  },
+  {
+   "name": "Wet weight",
+   "value": "225 kg",
+   "page": 109,
+   "group": "Chassis",
+   "source": "handbook"
+  },
+  {
+   "name": "Rake / trail",
+   "value": "28° / 110 mm",
+   "page": 118,
+   "group": "Chassis",
+   "source": "handbook"
+  }
+ ],
+ "specGroups": [
+  "Engine",
+  "Engine oil",
+  "Ignition and fuel",
+  "Tyres",
+  "Chain, brakes and battery",
+  "Chassis"
+ ],
+ "maintenance": {
+  "services": [
+   {
+    "key": "day",
+    "label": "Daily",
+    "sub": "Before riding",
+    "daily": true
+   },
+   {
+    "key": "service800km",
+    "label": "First service",
+    "sub": "800 km or 1 month"
+   },
+   {
+    "key": "serviceA",
+    "label": "A service",
+    "sub": "10,000 km or 1 year"
+   },
+   {
+    "key": "serviceB",
+    "label": "B service",
+    "sub": "20,000 km or 2 years"
+   },
+   {
+    "key": "serviceC",
+    "label": "C service",
+    "sub": "30,000 km or 3 years"
+   },
+   {
+    "key": "serviceD",
+    "label": "D service",
+    "sub": "40,000 km or 4 years"
+   }
+  ],
+  "rows": [
+   {
+    "task": "Engine and oil cooler - check for leaks",
+    "category": "Engine and lubrication",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Engine oil - renew",
+    "category": "Engine and lubrication",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Engine oil filter - renew",
+    "category": "Engine and lubrication",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Valve clearances - check/adjust",
+    "category": "Engine and lubrication",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Air cleaner - renew",
+    "category": "Engine and lubrication",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Spark plugs - check",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": true,
+    "serviceB": false,
+    "serviceC": true,
+    "serviceD": false
+   },
+   {
+    "task": "Spark plugs - renew",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Autoscan - carry out a full Autoscan using the Triumph diagnostic tool",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Fuel filter - renew",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Fuel system - check for leaks, chafing etc.",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Throttle cables - check/adjust",
+    "category": "Ignition and fuel",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Secondary air injection system - check/clean",
+    "category": "Ignition and fuel",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Fuel and evaporative hoses - renew",
+    "category": "Ignition and fuel",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": false,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Lights, instruments and electrical systems - check",
+    "category": "Electrical",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Steering - check for free operation",
+    "category": "Steering and suspension",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Headstock bearings - check/adjust",
+    "category": "Steering and suspension",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Headstock bearings - lubricate",
+    "category": "Steering and suspension",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": true,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Forks - check for leaks/smooth operation",
+    "category": "Steering and suspension",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Fork oil - renew",
+    "category": "Steering and suspension",
+    "page": 63,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": false,
+    "serviceC": false,
+    "serviceD": true
+   },
+   {
+    "task": "Brake fluid levels - check",
+    "category": "Brakes",
+    "page": 63,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Brake fluid - renew",
+    "category": "Brakes",
+    "page": 63,
+    "frequencyText": "Every 2 years",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": false,
+    "serviceC": false,
+    "serviceD": false
+   },
+   {
+    "task": "Brake pads - wear check",
+    "category": "Brakes",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Brake master cylinders - check for fluid leaks",
+    "category": "Brakes",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Brake calipers - check for fluid leaks and seized pistons",
+    "category": "Brakes",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Drive chain - lubricate",
+    "category": "Final drive",
+    "page": 64,
+    "frequencyText": "Every 300 km (200 miles)",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": false,
+    "serviceC": false,
+    "serviceD": false
+   },
+   {
+    "task": "Drive chain - wear check",
+    "category": "Final drive",
+    "page": 64,
+    "frequencyText": "Every 800 km (500 miles)",
+    "service800km": false,
+    "serviceA": false,
+    "serviceB": false,
+    "serviceC": false,
+    "serviceD": false
+   },
+   {
+    "task": "Drive chain slack - check/adjust",
+    "category": "Final drive",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Drive chain rubbing strip - check",
+    "category": "Final drive",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": false,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Fasteners - inspect visually for security",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Wheels - inspect for damage",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Spokes (where fitted) - check for broken or damaged spokes, check spoke tightness",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Wheel bearings - check for wear/smooth operation",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "-",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Tyre wear/tyre damage - check",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Tyre pressures - check/adjust",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Clutch cable - check/adjust",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   },
+   {
+    "task": "Stand - check operation",
+    "category": "Wheels, tyres and chassis",
+    "page": 64,
+    "frequencyText": "Day",
+    "service800km": true,
+    "serviceA": true,
+    "serviceB": true,
+    "serviceC": true,
+    "serviceD": true
+   }
+  ],
+  "notes": [
+   "Whichever comes first, distance or time. Brake fluid is renewed every 2 years; the chain is lubricated every 300 km and wear-checked every 800 km.",
+   "Evaporative hoses are fitted only for certain markets.",
+   "Source: Triumph owner's handbook 3851861-IN, January 2015, pages 63–64. Triumph advises that an authorised dealer carries out scheduled maintenance."
+  ],
+  "pages": "63–64"
+ },
+ "assemblies": [
+  {
+   "id": "front-forks",
+   "title": "Front forks & lower yoke",
+   "system": "Front suspension",
+   "catalogueTitle": "Front Forks & Lower Yoke",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a6d-e93b-7696-bbe7-4e42d142fe1f?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a6d-e93b-7696-bbe7-4e42d142fe1f%3Apath%3A142%3A19268&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Front+Suspension+%2F+Steering+%2F+Clutch&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dfront-suspension-steering-clutch",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Front Forks & Lower Yoke",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2045160",
+     "name": "Fork Leg Assembly LH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2048506",
+     "name": "Fork Leg Assembly LH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2045161",
+     "name": "Fork Leg Assembly RH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2048507",
+     "name": "Fork Leg Assembly RH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T2047114",
+     "name": "Cap Fork",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T2047113",
+     "name": "O Ring Fork Seal",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T2047112",
+     "name": "Tube spacer",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T2047111",
+     "name": "Guide Spring",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2047110",
+     "name": "Spring",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2047105",
+     "name": "Piston Damper",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2047103",
+     "name": "Fork tube",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2047104",
+     "name": "Oil Lock Fork",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T2047503",
+     "name": "Fork Tube LH Outer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T2049504",
+     "name": "Fork Tube RH Outer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T2047109",
+     "name": "Dust Seal Fork",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T2040248",
+     "name": "Snap Ring",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "16",
+     "partNumber": "T2047115",
+     "name": "Seal Oil",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T2047107",
+     "name": "Ring Back Up",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T2047106",
+     "name": "Guide Bushing",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T2045045",
+     "name": "Washer Sealing B",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "20",
+     "partNumber": "T2045046",
+     "name": "Capscrew Oil Lock",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T3050130",
+     "name": "Capscrew M8 x 40",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "22",
+     "partNumber": "T2049003",
+     "name": "Yoke assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T3050083",
+     "name": "Capscrew M10x22 S/S",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "24",
+     "partNumber": "T3600063",
+     "name": "Seal Dust Dia 55",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "25",
+     "partNumber": "T3800052",
+     "name": "Bearing Sac 55 x 30 x 17",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "26",
+     "partNumber": "T2140210",
+     "name": "Adjuster Nut Upper",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T3800054",
+     "name": "Bearing Sac 26 47 15",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "28",
+     "partNumber": "T3600062",
+     "name": "Seal Dust Dia 47",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "29",
+     "partNumber": "T2047036",
+     "name": "Dust cover",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "30",
+     "partNumber": "T2041265",
+     "name": "Adjuster Nut Lower",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "31",
+     "partNumber": "T3450060",
+     "name": "Cap",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "32",
+     "partNumber": "T2040349",
+     "name": "Gaiter Front Fork",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "33",
+     "partNumber": "T2045162",
+     "name": "Kit Clip Fork Gaiter",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "34",
+     "partNumber": "T2040399",
+     "name": "Screw Fork Gaiter Clip M4",
+     "quantity": 2,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Fork top bolt",
+     "torqueNm": 23,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Fork damper rod bolt",
+     "torqueNm": 30,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville, T100, Thruxton and Scrambler",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Fork clamp bolts, top and bottom yokes",
+     "torqueNm": 27,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville, T100, Thruxton and Scrambler",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Steering stem nut",
+     "torqueNm": 90,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Steering head bearing adjuster nut, pre-load",
+     "torqueNm": 40,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes: with the service tool",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Steering head bearing locknut",
+     "torqueNm": 40,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes: with the service tool",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "front-wheel",
+   "title": "Front wheel",
+   "system": "Wheels",
+   "catalogueTitle": "Front Wheel",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a6d-c218-795f-80fb-5334b3855461?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a6d-c218-795f-80fb-5334b3855461%3Apath%3A142%3A19289&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Wheels%2FTyres%2FFinal+Drive&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dwheels-tyres-final-drive",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Front Wheel",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2000108",
+     "name": "Wheel Assembly Front",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2000150",
+     "name": "Wheel Assembly Front Silver",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2001143",
+     "name": "Wheel Assembly Front Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2000170",
+     "name": "Hub Assembly Front Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2001368",
+     "name": "Hub Assembly Front Silver",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2004190",
+     "name": "Hub Assembly Front",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T3450183",
+     "name": "Bung Hole Dia 7.0 Blk",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T3800701",
+     "name": "Bearing Ball 17 47 14",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3600705",
+     "name": "Oil Seal 35 47 6",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T3600706",
+     "name": "Seal Oil DC 55 73 6",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2004182",
+     "name": "Spacer inner",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T3500402",
+     "name": "Circlip Int Dia 47",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2001111",
+     "name": "Drive Ring Speedo",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2000426",
+     "name": "Rim Front 19 x 2.5 36 Spoke Silver",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2001144",
+     "name": "Rim Front 19 x 2.5 36 Spoke Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2005003",
+     "name": "Nipple Steel Spoke",
+     "quantity": 36,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T2005125",
+     "name": "Spoke Front Inner 19\"",
+     "quantity": 18,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T2005126",
+     "name": "Spoke Front Outer 19\"",
+     "quantity": 18,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T2004236",
+     "name": "Speedo drive assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T2004230",
+     "name": "Speedo drive assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "16",
+     "partNumber": "T2000155",
+     "name": "Flanged Sleeve 17 x 25 x 35.3",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T2000056",
+     "name": "Bolt",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T3350155",
+     "name": "Locknut Thin M16",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T2004296",
+     "name": "Spacer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "20",
+     "partNumber": "T3555032",
+     "name": "Washer 17 x 30 x 3",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T3450042",
+     "name": "Bung Hole Dia 11 Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "22",
+     "partNumber": "T2000313",
+     "name": "Spacer Front Wheel",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Front axle nut",
+     "torqueNm": 60,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville, T100, Thruxton and Scrambler",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Front axle clamp bolts",
+     "torqueNm": 27,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville, T100, Thruxton and Scrambler",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "front-brakes",
+   "title": "Front brake caliper & disc",
+   "system": "Front brakes",
+   "catalogueTitle": "Front Brake Caliper & Discs",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a61-9431-751c-ad69-4beeb61e8cff?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a61-9431-751c-ad69-4beeb61e8cff%3Apath%3A142%3A19290&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Braking+System&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dbraking-system",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Front Brake Caliper & Discs",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2020542",
+     "name": "Caliper Assembly Front",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2026272",
+     "name": "Caliper Assembly LH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2020543",
+     "name": "Brake Pad Set x 2 Pads",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T2020505",
+     "name": "Seal Kit 2 Piston Caliper",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T2020050",
+     "name": "Piston Set",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T2020014",
+     "name": "Bleed Screw",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T2020084",
+     "name": "Pad Pin Set D Spec",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2020086",
+     "name": "Pad Spring D Spec",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2025438",
+     "name": "Bracket Caliper LH",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2023344",
+     "name": "Disc Front LHS Dia 310",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T3200601",
+     "name": "Bolt HHF M8 x 40 Slv",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2020608",
+     "name": "Bolt Disc M8 x 18 Slv",
+     "quantity": 6,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2029090",
+     "name": "Spares Kit Disc Bolts",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T3450200",
+     "name": "Plug Caphead Chrome",
+     "quantity": 6,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T3550184",
+     "name": "Washer Hardened 8.2 x 18.7 x 2",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T2021707",
+     "name": "Set Sliding Seals",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Front brake caliper mounting bolts",
+     "torqueNm": 28,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Front brake disc bolts",
+     "torqueNm": 22,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Brake pad retaining pins",
+     "torqueNm": 18,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes: front and rear",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Bleed valves",
+     "torqueNm": 6,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Brake hose banjo bolts",
+     "torqueNm": 25,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Front brake master cylinder clamp bolts",
+     "torqueNm": 12,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes contradicts itself: its brakes table gives 12 Nm, its frame and suspension table gives 15 Nm for the same bolts",
+     "toolDriveSize": null,
+     "alternatives": [
+      {
+       "torqueNm": 15,
+       "source": "haynes",
+       "note": "Frame, suspension and final drive table"
+      }
+     ]
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "rear-shocks",
+   "title": "Rear suspension & swingarm",
+   "system": "Rear suspension",
+   "catalogueTitle": "Rear Suspension",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a71-82b0-70d9-acc8-f0db77e6a17c?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a71-82b0-70d9-acc8-f0db77e6a17c%3Apath%3A142%3A19262&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Rear+Suspension&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Drear-suspension",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Rear Suspension",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2057980",
+     "name": "Rear Suspension Unit",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2057981",
+     "name": "Rear Suspension Unit",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2057983",
+     "name": "Rear Suspension Unit",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2057984",
+     "name": "Rear Suspension Unit",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T3205457",
+     "name": "Bolt HHF Lghtd M8 x 20 Enc",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T3555033",
+     "name": "Washer 8.4 x 24 x 2",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T2057367",
+     "name": "Rubbing strip",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3331041",
+     "name": "Screw Pan/Hd Tx M6 x 25 Enc",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T3350216",
+     "name": "Threaded Insert M6",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2057364",
+     "name": "Chainguard Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2057373",
+     "name": "Chainguard Chrome",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T3331042",
+     "name": "Screw Pan/Hd Tx M6 x 12 Enc",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T3331234",
+     "name": "Screw Torx P/H M6 x 20 Slv",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2054050",
+     "name": "Spindle",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2054063",
+     "name": "Spacer 25 x 17 x 8.5",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T3600044",
+     "name": "Oil Seal 35 25 4",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T3500204",
+     "name": "Circlip Int 35 x 1.5",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T3800506",
+     "name": "Bearing Ball 17 x 35 x 10",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T2054115",
+     "name": "Bush",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "16",
+     "partNumber": "T3600170",
+     "name": "Seal SD 25 32 04",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T2053188",
+     "name": "Sleeve Ground 25 x 17 x 37",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T3800014",
+     "name": "Roller bearing",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T3555032",
+     "name": "Washer 17 x 30 x 3",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "20",
+     "partNumber": "T3350155",
+     "name": "Locknut Thin M16",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T3450028",
+     "name": "Moulding Cap 24 A/F",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "22",
+     "partNumber": "T3555004",
+     "name": "Washer 6.4 x 14 x 1.6",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T2050304",
+     "name": "Swinging Arm Assembly 90 % Gloss",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T2056854",
+     "name": "Swinging arm assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Rear shock absorber mounting bolts",
+     "torqueNm": 28,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Swingarm pivot bolt nut",
+     "torqueNm": 110,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Swingarm pivot clamp bolts",
+     "torqueNm": 40,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes: 40 Nm from VIN 333840, 45 Nm before. Triumph Technical News 162 places March 2015 Bonnevilles near VIN 694352, so 2014–2016 bikes fall in the later range",
+     "toolDriveSize": null,
+     "alternatives": [
+      {
+       "torqueNm": 45,
+       "source": "haynes",
+       "note": "Up to VIN 333839 only"
+      }
+     ]
+    },
+    {
+     "label": "Chain guard screws",
+     "torqueNm": 7,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "rear-brakes",
+   "title": "Rear brake caliper & disc",
+   "system": "Rear brakes",
+   "catalogueTitle": "Rear Brake Caliper & Disc",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a61-7725-7235-a4c7-9cce539c2c4e?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a61-7725-7235-a4c7-9cce539c2c4e%3Apath%3A142%3A19290&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Braking+System&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dbraking-system",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Rear Brake Caliper & Disc",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2020239",
+     "name": "Caliper Rear",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2023052",
+     "name": "Caliper Rear",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2020966",
+     "name": "Pad Pin Set (2 Pins)",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T2020954",
+     "name": "Pad Spring Set",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T2020555",
+     "name": "Pad Set",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T2020050",
+     "name": "Piston Set",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T2020014",
+     "name": "Bleed Screw",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T3205687",
+     "name": "Bolt HHF Lghtd M10 x 19 Slv",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2023048",
+     "name": "Caliper Carrier",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2025375",
+     "name": "Disc Rear",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2020608",
+     "name": "Bolt Disc M8 x 18 Slv",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2029090",
+     "name": "Spares Kit Disc Bolts",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T3450200",
+     "name": "Plug Caphead Chrome",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T2021707",
+     "name": "Set Sliding Seals",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Rear brake caliper mounting bolts",
+     "torqueNm": 40,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Rear brake disc bolts",
+     "torqueNm": 22,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Brake pad retaining pins",
+     "torqueNm": 18,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes: front and rear",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Bleed valves",
+     "torqueNm": 6,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Brake hose banjo bolts",
+     "torqueNm": 25,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Rear brake master cylinder mounting bolts",
+     "torqueNm": 18,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville and T100",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Brake pedal pivot bolt",
+     "torqueNm": 15,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville and T100",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "rear-wheel",
+   "title": "Rear wheel & final drive",
+   "system": "Wheels and final drive",
+   "catalogueTitle": "Rear Wheel & Final Drive",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a64-3a79-73df-9d39-3b0d35d3d2fa?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a64-3a79-73df-9d39-3b0d35d3d2fa%3Apath%3A142%3A19289&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Wheels%2FTyres%2FFinal+Drive&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dwheels-tyres-final-drive",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Rear Wheel & Final Drive",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T2011211",
+     "name": "Rear Wheel Assembly Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T2011222",
+     "name": "Rear Wheel Assembly Silver",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2003507",
+     "name": "Spacer Wheel 17 122.5",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T3800701",
+     "name": "Bearing Ball 17 47 14",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T3600705",
+     "name": "Oil Seal 35 47 6",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3500402",
+     "name": "Circlip Int Dia 47",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T2012148",
+     "name": "Spoke Rear LH Inner",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T2014560",
+     "name": "Spoke Rear LH Inner",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2012147",
+     "name": "Spoke Rear LH Outer",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T2014367",
+     "name": "Spoke Rear LH Outer",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2012145",
+     "name": "Spoke Rear RH Inner",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2014562",
+     "name": "Spoke Rear RH Inner",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2012146",
+     "name": "Spoke Rear RH Outer",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T2014563",
+     "name": "Spoke Rear RH Outer",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T2005003",
+     "name": "Nipple Steel Spoke",
+     "quantity": 40,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2010426",
+     "name": "Rim 17 x 3.5 40 Spoke",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2012104",
+     "name": "Rim Wheel 17/CXMT 3.50",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2012205",
+     "name": "Rim Wheel 17 x 3.5 Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T2012223",
+     "name": "Rubber Cush Drive",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T2010380",
+     "name": "Sprocket Carrier Assembly Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T2012140",
+     "name": "Sprocket carrier assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T3800029",
+     "name": "Bearing Ball 25 52 15",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T3600073",
+     "name": "Oil Seal 35 52 6",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "16",
+     "partNumber": "T2012144",
+     "name": "Stud Sprocket Carrier",
+     "quantity": 5,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T3500203",
+     "name": "Circlip Int 52 x 2",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T2012113",
+     "name": "Ring",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T2012516",
+     "name": "Sprocket",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T2012522",
+     "name": "Sprocket Rear 43T",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "20",
+     "partNumber": "T3350250",
+     "name": "Locknut Flanged M10",
+     "quantity": 5,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T2004296",
+     "name": "Spacer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "22",
+     "partNumber": "T2012080",
+     "name": "Spacer 12.5 x 34.9mm",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T2012085",
+     "name": "Stepped spacer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "24",
+     "partNumber": "T2012012",
+     "name": "Bolt",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "25",
+     "partNumber": "T3555032",
+     "name": "Washer 17 x 30 x 3",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "26",
+     "partNumber": "T3350155",
+     "name": "Locknut Thin M16",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T2010134",
+     "name": "Chain",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T2012529",
+     "name": "Chain Final Drive 104L",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T2017215",
+     "name": "525 Chain 104L Split Spares",
+     "quantity": 1,
+     "sizeVerified": false,
+     "fitmentNote": "Triumph Technical News 162 (March 2015): 525 chain up to VIN 694351. The catalogue lists both; which one is fitted depends on VIN."
+    },
+    {
+     "callout": "27",
+     "partNumber": "T2017216",
+     "name": "520 Chain 104L Split Spares",
+     "quantity": 1,
+     "sizeVerified": false,
+     "fitmentNote": "Triumph Technical News 162 (March 2015): 520 chain from VIN 694352. The catalogue lists both; which one is fitted depends on VIN."
+    },
+    {
+     "callout": "28",
+     "partNumber": "T2014011",
+     "name": "Clevis",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "29",
+     "partNumber": "T3500042",
+     "name": "Circlip Chain Adjuster",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "30",
+     "partNumber": "T3330809",
+     "name": "Screw Chain Adjuster",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "31",
+     "partNumber": "T3450183",
+     "name": "Bung Hole Dia 7.0 Blk",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "32",
+     "partNumber": "T3450499",
+     "name": "Bung Hole Dia 9 Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "33",
+     "partNumber": "T2014031",
+     "name": "Hub Assembly Rear",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "33",
+     "partNumber": "T2015715",
+     "name": "Rear Hub Assembly Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "33",
+     "partNumber": "T2015765",
+     "name": "Rear Hub Assembly",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "34",
+     "partNumber": "T2010618",
+     "name": "Chain Link 520",
+     "quantity": 1,
+     "sizeVerified": false,
+     "fitmentNote": "Triumph Technical News 162 (March 2015): 520 chain from VIN 694352. The catalogue lists both; which one is fitted depends on VIN."
+    },
+    {
+     "callout": "34",
+     "partNumber": "T2010619",
+     "name": "Chain Link 525",
+     "quantity": 1,
+     "sizeVerified": false,
+     "fitmentNote": "Triumph Technical News 162 (March 2015): 525 chain up to VIN 694351. The catalogue lists both; which one is fitted depends on VIN."
+    },
+    {
+     "callout": "35",
+     "partNumber": "T2017210",
+     "name": "Chain & Sprocket Kit 104/43/18",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "35",
+     "partNumber": "T2017213",
+     "name": "Chain & Sprocket Kit 104/43/18",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Rear wheel spindle nut",
+     "torqueNm": 85,
+     "source": "handbook",
+     "page": 76,
+     "note": "Haynes gives the same 85 Nm",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Chain adjusters",
+     "torqueNm": 5,
+     "source": "handbook",
+     "page": 76,
+     "note": "Handbook: tighten the adjusters anti-clockwise to 5 Nm",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Rear sprocket nuts",
+     "torqueNm": 55,
+     "source": "haynes",
+     "page": null,
+     "note": "Haynes row for Bonneville, T100, Thruxton and Scrambler",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Rear sprocket carrier studs",
+     "torqueNm": 30,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "cooling",
+   "title": "Oil cooler",
+   "system": "Lubrication",
+   "catalogueTitle": "Oil Cooler",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a6c-1252-74a2-b61f-82b1f04ce57c?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a6c-1252-74a2-b61f-82b1f04ce57c%3Apath%3A142%3A19262&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Oil+Cooler&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Doil-cooler",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Oil Cooler",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T1210228",
+     "name": "Oil Cooler 13 Row",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T2101660",
+     "name": "Pipe Oil Feed",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T2101690",
+     "name": "Pipe Return Oil",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T3203025",
+     "name": "Bolt RHHF Domed M6 x 25 S/S",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T3205067",
+     "name": "Bolt HHF Lghtd M6 x 25 Slv",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3010702",
+     "name": "Flanged Sleeve 6.4 x 10 x 8.5",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T3021100",
+     "name": "Grommet Dia 13 x 1.8",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T3550905",
+     "name": "Washer M18 x 21.9 OD Copper",
+     "quantity": 5,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T2100227",
+     "name": "Banjo Bolt M18 x 31",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T3550547",
+     "name": "Washer Cu OD19 x ID14.2",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T1210241",
+     "name": "Banjo Bolt M14 x 28",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T2101600",
+     "name": "Adaptor Male",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T2101380",
+     "name": "O Ring",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T2101900",
+     "name": "Banjo Bolt M18 Ext M12 Int",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T3700016",
+     "name": "Cable Tie 370 Long",
+     "quantity": 3,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2/3",
+     "partNumber": "T2101685",
+     "name": "Kit Oil Feed/Return",
+     "quantity": 1,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Oil cooler mounting bolts",
+     "torqueNm": 8,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Oil feed pipe banjo bolts to cylinder head",
+     "torqueNm": 30,
+     "source": "haynes",
+     "page": null,
+     "note": "An owner post quoting the factory manual gives the same 30 Nm",
+     "toolDriveSize": null,
+     "alternatives": [
+      {
+       "torqueNm": 30,
+       "source": "nbr",
+       "note": "Agrees"
+      }
+     ]
+    },
+    {
+     "label": "Oil feed pipe banjo bolts to cooler",
+     "torqueNm": 45,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Oil return pipe banjo bolt to cooler",
+     "torqueNm": 45,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "External oil pipe to crankcase banjo bolt",
+     "torqueNm": 30,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  },
+  {
+   "id": "engine-covers",
+   "title": "Engine covers",
+   "system": "Engine",
+   "catalogueTitle": "Engine Covers",
+   "oemFicheUrl": "https://www.triumphestore.com/catalog/assembly/019f2a5e-7538-7a3b-9aed-cf5ab522268a?catalog_source_id=019f29dd-e632-7142-9a94-81abf7d42061&navigation_id=source%3A019f29dd-e632-7142-9a94-81abf7d42061%3Avehicle%3A019f2a1b-2980-7cef-ac15-28a5380f13ac%3Adiagram%3A019f2a5e-7538-7a3b-9aed-cf5ab522268a%3Apath%3A142%3A19266&buyer_navigation_id=make%3Atriumph%3Amodel%3Abonneville%3Ayear%3A2015%3Adriveline%3Abonneville-t100-a3%3Avehicle%3Abonneville-t100-a3&category_label=Crankcase%2FEngine+Covers%2FLubrication+System&category_href=%2Fcatalog%2Ftriumph%2Fbonneville%2F2015%3Fdriveline%3Dbonneville-t100-a3%26vehicle%3Dbonneville-t100-a3%26category%3Dcrankcase-engine-covers-lubrication-system",
+   "alternateCatalogueUrl": "https://www.triumphestore.com/catalog/triumph/bonneville/2015",
+   "catalogueDestination": "Hermy's Triumph eStore, 2015 Bonneville T100 (A3), Engine Covers",
+   "parts": [
+    {
+     "callout": "1",
+     "partNumber": "T1260322",
+     "name": "Clutch Cover Assembly Chromed",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T1260525",
+     "name": "Clutch Cover Assembly Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T1260544",
+     "name": "Clutch Cover Assembly Brushed & Chromate",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "1",
+     "partNumber": "T1261233",
+     "name": "Clutch Cover Assembly Chromed",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "2",
+     "partNumber": "T3600095",
+     "name": "Dust Seal",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "3",
+     "partNumber": "T3800110",
+     "name": "Roller Bearing HK 1210",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "3800041-T0301",
+     "name": "Bearing Gearbox Lever",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "4",
+     "partNumber": "T3800001",
+     "name": "Bearing Needle 20 x 14 x 12",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3600008",
+     "name": "Oil Seal",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "5",
+     "partNumber": "T3600088",
+     "name": "Seal Oil 14 x 22 x 4.5",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "6",
+     "partNumber": "T1260965",
+     "name": "Bracket Neut ID Lead Ret",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "7",
+     "partNumber": "T1260967",
+     "name": "Gasket Clutch Cover",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T3203030",
+     "name": "Bolt RHHF Domed M6 x 30",
+     "quantity": 7,
+     "sizeVerified": false
+    },
+    {
+     "callout": "8",
+     "partNumber": "T3205070",
+     "name": "Bolt HHF Lghtd M6 x 30 Slv",
+     "quantity": 7,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T3203040",
+     "name": "Bolt RHHF Domed M6 x 40",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "9",
+     "partNumber": "T3205072",
+     "name": "Bolt HHF Lghtd M6 x 40 Slv",
+     "quantity": 10,
+     "sizeVerified": false
+    },
+    {
+     "callout": "10",
+     "partNumber": "T3000005",
+     "name": "Dowel Dia 6 x 16.5",
+     "quantity": 8,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T1171450",
+     "name": "Clutch Lifter Arm",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "11",
+     "partNumber": "T1171455",
+     "name": "Clutch Lifter Arm",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "12",
+     "partNumber": "T1171701",
+     "name": "Bullet Clutch Lifter",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "13",
+     "partNumber": "T1170925",
+     "name": "Spring return",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T1171410",
+     "name": "Clutch Cable Holder / Guide",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "14",
+     "partNumber": "T1171415",
+     "name": "Clutch Cable Holder/Guide",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T1260896",
+     "name": "Alternator Cover Brushed & Chromate",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T1261932",
+     "name": "Cover RH Pol Chr",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "15",
+     "partNumber": "T1261957",
+     "name": "Cover RH Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "16",
+     "partNumber": "T1260968",
+     "name": "Gasket RH Cover",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T3203050",
+     "name": "Bolt Domed S/S M6 x 50",
+     "quantity": 11,
+     "sizeVerified": false
+    },
+    {
+     "callout": "17",
+     "partNumber": "T3205073",
+     "name": "Bolt HHF Lghtd M6 x 1.0 x 50 Slv",
+     "quantity": 11,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T3950100",
+     "name": "Triumph Badge Triangular",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T3950105",
+     "name": "Badge Triumph Triangular",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "18",
+     "partNumber": "T3951010",
+     "name": "Badge Symbol",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "19",
+     "partNumber": "T1261178",
+     "name": "Plate Wire Retainer",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "20",
+     "partNumber": "T3051062",
+     "name": "Screw M6 x 12 Enc Raw",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T1260962",
+     "name": "Cover G/Change Mech Silver",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "21",
+     "partNumber": "T1260992",
+     "name": "Cover Gearchange Mech Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "22",
+     "partNumber": "T1260969",
+     "name": "Gasket Gearchange Mech Cover",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T3205063",
+     "name": "Bolt HHF Lghtd M6 x 16 Slv",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "23",
+     "partNumber": "T3205066",
+     "name": "Bolt HHF Lghtd M6 x 20 Slv",
+     "quantity": 2,
+     "sizeVerified": false
+    },
+    {
+     "callout": "24",
+     "partNumber": "T1260897",
+     "name": "Sprocket Cover Brushed & Chromate",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "24",
+     "partNumber": "T1261942",
+     "name": "Sprocket Cover Chromed",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "24",
+     "partNumber": "T1262031",
+     "name": "Sprocket Cover Crinkle Black",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "25",
+     "partNumber": "T3203075",
+     "name": "Bolt RHHF M6 x 75 S/Less",
+     "quantity": 5,
+     "sizeVerified": false
+    },
+    {
+     "callout": "25",
+     "partNumber": "T3205076",
+     "name": "Bolt HHF Lghtd M6 x 1.0 x 75 Slv",
+     "quantity": 5,
+     "sizeVerified": false
+    },
+    {
+     "callout": "26",
+     "partNumber": "T3900302",
+     "name": "Label Oil & Filter",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T3203040",
+     "name": "Bolt RHHF Domed M6 x 40",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "27",
+     "partNumber": "T3205072",
+     "name": "Bolt HHF Lghtd M6 x 40 Slv",
+     "quantity": 4,
+     "sizeVerified": false
+    },
+    {
+     "callout": "28",
+     "partNumber": "T1260928",
+     "name": "Plate Sound Pad Clutch Cover",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "29",
+     "partNumber": "T1260927",
+     "name": "Pad Sound Suppression",
+     "quantity": 1,
+     "sizeVerified": false
+    },
+    {
+     "callout": "30",
+     "partNumber": "T3331042",
+     "name": "Screw Pan/Hd Tx M6 x 12 Enc",
+     "quantity": 8,
+     "sizeVerified": false
+    }
+   ],
+   "operations": [
+    {
+     "label": "Clutch cover bolts",
+     "torqueNm": 8,
+     "source": "tn162",
+     "page": 2,
+     "note": "Item 2: changed to 8 Nm on Bonneville EFI and Bonneville T100 EFI. Tightening sequence as in the service manual",
+     "toolDriveSize": null,
+     "alternatives": [
+      {
+       "torqueNm": 10,
+       "source": "haynes",
+       "note": "Superseded by Technical News 162"
+      },
+      {
+       "torqueNm": 9,
+       "source": "nbr",
+       "note": "Superseded by Technical News 162"
+      }
+     ]
+    },
+    {
+     "label": "Alternator cover bolts",
+     "torqueNm": 8,
+     "source": "tn162",
+     "page": 2,
+     "note": "Item 2: changed to 8 Nm on Bonneville EFI and Bonneville T100 EFI",
+     "toolDriveSize": null,
+     "alternatives": [
+      {
+       "torqueNm": 9,
+       "source": "haynes",
+       "note": "Routine maintenance table; superseded"
+      },
+      {
+       "torqueNm": 10,
+       "source": "haynes",
+       "note": "Engine table; superseded"
+      }
+     ]
+    },
+    {
+     "label": "Front sprocket cover bolts",
+     "torqueNm": 9,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    },
+    {
+     "label": "Gearchange mechanism cover bolts",
+     "torqueNm": 8,
+     "source": "haynes",
+     "page": null,
+     "note": "",
+     "toolDriveSize": null
+    }
+   ],
+   "specialTools": []
+  }
+ ],
+ "map": {
+  "views": {
+   "right": {
+    "title": "Right side",
+    "tab": "Right side",
+    "image": "assets/photo/t100-2011-right.webp",
+    "width": 1920,
+    "height": 1175,
+    "frame": [
+     -90,
+     60,
+     1800,
+     1130
+    ],
+    "cutout": false,
+    "subject": "Triumph Bonneville T100, 2011 model year",
+    "relevance": "A 2011 T100, three years before the A3 range. It has the same 865 cc twin, spoked wheels and chrome engine covers. No openly licensed 2014–2016 T100 side view was found. A flyscreen and rack are fitted. It is not the owner's motorcycle.",
+    "changes": "Resized; nothing altered.",
+    "alt": "Right side of a 2011 Triumph Bonneville T100 in black and cream with spoked wheels and chrome engine covers, in front of an estuary",
+    "hero": "assets/photo/t100-2011-hero.webp",
+    "credit": {
+     "author": "Hogyn Lleol",
+     "licence": "CC BY-SA 4.0",
+     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Triumph_Bonneville_T100_(2011).jpg",
+     "taken": "photo date not stated"
+    }
+   }
+  },
+  "viewOrder": [
+   "right"
+  ],
+  "placements": [
+   {
+    "assembly": "front-wheel",
+    "shape": "M1276,895 A214,214 0 1 0 1704,895 A214,214 0 1 0 1276,895 Z",
+    "lift": [
+     150,
+     50
+    ],
+    "layer": 1,
+    "view": "right"
+   },
+   {
+    "assembly": "front-forks",
+    "shape": "M1198,368 L1266,358 L1372,600 L1508,885 L1472,930 L1330,642 L1204,420 Z",
+    "lift": [
+     70,
+     -110
+    ],
+    "layer": 2,
+    "view": "right"
+   },
+   {
+    "assembly": "rear-wheel",
+    "shape": "M618,864 L188,848 L188,847 L190,833 L193,819 L197,806 L202,792 L208,779 L215,767 L222,755 L231,744 L240,733 L249,722 L260,713 L271,704 L282,695 L294,688 L306,681 L319,675 L333,670 L346,666 L360,663 L374,661 L388,659 L402,659 L416,659 L430,661 L444,663 L458,666 L471,670 L485,675 L498,681 L510,688 L522,695 L533,704 L544,713 L555,722 L564,733 L573,744 L582,755 L589,767 L596,779 L602,792 L607,806 L611,819 L614,833 L616,847 L618,861 Z M612,924 L611,931 L607,944 L602,958 L596,971 L589,983 L582,995 L573,1006 L564,1017 L555,1028 L544,1037 L533,1046 L522,1055 L510,1062 L498,1069 L485,1075 L471,1080 L458,1084 L444,1087 L430,1089 L416,1091 L402,1091 L388,1091 L374,1089 L360,1087 L346,1084 L333,1080 L319,1075 L306,1069 L294,1062 L282,1055 L271,1046 L260,1037 L249,1028 L240,1017 L231,1006 L222,995 L215,983 L208,971 L202,958 L197,944 L193,931 L190,917 L188,903 L188,901 Z",
+    "lift": [
+     -160,
+     50
+    ],
+    "layer": 1,
+    "label": "silencer left in place",
+    "view": "right"
+   },
+   {
+    "assembly": "rear-shocks",
+    "shape": "M492,598 L548,608 L442,848 L392,836 Z",
+    "lift": [
+     -60,
+     -140
+    ],
+    "layer": 3,
+    "view": "right"
+   },
+   {
+    "assembly": "engine-covers",
+    "shape": "M843,850 A132,96 0 1 0 1107,850 A132,96 0 1 0 843,850 Z M694,836 A96,74 0 1 0 886,836 A96,74 0 1 0 694,836 Z",
+    "lift": [
+     0,
+     160
+    ],
+    "layer": 2,
+    "view": "right"
+   },
+   {
+    "assembly": "front-brakes",
+    "shape": "M1465,875 A80,105 0 1 0 1625,875 A80,105 0 1 0 1465,875 Z",
+    "lift": [
+     0,
+     0
+    ],
+    "layer": 4,
+    "label": "seen through the spokes",
+    "view": "right"
+   }
+  ],
+  "pins": [
+   {
+    "assembly": "front-forks",
+    "callout": "3",
+    "view": "right",
+    "x": 1232,
+    "y": 400,
+    "note": "Top of the right-hand leg; approximate"
+   },
+   {
+    "assembly": "front-forks",
+    "callout": "32",
+    "view": "right",
+    "x": 1362,
+    "y": 640,
+    "note": "Rubber gaiter on the right-hand leg"
+   },
+   {
+    "assembly": "front-forks",
+    "callout": "13",
+    "view": "right",
+    "x": 1470,
+    "y": 842,
+    "note": "Right-hand lower leg"
+   },
+   {
+    "assembly": "front-wheel",
+    "callout": "10",
+    "view": "right",
+    "x": 1690,
+    "y": 885,
+    "note": ""
+   },
+   {
+    "assembly": "front-wheel",
+    "callout": "17",
+    "view": "right",
+    "x": 1488,
+    "y": 894,
+    "note": "Spindle end on this side"
+   },
+   {
+    "assembly": "front-brakes",
+    "callout": "9",
+    "view": "right",
+    "x": 1565,
+    "y": 858,
+    "note": "Single front disc, seen through the spokes"
+   },
+   {
+    "assembly": "rear-wheel",
+    "callout": "11",
+    "view": "right",
+    "x": 222,
+    "y": 905,
+    "note": ""
+   },
+   {
+    "assembly": "rear-shocks",
+    "callout": "1",
+    "view": "right",
+    "x": 470,
+    "y": 725,
+    "note": "Right-hand shock"
+   },
+   {
+    "assembly": "engine-covers",
+    "callout": "15",
+    "view": "right",
+    "x": 1010,
+    "y": 880,
+    "note": "The catalogue lists this as the right-hand (alternator) cover"
+   },
+   {
+    "assembly": "engine-covers",
+    "callout": "18",
+    "view": "right",
+    "x": 970,
+    "y": 850,
+    "note": ""
+   },
+   {
+    "assembly": "engine-covers",
+    "callout": "17",
+    "view": "right",
+    "x": 1020,
+    "y": 805,
+    "note": "One of the cover bolts; approximate"
+   },
+   {
+    "assembly": "engine-covers",
+    "callout": "24",
+    "view": "right",
+    "x": 790,
+    "y": 840,
+    "note": "Front sprocket cover, ahead of the swingarm pivot"
+   }
+  ],
+  "primaryView": {
+   "front-forks": "right",
+   "front-wheel": "right",
+   "front-brakes": "right",
+   "rear-shocks": "right",
+   "rear-wheel": "right",
+   "engine-covers": "right"
+  },
+  "notVisible": {
+   "rear-brakes": "The rear disc and caliper are on the left side, out of this photograph.",
+   "cooling": "The oil cooler sits behind the front frame tubes and is not distinguishable in this photograph."
+  },
+  "calloutLinks": {
+   "front-forks": {
+    "3": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "Haynes' fork top bolt is the cap that closes the top of each leg"
+     }
+    ],
+    "20": [
+     {
+      "op": 1,
+      "kind": "inferred",
+      "basis": "Haynes calls it the damper rod bolt; the catalogue calls the bolt at the foot of the leg the oil-lock capscrew"
+     }
+    ],
+    "21": [
+     {
+      "op": 2,
+      "kind": "inferred",
+      "basis": "The M8 bolts listed with the lower yoke; Haynes gives one figure for top and bottom yoke clamp bolts"
+     }
+    ],
+    "26": [
+     {
+      "op": 5,
+      "kind": "inferred",
+      "basis": "Read as the steering head locknut (upper of the two adjuster nuts)"
+     }
+    ],
+    "30": [
+     {
+      "op": 4,
+      "kind": "inferred",
+      "basis": "Read as the steering head bearing adjuster nut (lower of the two)"
+     }
+    ]
+   },
+   "front-wheel": {
+    "18": [
+     {
+      "op": 0,
+      "kind": "named",
+      "basis": "The only nut on the front spindle in the catalogue"
+     }
+    ]
+   },
+   "front-brakes": {
+    "5": [
+     {
+      "op": 3,
+      "kind": "named",
+      "basis": "Haynes: bleed valves"
+     }
+    ],
+    "6": [
+     {
+      "op": 2,
+      "kind": "named",
+      "basis": "Haynes: brake pad retaining pins"
+     }
+    ],
+    "10": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "The bolts listed with the caliper bracket; Triumph does not label them as the caliper mounting bolts"
+     }
+    ],
+    "11": [
+     {
+      "op": 1,
+      "kind": "named",
+      "basis": "Catalogue and Haynes both name the disc bolts"
+     }
+    ]
+   },
+   "rear-shocks": {
+    "1": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "Haynes gives the mounting bolt figure; the catalogue lists the shock unit"
+     }
+    ],
+    "10": [
+     {
+      "op": 1,
+      "kind": "inferred",
+      "basis": "The swingarm spindle; Haynes gives the pivot bolt nut"
+     }
+    ],
+    "20": [
+     {
+      "op": 1,
+      "kind": "inferred",
+      "basis": "The nut listed with the swingarm spindle"
+     }
+    ]
+   },
+   "rear-brakes": {
+    "2": [
+     {
+      "op": 2,
+      "kind": "named",
+      "basis": "Haynes: brake pad retaining pins"
+     }
+    ],
+    "6": [
+     {
+      "op": 3,
+      "kind": "named",
+      "basis": "Haynes: bleed valves"
+     }
+    ],
+    "7": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "The bolts listed with the caliper carrier; Triumph does not label them as the caliper mounting bolts"
+     }
+    ],
+    "10": [
+     {
+      "op": 1,
+      "kind": "named",
+      "basis": "Catalogue and Haynes both name the disc bolts"
+     }
+    ]
+   },
+   "rear-wheel": {
+    "16": [
+     {
+      "op": 3,
+      "kind": "named",
+      "basis": "Haynes: rear sprocket carrier studs"
+     }
+    ],
+    "20": [
+     {
+      "op": 2,
+      "kind": "named",
+      "basis": "The nuts on the sprocket carrier studs; Haynes: rear sprocket nuts"
+     }
+    ],
+    "26": [
+     {
+      "op": 0,
+      "kind": "named",
+      "basis": "The handbook names the rear wheel spindle nut"
+     }
+    ],
+    "30": [
+     {
+      "op": 1,
+      "kind": "named",
+      "basis": "The handbook names the chain adjusters"
+     }
+    ]
+   },
+   "cooling": {
+    "4": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "The only plain bolts in the oil cooler diagram"
+     }
+    ]
+   },
+   "engine-covers": {
+    "8": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "Bolts listed with the clutch cover (callouts 8 and 9)"
+     }
+    ],
+    "9": [
+     {
+      "op": 0,
+      "kind": "inferred",
+      "basis": "Bolts listed with the clutch cover (callouts 8 and 9)"
+     }
+    ],
+    "17": [
+     {
+      "op": 1,
+      "kind": "inferred",
+      "basis": "Bolts listed with the alternator cover"
+     }
+    ],
+    "23": [
+     {
+      "op": 3,
+      "kind": "inferred",
+      "basis": "Bolts listed with the gearchange mechanism cover"
+     }
+    ],
+    "25": [
+     {
+      "op": 2,
+      "kind": "inferred",
+      "basis": "Bolts listed with the sprocket cover"
+     }
+    ],
+    "27": [
+     {
+      "op": 2,
+      "kind": "inferred",
+      "basis": "Bolts listed after the sprocket cover"
+     }
+    ]
+   }
+  },
+  "systemCategories": {}
+ },
+ "toolReports": [
+  {
+   "id": "BL-JMP-axle-nut",
+   "assembly": "rear-wheel",
+   "op": 0,
+   "tool": "22 mm spanner",
+   "fits": "Wheel spindle nut, M16 × 1.5, listed for every 2001–2016 Bonneville",
+   "sourceTitle": "JMP stainless axle nut listing (British Legends, aftermarket)",
+   "url": "https://www.britishlegends.fr/en/go/product/161424464",
+   "crossCheck": "The catalogue's thin M16 locknut matches the M16 thread. The listing does not say whether it covers the front or rear spindle; owner posts that give 24 mm could not be re-read, so they are not used.",
+   "kind": "vendor-guide",
+   "checked": "search excerpt 2026-11-18",
+   "callout": "26"
+  }
+ ]
+}
