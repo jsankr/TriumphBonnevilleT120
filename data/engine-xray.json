@@ -19,80 +19,442 @@
   }
  },
  "facts": [
-  { "label": "Engine", "value": "1200 cc 'High Torque' 8-valve parallel twin", "source": "media" },
-  { "label": "Firing interval", "value": "270°", "source": "media" },
-  { "label": "Cooling", "value": "Liquid, integrated to minimise its visual impact", "source": "media" },
-  { "label": "Fuel", "value": "Ride-by-wire fuel injection, twin throttle bodies", "source": "media" },
-  { "label": "Clutch", "value": "Torque assist", "source": "media" },
-  { "label": "Gearbox", "value": "Six-speed", "source": "media" },
-  { "label": "Exhaust", "value": "Twin-skin, peashooter-style silencers", "source": "media" }
+  {
+   "label": "Engine",
+   "value": "1200 cc 'High Torque' 8-valve parallel twin",
+   "source": "media"
+  },
+  {
+   "label": "Firing interval",
+   "value": "270°",
+   "source": "media"
+  },
+  {
+   "label": "Cooling",
+   "value": "Liquid, integrated to minimise its visual impact",
+   "source": "media"
+  },
+  {
+   "label": "Fuel",
+   "value": "Ride-by-wire fuel injection, twin throttle bodies",
+   "source": "media"
+  },
+  {
+   "label": "Clutch",
+   "value": "Torque assist",
+   "source": "media"
+  },
+  {
+   "label": "Gearbox",
+   "value": "Six-speed",
+   "source": "media"
+  },
+  {
+   "label": "Exhaust",
+   "value": "Twin-skin, peashooter-style silencers",
+   "source": "media"
+  }
  ],
  "parts": [
-  { "id": "crank", "label": "Crankshaft", "sys": "Bottom end", "shell": false,
-    "text": "Triumph gives the 1200 High Torque twin a 270° firing interval. That spaces the two power strokes 270° and then 450° of crank rotation apart; the readout under the view shows it as the engine turns. The crank shape is drawn for illustration.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "165–186", "note": "Crankshaft chapter" }] },
-  { "id": "rods", "label": "Connecting rods", "sys": "Bottom end", "shell": false,
-    "text": "Two connecting rods join the crankpins to the pistons. The service manual covers rod installation in the crankshaft chapter. Rod length and shape here are placeholders chosen so the animation reads well.",
-    "cite": [{ "source": "sm2016", "pages": "59, 178", "note": "Connecting rod big-end bolts; Connecting Rod - Installation" }] },
-  { "id": "pistons", "label": "Pistons", "sys": "Bottom end", "shell": false,
-    "text": "Barrels and pistons have their own chapter in the service manual, and its lubrication table lists oil cooling jets aimed at the pistons. Bore, stroke and crown shape here are not to scale.",
-    "cite": [{ "source": "sm2016", "pages": "139–150", "note": "Barrels And Pistons" }, { "source": "sm2016", "pages": "62", "note": "Oil cooling jet (pistons)" }] },
-  { "id": "balancers", "label": "Balancer shafts", "sys": "Bottom end", "shell": false,
-    "text": "The service manual has a Balancer chapter, and its torque table names a front balancer shaft adjuster and a rear dead shaft, so two balancers are shown, one ahead of and one behind the crank. Their exact positions and weights are illustrative.",
-    "cite": [{ "source": "sm2016", "pages": "187–202", "note": "Balancer chapter" }, { "source": "sm2016", "pages": "59", "note": "Front balancer shaft adjuster clamp plug; rear dead shaft retaining washer" }] },
-  { "id": "block", "label": "Cylinder barrels", "sys": "Castings & covers", "shell": true,
-    "text": "Finned barrels on a liquid-cooled engine. Triumph says the cooling system is integrated to minimise its visual impact. Fin count and shape here are approximate.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "139–150", "note": "Barrels And Pistons" }] },
-  { "id": "head", "label": "Cylinder head", "sys": "Castings & covers", "shell": true,
-    "text": "Cylinder head carrying the eight valves Triumph quotes for the engine. The service manual covers it in its own chapter. The shape is approximate.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "107–138", "note": "Cylinder Head chapter" }] },
-  { "id": "camcover", "label": "Camshaft cover", "sys": "Castings & covers", "shell": true,
-    "text": "Camshaft cover, fixed to the cylinder head. The shape is approximate.",
-    "cite": [{ "source": "sm2016", "pages": "57", "note": "Camshaft cover to cylinder head" }] },
-  { "id": "cam", "label": "Camshaft", "sys": "Top end", "shell": false,
-    "text": "Camshaft with a sprocket, mounted in a camshaft frame and driven by a chain through an idler shaft, per the cylinder-head torque table. It turns at half crank speed, as in any four-stroke. Lobe count, profiles and timing here are illustrative.",
-    "cite": [{ "source": "sm2016", "pages": "57", "note": "Camshaft frame; camshaft sprocket; camshaft idler shaft bolt" }] },
-  { "id": "chain", "label": "Camshaft drive chain", "sys": "Top end", "shell": false,
-    "text": "Chain drive to the camshaft with a tensioner and a tensioner blade. The side of the engine it runs on and the routing shown are not verified.",
-    "cite": [{ "source": "sm2016", "pages": "57", "note": "Camshaft drive chain tensioner; tensioner blade" }] },
-  { "id": "valves", "label": "Valves ×8", "sys": "Top end", "shell": false,
-    "text": "Eight valves. Intake valves face the throttle bodies and exhaust valves face the header pipes. They move on a generic four-stroke cycle with the cylinders 270° apart; this is not Triumph cam timing, and the valve angles are approximate.",
-    "cite": [{ "source": "media" }] },
-  { "id": "plugs", "label": "Spark plugs", "sys": "Top end", "shell": false,
-    "text": "Spark plugs in the cylinder head. Plug angle and cap shape are approximate. For the plug torque, see the sourced value on the Dashboard.",
-    "cite": [{ "source": "sm2016", "pages": "57", "note": "Spark plugs (cylinder head table)" }] },
-  { "id": "gearbox", "label": "Six-speed gearbox", "sys": "Transmission", "shell": false,
-    "text": "Six-speed gearbox with an input shaft above and an output shaft below. All six pairs stay in mesh. Gear sizes and ratios here are arbitrary.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "203–230", "note": "Transmission chapter" }] },
-  { "id": "clutch", "label": "Torque-assist clutch", "sys": "Transmission", "shell": false,
-    "text": "Torque-assist clutch, driven from the crank by a primary gear. Plate count and the side it sits on here are illustrative.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "151–164", "note": "Clutch chapter" }] },
-  { "id": "alt", "label": "Alternator", "sys": "Ancillaries", "shell": false,
-    "text": "Alternator behind its own engine cover. Rotor and stator layout and the side shown are illustrative.",
-    "cite": [{ "source": "sm2016", "pages": "60", "note": "Alternator cover to crankcase" }] },
-  { "id": "sprocket", "label": "Front sprocket", "sys": "Transmission", "shell": false,
-    "text": "Front sprocket on the gearbox output shaft, under the front sprocket cover. Size and side shown are illustrative.",
-    "cite": [{ "source": "sm2016", "pages": "60–61", "note": "Front sprocket cover; front sprocket to output shaft nut" }] },
-  { "id": "crankcase", "label": "Crankcase", "sys": "Castings & covers", "shell": true,
-    "text": "Crankcase halves bolted together, holding the crank, balancers and gearbox. The shape is approximate.",
-    "cite": [{ "source": "sm2016", "pages": "59", "note": "Crankcase to crankcase bolts" }] },
-  { "id": "clutchcover", "label": "Clutch cover", "sys": "Castings & covers", "shell": true,
-    "text": "Clutch cover. The shape is approximate.",
-    "cite": [{ "source": "sm2016", "pages": "60", "note": "Clutch cover to crankcase" }] },
-  { "id": "altcover", "label": "Alternator cover", "sys": "Castings & covers", "shell": true,
-    "text": "Alternator cover. The shape is approximate.",
-    "cite": [{ "source": "sm2016", "pages": "60", "note": "Alternator cover to crankcase" }] },
-  { "id": "sump", "label": "Sump", "sys": "Castings & covers", "shell": true,
-    "text": "Sump with a drain plug and an internal baffle. The shape is approximate.",
-    "cite": [{ "source": "sm2016", "pages": "60", "note": "Sump to crankcase; sump plug; baffle to sump" }] },
-  { "id": "tb", "label": "Throttle bodies", "sys": "Intake & exhaust", "shell": false,
-    "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). The shape is approximate.",
-    "cite": [{ "source": "media" }] },
-  { "id": "exhaust", "label": "Header pipes", "sys": "Intake & exhaust", "shell": false,
-    "text": "Twin-skin header pipes running back to peashooter-style silencers, which are cut short here. The routing is approximate.",
-    "cite": [{ "source": "media" }] },
-  { "id": "radiator", "label": "Radiator", "sys": "Cooling", "shell": false,
-    "text": "Radiator ahead of the engine, fixed to the frame. Size and hose routing are approximate.",
-    "cite": [{ "source": "media" }, { "source": "sm2016", "pages": "64", "note": "Radiator to frame upper" }] }
- ]
+  {
+   "id": "crank",
+   "label": "Crankshaft",
+   "sys": "Bottom end",
+   "shell": false,
+   "text": "Triumph gives the 1200 High Torque twin a 270° firing interval. That spaces the two power strokes 270° and then 450° of crank rotation apart; the readout under the view shows it as the engine turns. The crank shape is drawn for illustration.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "165–186",
+     "note": "Crankshaft chapter"
+    }
+   ]
+  },
+  {
+   "id": "rods",
+   "label": "Connecting rods",
+   "sys": "Bottom end",
+   "shell": false,
+   "text": "Two connecting rods join the crankpins to the pistons. The service manual covers rod installation in the crankshaft chapter. Rod length and shape here are placeholders chosen so the animation reads well.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "59, 178",
+     "note": "Connecting rod big-end bolts; Connecting Rod - Installation"
+    }
+   ]
+  },
+  {
+   "id": "pistons",
+   "label": "Pistons",
+   "sys": "Bottom end",
+   "shell": false,
+   "text": "Barrels and pistons have their own chapter in the service manual, and its lubrication table lists oil cooling jets aimed at the pistons. Bore, stroke and crown shape here are not to scale.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "139–150",
+     "note": "Barrels And Pistons"
+    },
+    {
+     "source": "sm2016",
+     "pages": "62",
+     "note": "Oil cooling jet (pistons)"
+    }
+   ]
+  },
+  {
+   "id": "balancers",
+   "label": "Balancer shafts",
+   "sys": "Bottom end",
+   "shell": false,
+   "text": "The service manual has a Balancer chapter, and its torque table names a front balancer shaft adjuster and a rear dead shaft, so two balancers are shown, one ahead of and one behind the crank. Their exact positions and weights are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "187–202",
+     "note": "Balancer chapter"
+    },
+    {
+     "source": "sm2016",
+     "pages": "59",
+     "note": "Front balancer shaft adjuster clamp plug; rear dead shaft retaining washer"
+    }
+   ]
+  },
+  {
+   "id": "block",
+   "label": "Cylinder barrels",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Finned barrels on a liquid-cooled engine. Triumph says the cooling system is integrated to minimise its visual impact. Fin count and shape here are approximate.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "139–150",
+     "note": "Barrels And Pistons"
+    }
+   ]
+  },
+  {
+   "id": "head",
+   "label": "Cylinder head",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Cylinder head carrying the eight valves Triumph quotes for the engine. The service manual covers it in its own chapter. The shape is approximate.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "107–138",
+     "note": "Cylinder Head chapter"
+    }
+   ]
+  },
+  {
+   "id": "camcover",
+   "label": "Camshaft cover",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Camshaft cover, fixed to the cylinder head. The shape is approximate.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "57",
+     "note": "Camshaft cover to cylinder head"
+    }
+   ]
+  },
+  {
+   "id": "cam",
+   "label": "Camshaft",
+   "sys": "Top end",
+   "shell": false,
+   "text": "Camshaft with a sprocket, mounted in a camshaft frame and driven by a chain through an idler shaft, per the cylinder-head torque table. It turns at half crank speed, as in any four-stroke. Lobe count, profiles and timing here are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "57",
+     "note": "Camshaft frame; camshaft sprocket; camshaft idler shaft bolt"
+    }
+   ]
+  },
+  {
+   "id": "chain",
+   "label": "Camshaft drive chain",
+   "sys": "Top end",
+   "shell": false,
+   "text": "Chain drive to the camshaft with a tensioner and a tensioner blade. The side of the engine it runs on and the routing shown are not verified.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "57",
+     "note": "Camshaft drive chain tensioner; tensioner blade"
+    }
+   ]
+  },
+  {
+   "id": "valves",
+   "label": "Valves ×8",
+   "sys": "Top end",
+   "shell": false,
+   "text": "Eight valves. Intake valves face the throttle bodies and exhaust valves face the header pipes. They move on a generic four-stroke cycle with the cylinders 270° apart; this is not Triumph cam timing, and the valve angles are approximate.",
+   "cite": [
+    {
+     "source": "media"
+    }
+   ]
+  },
+  {
+   "id": "plugs",
+   "label": "Spark plugs",
+   "sys": "Top end",
+   "shell": false,
+   "text": "Spark plugs in the cylinder head. Plug angle and cap shape are approximate. For the plug torque, see the sourced value on the Dashboard.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "57",
+     "note": "Spark plugs (cylinder head table)"
+    }
+   ]
+  },
+  {
+   "id": "gearbox",
+   "label": "Six-speed gearbox",
+   "sys": "Transmission",
+   "shell": false,
+   "text": "Six-speed gearbox with an input shaft above and an output shaft below. All six pairs stay in mesh. Gear sizes and ratios here are arbitrary.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "203–230",
+     "note": "Transmission chapter"
+    }
+   ]
+  },
+  {
+   "id": "clutch",
+   "label": "Torque-assist clutch",
+   "sys": "Transmission",
+   "shell": false,
+   "text": "Torque-assist clutch, driven from the crank by a primary gear. Plate count and the side it sits on here are illustrative.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "151–164",
+     "note": "Clutch chapter"
+    }
+   ]
+  },
+  {
+   "id": "alt",
+   "label": "Alternator",
+   "sys": "Ancillaries",
+   "shell": false,
+   "text": "Alternator behind its own engine cover. Rotor and stator layout and the side shown are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "60",
+     "note": "Alternator cover to crankcase"
+    }
+   ]
+  },
+  {
+   "id": "sprocket",
+   "label": "Front sprocket",
+   "sys": "Transmission",
+   "shell": false,
+   "text": "Front sprocket on the gearbox output shaft, under the front sprocket cover. Size and side shown are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "60–61",
+     "note": "Front sprocket cover; front sprocket to output shaft nut"
+    }
+   ]
+  },
+  {
+   "id": "crankcase",
+   "label": "Crankcase",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Crankcase halves bolted together, holding the crank, balancers and gearbox. The shape is approximate.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "59",
+     "note": "Crankcase to crankcase bolts"
+    }
+   ]
+  },
+  {
+   "id": "clutchcover",
+   "label": "Clutch cover",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Clutch cover. The shape is approximate.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "60",
+     "note": "Clutch cover to crankcase"
+    }
+   ]
+  },
+  {
+   "id": "altcover",
+   "label": "Alternator cover",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Alternator cover. The shape is approximate.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "60",
+     "note": "Alternator cover to crankcase"
+    }
+   ]
+  },
+  {
+   "id": "sump",
+   "label": "Sump",
+   "sys": "Castings & covers",
+   "shell": true,
+   "text": "Sump with a drain plug and an internal baffle. The shape is approximate.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "60",
+     "note": "Sump to crankcase; sump plug; baffle to sump"
+    }
+   ]
+  },
+  {
+   "id": "tb",
+   "label": "Throttle bodies",
+   "sys": "Intake & exhaust",
+   "shell": false,
+   "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). Air enters here; the injectors sit on the fuel rail just downstream. The shape is approximate.",
+   "cite": [
+    {
+     "source": "media"
+    }
+   ]
+  },
+  {
+   "id": "fuelpump",
+   "label": "Fuel pump (in tank)",
+   "sys": "Fuel system",
+   "shell": false,
+   "text": "Electric fuel pump on a mounting plate fixed to the fuel tank, with the fuel hose attached to the pump. The tank is drawn as an outline only. Pump size and position are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "65",
+     "note": "Fuel pump mounting plate to fuel tank; fuel hose to fuel pump"
+    },
+    {
+     "source": "media"
+    }
+   ]
+  },
+  {
+   "id": "fuelrail",
+   "label": "Fuel hose, rail & injectors",
+   "sys": "Fuel system",
+   "shell": false,
+   "text": "The fuel hose runs from the pump to a fuel rail fixed to the cylinder head, which feeds the injectors. While the engine runs, the moving dots show fuel flowing, and each injector sprays during its cylinder's intake stroke. Hose routing and injection timing are illustrative.",
+   "cite": [
+    {
+     "source": "sm2016",
+     "pages": "65",
+     "note": "Fuel hose to fuel pump; fuel rail to cylinder head"
+    },
+    {
+     "source": "media"
+    }
+   ]
+  },
+  {
+   "id": "exhaust",
+   "label": "Header pipes",
+   "sys": "Intake & exhaust",
+   "shell": false,
+   "text": "Twin-skin header pipes running back to peashooter-style silencers. In X-ray mode the pipes are drawn see-through so the exhaust gas can be seen leaving each cylinder. The routing is approximate.",
+   "cite": [
+    {
+     "source": "media"
+    }
+   ]
+  },
+  {
+   "id": "radiator",
+   "label": "Radiator",
+   "sys": "Cooling",
+   "shell": false,
+   "text": "Radiator ahead of the engine, fixed to the frame. It is drawn see-through in X-ray mode so the engine behind it stays visible. Size and hose routing are approximate.",
+   "cite": [
+    {
+     "source": "media"
+    },
+    {
+     "source": "sm2016",
+     "pages": "64",
+     "note": "Radiator to frame upper"
+    }
+   ]
+  }
+ ],
+ "cycle": {
+  "title": "What the firing animation shows",
+  "steps": [
+   {
+    "key": "intake",
+    "label": "Intake",
+    "text": "Intake valves open and the injector sprays fuel into the port."
+   },
+   {
+    "key": "compression",
+    "label": "Compression",
+    "text": "Both valves closed; the piston rises."
+   },
+   {
+    "key": "spark",
+    "label": "Spark",
+    "text": "The plug fires as the piston nears the top. Exact ignition timing is not shown."
+   },
+   {
+    "key": "power",
+    "label": "Power",
+    "text": "Burning mixture (orange glow) pushes the piston down."
+   },
+   {
+    "key": "exhaust",
+    "label": "Exhaust",
+    "text": "Exhaust valves open and the gas leaves through the header pipe."
+   }
+  ],
+  "text": "Each cylinder runs the same four-stroke cycle. The second cylinder runs 270° of crank rotation behind the first, matching Triumph's 270° firing interval. Effects are hidden while the engine is exploded.",
+  "cite": [
+   {
+    "source": "media"
+   }
+  ]
+ }
 }

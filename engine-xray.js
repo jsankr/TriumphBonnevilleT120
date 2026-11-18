@@ -14,7 +14,7 @@ const api = window.__engineXray = { ready:false, error:null };
 
 /* ---------- state (per-tab convenience only) ---------- */
 const KEY = 't120-engine-xray';
-const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, speed:1, labels:innerWidth < 700 ? 'internal' : 'all', isolate:false, sel:null };
+const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, speed:1, labels:innerWidth < 700 ? 'internal' : 'all', isolate:false, sel:null, fx:true };
 try { Object.assign(state, JSON.parse(sessionStorage.getItem(KEY) || '{}')); } catch (e) {}
 const save = () => { try { sessionStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
 
@@ -44,6 +44,8 @@ const LAYOUT = {
   tb:         { anchor:[0.07,0.265,-0.18], dir:'up',    explode:[0,0.04,-0.16] },
   exhaust:    { anchor:[0.13,0.02,0.225],  dir:'right', explode:[0,-0.1,0.12] },
   radiator:   { anchor:[-0.1,0.315,0.275], dir:'up',    explode:[0,0.05,0.3] },
+  fuelpump:   { anchor:[-0.03,0.5,-0.08],  dir:'up',    explode:[0,0.18,0] },
+  fuelrail:   { anchor:[0.11,0.3,-0.13],   dir:'right', explode:[0,0.08,-0.06] },
 };
 const SOLID = { block:0x3e4248, head:0x3e4248, crankcase:0x3e4248, sump:0x3e4248, camcover:0xc9ced4, clutchcover:0xc9ced4, altcover:0xc9ced4 };
 
@@ -52,6 +54,11 @@ const CX = [-0.06, 0.06];             // cylinder 1 / cylinder 2 (pitch illustra
 const ALPHA = [0, 3 * Math.PI / 2];   // crankpins 270° apart (Triumph: 270° firing interval)
 const IN = { y:0.02, z:-0.13 }, OUT = { y:-0.05, z:-0.17 };
 const PRIMARY = 0.04 / 0.09;
+const headerPts = cx => { const s = Math.sign(cx); return [[cx,0.235,0.1],[cx,0.225,0.155],[cx+s*0.02,0.15,0.215],[cx+s*0.05,0.02,0.228],[cx+s*0.08,-0.12,0.17],[cx+s*0.1,-0.182,0.05],[cx+s*0.12,-0.19,-0.12],[cx+s*0.13,-0.17,-0.3]]; };
+const pinY = a => R * Math.cos(a) + Math.sqrt(L * L - (R * Math.sin(a)) ** 2);
+const cycleDeg = (phi, i) => ((((phi * 180 / Math.PI) + (i ? 270 : 0)) % 720) + 720) % 720;   // 0 = TDC, start of intake
+const strokeOf = c => c < 180 ? 'intake' : c < 360 ? 'compression' : c < 540 ? 'power' : 'exhaust';
+const INJ = { y:0.27, z:-0.105, tilt:-0.6, len:0.04 };
 
 /* ---------- helpers ---------- */
 const std = (color, metalness, roughness) => () => new THREE.MeshStandardMaterial({ color, metalness, roughness });
@@ -216,18 +223,57 @@ const BUILD = {
       const r = cylZ(0.02, 0.02, 0.04); r.translate(cx, 0.232, -0.135); rig.add(mesh(r, ru));
       const b = cylZ(0.03, 0.03, 0.07); b.translate(cx, 0.228, -0.185); rig.add(mesh(b, al));
       rig.add(mesh(new RoundedBoxGeometry(0.05, 0.032, 0.045, 3, 0.008), al, cx, 0.19, -0.185));
-      const inj = new THREE.CylinderGeometry(0.006, 0.006, 0.03, 12); inj.rotateX(-0.5); inj.translate(cx, 0.262, -0.16); rig.add(mesh(inj, bl));
       rig.add(mesh(new THREE.BoxGeometry(0.012, 0.03, 0.03), bl, cx + s * 0.036, 0.228, -0.185));
       const t = cylZ(0.028, 0.034, 0.04); t.translate(cx, 0.228, -0.24); rig.add(mesh(t, ru)); });
     rig.add(mesh(cylX(0.004, -0.04, 0.04), st, 0, 0.228, -0.185));
   },
-  exhaust(rig) {
-    const ch = MAT.chrome();
+  exhaust(rig, p) {
+    const ch = MAT.chrome(); p.ghost = true;
     CX.forEach(cx => { const s = Math.sign(cx);
-      rig.add(tube([[cx,0.235,0.1],[cx,0.225,0.155],[cx+s*0.02,0.15,0.215],[cx+s*0.05,0.02,0.228],[cx+s*0.08,-0.12,0.17],[cx+s*0.1,-0.182,0.05],[cx+s*0.12,-0.19,-0.12],[cx+s*0.13,-0.17,-0.3]], 0.019, ch, 100));
+      rig.add(tube(headerPts(cx), 0.019, ch, 100));
       const m = cylZ(0.04, 0.045, 0.16); m.rotateX(0.08); m.translate(cx + s * 0.132, -0.164, -0.38); rig.add(mesh(m, ch)); });
   },
-  radiator(rig) {
+  fuelpump(rig, p) {
+    // Tank outline only (context), pump hanging from a plate on the tank floor
+    const tg = new THREE.SphereGeometry(0.2, 28, 14); tg.scale(0.75, 0.42, 1.2); tg.translate(0, 0.47, -0.03);
+    const tank = new THREE.Mesh(tg, new THREE.MeshBasicMaterial({ color:0x8a96a3, transparent:true, opacity:0.06, depthWrite:false }));
+    tank.add(new THREE.LineSegments(new THREE.EdgesGeometry(tg, 18), new THREE.LineBasicMaterial({ color:0x8a96a3, transparent:true, opacity:0.35, depthWrite:false })));
+    tank.renderOrder = 2; rig.add(tank); p.noPick = new Set([tank]);
+    const al = MAT.alu(), bl = MAT.black(), st = MAT.steel();
+    rig.add(mesh(new THREE.CylinderGeometry(0.036, 0.036, 0.006, 32), al, 0.02, 0.392, -0.08));          // mounting plate
+    rig.add(mesh(new THREE.CylinderGeometry(0.02, 0.02, 0.085, 24), bl, 0.02, 0.44, -0.08));             // pump body
+    rig.add(mesh(new THREE.BoxGeometry(0.03, 0.012, 0.04), MAT.dark(), 0.02, 0.405, -0.08));             // strainer
+    rig.add(mesh(new THREE.CylinderGeometry(0.005, 0.005, 0.02, 12), st, 0.02, 0.38, -0.08));            // outlet
+    p.update = k => { };
+  },
+  fuelrail(rig, p) {
+    const ru = MAT.rubber(), st = MAT.steel(), bl = MAT.black();
+    const hose = [[0.02,0.372,-0.08],[0.04,0.345,-0.12],[0.1,0.31,-0.13],[0.115,0.28,-0.11],[0.1,INJ.y,INJ.z]];
+    rig.add(tube(hose, 0.0055, ru, 60));
+    rig.add(mesh(cylX(0.0075, -0.1, 0.1), st, 0, INJ.y, INJ.z));                                          // rail
+    p.spray = CX.map(cx => {
+      const g = new THREE.Group(); g.position.set(cx, INJ.y, INJ.z); g.rotation.x = INJ.tilt; rig.add(g);
+      g.add(mesh(new THREE.CylinderGeometry(0.007, 0.005, 0.034, 14), bl, 0, -0.017, 0));               // injector body
+      const cone = new THREE.ConeGeometry(0.009, 0.03, 16, 1, true); cone.translate(0, -0.015, 0);
+      const m = new THREE.MeshBasicMaterial({ color:0xd9c27a, transparent:true, opacity:0, blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide });
+      const sp = mesh(cone, m, 0, -INJ.len, 0); g.add(sp); sp.userData.fx = true;
+      return { mesh:sp, mat:m };
+    });
+    // fuel flow dots along hose then rail
+    const path = new THREE.CatmullRomCurve3([...hose.slice(0, -1), [0.1,INJ.y,INJ.z], [0,INJ.y,INJ.z], [-0.1,INJ.y,INJ.z]].map(q => new THREE.Vector3(...q)));
+    const N = 16, dots = new THREE.InstancedMesh(new THREE.SphereGeometry(0.0042, 8, 6), new THREE.MeshBasicMaterial({ color:0xe0b54a }), N);
+    dots.userData.fx = true; rig.add(dots);
+    const m4 = new THREE.Matrix4(), v = new THREE.Vector3(); let flow = 0;
+    p.update = k => {
+      if (k.running) flow += k.dt * 0.35 * k.speed;
+      for (let i = 0; i < N; i++) { path.getPointAt((flow + i / N) % 1, v); m4.makeTranslation(v.x, v.y, v.z); dots.setMatrixAt(i, m4); }
+      dots.instanceMatrix.needsUpdate = true; dots.visible = k.fx;
+      CX.forEach((cx, i) => { const c = cycleDeg(k.phi, i); const on = k.fx && k.running && c > 15 && c < 165;
+        p.spray[i].mat.opacity = on ? 0.55 + 0.25 * Math.sin(k.time * 40) : 0; p.spray[i].mesh.visible = on; if (on) k.counters.sprays++; });
+    };
+  },
+  radiator(rig, p) {
+    p.ghost = true;
     const cv = document.createElement('canvas'); cv.width = 16; cv.height = 128; const g = cv.getContext('2d');
     g.fillStyle = '#3a3f47'; g.fillRect(0, 0, 16, 128); g.fillStyle = '#20242a'; for (let y = 0; y < 128; y += 4) g.fillRect(0, y, 16, 2);
     const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; tex.wrapS = tex.wrapT = THREE.RepeatWrapping; tex.repeat.set(16, 2);
@@ -273,7 +319,7 @@ catch (e) { renderer = null; fail('WebGL is not available in this browser, so th
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(32, 1, 0.01, 20);
-const TARGET = new THREE.Vector3(0, 0.04, -0.07);
+const TARGET = new THREE.Vector3(0, 0.1, -0.07);
 let controls = null, labelRenderer = null;
 if (renderer) {
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
@@ -304,7 +350,7 @@ for (const d of data.parts) {
     p.edgeMat = new THREE.LineBasicMaterial({ color:xrayHex(), transparent:true, opacity:0.35, depthWrite:false });
   }
   build(rig, p);
-  rig.traverse(o => { if (o.isMesh) { o.userData.partId = d.id; p.meshes.push(o); if (!d.shell) p.mats.add(o.material); } });
+  rig.traverse(o => { if (o.isMesh && !(p.noPick && p.noPick.has(o)) && !o.userData.fx) { o.userData.partId = d.id; p.meshes.push(o); if (!d.shell) p.mats.add(o.material); } });
   if (d.shell) p.meshes.forEach(o => { o.renderOrder = 2; const l = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 32), p.edgeMat); l.renderOrder = 3; o.add(l); p.edges.push(l); });
   const b = el('button', 'xr-lbl ' + p.dir + (d.shell ? ' shell' : '')); b.type = 'button';
   b.append(el('span', 't', d.label)); b.setAttribute('aria-label', 'Select ' + d.label);
@@ -313,6 +359,61 @@ for (const d of data.parts) {
   const C = { up:[0.5,1], down:[0.5,0], left:[1,0.5], right:[0,0.5] }[p.dir]; lo.center.set(C[0], C[1]);
   root.add(lo); p.labelObj = lo; p.labelEl = b;
   parts.push(p); byId[d.id] = p;
+}
+
+/* ---------- firing effects (illustrative): spark, combustion, exhaust gas ---------- */
+const fxGroup = new THREE.Group(); engine.add(fxGroup);
+const add = (o) => { fxGroup.add(o); return o; };
+const sparkMat = new THREE.MeshBasicMaterial({ color:0xffffff, toneMapped:false });
+const fx = CX.map((cx, i) => {
+  const spark = add(mesh(new THREE.IcosahedronGeometry(0.012, 1), sparkMat, cx, 0.214, 0.004));
+  const sparkLight = add(new THREE.PointLight(0x9fd0ff, 0, 0.35, 2)); sparkLight.position.set(cx, 0.214, 0.004);
+  const gm = new THREE.MeshBasicMaterial({ color:0xff6a00, transparent:true, opacity:0, depthWrite:false, toneMapped:false });
+  const glow = add(mesh(new THREE.SphereGeometry(1, 24, 12), gm, cx, 0.2, 0));
+  const glowLight = add(new THREE.PointLight(0xff8a3a, 0, 0.35, 2)); glowLight.position.set(cx, 0.2, 0);
+  const hm = new THREE.MeshBasicMaterial({ color:0xff4d00, transparent:true, opacity:0, depthWrite:false, depthTest:false, toneMapped:false });
+  const halo = add(mesh(new THREE.SphereGeometry(1, 24, 12), hm, cx, 0.2, 0)); halo.renderOrder = 5;
+  const shm = new THREE.MeshBasicMaterial({ color:0xeaf6ff, transparent:true, opacity:0.7, depthWrite:false, depthTest:false, toneMapped:false });
+  const sparkHalo = add(mesh(new THREE.SphereGeometry(0.03, 16, 10), shm, cx, 0.214, 0.004)); sparkHalo.renderOrder = 5;
+  const sg = Math.sign(cx);   // gas path: header, through the silencer, out of its tail
+  const curve = new THREE.CatmullRomCurve3([...headerPts(cx), [cx+sg*0.132,-0.165,-0.38], [cx+sg*0.134,-0.16,-0.47], [cx+sg*0.136,-0.15,-0.62]].map(q => new THREE.Vector3(...q)));
+  const N = 70, gas = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 8, 6), new THREE.MeshBasicMaterial({ transparent:true, blending:THREE.AdditiveBlending, depthWrite:false }), N);
+  gas.instanceMatrix.setUsage(THREE.DynamicDrawUsage); gas.setColorAt(0, new THREE.Color()); add(gas);
+  return { spark, sparkLight, glow, gm, glowLight, halo, hm, sparkHalo, curve, gas, N, puffs:Array.from({ length:N }, () => ({ on:false, t:0 })), next:0, acc:0, prevC:null, sparkT:0 };
+});
+const hot = new THREE.Color(0xff6a1a), cool = new THREE.Color(0x6b7280), tmpC = new THREE.Color(), tmpV = new THREE.Vector3(), tmpM = new THREE.Matrix4(), zeroM = new THREE.Matrix4().makeScale(0, 0, 0);
+const counters = { sparks:0, combustion:0, puffs:0, sprays:0 };
+function updateFx(k, dt) {
+  const show = k.fx;
+  fxGroup.visible = show;
+  if (!show) return;
+  CX.forEach((cx, i) => {
+    const f = fx[i], c = cycleDeg(k.phi, i);
+    // Spark fires when the cycle crosses 350° (illustrative, just before top dead centre), then shows for a fixed time
+    if (f.prevC !== null && k.running) { const moved = (c - f.prevC + 720) % 720, toFire = (350 - f.prevC + 720) % 720;
+      if (moved > 0 && moved < 360 && toFire > 0 && toFire <= moved) { f.sparkT = Math.min(0.5, 0.09 / Math.max(0.1, k.speed)); counters.sparks++; } }
+    f.prevC = c; f.sparkT = Math.max(0, f.sparkT - dt);
+    const sparkOn = f.sparkT > 0;
+    f.spark.visible = sparkOn; f.sparkHalo.visible = sparkOn; f.sparkLight.intensity = sparkOn ? 1.2 : 0;
+    if (sparkOn) f.spark.scale.setScalar(0.7 + Math.random() * 0.8);
+    const a = k.phi + ALPHA[i], crown = pinY(a) + 0.035, gap = Math.max(0.003, 0.212 - crown);
+    const burn = c >= 358 && c < 540 ? Math.exp(-(c - 358) / 70) : 0;
+    f.gm.opacity = Math.min(0.95, burn * 1.4); f.glow.visible = burn > 0.01;
+    f.hm.opacity = burn * 0.38; f.halo.visible = burn > 0.01; f.halo.position.y = crown + gap / 2; f.halo.scale.set(0.07, Math.max(0.03, gap / 2 + 0.02), 0.07);
+    f.glow.position.y = crown + gap / 2; f.glow.scale.set(0.047, Math.max(0.008, gap / 2), 0.047);
+    f.glowLight.position.y = crown + gap / 2; f.glowLight.intensity = burn * 3;
+    if (burn > 0.01) counters.combustion++;
+    // exhaust gas: emit while this cylinder's exhaust stroke runs, then travel down the header
+    if (k.running && c >= 545) { f.acc += dt * 60 * k.speed; while (f.acc >= 1) { f.acc -= 1; const q = f.puffs[f.next]; q.on = true; q.t = 0; f.next = (f.next + 1) % f.N; counters.puffs++; } }
+    f.puffs.forEach((q, j) => {
+      if (q.on && k.running) { q.t += dt * 0.55 * k.speed; if (q.t >= 1) q.on = false; }
+      if (!q.on) { f.gas.setMatrixAt(j, zeroM); return; }
+      f.curve.getPointAt(q.t, tmpV); const sc = q.t > 0.82 ? 0.014 + 0.08 * (q.t - 0.82) : 0.013;
+      tmpM.makeScale(sc, sc, sc).setPosition(tmpV); f.gas.setMatrixAt(j, tmpM);
+      const fade = 1 - q.t; tmpC.copy(hot).lerp(cool, Math.min(1, q.t * 1.6)).multiplyScalar(0.25 + 0.55 * fade); f.gas.setColorAt(j, tmpC);
+    });
+    f.gas.instanceMatrix.needsUpdate = true; if (f.gas.instanceColor) f.gas.instanceColor.needsUpdate = true;
+  });
 }
 
 new MutationObserver(() => { const c = xrayHex(); parts.forEach(p => { if (p.shell) { p.xrayMat.uniforms.uColor.value.setHex(c); p.edgeMat.color.setHex(c); } }); })
@@ -327,7 +428,7 @@ function renderFacts() {
   const src = data.sources.media;
   if (src && src.url) { const a = el('a', 'xr-fact-src', 'Source: ' + src.short + ' ↗'); a.href = src.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; box.append(a); }
 }
-const SYS_ORDER = ['Top end', 'Bottom end', 'Transmission', 'Intake & exhaust', 'Cooling', 'Ancillaries', 'Castings & covers'];
+const SYS_ORDER = ['Top end', 'Bottom end', 'Fuel system', 'Transmission', 'Intake & exhaust', 'Cooling', 'Ancillaries', 'Castings & covers'];
 function buildList(filter = '') {
   const list = $('xrList'); list.textContent = ''; const f = filter.trim().toLowerCase();
   for (const sys of SYS_ORDER) {
@@ -356,7 +457,12 @@ function renderInspector() {
     insp.classList.add('empty');
     box.append(el('h2', null, 'Inspect a part'),
       el('p', null, 'Click a part or a label, or pick one from the list. In X-ray mode a click goes through the glass casings to the moving parts inside.'),
-      el('p', 'xr-hint', 'Keys: X x-ray/solid · Space run/pause · L labels · I isolate · 1–5 views · R reset · Esc deselect'));
+      el('p', 'xr-hint', 'Keys: X x-ray/solid · Space run/pause · F firing · L labels · I isolate · 1–5 views · R reset · Esc deselect'));
+    if (data.cycle) {
+      box.append(el('div', 'xr-sub', data.cycle.title));
+      const ol = el('ol', 'xr-cycle'); for (const st of data.cycle.steps) { const li = el('li'); li.append(el('b', null, st.label + ' '), document.createTextNode(st.text)); ol.append(li); }
+      box.append(ol, el('p', 'xr-hint', data.cycle.text + ' Source: ' + data.cycle.cite.map(citeText).join('; ') + '.'));
+    }
     if (innerWidth > 900) insp.classList.remove('empty');
     return;
   }
@@ -378,7 +484,7 @@ function renderInspector() {
 /* ---------- actions ---------- */
 function highlight(p, on) {
   if (p.shell) { p.xrayMat.uniforms.uHi.value = on ? 1 : 0; p.solidMat.emissive.setHex(on ? 0x4a3410 : 0); }
-  else p.mats.forEach(m => { m.emissive.setHex(on ? 0xcfa95f : 0); m.emissiveIntensity = on ? 0.45 : 0; });
+  else p.mats.forEach(m => { if (!m.emissive) return; m.emissive.setHex(on ? 0xcfa95f : 0); m.emissiveIntensity = on ? 0.45 : 0; });
   p.labelEl.classList.toggle('on', on);
 }
 function select(id) {
@@ -397,6 +503,8 @@ function applyMode() {
     p.meshes.forEach(o => { o.material = x ? p.xrayMat : p.solidMat; });
     p.edges.forEach(l => { l.visible = x; });
     p.xrayMat.uniforms.uOpacity.value = state.opacity; p.edgeMat.opacity = 0.12 + state.opacity * 0.55; });
+  parts.forEach(p => { if (!p.ghost) return;      // see-through pipes in X-ray so the exhaust gas is visible
+    p.mats.forEach(m => { m.transparent = x; m.opacity = x ? 0.32 : 1; m.depthWrite = !x; m.needsUpdate = true; }); });
   $('xrModeX').setAttribute('aria-pressed', String(x)); $('xrModeS').setAttribute('aria-pressed', String(!x));
   $('xrOp').disabled = !x; $('xrOp').value = state.opacity; $('xrOpV').textContent = state.opacity.toFixed(2); save();
 }
@@ -413,7 +521,7 @@ function applyLabels() {
 function setRun(v) { state.run = v; $('xrRun').setAttribute('aria-pressed', String(v)); $('xrRun').textContent = v ? 'Pause' : 'Run'; save(); }
 
 /* ---------- camera ---------- */
-const VIEWS = { q34:[-1.3,0.52,0.42], left:[1.45,0.14,-0.07], right:[-1.45,0.14,-0.07], front:[0,0.2,1.45], top:[0,1.6,-0.05] };
+const VIEWS = { q34:[-1.45,0.6,0.46], left:[1.6,0.2,-0.07], right:[-1.6,0.2,-0.07], front:[0,0.26,1.6], top:[0,1.75,-0.05] };
 let tween = null;
 function fit(pos, tgt) { const v = new THREE.Vector3(...pos); const k = camera.aspect < 1 ? Math.min(2.2, 1.15 / camera.aspect) : 1; return v.sub(tgt).multiplyScalar(k).add(tgt); }
 function goTo(pos, tgt, raw = false) {
@@ -437,6 +545,8 @@ $('xrRun').addEventListener('click', () => setRun(!state.run));
 $('xrSp').addEventListener('input', e => { state.speed = +e.target.value; $('xrSpV').textContent = state.speed.toFixed(1) + '×'; save(); });
 $('xrLbls').addEventListener('click', () => { state.labels = LBL[(LBL.indexOf(state.labels) + 1) % 3]; applyLabels(); save(); });
 $('xrIso').addEventListener('click', () => setIsolate(!state.isolate));
+function setFx(v) { state.fx = v; $('xrFx').setAttribute('aria-pressed', String(v)); $('xrFx').textContent = v ? 'Firing: On' : 'Firing: Off'; save(); }
+$('xrFx').addEventListener('click', () => setFx(!state.fx));
 $('xrReset').addEventListener('click', () => { state.explode = 0; applyExplode(); setIsolate(false); select(null); goTo(VIEWS.q34, TARGET); });
 document.querySelectorAll('[data-xr-view]').forEach(b => b.addEventListener('click', () => goTo(VIEWS[b.dataset.xrView], TARGET)));
 addEventListener('keydown', e => {
@@ -445,6 +555,7 @@ addEventListener('keydown', e => {
   if (k === 'x') { state.mode = state.mode === 'xray' ? 'solid' : 'xray'; applyMode(); }
   else if (k === ' ' && !e.target.matches('button,a')) { e.preventDefault(); setRun(!state.run); }
   else if (k === 'l') $('xrLbls').click();
+  else if (k === 'f') setFx(!state.fx);
   else if (k === 'i') setIsolate(!state.isolate);
   else if (k === 'r') $('xrReset').click();
   else if (k === 'escape') select(null);
@@ -476,25 +587,27 @@ sizeToViewport(); addEventListener('resize', sizeToViewport); new ResizeObserver
 new ResizeObserver(resize).observe(stage); resize();
 
 let phi = 0; const clock = new THREE.Clock(); const readout = $('xrReadout');
-const power = c => c >= 360 && c < 540;
 function frame() {
-  const dt = Math.min(clock.getDelta(), 0.05);
+  const dt = Math.min(clock.getDelta(), 0.25);   // keep real-time speed on slow devices; effects below are crossing-based
   if (state.run && !document.hidden) phi += dt * state.speed * Math.PI;
-  const aIn = -phi * PRIMARY, k = { phi, aIn, aOut:aIn * (0.037 / 0.043) };
+  const aIn = -phi * PRIMARY, running = state.run && !document.hidden;
+  const k = { phi, aIn, aOut:aIn * (0.037 / 0.043), dt, time:clock.elapsedTime, running, speed:state.speed, fx:state.fx && state.explode < 0.01, counters };
   parts.forEach(p => { if (p.update) p.update(k); });
+  updateFx(k, dt);
   if (tween) { tween.t = Math.min(1, tween.t + dt * 2.2); const e = 1 - Math.pow(1 - tween.t, 3);
     camera.position.lerpVectors(tween.from, tween.to, e); controls.target.lerpVectors(tween.tf, tween.tt, e); if (tween.t >= 1) tween = null; }
   controls.update();
   const d = phi * 180 / Math.PI, c1 = ((d % 720) + 720) % 720, c2 = (((d + 270) % 720) + 720) % 720;
-  readout.textContent = 'Crank ' + String(Math.round(c1 % 360)).padStart(3, '0') + '° · Power stroke: cyl 1 ' + (power(c1) ? '●' : '○') + '  cyl 2 ' + (power(c2) ? '●' : '○');
+  const S = { intake:'Intake', compression:'Compress', power:'POWER', exhaust:'Exhaust' };
+  readout.textContent = 'Crank ' + String(Math.round(c1 % 360)).padStart(3, '0') + '°  Cyl 1 ' + S[strokeOf(c1)].padEnd(8) + '  Cyl 2 ' + S[strokeOf(c2)];
   renderer.render(scene, camera); labelRenderer.render(scene, camera);
 }
 
-buildList(); applyMode(); applyExplode(); setRun(state.run); applyVisibility();
+buildList(); applyMode(); applyExplode(); setRun(state.run); setFx(state.fx !== false); applyVisibility();
 $('xrSp').value = state.speed; $('xrSpV').textContent = state.speed.toFixed(1) + '×';
 $('xrIso').setAttribute('aria-pressed', String(state.isolate));
 select(state.sel);
 if (renderer) { camera.position.copy(fit(VIEWS.q34, TARGET)); controls.update(); renderer.setAnimationLoop(frame); }
 document.addEventListener('visibilitychange', () => clock.getDelta());
 Object.assign(api, { ready:true, partCount:parts.length, dataCount:data.parts.length, select, state, webgl:!!renderer,
-  partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });
+  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });

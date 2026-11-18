@@ -48,6 +48,8 @@ body.xr-page{margin:0;overflow:hidden}
 .xr-cites a{color:var(--fg)}
 .xr-insp .xr-note{font-size:11.5px;color:var(--line-gold)}
 .xr-insp .xr-hint{font-size:11.5px;color:var(--fg-3)}
+.xr-cycle{margin:6px 0 0;padding-left:18px;font-size:12.5px;line-height:1.5;color:var(--fg-2)}
+.xr-cycle b{color:var(--fg);font-weight:620}
 .xr-btnrow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
 
 .xr-toolbar{left:50%;transform:translateX(-50%);bottom:14px;padding:10px 12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;max-width:calc(100% - 24px)}
@@ -55,7 +57,7 @@ body.xr-page{margin:0;overflow:hidden}
 .xr-ctl label{display:flex;justify-content:space-between;gap:8px}
 .xr-ctl output{color:var(--fg);font-variant-numeric:tabular-nums}
 .xr-toolbar input[type=range]{accent-color:var(--line-gold);width:100%}
-.xr-readout{font-size:11.5px;color:var(--fg-2);font-variant-numeric:tabular-nums;min-width:230px;white-space:pre}
+.xr-readout{font-size:11.5px;color:var(--fg-2);font-variant-numeric:tabular-nums;min-width:260px;white-space:pre;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .xr-sep{width:1px;align-self:stretch;background:var(--glass-edge)}
 
 /* 3D labels */

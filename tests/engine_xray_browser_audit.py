@@ -1,5 +1,5 @@
 """Chromium audit for engine-xray.html, served over HTTP with its real CSP (ES modules need a server).
-Checks: loads without errors, WebGL draws, every data part has geometry, labels select parts,
+Checks: loads without errors, WebGL draws, firing effects (spark, combustion, exhaust gas, injector spray) run, every data part has geometry, labels select parts,
 explode is reversible, modes toggle, and the toolbar fits a phone screen."""
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -45,7 +45,10 @@ with sync_playwright() as p:
         if not info['gl']:
             check(page.locator('#xrFallback').is_visible(), f'{tag}: WebGL fallback message shown')
             failures.append(f'{tag}: WebGL unavailable in this runner'); ctx.close(); continue
-        page.wait_for_timeout(600)
+        page.wait_for_timeout(4500)   # > one full 720° cycle at 1x
+        fxc = page.evaluate('__engineXray.fxCounters')
+        check(all(fxc[k] > 0 for k in ('sparks', 'combustion', 'puffs', 'sprays')), f'{tag}: firing effects ran {fxc}')
+        check(page.locator('#xrReadout').inner_text().count('Cyl') == 2 or width <= 900, f'{tag}: stroke readout shows both cylinders')
         png = page.locator('#xrStage canvas').screenshot()
         check(len(png) > 20000, f'{tag}: canvas has drawn content ({len(png)} bytes)')
         if width > 900:
@@ -60,6 +63,8 @@ with sync_playwright() as p:
         page.click('#xrReset'); page.wait_for_timeout(100)
         back = [page.evaluate(f"__engineXray.partRootPosition('{p['id']}')") for p in DATA['parts']]
         check(all(abs(v) < 1e-9 for pos in back for v in pos), f'{tag}: reset restores every part exactly')
+        page.click('#xrFx'); check(page.get_attribute('#xrFx', 'aria-pressed') == 'false', f'{tag}: firing toggle off')
+        page.click('#xrFx')
         page.click('#xrModeS'); check(page.get_attribute('#xrModeS', 'aria-pressed') == 'true', f'{tag}: solid mode')
         page.click('#xrModeX'); check(page.get_attribute('#xrModeX', 'aria-pressed') == 'true', f'{tag}: x-ray mode')
         box = page.locator('.xr-toolbar').bounding_box()
