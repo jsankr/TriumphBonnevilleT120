@@ -1,0 +1,592 @@
+[
+  {
+    "page": "index.html",
+    "width": 1440,
+    "title": "Bonneville T120 2018 \u00b7 Workshop Explorer",
+    "errors": [],
+    "actions": [
+      {
+        "name": "catalogue loaded",
+        "ok": true
+      },
+      {
+        "name": "front-brake torque",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "search hostile",
+        "ok": true
+      },
+      {
+        "name": "reset search",
+        "ok": true
+      },
+      {
+        "name": "maintenance",
+        "ok": true
+      },
+      {
+        "name": "assistant",
+        "ok": true
+      },
+      {
+        "name": "source tab",
+        "ok": true
+      },
+      {
+        "name": "source filter",
+        "ok": true
+      },
+      {
+        "name": "manual reader",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./parts.json",
+      "./data/source-reference.json",
+      "./data/source-reference.json",
+      "data/source-reference.json",
+      "data/rider-tips.json"
+    ],
+    "buttons": 137,
+    "links": 46
+  },
+  {
+    "page": "index.html",
+    "width": 390,
+    "title": "Bonneville T120 2018 \u00b7 Workshop Explorer",
+    "errors": [],
+    "actions": [
+      {
+        "name": "catalogue loaded",
+        "ok": true
+      },
+      {
+        "name": "front-brake torque",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "search hostile",
+        "ok": true
+      },
+      {
+        "name": "reset search",
+        "ok": true
+      },
+      {
+        "name": "maintenance",
+        "ok": true
+      },
+      {
+        "name": "assistant",
+        "ok": true
+      },
+      {
+        "name": "source tab",
+        "ok": true
+      },
+      {
+        "name": "source filter",
+        "ok": true
+      },
+      {
+        "name": "manual reader",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./parts.json",
+      "./data/source-reference.json",
+      "./data/source-reference.json",
+      "data/source-reference.json",
+      "data/rider-tips.json"
+    ],
+    "buttons": 137,
+    "links": 46
+  },
+  {
+    "page": "exploded.html",
+    "width": 1440,
+    "title": "Teardown \u00b7 Bonneville T120 2018",
+    "errors": [],
+    "actions": [
+      {
+        "name": "assemblies",
+        "ok": true
+      },
+      {
+        "name": "switch assembly",
+        "ok": true
+      },
+      {
+        "name": "explode slider",
+        "ok": true
+      },
+      {
+        "name": "source tab",
+        "ok": true
+      },
+      {
+        "name": "back to callouts",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "next part",
+        "ok": true
+      },
+      {
+        "name": "bike context",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "data/exploded-2018.json",
+      "data/teardown-map.json",
+      "data/tool-size-reports.json",
+      "data/source-reference.json"
+    ],
+    "buttons": 28,
+    "links": 16
+  },
+  {
+    "page": "exploded.html",
+    "width": 390,
+    "title": "Teardown \u00b7 Bonneville T120 2018",
+    "errors": [],
+    "actions": [
+      {
+        "name": "assemblies",
+        "ok": true
+      },
+      {
+        "name": "switch assembly",
+        "ok": true
+      },
+      {
+        "name": "explode slider",
+        "ok": true
+      },
+      {
+        "name": "source tab",
+        "ok": true
+      },
+      {
+        "name": "back to callouts",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "next part",
+        "ok": true
+      },
+      {
+        "name": "bike context",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "data/exploded-2018.json",
+      "data/teardown-map.json",
+      "data/tool-size-reports.json",
+      "data/source-reference.json"
+    ],
+    "buttons": 28,
+    "links": 16
+  },
+  {
+    "page": "catalogue.html",
+    "width": 1440,
+    "title": "2018 T120 Spare Parts Navigator",
+    "errors": [],
+    "actions": [
+      {
+        "name": "catalogue search",
+        "ok": true
+      },
+      {
+        "name": "catalogue results",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/catalogue-categories.json"
+    ],
+    "buttons": 1,
+    "links": 10
+  },
+  {
+    "page": "catalogue.html",
+    "width": 390,
+    "title": "2018 T120 Spare Parts Navigator",
+    "errors": [],
+    "actions": [
+      {
+        "name": "catalogue search",
+        "ok": true
+      },
+      {
+        "name": "catalogue results",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/catalogue-categories.json"
+    ],
+    "buttons": 1,
+    "links": 10
+  },
+  {
+    "page": "electrical.html",
+    "width": 1440,
+    "title": "T120 (2018) Electrical & Fuse Reference",
+    "errors": [],
+    "actions": [
+      {
+        "name": "fuses",
+        "ok": true
+      },
+      {
+        "name": "harness",
+        "ok": true
+      },
+      {
+        "name": "fuse source",
+        "ok": true
+      },
+      {
+        "name": "harness search",
+        "ok": true
+      },
+      {
+        "name": "harness source",
+        "ok": true
+      },
+      {
+        "name": "part search",
+        "ok": true
+      },
+      {
+        "name": "part details",
+        "ok": true
+      },
+      {
+        "name": "diagram source",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/electrical-reference.json"
+    ],
+    "buttons": 27,
+    "links": 17
+  },
+  {
+    "page": "electrical.html",
+    "width": 390,
+    "title": "T120 (2018) Electrical & Fuse Reference",
+    "errors": [],
+    "actions": [
+      {
+        "name": "fuses",
+        "ok": true
+      },
+      {
+        "name": "harness",
+        "ok": true
+      },
+      {
+        "name": "fuse source",
+        "ok": true
+      },
+      {
+        "name": "harness search",
+        "ok": true
+      },
+      {
+        "name": "harness source",
+        "ok": true
+      },
+      {
+        "name": "part search",
+        "ok": true
+      },
+      {
+        "name": "part details",
+        "ok": true
+      },
+      {
+        "name": "diagram source",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/electrical-reference.json"
+    ],
+    "buttons": 27,
+    "links": 17
+  },
+  {
+    "page": "real-photo-gallery.html",
+    "width": 1440,
+    "title": "2018 T120 \u00b7 Real Photo & OEM Source Atlas",
+    "errors": [],
+    "actions": [
+      {
+        "name": "all photos",
+        "ok": true
+      },
+      {
+        "name": "only photos",
+        "ok": true
+      },
+      {
+        "name": "only fiches",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "hostile search",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/real-reference-index.json"
+    ],
+    "buttons": 4,
+    "links": 12
+  },
+  {
+    "page": "real-photo-gallery.html",
+    "width": 390,
+    "title": "2018 T120 \u00b7 Real Photo & OEM Source Atlas",
+    "errors": [],
+    "actions": [
+      {
+        "name": "all photos",
+        "ok": true
+      },
+      {
+        "name": "only photos",
+        "ok": true
+      },
+      {
+        "name": "only fiches",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "hostile search",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./data/real-reference-index.json"
+    ],
+    "buttons": 4,
+    "links": 12
+  },
+  {
+    "page": "photo-teardown.html",
+    "width": 1440,
+    "title": "T120 \u00b7 Private Photo Teardown",
+    "errors": [],
+    "actions": [
+      {
+        "name": "angles",
+        "ok": true
+      },
+      {
+        "name": "stages",
+        "ok": true
+      },
+      {
+        "name": "parts search",
+        "ok": true
+      },
+      {
+        "name": "torque search",
+        "ok": true
+      },
+      {
+        "name": "photo marker action",
+        "ok": true
+      },
+      {
+        "name": "export markers",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./parts.json",
+      "./data/source-reference.json",
+      "./data/real-reference-index.json"
+    ],
+    "buttons": 28,
+    "links": 8
+  },
+  {
+    "page": "photo-teardown.html",
+    "width": 390,
+    "title": "T120 \u00b7 Private Photo Teardown",
+    "errors": [],
+    "actions": [
+      {
+        "name": "angles",
+        "ok": true
+      },
+      {
+        "name": "stages",
+        "ok": true
+      },
+      {
+        "name": "parts search",
+        "ok": true
+      },
+      {
+        "name": "torque search",
+        "ok": true
+      },
+      {
+        "name": "photo marker action",
+        "ok": true
+      },
+      {
+        "name": "export markers",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./parts.json",
+      "./data/source-reference.json",
+      "./data/real-reference-index.json"
+    ],
+    "buttons": 28,
+    "links": 8
+  },
+  {
+    "page": "manual-index.html",
+    "width": 1440,
+    "title": "T120 | Complete 894-page manual index",
+    "errors": [],
+    "actions": [
+      {
+        "name": "manual count",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "torque tab",
+        "ok": true
+      },
+      {
+        "name": "torque page",
+        "ok": true
+      },
+      {
+        "name": "tools tab",
+        "ok": true
+      },
+      {
+        "name": "schedule tab",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./manual-page-index.json",
+      "./data/source-reference.json"
+    ],
+    "buttons": 12,
+    "links": 10
+  },
+  {
+    "page": "manual-index.html",
+    "width": 390,
+    "title": "T120 | Complete 894-page manual index",
+    "errors": [],
+    "actions": [
+      {
+        "name": "manual count",
+        "ok": true
+      },
+      {
+        "name": "search",
+        "ok": true
+      },
+      {
+        "name": "torque tab",
+        "ok": true
+      },
+      {
+        "name": "torque page",
+        "ok": true
+      },
+      {
+        "name": "tools tab",
+        "ok": true
+      },
+      {
+        "name": "schedule tab",
+        "ok": true
+      }
+    ],
+    "horizontal_overflow": false,
+    "xss_executed": false,
+    "fetches": [
+      "./manual-page-index.json",
+      "./data/source-reference.json"
+    ],
+    "buttons": 12,
+    "links": 10
+  }
+]

@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const pages=['index.html','exploded.html','catalogue.html','electrical.html','real-photo-gallery.html','photo-teardown.html','manual-index.html'];
+const pages=['index.html','exploded.html','catalogue.html','electrical.html','real-photo-gallery.html','photo-teardown.html','manual-index.html','engine-xray.html'];
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 let internal=0,external=0,fragments=0,scripts=0,checkedAnchors=0;
 const ids=new Map(pages.map(p=>[p,new Set([...read(p).matchAll(/\bid\s*=\s*['"]([^'"]+)['"]/g)].map(m=>m[1]))]));
@@ -50,12 +50,12 @@ for (const page of pages){
  }
  checkedAnchors+=ids.get(page).size;
 }
-for (const src of ['app.js','exploded.js','electrical.js','photo-teardown.js','manual-library.js','source-library.js','component-evidence.js','copilot.js']){
+for (const src of ['app.js','exploded.js','electrical.js','photo-teardown.js','manual-library.js','source-library.js','component-evidence.js','copilot.js','engine-xray.js']){
  const js=read(src);
  assert(!/\beval\s*\(|\bnew\s+Function\s*\(|document\.write\s*\(/.test(js),`${src}: dynamic code execution`);
 }
 for(const [file,rootKeys] of Object.entries({
- 'parts.json':['0'],'data/source-reference.json':['schemaVersion'],'data/exploded-2018.json':['assemblies'],'data/real-reference-index.json':['photos'],'data/electrical-reference.json':['fuses'],'data/catalogue-categories.json':['categories'],
+ 'parts.json':['0'],'data/source-reference.json':['schemaVersion'],'data/exploded-2018.json':['assemblies'],'data/real-reference-index.json':['photos'],'data/electrical-reference.json':['fuses'],'data/catalogue-categories.json':['categories'],'data/engine-xray.json':['parts'],
 })){const data=JSON.parse(read(file));assert(data&&typeof data==='object',`Invalid ${file}`);}
 const references=JSON.parse(read('data/exploded-2018.json'));
 for(const a of references.assemblies){

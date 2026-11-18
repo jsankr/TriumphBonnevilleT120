@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.4.0 — 18 November 2026
+- New page `engine-xray.html`: animated 3D concept drawing of the 1200 cc twin with glass (X-ray) casings, 22 labelled parts, inspector with sources, explode/reset, isolate, solid mode and camera views. Linked from every page's navigation.
+- Part text and the facts strip come from `data/engine-xray.json`; every statement cites Triumph's launch media kit or a 2016 service-manual page. Shapes are marked illustrative on screen. No torque values, tool sizes, dimensions or part numbers on the page.
+- Two balancer shafts, following the 2016 manual's Balancer chapter and its front balancer / rear dead shaft torque rows.
+- Firing animation: injector spray on each intake stroke, spark near top dead centre, combustion flame on the power stroke, exhaust gas down the header pipes and out of the silencers, and a per-cylinder stroke readout. *Firing: On/Off* toggle (key F). Timing is illustrative.
+- Fuel system: fuel pump in the tank (tank as outline), fuel hose and fuel rail with injectors on the cylinder head, with animated fuel flow (2016 manual p.65).
+- In X-ray mode the header pipes and radiator are drawn see-through.
+- Animation keeps real-time speed on slow devices; the spark triggers on crossing its firing point, so it is never skipped between frames.
+- README: browser links to the live site and the Engine X-ray at the top, for sharing.
+- Three.js r160 (MIT) vendored in `assets/vendor/three/`; the page's CSP allows scripts from `'self'` only.
+- AGENTS.md: the no-3D rule now allows this one labelled concept page, under stated conditions.
+- New CI steps: `tests/validate-engine-xray.mjs` and `tests/engine_xray_browser_audit.py`; the security/routes test now covers the new page and script.
+
 ## 3.3.0 — 18 November 2026
 - Dashboard section "Rider tricks" (T120): 22 sourced features in five groups, with steps, cautions and handbook pages (`data/rider-tips.json`, `rider-tips.js`).
 - New CI step: `tests/validate-rider-tips.mjs`.

@@ -39,6 +39,8 @@ jobs:
       - run: node tests/validate-models.mjs
       - run: node --check rider-tips.js
       - run: node tests/validate-rider-tips.mjs
+      - run: node --check engine-xray.js
+      - run: node tests/validate-engine-xray.mjs
   browser-smoke:
     needs: validate
     # Playwright 1.57 Chromium supports Ubuntu 24.04; ubuntu-latest has moved to 26.04.
@@ -55,6 +57,7 @@ jobs:
       - run: python tests/browser_audit.py
       - run: python tests/security_browser_audit.py
       - run: python tests/model_browser_audit.py
+      - run: python tests/engine_xray_browser_audit.py
   deploy:
     needs: [validate, browser-smoke]
     permissions:

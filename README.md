@@ -1,5 +1,18 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
+> **Open in your browser (no install, share the link):**
+> **[Workshop Explorer](https://jsankr.github.io/TriumphBonnevilleT120/)** · **[Engine X-ray (3D, animated)](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html)** · [Teardown](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html) · [Parts catalogue](https://jsankr.github.io/TriumphBonnevilleT120/catalogue.html) · [Electrical](https://jsankr.github.io/TriumphBonnevilleT120/electrical.html)
+
+## v3.4 — Engine X-ray concept explainer (18 November 2026)
+
+[**Open the Engine X-ray**](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html) ([source](engine-xray.html)) — an animated 3D drawing of the 1200 cc liquid-cooled twin with its casings shown as glass. It shows how the parts move together: crank, rods and pistons on the 270° firing interval, camshaft at half speed, valves, two balancer shafts, clutch and six-speed gearbox.
+
+**Firing and fuel.** The fuel pump in the tank (tank drawn as an outline) feeds the fuel hose and the rail on the cylinder head; dots show the fuel flowing. Each injector sprays during its cylinder's intake stroke, the plug sparks near top dead centre, an orange flame fills the chamber on the power stroke, and exhaust gas flows down the header pipe and out of the silencer. The readout names each cylinder's stroke, with the second cylinder 270° behind the first. In X-ray mode the header pipes and radiator are drawn see-through so the flow is visible. *Firing: On/Off* (key F) switches the effects, and slow speeds give a slow-motion view. Injection and ignition timing are illustrative; the pump, hose and rail come from the 2016 manual's fuel-system torque rows (p.65). You can switch between X-ray and solid, change the glass opacity, explode the engine apart and back, isolate a part and pick camera views.
+
+**It is a concept drawing, not Triumph CAD.** Shapes, sizes and positions are hand-built and not to scale, and the page says so on screen. Each part's text names its source: Triumph's launch media kit (1200 cc 8-valve High Torque twin, 270° firing interval, liquid cooling, ride-by-wire injection, torque-assist clutch, six-speed gearbox, twin-skin peashooter exhausts) or a page in the 2016 service manual's chapter and torque-table rows already recorded in `data/source-reference.json` (for example the Balancer chapter and the front balancer / rear dead shaft rows that show two balancer shafts). Where a detail is not sourced, such as which side the cam chain runs on, the text says it is illustrative. The page carries no torque values, tool sizes, dimensions or part numbers; `tests/validate-engine-xray.mjs` fails the build if any appear.
+
+Files: `engine-xray.html`, `engine-xray.js`, `engine-xray.css`, `data/engine-xray.json`. Three.js r160 (MIT) and four of its add-ons are vendored in `assets/vendor/three/`, so the page loads no third-party scripts and its CSP is `script-src 'self'`.
+
 ## v3.3 — Rider tricks (18 November 2026)
 
 A new dashboard section for the T120 lists 22 features most owners never find, each with steps, a caution where needed, and the page it comes from. Examples: changing between ROAD and RAIN on the move, turning traction control off (and why it always comes back on), flash-to-pass with daytime running lights, hazards that stay on with the key out, heated grips, the USB socket and helmet hook under the seat, lever span and rear preload settings, and the design details behind the carburettor-styled throttle bodies and the 270° twin.
@@ -116,7 +129,7 @@ The studio **does not contain, request, display or transmit a full vehicle ident
 
 This release replaces the earlier repository contents with the newer, tested photo-led T120 dashboard plus the **audited 2016 source-reference database** and a separate **894-page document navigation explorer**. The 230 **active** torque entries exclude 13 inconsistent rows from service-manual page 70; 44 scheduled-maintenance tasks, 37 special tools, and 32 T120 owner-specification records retain source edition/page links. The older 2012 and 2006 documents are included in the page navigator **only as historical material**, not repair specifications for a 2018 T120. The four copyrighted original PDFs are **not redistributed**; use the app's local PDF picker to inspect complete original pages privately.
 
-**No Blender or fabricated 3D motorcycle model.** Since v3.0 every motorcycle image in the app is a real, openly licensed photograph (credited in the v3.1 and v3.0 tables above); none is the owner's motorcycle. The evidence assistant is a local deterministic search, not live AI. The repo is currently private; GitHub Pages requires deployment support and settings to be configured before the browser link is confirmed live.
+**No Blender or fabricated 3D motorcycle model.** The only 3D in the app is the Engine X-ray (v3.4), a labelled concept drawing of the engine, not a model of the motorcycle. Since v3.0 every motorcycle image in the app is a real, openly licensed photograph (credited in the v3.1 and v3.0 tables above); none is the owner's motorcycle. The evidence assistant is a local deterministic search, not live AI. The repo is currently private; GitHub Pages requires deployment support and settings to be configured before the browser link is confirmed live.
 
 ---
 
@@ -169,7 +182,7 @@ For your actual 2018 bike, confirm applicability with the appropriate Triumph se
 
 ## Application features
 
-- Dashboard built on a real, openly licensed photograph of a T120 in Cranberry Red / Aluminium Silver, with hotspots and selectable assemblies; **no fake 3D model**, Blender or Three.js dependency.
+- Dashboard built on a real, openly licensed photograph of a T120 in Cranberry Red / Aluminium Silver, with hotspots and selectable assemblies; no 3D model or Three.js on the dashboard (Three.js is used only by the separate, labelled Engine X-ray page).
 - 30 source-constrained 2018 T120 assembly-level part records, including 2018 Nissin two-piston floating brake calipers; the geometry shown is illustrative and not measured OEM CAD.
 - Full-text filter over all 230 torque entries, 44 scheduled-maintenance tasks, 32 owner-manual T120 specifications and 37 specialist tools.
 - Paper-trail from every technical result to an original document and exact PDF page.
@@ -201,13 +214,15 @@ node --check copilot.js
 node --check source-library.js
 node tests/validate-data.mjs
 node tests/validate-sources.mjs
+node tests/validate-engine-xray.mjs
+python tests/engine_xray_browser_audit.py   # needs Playwright Chromium
 ```
 
 These tests check data shape and specific printed values. They **cannot certify** revision/VIN applicability or every diagram/procedure.
 
 ## Legal and safety
 
-The source documents bear copyright notices restricting redistribution. They have **not** been bundled, copied into GitHub or translated into wholesale plain-text replicas. The indexed dataset is a factual source catalogue, not a scanned manual replacement. Original documents remain privately available for all pages through your own selected PDFs. The repository is independent of Triumph Motorcycles Ltd.
+The source documents bear copyright notices restricting redistribution. They have **not** been bundled, copied into GitHub or translated into wholesale plain-text replicas. The indexed dataset is a factual source catalogue, not a scanned manual replacement. Original documents remain privately available for all pages through your own selected PDFs. The repository is independent of Triumph Motorcycles Ltd. Three.js is © 2010–2023 three.js authors under the MIT licence (`assets/vendor/three/LICENSE`).
 ## Selected assembly: torque and tool evidence (v2.6)
 
 The **Torque & tools** tab is now connected to the existing `data/source-reference.json` technical reference database. Every one of the 30 high-level assemblies has an explicit cross-reference. Selecting a motorcycle part displays individual *named fasteners* from the April 2016 T120 service manual, each with a cited page and a **Read original p.X** control. Where relevant, the panel also lists Triumph's special service tool number and purpose. Special-tool numbers are **not** bit or socket dimensions.
