@@ -39,4 +39,4 @@
 - Model IDs live in `data/models.json` and in `model.js`; `tests/validate-models.mjs` keeps them identical. The T120 keeps its original data files and element IDs.
 - Air-cooled model files (`data/models/*.json`) must name a source for every torque (`sources` key with tier triumph, aftermarket or forum). Never relabel a Haynes or forum value as Triumph data, and never store dealer prices.
 - A figure that Triumph superseded or that a source contradicts stays visible as an alternative, not deleted.
-- Rebuild those files with the project's build script rather than hand-editing values; run `tests/validate-models.mjs` and `tests/model_browser_audit.py`.
+- When changing a value in those files, change its `source` and `page` with it, and run `tests/validate-models.mjs` and `tests/model_browser_audit.py`.
