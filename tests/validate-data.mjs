@@ -13,4 +13,4 @@ assert(parts.find(p=>p.id==='rear-brake')?.name.includes('Nissin'));
 assert(parts.some(p=>p.id==='forks')&&parts.some(p=>p.id==='rear-shocks'));
 const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
 assert(!/three\.js|GLTFLoader|blender/i.test(html.replace(/no blender/ig,'')),'Unexpected 3D dependencies in page');
-console.log('PASS: 30 unique parts; Nissin brake and fork/shock records; tool/torque guard; no Blender/Three.js dependencies.');
+console.log('PASS: 30 unique parts; Nissin brake and fork/shock records; tool/torque guard; no Blender/Three.js on the dashboard (3D is limited to the labelled engine-xray.html concept page).');

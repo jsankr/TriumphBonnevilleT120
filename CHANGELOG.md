@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.4.0 — 18 November 2026
+- New page `engine-xray.html`: animated 3D concept drawing of the 1200 cc twin with glass (X-ray) casings, 22 labelled parts, inspector with sources, explode/reset, isolate, solid mode and camera views. Linked from every page's navigation.
+- Part text and the facts strip come from `data/engine-xray.json`; every statement cites Triumph's launch media kit or a 2016 service-manual page. Shapes are marked illustrative on screen. No torque values, tool sizes, dimensions or part numbers on the page.
+- Two balancer shafts, following the 2016 manual's Balancer chapter and its front balancer / rear dead shaft torque rows.
+- Three.js r160 (MIT) vendored in `assets/vendor/three/`; the page's CSP allows scripts from `'self'` only.
+- AGENTS.md: the no-3D rule now allows this one labelled concept page, under stated conditions.
+- New CI steps: `tests/validate-engine-xray.mjs` and `tests/engine_xray_browser_audit.py`; the security/routes test now covers the new page and script.
+
 ## 3.3.0 — 18 November 2026
 - Dashboard section "Rider tricks" (T120): 22 sourced features in five groups, with steps, cautions and handbook pages (`data/rider-tips.json`, `rider-tips.js`).
 - New CI step: `tests/validate-rider-tips.mjs`.

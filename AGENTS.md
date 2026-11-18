@@ -6,7 +6,7 @@
 - The 2012 Bonneville/T100 sheet and 2006 checklist are not 2018 T120 service sources.
 - Factory MY18 Nissin dual front/single rear calipers; two front fork legs and two rear shocks. No later-year Brembo substitution.
 - Keep all original copyrighted PDFs on the user device, not in GitHub. Respect their rights restrictions.
-- Motorcycle images are real, openly licensed photographs with credits in README.md and data/teardown-map.json; none is the owner's motorcycle. No Blender or inaccurate 3D.
+- Motorcycle images are real, openly licensed photographs with credits in README.md and data/teardown-map.json; none is the owner's motorcycle. No Blender or inaccurate 3D, with one exception: the Engine X-ray concept page (see v3.4 below).
 - Run `node tests/validate-data.mjs`, `node tests/validate-sources.mjs` and `node tests/validate-manual-index.mjs` before committing.
 - Show complete feature/test/deploy status truthfully, preserve source citations, and verify GitHub Pages separately from source publication.
 
@@ -40,3 +40,10 @@
 - Air-cooled model files (`data/models/*.json`) must name a source for every torque (`sources` key with tier triumph, aftermarket or forum). Never relabel a Haynes or forum value as Triumph data, and never store dealer prices.
 - A figure that Triumph superseded or that a source contradicts stays visible as an alternative, not deleted.
 - When changing a value in those files, change its `source` and `page` with it, and run `tests/validate-models.mjs` and `tests/model_browser_audit.py`.
+
+## v3.4 Engine X-ray (concept 3D) invariants
+- `engine-xray.html` is the only 3D page, and it is a concept explainer of the engine, not a model of the motorcycle. It must keep the on-screen "not Triumph CAD · not to scale" badge, and `geometryStatus` in `data/engine-xray.json` stays `illustrative-not-oem`.
+- Every statement in `data/engine-xray.json` names a source (Triumph media kit, or a 2016 service-manual page with `pages`). A detail with no source is described as illustrative, never stated as fact.
+- No torque values, tool sizes, dimensions or part numbers on this page; link to the Dashboard and Teardown for those. Do not add 3D anywhere else without the owner's approval.
+- Three.js stays vendored in `assets/vendor/three/` (no CDN); the page CSP keeps `script-src 'self'`.
+- Run `node tests/validate-engine-xray.mjs` and `python tests/engine_xray_browser_audit.py` after any change to the page, its script, its CSS or its data.
