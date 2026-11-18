@@ -1,5 +1,11 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
+## v3.3 — Rider tricks (18 November 2026)
+
+A new dashboard section for the T120 lists 22 features most owners never find, each with steps, a caution where needed, and the page it comes from. Examples: changing between ROAD and RAIN on the move, turning traction control off (and why it always comes back on), flash-to-pass with daytime running lights, hazards that stay on with the key out, heated grips, the USB socket and helmet hook under the seat, lever span and rear preload settings, and the design details behind the carburettor-styled throttle bodies and the 270° twin.
+
+Source: Triumph's owner's handbook 3855663-EN, which Triumph's handbook service lists for the 2018 T120, plus Triumph's launch press kit and specification page, and one Visordown road test as a cross-check. Nothing here unlocks hidden ECU or dashboard menus. No such menu is documented for this model, and dealer-only resets (the service symbol) are named as dealer-only.
+
 ## v3.2 — three motorcycles: T120, air-cooled Bonneville and T100 (18 November 2026)
 
 A switch under the header picks the motorcycle. The dashboard and the teardown follow it, and the choice is kept in the address (`?model=`) and in this browser. The T120 is unchanged.

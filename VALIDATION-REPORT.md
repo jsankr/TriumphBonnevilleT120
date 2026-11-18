@@ -1,4 +1,4 @@
-# Validation report — v3.2 (18 November 2026)
+# Validation report — v3.3 (18 November 2026)
 
 All checks below were run on the release commit. Every check passed.
 
@@ -14,6 +14,7 @@ All checks below were run on the release commit. Every check passed.
 | Manual index | 894 indexed pages, 230 audited torque rows, 13 quarantined, 44 service rows, 37 tools, 32 owner specs |
 | Security and routes | 7 pages, 101 internal resources, 190 anchors, no embedded secrets |
 | Sources | 230 active torque rows, 13 quarantined, 44 maintenance rows, 32 owner specs, 37 special tools |
+| Rider tricks | 22 tricks in 5 groups; each names a source from its list; handbook items carry page numbers |
 | Models | 3 models; 432 catalogue part rows, 76 sourced torque values, 56 callout links with basis, 24 photo markers; model IDs match `model.js`; no prices stored; Triumph-sourced values pinned (85 Nm spindle, 5 Nm adjusters, 8 Nm covers) |
 | Teardown | 3 openly licensed photos, 17 outlines, 43 markers, 31 callout-to-torque links, 8 sourced tool sizes |
 

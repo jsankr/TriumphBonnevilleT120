@@ -28,6 +28,7 @@
   <nav id="sideNav">
     <button class="nav-link selected" type="button" data-target="overview">Overview</button>
     <button class="nav-link" type="button" data-target="servicePlanner">Service planner</button>
+    <button class="nav-link t120-only" type="button" data-target="riderTips">Rider tricks</button>
     <button class="nav-link a3-only" type="button" data-target="modelTorque">Torque by source</button>
     <button class="nav-link t120-only" type="button" data-target="catalogue">Assemblies</button>
     <button class="nav-link t120-only" type="button" data-target="maintenance">Garage checklist</button>
@@ -73,6 +74,13 @@
       <div class="planner-list" id="plannerList" aria-live="polite"></div>
     </div>
     <p class="fine" id="plannerNotes"></p>
+  </section>
+
+  <section class="panel glass rider-tips t120-only" id="riderTips" aria-labelledby="riderTipsTitle">
+    <div class="section-head"><h2 id="riderTipsTitle">Rider tricks</h2><p>Features most owners never find, with the steps and the page they come from.</p></div>
+    <div class="tip-filters" id="tipFilters" role="group" aria-label="Filter rider tricks"></div>
+    <div class="tip-list" id="tipList"><p class="muted">Loading…</p></div>
+    <p class="fine" id="tipSource"></p>
   </section>
 
   <section class="panel glass model-torque a3-only" id="modelTorque" aria-labelledby="modelTorqueTitle">
@@ -162,5 +170,6 @@
 <script type="module" src="app.js"></script>
 <script type="module" src="source-library.js"></script>
 <script defer src="dashboard.js"></script>
+<script defer src="rider-tips.js"></script>
 </body>
 </html>

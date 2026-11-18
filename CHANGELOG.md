@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0 — 18 November 2026
+- Dashboard section "Rider tricks" (T120): 22 sourced features in five groups, with steps, cautions and handbook pages (`data/rider-tips.json`, `rider-tips.js`).
+- New CI step: `tests/validate-rider-tips.mjs`.
+
 ## 3.2.0 — 18 November 2026
 - Model switch for Bonneville T120 (2018), Bonneville (A3, 2014–2016) and Bonneville T100 (A3, 2014–2016), shared by the dashboard and the teardown (`model.js`, `data/models.json`).
 - New per-model data files `data/models/bonneville-a3.json` and `data/models/bonneville-t100-a3.json`: handbook specifications, the 36-row maintenance chart, model-year 2015 catalogue part numbers for eight assemblies, 38 torque values each with a source tier, 28 callout links each with a basis, and the teardown map.

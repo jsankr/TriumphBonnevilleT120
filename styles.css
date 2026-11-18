@@ -213,3 +213,29 @@ td.on .dot.yes{background:var(--line-gold);box-shadow:0 0 0 3px rgb(var(--gold-r
 .model-sources li{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:13.5px;line-height:1.45;min-width:0}
 .model-sources a{color:var(--fg-2);overflow-wrap:anywhere}
 @media (max-width:640px){.mt-table td:nth-child(2),.mt-table thead th:nth-child(2){display:none}.mt-table td .ev{white-space:normal;line-height:1.3}.mt-table tbody th{max-width:none}}
+
+/* ---------- Rider tricks (v3.3) ---------- */
+.rider-tips{padding:clamp(18px,3vw,30px);margin:0 0 26px;min-width:0}
+.tip-filters{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px}
+.tip-filters button{appearance:none;font:inherit;font-size:13px;color:var(--fg-2);background:transparent;border:1px solid var(--glass-edge-hi);border-radius:999px;padding:6px 12px;cursor:pointer}
+.tip-filters button span{color:var(--fg-3);margin-left:4px}
+.tip-filters button.active{color:var(--fg);background:rgb(var(--acc-rgb) / .14);border-color:var(--line-gold)}
+.tip-filters button:focus-visible,.tip summary:focus-visible{outline:2px solid var(--line-gold);outline-offset:2px}
+.tip-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:10px;align-items:start}
+.tip{border:1px solid var(--glass-edge);border-radius:14px;background:rgb(var(--acc-rgb) / .04);min-width:0}
+.tip[open]{border-color:var(--glass-edge-hi);background:rgb(var(--acc-rgb) / .08)}
+.tip summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;gap:4px}
+.tip summary::-webkit-details-marker{display:none}
+.tip-group{font-size:12px;color:var(--fg-3);display:flex;gap:8px;align-items:center}
+.tip-flag{border:1px dashed var(--glass-edge-hi);border-radius:999px;padding:1px 7px;font-size:11px}
+.tip-title{font-weight:650;font-size:15px;line-height:1.35;color:var(--fg);padding-right:22px;position:relative}
+.tip-title::after{content:"+";position:absolute;right:0;top:-1px;color:var(--line-gold);font-weight:500;font-size:18px}
+.tip[open] .tip-title::after{content:"−"}
+.tip-body{padding:0 16px 16px;font-size:14px;line-height:1.55;color:var(--fg-2)}
+.tip-body p{margin:0 0 10px}
+.tip-steps{margin:0 0 10px;padding-left:20px;display:grid;gap:6px}
+.tip-steps li::marker{color:var(--line-gold);font-weight:700}
+.tip-caution{border-left:2px solid var(--line-gold);padding-left:10px}
+.tip-caution strong{color:var(--fg)}
+.tip-src{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+.tip-src .ev{white-space:normal;line-height:1.3}

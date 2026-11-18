@@ -52,3 +52,11 @@ S1’s schedule identifies drive-chain slack check/adjustment as a daily check, 
 | [New Bonneville Riders thread 204](https://www.newbonnevilleriders.com/forum/threads/triumph-factory-specs-torque-etc.204/) | Owner forum | Cross-check only (oil feed banjo 30 Nm; clutch cover 9 Nm, superseded). Read from a search excerpt because the forum blocks automated reading. |
 | [Hermy's Triumph eStore](https://www.triumphestore.com/catalog/triumph/bonneville/2015) (authorised dealer) | Catalogue | Part numbers, names and quantities for eight assemblies per model, model year 2015. Prices are not stored. |
 | [British Legends, JMP axle nut listing](https://www.britishlegends.fr/en/go/product/161424464) | Aftermarket | M16 × 1.5 spindle nut, 22 mm spanner, for 2001–2016 Bonnevilles. |
+
+## Added in v3.3: Rider tricks
+| Source | Used for |
+|---|---|
+| [Triumph Owner's Handbook 3855663-EN](https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf) (listed by Triumph's handbook service for the 2018 T120) | Riding modes, traction control, trip and clock, range, DRL, hazards, heated grips, service symbol, USB, helmet hook, tool, levers, rear preload, starter interlock, immobiliser, low fuel, bank angle indicators (pages given per item) |
+| [Triumph media kit, T120 launch](https://triumph-mediakits.com/en/news-articles/the-new-triumph-bonneville-t120-and-t120-black.html) | Styled throttle bodies, 1959 lineage, 4-bar tank badge |
+| [Triumph specification page](https://www.triumphmotorcycles.com/motorcycles/previous-model-year/models/t120-black-2023) | 270° firing interval, torque-assist clutch |
+| [Visordown road test](https://www.visordown.com/reviews/motorbike/bonneville-t120-review) | Cross-check: carburettor look, clutch needed to start |

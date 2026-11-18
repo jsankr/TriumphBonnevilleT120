@@ -1,0 +1,325 @@
+{
+ "schemaVersion": 1,
+ "updated": "2026-11-18",
+ "model": "t120-2018",
+ "about": "Features and tricks for the 2018 Bonneville T120, each copied from the source named with it. Handbook pages are the printed page numbers. 'If fitted' means the handbook marks the feature as model or market dependent.",
+ "sources": {
+  "ohb": {
+   "tier": "triumph",
+   "short": "Triumph owner's handbook",
+   "title": "Triumph Owner's Handbook 3855663-EN, Bonneville T100 and T120, Speed Twin, Street Scrambler, Street Twin and Thruxton RS (Triumph's handbook service lists it for the 2018 T120)",
+   "url": "https://api.triumphtechnicalinformation.com/handbooks/documents/6246e0045b05bf5ce5071ffc/pdf"
+  },
+  "media": {
+   "tier": "triumph",
+   "short": "Triumph launch press kit",
+   "title": "The new Triumph Bonneville T120 and T120 Black (Triumph media kit)",
+   "url": "https://triumph-mediakits.com/en/news-articles/the-new-triumph-bonneville-t120-and-t120-black.html"
+  },
+  "spec": {
+   "tier": "triumph",
+   "short": "Triumph specification page",
+   "title": "Bonneville T120 Black specification (Triumph Motorcycles)",
+   "url": "https://www.triumphmotorcycles.com/motorcycles/previous-model-year/models/t120-black-2023"
+  },
+  "visordown": {
+   "tier": "press",
+   "short": "Visordown road test",
+   "title": "Bonneville T120 review (Visordown)",
+   "url": "https://www.visordown.com/reviews/motorbike/bonneville-t120-review"
+  }
+ },
+ "groups": [
+  {
+   "id": "dash",
+   "title": "Dash and switches"
+  },
+  {
+   "id": "seat",
+   "title": "Under the seat"
+  },
+  {
+   "id": "fit",
+   "title": "Fit the bike to you"
+  },
+  {
+   "id": "gotcha",
+   "title": "Looks like a fault, isn't"
+  },
+  {
+   "id": "heritage",
+   "title": "Design details"
+  }
+ ],
+ "tips": [
+  {
+   "id": "mode-on-the-move",
+   "group": "dash",
+   "title": "Switch between ROAD and RAIN without stopping",
+   "why": "ROAD gives standard throttle response. RAIN softens the throttle and allows only minimal rear wheel slip, for wet roads.",
+   "steps": [
+    "Press and release the MODE button on the right-hand switch until the mode you want flashes.",
+    "Within 30 seconds, close the throttle, pull the clutch in and let the bike coast with no brakes applied.",
+    "The new mode takes effect while you coast. If it doesn't, stop, select neutral, turn the ignition off and on, and choose the mode again."
+   ],
+   "caution": "Only on a straight, level, traffic-free road at low speed in good conditions. Never in a corner or at high speed.",
+   "source": "ohb",
+   "pages": "44–47, 55"
+  },
+  {
+   "id": "tc-off",
+   "group": "dash",
+   "title": "Turn traction control off, and why it comes back on",
+   "why": "Traction control resets to ON every time the ignition is switched off and on, so a rider can never forget it off by accident.",
+   "steps": [
+    "Stop, select neutral, ignition ON, engine stop switch at RUN.",
+    "Press and release SCROLL on the left switch until 'ttcOn' shows.",
+    "Hold SCROLL for more than one second to toggle between on and off. The TC-disabled light stays lit while it is off.",
+    "To restore it, repeat the steps or cycle the ignition."
+   ],
+   "caution": "Never change it while moving. On wet roads without traction control, too much throttle can spin the rear wheel.",
+   "source": "ohb",
+   "pages": "48–49"
+  },
+  {
+   "id": "trip-clock",
+   "group": "dash",
+   "title": "Two trip meters, and setting the clock",
+   "why": "Trip 1 and Trip 2 run independently: one per tank and one per journey works well.",
+   "steps": [
+    "Press and release SCROLL until the trip meter you want shows; hold it for one second to zero it.",
+    "For the clock, scroll to the clock and hold SCROLL for one second until the hours flash.",
+    "Each short press changes the hours by one; hold for one second to move to minutes, then set them the same way.",
+    "Hold for one second again to finish."
+   ],
+   "caution": "Not while moving.",
+   "source": "ohb",
+   "pages": "42–43"
+  },
+  {
+   "id": "range-refresh",
+   "group": "dash",
+   "title": "Range and average economy look frozen after refuelling",
+   "why": "They update only while you ride, and can take up to five minutes depending on riding style. Average economy shows dashes until 0.1 km is covered after a reset.",
+   "steps": [
+    "Refuel, ride normally, and give the figures five minutes before trusting them."
+   ],
+   "source": "ohb",
+   "pages": "41–42"
+  },
+  {
+   "id": "flash-to-pass",
+   "group": "dash",
+   "title": "Flash the high beam while on daytime running lights",
+   "why": "With the DRL switch in the daytime-running position, the high beam button works as a momentary flash.",
+   "steps": [
+    "Push the DRL switch forward for daytime running lights.",
+    "Press and hold the high beam button: high beam stays on only while you hold it."
+   ],
+   "caution": "DRLs are manual, not automatic. Switch to dip beam in tunnels, at dusk and in poor light.",
+   "source": "ohb",
+   "pages": "37, 57–58",
+   "ifFitted": true
+  },
+  {
+   "id": "hazards-parked",
+   "group": "dash",
+   "title": "Hazard lights that stay on with the key out",
+   "why": "Useful when stopped at the roadside: the hazards keep flashing after the ignition is switched off.",
+   "steps": [
+    "With the ignition ON, press the hazard switch on the right-hand switch.",
+    "Switch the ignition off; the hazards keep flashing until you press the switch again."
+   ],
+   "caution": "This drains the battery; don't leave them on for long.",
+   "source": "ohb",
+   "pages": "56"
+  },
+  {
+   "id": "heated-grips",
+   "group": "dash",
+   "title": "Heated grips: start on HI, then drop to Lo",
+   "why": "Triumph's own advice for the fastest warm-up. The grips switch themselves off if the battery falls below 11.8 V with the engine stopped.",
+   "steps": [
+    "Press the button on the left grip to show the current setting for three seconds.",
+    "Press again while it shows to cycle OFF, Lo and HI.",
+    "Start on HI; once the grips are warm, change to Lo.",
+    "If 'LoBAtt' appears, run the engine to recharge before using the grips again. If 'HgrOFF' appears, wait 25 seconds or cycle the ignition."
+   ],
+   "source": "ohb",
+   "pages": "58–59",
+   "ifFitted": true
+  },
+  {
+   "id": "service-symbol",
+   "group": "dash",
+   "title": "The spanner symbol gives you 100 km warning",
+   "why": "At start-up the service symbol lights for five seconds when a service is due in about 100 km, then stays lit once the distance is reached.",
+   "steps": [
+    "Book the service when you see the five-second reminder.",
+    "Only the Triumph diagnostic tool resets it, so a dealer has to clear it."
+   ],
+   "source": "ohb",
+   "pages": "98"
+  },
+  {
+   "id": "usb",
+   "group": "seat",
+   "title": "A USB charging socket under the seat",
+   "why": "5 V, up to 2 A, enough for a phone, camera or GPS.",
+   "steps": [
+    "Remove the seat: key into the lock on the left side below the seat, turn anticlockwise, lift up and back.",
+    "The socket sits on top of the battery. Remove its cap and plug in your own cable (none is supplied).",
+    "Route the cable so the seat closes without pinching it."
+   ],
+   "caution": "Not waterproof without its cap; don't connect devices in the rain.",
+   "source": "ohb",
+   "pages": "72, 76"
+  },
+  {
+   "id": "helmet-hook",
+   "group": "seat",
+   "title": "A hidden helmet hook",
+   "why": "The hook is under the seat on the left side, so the helmet is locked in by the seat.",
+   "steps": [
+    "Remove the seat and loop the helmet chin strap over the hook.",
+    "Keep the strap clear of the flat area above the hook.",
+    "Refit the seat and press down at the rear until it clicks."
+   ],
+   "caution": "Never ride with a helmet on the hook, and keep it off the hot silencer.",
+   "source": "ohb",
+   "pages": "70, 72"
+  },
+  {
+   "id": "tool",
+   "group": "seat",
+   "title": "The adjustment tool lives inside the right side panel",
+   "why": "It is the tool for the rear preload adjusters.",
+   "steps": [
+    "Unclip the right-hand side panel and take the tool from its inside face."
+   ],
+   "source": "ohb",
+   "pages": "69"
+  },
+  {
+   "id": "levers",
+   "group": "fit",
+   "title": "Bring the levers closer to your fingers",
+   "why": "Both levers have numbered span adjusters: clutch 1 to 4, brake 1 to 5. The highest number is closest to the grip.",
+   "steps": [
+    "Push the lever forward.",
+    "Turn the wheel until the number you want lines up with the arrow on the lever holder.",
+    "Try it in a quiet area before riding in traffic."
+   ],
+   "caution": "Not while moving.",
+   "source": "ohb",
+   "pages": "60–62"
+  },
+  {
+   "id": "preload",
+   "group": "fit",
+   "title": "Rear preload for a passenger and luggage",
+   "why": "Five positions: 1 for solo riding (factory setting), 5 for rider, passenger and luggage.",
+   "steps": [
+    "Insert the adjustment tool into the hole in the adjuster ring at the bottom of each shock.",
+    "Turn clockwise to increase preload, anticlockwise to decrease.",
+    "Set both shocks to the same position."
+   ],
+   "caution": "Different settings left and right can upset stability.",
+   "source": "ohb",
+   "pages": "131–132"
+  },
+  {
+   "id": "starter",
+   "group": "gotcha",
+   "title": "The starter does nothing in neutral",
+   "why": "The clutch lever must be pulled for the starter to work, even in neutral. With the side stand down and a gear engaged it will not crank at all.",
+   "steps": [
+    "Pull the clutch in, then press START."
+   ],
+   "source": "ohb",
+   "pages": "56",
+   "alsoSource": "visordown"
+  },
+  {
+   "id": "two-keys",
+   "group": "gotcha",
+   "title": "The bike won't start with both keys together",
+   "why": "Two transponder keys near the ignition confuse the immobiliser, which stays active until one is moved away.",
+   "steps": [
+    "Keep the spare key off your key ring."
+   ],
+   "source": "ohb",
+   "pages": "55"
+  },
+  {
+   "id": "headlight-crank",
+   "group": "gotcha",
+   "title": "The headlight goes out while you crank",
+   "why": "By design: the headlight goes off while the starter is pressed and comes back on when the engine starts.",
+   "steps": [],
+   "source": "ohb",
+   "pages": "58"
+  },
+  {
+   "id": "mode-memory",
+   "group": "gotcha",
+   "title": "It remembers RAIN mode, but not TC off",
+   "why": "The last riding mode stays selected after the ignition is switched off; traction control always returns to ON.",
+   "steps": [
+    "Check the mode display at start-up if someone else rode the bike."
+   ],
+   "source": "ohb",
+   "pages": "47–48"
+  },
+  {
+   "id": "low-fuel",
+   "group": "gotcha",
+   "title": "The low-fuel light means about 3 litres left",
+   "why": "From the 14.5-litre tank, about 3 litres remain when the light comes on.",
+   "steps": [
+    "Use the range-to-empty display for the distance estimate."
+   ],
+   "source": "ohb",
+   "pages": "38, 40, 162"
+  },
+  {
+   "id": "bank-angle",
+   "group": "gotcha",
+   "title": "Scraping footpegs have a wear limit",
+   "why": "The bank angle indicators under the footrests are meant to touch down. Replace them when 5 mm has worn away.",
+   "steps": [
+    "Check them regularly for wear."
+   ],
+   "source": "ohb",
+   "pages": "133"
+  },
+  {
+   "id": "carb-look",
+   "group": "heritage",
+   "title": "Fuel injection disguised as carburettors",
+   "why": "The throttle bodies are styled to look like classic carburettors, with chrome embellishers on the T120.",
+   "steps": [],
+   "source": "media",
+   "pages": null,
+   "alsoSource": "visordown"
+  },
+  {
+   "id": "270",
+   "group": "heritage",
+   "title": "Why it sounds the way it does",
+   "why": "The 1200 'High Torque' twin has a 270° firing interval, behind the T120's distinctive sound, and a torque-assist clutch for a lighter lever.",
+   "steps": [],
+   "source": "spec",
+   "pages": null
+  },
+  {
+   "id": "1959",
+   "group": "heritage",
+   "title": "The name goes back to 1959",
+   "why": "Triumph presents the modern T120 as the next chapter after the game-changing T120 of 1959, and gives it an authentic 4-bar tank badge.",
+   "steps": [],
+   "source": "media",
+   "pages": null
+  }
+ ]
+}
