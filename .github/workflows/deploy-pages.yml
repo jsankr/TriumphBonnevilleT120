@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          check-latest: true   # always the newest 22.x, never an older cached build
+      - run: python3 tests/check_runtime_versions.py --system-node   # CVE-2026-111497 (Node2Shell) guard
       - run: node --check app.js
       - run: node --check component-evidence.js
       - run: node --check exploded.js
@@ -53,7 +55,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: python -m pip install playwright==1.57.0 beautifulsoup4==4.14.2
+      - run: python -m pip install playwright==1.65.2 beautifulsoup4==4.14.2   # 1.65.2 bundles Node.js 26.13.1 (patched)
+      - run: python tests/check_runtime_versions.py --playwright-node   # CVE-2026-111497 (Node2Shell) guard
       - run: python -m playwright install --with-deps chromium
       - run: python tests/browser_audit.py
       - run: python tests/security_browser_audit.py

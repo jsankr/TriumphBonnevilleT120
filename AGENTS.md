@@ -47,3 +47,7 @@
 - No torque values, tool sizes, dimensions or part numbers on this page; link to the Dashboard and Teardown for those. Do not add 3D anywhere else without the owner's approval.
 - Three.js stays vendored in `assets/vendor/three/` (no CDN); the page CSP keeps `script-src 'self'`.
 - Run `node tests/validate-engine-xray.mjs` and `python tests/engine_xray_browser_audit.py` after any change to the page, its script, its CSS or its data.
+
+## Runtime CVE guard (v3.5.2)
+- CI must keep `tests/check_runtime_versions.py` for both the system Node.js and Playwright's bundled Node.js. Never lower the Playwright pin below a release that bundles a patched Node.js (CVE-2026-111497 fixed in 22.23.4, 24.22.1, 26.12.1).
+- The site stays static: no server-side Node.js, PHP or React Server Components, no Brotli decompression in project code, and no `fetch()` to external servers from tests or build steps.

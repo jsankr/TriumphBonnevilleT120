@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.5.2 — 19 November 2026 (security)
+- Checked against the "2Shell" vulnerabilities: Node2Shell / HTTP2Shell (CVE-2026-111497, Brotli decoder in Node.js), PHP2Shell (CVE-2026-109618/109619) and React2Shell (CVE-2025-55182). The published site is static (no Node.js, PHP or React Server Components at runtime) and the code never decompresses Brotli or fetches external servers, so none of them is exposed.
+- CI hardening: the Playwright pin 1.57.0 bundled Node.js 24.11.1, which predates the fix. It is now 1.65.2, which bundles Node.js 26.13.1 (patched). `actions/setup-node` uses `check-latest: true` so the validate job always gets the newest 22.x.
+- New guard `tests/check_runtime_versions.py` fails CI if the system Node.js or Playwright's bundled Node.js is older than 22.23.4 / 24.22.1 / 26.12.1, or on an end-of-life line.
+
 ## 3.5.1 — 19 November 2026
 - README: animated Engine X-ray GIF at the top, a screenshot gallery of every page (desktop and phone), a "How it helps a Bonneville rider" section, a **torque quick reference** of 24 everyday fasteners taken exactly from the 2016 manual rows (with page, note and row ID, plus the 2016-edition and front-brake quarantine caveats), and the 22 **Rider tricks** as a collapsible Easter egg.
 - Media in `docs/media/` (WebP screenshots, a 2 MB GIF captured frame by frame with a controlled clock so the animation is smooth).
