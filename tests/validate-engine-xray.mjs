@@ -33,6 +33,14 @@ for (const p of data.parts) {
   }
 }
 
+// 1b. Sides are sourced and stated: clutch LEFT; alternator and front sprocket RIGHT (rider's view)
+const part = id => data.parts.find(p => p.id === id);
+for (const [id, side] of [['clutch','LEFT'],['clutchcover','LEFT'],['alt','RIGHT'],['altcover','RIGHT'],['sprocket','RIGHT']]) {
+  assert(part(id).text.includes(`rider's ${side}`), `${id} must state the rider's ${side} side`);
+  assert(part(id).cite.length >= 2, `${id}: side needs more than one source`);
+}
+assert(js.includes("const MIRROR_X = new Set(['gearbox', 'clutch', 'clutchcover', 'alt', 'altcover', 'sprocket']);"), 'transmission-side builders must stay mirrored to their sourced sides');
+
 // 2. No service figures on a concept page (they live, sourced, on the Dashboard and Teardown)
 const allText = JSON.stringify(data) + html;
 assert.doesNotMatch(allText, /\b\d+(?:\.\d+)?\s?N\s?m\b/i, 'no torque values on the X-ray page');

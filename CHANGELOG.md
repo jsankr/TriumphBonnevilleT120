@@ -5,6 +5,8 @@
 - *Hold to rev* button (pointer or keyboard) snaps the throttle wide open until released. *Slow-mo* toggle (key S) slows the view to 0.2× for study.
 - Engine speed is shown relative to idle, never as rpm; the throttle-to-speed relationship is labelled illustrative. Explainer text cites Triumph's media kit for ride-by-wire.
 - Throttle bodies are drawn see-through in X-ray mode so the butterflies show.
+- **Side correction:** the clutch and primary drive are on the rider's LEFT; the alternator, front sprocket and final-drive chain are on the RIGHT. The Engine X-ray had the clutch and alternator swapped and the sprocket on the left. Sources: manual removal steps quoted on TriumphRat (clutch cable and gear-change arm attach at the clutch cover; the alternator cover sits behind the coolant tank and rear brake reservoir), Triumph's owner's handbook (coolant expansion tank on the right), an aftermarket clutch-cable bracket fitted on the left, and the project's right-side (chain side) photo. Both tests now pin these sides.
+- Teardown photo labels corrected to match: the left view's large cover is the **Clutch cover**; the right and Cranberry views show the **Alternator cover and front sprocket cover**.
 - Labels start hidden for a clean view; the Labels button cycles Off → Internals → All (key L), and a selected part always keeps its label.
 - Browser audit: checks that throttle raises engine speed, opens the butterflies, draws in intake air, and that Hold to rev releases back to the previous setting.
 

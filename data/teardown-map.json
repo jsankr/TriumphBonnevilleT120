@@ -143,7 +143,7 @@
     240
    ],
    "layer": 2,
-   "label": "Alternator cover"
+   "label": "Clutch cover"
   },
   {
    "assembly": "cooling",
@@ -165,7 +165,7 @@
     -150
    ],
    "layer": 2,
-   "label": "Clutch cover and front sprocket cover"
+   "label": "Alternator cover and front sprocket cover"
   },
   {
    "assembly": "cooling",
@@ -239,7 +239,7 @@
     165
    ],
    "layer": 2,
-   "label": "Clutch cover and front sprocket cover"
+   "label": "Alternator cover and front sprocket cover"
   },
   {
    "assembly": "cooling",

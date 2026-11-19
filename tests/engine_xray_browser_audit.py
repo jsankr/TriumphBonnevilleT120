@@ -45,6 +45,8 @@ with sync_playwright() as p:
         if not info['gl']:
             check(page.locator('#xrFallback').is_visible(), f'{tag}: WebGL fallback message shown')
             failures.append(f'{tag}: WebGL unavailable in this runner'); ctx.close(); continue
+        sides = {i: page.evaluate(f"__engineXray.partSide('{i}')") for i in ('clutch', 'clutchcover', 'alt', 'altcover', 'sprocket')}
+        check(sides == {'clutch': 'left', 'clutchcover': 'left', 'alt': 'right', 'altcover': 'right', 'sprocket': 'right'}, f'{tag}: clutch on rider\'s left, alternator and sprocket on the right {sides}')
         page.wait_for_timeout(4500)   # > one full 720° cycle at 1x
         fxc = page.evaluate('__engineXray.fxCounters')
         check(all(fxc[k] > 0 for k in ('sparks', 'combustion', 'puffs', 'sprays')), f'{tag}: firing effects ran {fxc}')

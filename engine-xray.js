@@ -35,13 +35,13 @@ const LAYOUT = {
   chain:      { anchor:[0.145,0.14,-0.035],dir:'right', explode:[0.06,0.1,0] },
   valves:     { anchor:[0.085,0.25,-0.04], dir:'up',    explode:[0,0.17,0] },
   plugs:      { anchor:[-0.06,0.31,0.06],  dir:'up',    explode:[0,0.32,0.04] },
-  gearbox:    { anchor:[-0.05,-0.075,-0.17], dir:'down', explode:[0,-0.06,-0.12] },
-  clutch:     { anchor:[0.236,-0.04,-0.13],dir:'down',  explode:[0.16,0,0] },
-  alt:        { anchor:[-0.22,-0.075,0],   dir:'down',  explode:[-0.12,0,0] },
-  sprocket:   { anchor:[-0.215,-0.1,-0.17],dir:'down',  explode:[-0.16,-0.02,0] },
+  gearbox:    { anchor:[0.05,-0.075,-0.17], dir:'down',  explode:[0,-0.06,-0.12] },
+  clutch:     { anchor:[-0.236,-0.04,-0.13],dir:'down', explode:[-0.16,0,0] },
+  alt:        { anchor:[0.22,-0.075,0],    dir:'down',  explode:[0.12,0,0] },
+  sprocket:   { anchor:[0.215,-0.1,-0.17], dir:'down',  explode:[0.16,-0.02,0] },
   crankcase:  { anchor:[0.1,0,0.165],      dir:'right', explode:[0,0,0] },
-  clutchcover:{ anchor:[0.25,0.11,-0.13],  dir:'right', explode:[0.3,0,0] },
-  altcover:   { anchor:[-0.25,0.07,0],     dir:'up',    explode:[-0.24,0,0] },
+  clutchcover:{ anchor:[-0.25,0.11,-0.13], dir:'left',  explode:[-0.3,0,0] },
+  altcover:   { anchor:[0.25,0.07,0],      dir:'up',    explode:[0.24,0,0] },
   sump:       { anchor:[0.05,-0.155,-0.03],dir:'down',  explode:[0,-0.12,0] },
   tb:         { anchor:[0.07,0.265,-0.18], dir:'up',    explode:[0,0.04,-0.16] },
   exhaust:    { anchor:[0.13,0.02,0.225],  dir:'right', explode:[0,-0.1,0.12] },
@@ -49,6 +49,10 @@ const LAYOUT = {
   fuelpump:   { anchor:[-0.03,0.5,-0.08],  dir:'up',    explode:[0,0.18,0] },
   fuelrail:   { anchor:[0.11,0.3,-0.13],   dir:'right', explode:[0,0.08,-0.06] },
 };
+// Sides (sourced in data/engine-xray.json): clutch + primary drive on the rider's LEFT; alternator,
+// front sprocket and final-drive chain on the RIGHT. These builders were drawn for the opposite
+// side, so their rigs are mirrored in x rather than re-deriving every coordinate.
+const MIRROR_X = new Set(['gearbox', 'clutch', 'clutchcover', 'alt', 'altcover', 'sprocket']);
 const SOLID = { block:0x3e4248, head:0x3e4248, crankcase:0x3e4248, sump:0x3e4248, camcover:0xc9ced4, clutchcover:0xc9ced4, altcover:0xc9ced4 };
 
 const R = 0.040, L = 0.130;           // crank throw and rod length: animation placeholders, not measurements
@@ -93,7 +97,7 @@ const tube = (pts, r, m, seg = 80, closed = false) => new THREE.Mesh(new THREE.T
 const BUILD = {
   crank(rig, p) {
     const st = MAT.steel();
-    rig.add(mesh(cylX(0.018, -0.245, 0.205), st));
+    rig.add(mesh(cylX(0.018, -0.205, 0.245), st));
     CX.forEach((cx, i) => {
       const th = new THREE.Group(); th.rotation.x = ALPHA[i]; rig.add(th);
       th.add(mesh(cylX(0.019, cx - 0.026, cx + 0.026), st, 0, R, 0));
@@ -101,7 +105,7 @@ const BUILD = {
         th.add(mesh(new THREE.BoxGeometry(0.014, 0.075, 0.05), st, wx, 0.012, 0));
         th.add(mesh(halfDiscX(0.06, 0.014), st, wx, 0, 0)); });
     });
-    rig.add(mesh(gearGeo(0.04, 28, 0.018, 0.018), st, 0.18, 0, 0));
+    rig.add(mesh(gearGeo(0.04, 28, 0.018, 0.018), st, -0.18, 0, 0));   // primary drive gear: clutch side = rider's LEFT
     rig.add(mesh(gearGeo(0.02, 18, 0.008), st, 0.14, 0, 0));
     p.update = k => { rig.rotation.x = k.phi; };
   },
@@ -364,6 +368,7 @@ for (const d of data.parts) {
     p.edgeMat = new THREE.LineBasicMaterial({ color:xrayHex(), transparent:true, opacity:0.35, depthWrite:false });
   }
   build(rig, p);
+  if (MIRROR_X.has(d.id)) rig.scale.x = -1;
   rig.traverse(o => { if (o.isMesh && !(p.noPick && p.noPick.has(o)) && !o.userData.fx) { o.userData.partId = d.id; p.meshes.push(o); if (!d.shell) p.mats.add(o.material); } });
   if (d.shell) p.meshes.forEach(o => { o.renderOrder = 2; const l = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 32), p.edgeMat); l.renderOrder = 3; o.add(l); p.edges.push(l); });
   const b = el('button', 'xr-lbl ' + p.dir + (d.shell ? ' shell' : '')); b.type = 'button';
@@ -654,4 +659,4 @@ select(state.sel);
 if (renderer) { camera.position.copy(fit(VIEWS.q34, TARGET)); controls.update(); renderer.setAnimationLoop(frame); }
 document.addEventListener('visibilitychange', () => clock.getDelta());
 Object.assign(api, { ready:true, partCount:parts.length, dataCount:data.parts.length, select, state, webgl:!!renderer,
-  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, engineSpeed:() => engineSpeed, butterfly:() => byId.tb ? byId.tb.flaps[0].rotation.x : null, setThrottle, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });
+  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, engineSpeed:() => engineSpeed, butterfly:() => byId.tb ? byId.tb.flaps[0].rotation.x : null, setThrottle, partSide:id => { if (!byId[id]) return null; const c = new THREE.Box3().setFromObject(byId[id].rig).getCenter(new THREE.Vector3()); return engine.worldToLocal(c).x > 0 ? 'right' : 'left'; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });
