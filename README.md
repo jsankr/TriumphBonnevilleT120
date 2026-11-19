@@ -1,7 +1,116 @@
 # Triumph Bonneville T120 (2018) — Workshop Explorer
 
 > **Open in your browser (no install, share the link):**
-> **[Workshop Explorer](https://jsankr.github.io/TriumphBonnevilleT120/)** · **[Engine X-ray (3D, animated)](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html)** · [Teardown](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html) · [Parts catalogue](https://jsankr.github.io/TriumphBonnevilleT120/catalogue.html) · [Electrical](https://jsankr.github.io/TriumphBonnevilleT120/electrical.html)
+> **[Workshop Explorer](https://jsankr.github.io/TriumphBonnevilleT120/)** · **[Engine X-ray (3D, animated)](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html)** · [Teardown](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html) · [Parts catalogue](https://jsankr.github.io/TriumphBonnevilleT120/catalogue.html) · [Electrical](https://jsankr.github.io/TriumphBonnevilleT120/electrical.html) · [Manual index](https://jsankr.github.io/TriumphBonnevilleT120/manual-index.html)
+
+<p align="center">
+  <a href="https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html"><img src="docs/media/engine-xray.gif" width="640" alt="Engine X-ray: the 1200 cc twin turning over with glass casings. The injectors spray on intake, the plugs spark, an orange flame fills the chamber on the power stroke, and exhaust gas flows down the header pipes."></a><br>
+  <sub><b>Engine X-ray.</b> The 270° twin firing in real time: fuel flow, injector spray, spark, combustion and exhaust. Concept drawing, not Triumph CAD and not to scale.</sub>
+</p>
+
+A free, browser-only workshop companion for the **2018 Triumph Bonneville T120** (liquid-cooled 1200 HT). It covers the air-cooled 2014–2016 Bonneville and T100 as well. Every torque, part and specification is shown with the source and page it came from. Nothing is invented, and anything that cannot be confirmed for a 2018 bike says so.
+
+## What's covered
+
+| | |
+|---|---|
+| [![Dashboard](docs/media/dashboard.webp)](https://jsankr.github.io/TriumphBonnevilleT120/) **[Dashboard](https://jsankr.github.io/TriumphBonnevilleT120/)**: key specifications, the service planner, a torque quick reference, the maintenance schedule, the garage checklist and a sourced question box. | [![Teardown](docs/media/teardown.webp)](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html) **[Teardown](https://jsankr.github.io/TriumphBonnevilleT120/exploded.html)**: real T120 photos you can take apart assembly by assembly, with callouts linked to the fastener torques for each assembly. |
+| [![Engine X-ray](docs/media/engine-xray-labels.webp)](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html) **[Engine X-ray](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html)**: an animated 3D concept of the twin with glass casings. It has a throttle, firing, fuel and exhaust flow, labelled parts with sources, explode and isolate. | [![Exploded engine](docs/media/engine-xray-exploded.webp)](https://jsankr.github.io/TriumphBonnevilleT120/engine-xray.html) **Explode and inspect**: pull the engine apart along clear paths and put it back, click any part for its sourced description, or switch to a solid view. |
+| [![Parts catalogue](docs/media/catalogue.webp)](https://jsankr.github.io/TriumphBonnevilleT120/catalogue.html) **[Parts catalogue](https://jsankr.github.io/TriumphBonnevilleT120/catalogue.html)**: 2018 assemblies and part candidates, with links to the genuine catalogue diagrams. Check fitment against your VIN. | [![Electrical](docs/media/electrical.webp)](https://jsankr.github.io/TriumphBonnevilleT120/electrical.html) **[Electrical](https://jsankr.github.io/TriumphBonnevilleT120/electrical.html)**: fuses, sensors and wiring references indexed to the manual pages. Open your own PDF privately in the browser. |
+| [![Manual index](docs/media/manual-index.webp)](https://jsankr.github.io/TriumphBonnevilleT120/manual-index.html) **[Manual index](https://jsankr.github.io/TriumphBonnevilleT120/manual-index.html)**: all 894 pages of the 2016 service manual and owner's handbook, indexed by topic. It shows where to look, but the PDFs are never hosted. | [![Real photos](docs/media/photo-gallery.webp)](https://jsankr.github.io/TriumphBonnevilleT120/real-photo-gallery.html) **[Real photos](https://jsankr.github.io/TriumphBonnevilleT120/real-photo-gallery.html)**: an atlas of real T120 photographs and OEM exploded drawings, linked to their publishers with credits. None of them shows your own bike. |
+| [![Service planner](docs/media/service-planner.webp)](https://jsankr.github.io/TriumphBonnevilleT120/#servicePlanner) **[Service planner](https://jsankr.github.io/TriumphBonnevilleT120/#servicePlanner)**: Triumph's maintenance schedule as a task list for each interval, with the manual page for every task. | [![Torque quick reference](docs/media/torque-reference.webp)](https://jsankr.github.io/TriumphBonnevilleT120/#torqueReference) **[Torque quick reference](https://jsankr.github.io/TriumphBonnevilleT120/#torqueReference)**: search 230 torque values from the 2016 manual by fastener, each with its page. Contradictory rows are kept out. |
+
+<p align="center"><img src="docs/media/engine-xray-mobile.webp" width="220" alt="Engine X-ray on a phone"> &nbsp; <img src="docs/media/dashboard-mobile.webp" width="220" alt="Dashboard on a phone"><br><sub>Works on phones too.</sub></p>
+
+## How it helps a Bonneville rider
+
+- **Before you pick up a spanner:** look up the torque for the exact fastener you are about to touch, with its manual page, then open your own copy of the manual to that page and check it.
+- **When the service is due:** the planner shows what each interval (first service, annual, 16,000 / 32,000 / 48,000 km and more) asks for, so you can do it yourself or check the dealer's invoice.
+- **When you need a part:** the Teardown and Parts catalogue show which assembly a part belongs to and link to the genuine diagram, so you can order by part number instead of by description.
+- **When something looks wrong:** the Rider tricks below explain the things that only look like faults, and the Electrical page points you to the right fuse and wiring pages.
+- **To understand your engine:** the Engine X-ray shows how the 270° twin, its two balancer shafts, its fuel system and its ride-by-wire throttle work together. It also shows which side the clutch (left) and the alternator and sprocket (right) are on.
+- **Private by design:** it runs entirely in your browser. It needs no VIN and stores none, and manual PDFs you open stay on your device.
+
+## Torque quick reference (2018 T120)
+
+The fasteners riders touch most often, taken exactly from the **April 2016 T120 service manual** torque tables. All 230 values are searchable in the app's [Torque quick reference](https://jsankr.github.io/TriumphBonnevilleT120/#torqueReference).
+
+> **Check before you tighten.** These are 2016 edition values, not independently validated for a 2018 or India-market VIN. Torques belong to the named fastener, so follow the procedure on the page shown, including any new fixings or sealing washers. Front brake caliper values are **not listed**, because the manual's page 70 "Front Brakes" table prints unrelated rows. Those 13 rows are quarantined; use the front brake procedures from p. 513.
+
+<!-- torque-table:start (generated from data/source-reference.json; checked by tests/validate-readme-torques.mjs) -->
+| Area | Fastener (manual wording) | Torque | Manual page | Note | Row ID |
+|---|---|---|---|---|---|
+| Engine, oil and cooling | Sump plug | **25 Nm** | p. 60 | Fit new sealing washer(s) | `SM2016-P60-R12` |
+| Engine, oil and cooling | Oil filter | **10 Nm** | p. 62 | Apply clean engine oil to the seal(s) | `SM2016-P62-R4` |
+| Engine, oil and cooling | Spark plugs | **12 Nm** | p. 57 |  | `SM2016-P57-R9` |
+| Engine, oil and cooling | Camshaft cover to cylinder head | **14 Nm** | p. 57 | See Camshaft Cover - Installation, page 104 | `SM2016-P57-R1` |
+| Engine, oil and cooling | Coolant expansion tank | **4 Nm** | p. 64 |  | `SM2016-P64-R3` |
+| Chain and sprockets | Drive chain slack adjuster lock nut | **20 Nm** | p. 68 |  | `SM2016-P68-R3` |
+| Chain and sprockets | Front sprocket to output shaft nut | **180 Nm** | p. 61 | Fit new fixing(s) if loosened or removed | `SM2016-P61-R1` |
+| Chain and sprockets | Rear sprocket to sprocket carrier | **55 Nm** | p. 69 | Fit new fixing(s) if loosened or removed | `SM2016-P69-R4` |
+| Chain and sprockets | Front sprocket cover to crankcase | **9 Nm** | p. 60 |  | `SM2016-P60-R7` |
+| Wheels | Front wheel spindle/axle bolt | **65 Nm** | p. 69 |  | `SM2016-P69-R1` |
+| Wheels | Fork to wheel spindle pinch bolts | **23 Nm** | p. 69 |  | `SM2016-P69-R2` |
+| Wheels | Rear wheel spindle lock nut | **110 Nm** | p. 69 |  | `SM2016-P69-R3` |
+| Rear brake | Brake caliper to carrier | **40 Nm** | p. 71 |  | `SM2016-P71-R8` |
+| Rear brake | Brake disc to wheel | **22 Nm** | p. 71 | Fit new fixing(s) if loosened or removed | `SM2016-P71-R9` |
+| Rear brake | Brake hose to rear caliper | **25 Nm** | p. 71 | Fit new sealing washer(s) | `SM2016-P71-R1` |
+| Steering, bars and controls | Handlebar clamp bolt | **24 Nm** | p. 67 |  | `SM2016-P67-R7` |
+| Steering, bars and controls | Handlebar risers | **38 Nm** | p. 67 |  | `SM2016-P67-R14` |
+| Steering, bars and controls | Upper yoke pinch bolt | **24 Nm** | p. 67 |  | `SM2016-P67-R2` |
+| Steering, bars and controls | Lower yoke pinch bolt | **45 Nm** | p. 67 |  | `SM2016-P67-R3` |
+| Steering, bars and controls | Upper yoke centre nut | **90 Nm** | p. 67 |  | `SM2016-P67-R1` |
+| Steering, bars and controls | Fork top cap | **22 Nm** | p. 67 |  | `SM2016-P67-R16` |
+| Steering, bars and controls | Gear change pedal pinch bolt | **8 Nm** | p. 61 |  | `SM2016-P61-R10` |
+| Steering, bars and controls | Mirror | **20 Nm** | p. 73 |  | `SM2016-P73-R20` |
+| Rear suspension | Swinging arm pivot nut | **110 Nm** | p. 68 | See Swinging Arm - Installation, page 512 | `SM2016-P68-R1` |
+<!-- torque-table:end -->
+
+<details>
+<summary><b>🥚 Easter egg: 22 rider tricks most T120 owners never find</b> (tap to open)</summary>
+
+<br>
+<a href="https://jsankr.github.io/TriumphBonnevilleT120/#riderTips"><img src="docs/media/rider-tricks.webp" width="720" alt="Rider tricks section on the dashboard"></a>
+
+Each trick has step-by-step instructions, any caution, and the page it comes from, in the **[Rider tricks](https://jsankr.github.io/TriumphBonnevilleT120/#riderTips)** section of the dashboard. Nothing here unlocks hidden ECU or dashboard menus, and dealer-only resets are marked as dealer-only.
+
+**Dash and switches**
+
+- Switch between ROAD and RAIN without stopping <sub>(Triumph owner's handbook, p. 44–47, 55)</sub>
+- Turn traction control off, and why it comes back on <sub>(Triumph owner's handbook, p. 48–49)</sub>
+- Two trip meters, and setting the clock <sub>(Triumph owner's handbook, p. 42–43)</sub>
+- Range and average economy look frozen after refuelling <sub>(Triumph owner's handbook, p. 41–42)</sub>
+- Flash the high beam while on daytime running lights <sub>(Triumph owner's handbook, p. 37, 57–58)</sub>
+- Hazard lights that stay on with the key out <sub>(Triumph owner's handbook, p. 56)</sub>
+- Heated grips: start on HI, then drop to Lo <sub>(Triumph owner's handbook, p. 58–59)</sub>
+- The spanner symbol gives you 100 km warning <sub>(Triumph owner's handbook, p. 98)</sub>
+
+**Under the seat**
+
+- A USB charging socket under the seat <sub>(Triumph owner's handbook, p. 72, 76)</sub>
+- A hidden helmet hook <sub>(Triumph owner's handbook, p. 70, 72)</sub>
+- The adjustment tool lives inside the right side panel <sub>(Triumph owner's handbook, p. 69)</sub>
+
+**Fit the bike to you**
+
+- Bring the levers closer to your fingers <sub>(Triumph owner's handbook, p. 60–62)</sub>
+- Rear preload for a passenger and luggage <sub>(Triumph owner's handbook, p. 131–132)</sub>
+
+**Looks like a fault, isn't**
+
+- The starter does nothing in neutral <sub>(Triumph owner's handbook, p. 56)</sub>
+- The bike won't start with both keys together <sub>(Triumph owner's handbook, p. 55)</sub>
+- The headlight goes out while you crank <sub>(Triumph owner's handbook, p. 58)</sub>
+- It remembers RAIN mode, but not TC off <sub>(Triumph owner's handbook, p. 47–48)</sub>
+- The low-fuel light means about 3 litres left <sub>(Triumph owner's handbook, p. 38, 40, 162)</sub>
+- Scraping footpegs have a wear limit <sub>(Triumph owner's handbook, p. 133)</sub>
+
+**Design details**
+
+- Fuel injection disguised as carburettors <sub>(Triumph launch press kit)</sub>
+- Why it sounds the way it does <sub>(Triumph specification page)</sub>
+- The name goes back to 1959 <sub>(Triumph launch press kit)</sub>
+</details>
 
 ## v3.4 — Engine X-ray concept explainer (18 November 2026)
 
