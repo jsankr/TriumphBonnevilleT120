@@ -3,6 +3,7 @@
 ## 3.5.1 — 19 November 2026
 - README: animated Engine X-ray GIF at the top, a screenshot gallery of every page (desktop and phone), a "How it helps a Bonneville rider" section, a **torque quick reference** of 24 everyday fasteners taken exactly from the 2016 manual rows (with page, note and row ID, plus the 2016-edition and front-brake quarantine caveats), and the 22 **Rider tricks** as a collapsible Easter egg.
 - Media in `docs/media/` (WebP screenshots, a 2 MB GIF captured frame by frame with a controlled clock so the animation is smooth).
+- Engine X-ray: the animation is split into a simulation step and a render step. The browser audit now advances 8 simulated seconds through `simulate()` instead of waiting in real time, so the firing and throttle checks give the same result on any runner. CI run 44479179682 failed when a slow runner drew too few frames for cylinder 1 to reach its exhaust stroke.
 - New CI check `tests/validate-readme-torques.mjs`: every README torque row must match `data/source-reference.json` exactly (fastener wording, value, page, note), must not be a quarantined page-70 row, and every README image must exist.
 
 ## 3.5.0 — 19 November 2026

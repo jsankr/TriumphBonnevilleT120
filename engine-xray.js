@@ -632,15 +632,23 @@ sizeToViewport(); addEventListener('resize', sizeToViewport); new ResizeObserver
 new ResizeObserver(resize).observe(stage); resize();
 
 let phi = 0, engineSpeed = targetSpeed(state.throttle); const clock = new THREE.Clock(); const readout = $('xrReadout');
-function frame() {
-  const dt = Math.min(clock.getDelta(), 0.25);   // keep real-time speed on slow devices; effects below are crossing-based
+// One simulation step (engine, fuel, firing, exhaust). Rendering is separate so tests can advance
+// simulated time deterministically, independent of how fast a machine can draw frames.
+let simTime = 0, viewSpeed = 0;
+function step(dt) {
+  simTime += dt;
   engineSpeed += (targetSpeed(state.throttle) - engineSpeed) * Math.min(1, dt * 2.2);   // revs rise and fall with a short lag
-  const viewSpeed = engineSpeed * (state.slowmo ? SLOWMO : 1);
-  if (state.run && !document.hidden) phi += dt * viewSpeed * Math.PI;
-  const aIn = -phi * PRIMARY, running = state.run && !document.hidden;
-  const k = { phi, aIn, aOut:aIn * (0.037 / 0.043), dt, time:clock.elapsedTime, running, speed:viewSpeed, throttle:state.throttle, fx:state.fx && state.explode < 0.01, counters };
+  viewSpeed = engineSpeed * (state.slowmo ? SLOWMO : 1);
+  const running = state.run && !document.hidden;
+  if (running) phi += dt * viewSpeed * Math.PI;
+  const aIn = -phi * PRIMARY;
+  const k = { phi, aIn, aOut:aIn * (0.037 / 0.043), dt, time:simTime, running, speed:viewSpeed, throttle:state.throttle, fx:state.fx && state.explode < 0.01, counters };
   parts.forEach(p => { if (p.update) p.update(k); });
   updateFx(k, dt);
+}
+function frame() {
+  const dt = Math.min(clock.getDelta(), 0.25);   // keep real-time speed on slow devices; effects are crossing-based
+  step(dt);
   if (tween) { tween.t = Math.min(1, tween.t + dt * 2.2); const e = 1 - Math.pow(1 - tween.t, 3);
     camera.position.lerpVectors(tween.from, tween.to, e); controls.target.lerpVectors(tween.tf, tween.tt, e); if (tween.t >= 1) tween = null; }
   controls.update();
@@ -659,4 +667,4 @@ select(state.sel);
 if (renderer) { camera.position.copy(fit(VIEWS.q34, TARGET)); controls.update(); renderer.setAnimationLoop(frame); }
 document.addEventListener('visibilitychange', () => clock.getDelta());
 Object.assign(api, { ready:true, partCount:parts.length, dataCount:data.parts.length, select, state, webgl:!!renderer,
-  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, engineSpeed:() => engineSpeed, butterfly:() => byId.tb ? byId.tb.flaps[0].rotation.x : null, setThrottle, labelsShown:() => parts.filter(p => p.labelObj.visible).length, partSide:id => { if (!byId[id]) return null; const c = new THREE.Box3().setFromObject(byId[id].rig).getCenter(new THREE.Vector3()); return engine.worldToLocal(c).x > 0 ? 'right' : 'left'; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });
+  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, engineSpeed:() => engineSpeed, butterfly:() => byId.tb ? byId.tb.flaps[0].rotation.x : null, setThrottle, labelsShown:() => parts.filter(p => p.labelObj.visible).length, partSide:id => { if (!byId[id]) return null; const c = new THREE.Box3().setFromObject(byId[id].rig).getCenter(new THREE.Vector3()); return engine.worldToLocal(c).x > 0 ? 'right' : 'left'; }, simulate:(seconds, dt = 0.05) => { for (let t = 0; t < seconds; t += dt) step(dt); return { phi, engineSpeed }; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });

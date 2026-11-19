@@ -47,7 +47,7 @@ with sync_playwright() as p:
             failures.append(f'{tag}: WebGL unavailable in this runner'); ctx.close(); continue
         sides = {i: page.evaluate(f"__engineXray.partSide('{i}')") for i in ('clutch', 'clutchcover', 'alt', 'altcover', 'sprocket')}
         check(sides == {'clutch': 'left', 'clutchcover': 'left', 'alt': 'right', 'altcover': 'right', 'sprocket': 'right'}, f'{tag}: clutch on rider\'s left, alternator and sprocket on the right {sides}')
-        page.wait_for_timeout(4500)   # > one full 720° cycle at 1x
+        page.evaluate('__engineXray.simulate(8)')   # 8 simulated seconds (> one 720° cycle even at idle), independent of the runner's frame rate
         fxc = page.evaluate('__engineXray.fxCounters')
         check(all(fxc[k] > 0 for k in ('sparks', 'combustion', 'puffs', 'sprays')), f'{tag}: firing effects ran {fxc}')
         check(page.locator('#xrReadout').inner_text().count('Cyl') == 2 or width <= 900, f'{tag}: stroke readout shows both cylinders')
@@ -70,9 +70,9 @@ with sync_playwright() as p:
         page.click('#xrReset'); page.wait_for_timeout(100)
         back = [page.evaluate(f"__engineXray.partRootPosition('{p['id']}')") for p in DATA['parts']]
         check(all(abs(v) < 1e-9 for pos in back for v in pos), f'{tag}: reset restores every part exactly')
-        page.evaluate('__engineXray.setThrottle(0)'); page.wait_for_timeout(2500)
+        page.evaluate('__engineXray.setThrottle(0)'); page.evaluate('__engineXray.simulate(3)')
         idle_speed, idle_flap = page.evaluate('__engineXray.engineSpeed()'), page.evaluate('__engineXray.butterfly()')
-        page.evaluate('__engineXray.setThrottle(1)'); page.wait_for_timeout(2500)
+        page.evaluate('__engineXray.setThrottle(1)'); page.evaluate('__engineXray.simulate(3)')
         wot_speed, wot_flap = page.evaluate('__engineXray.engineSpeed()'), page.evaluate('__engineXray.butterfly()')
         check(wot_speed > idle_speed * 3, f'{tag}: throttle raises engine speed ({idle_speed:.2f} -> {wot_speed:.2f})')
         check(wot_flap > idle_flap + 1.2, f'{tag}: throttle opens the butterflies ({idle_flap:.2f} -> {wot_flap:.2f} rad)')
