@@ -56,14 +56,14 @@ with sync_playwright() as p:
         check(page.locator('.xr-lbl:visible').count() == 0, f'{tag}: labels start hidden (clean view)')
         if width > 900:
             page.click('#xrLbls'); check(page.locator('#xrLbls').inner_text() == 'Labels: Internals', f'{tag}: labels button cycles to internals')
-            page.click('#xrLbls'); check(page.locator('.xr-lbl:visible').count() == len(DATA['parts']), f'{tag}: all labels shown on request')
+            page.click('#xrLbls'); check(page.evaluate('__engineXray.labelsShown()') == len(DATA['parts']), f'{tag}: all labels shown on request')  # page state, not on-screen count: the label renderer hides off-frustum labels and updates on the next frame
             page.locator('.xr-lbl', has_text='Crankshaft').first.click()
             check(page.locator('#xrInsp h2').inner_text() == 'Crankshaft', f'{tag}: label click opens inspector')
             check(page.locator('.xr-cites li').count() >= 1, f'{tag}: inspector lists sources')
             page.locator('#xrList .nm', has_text='Balancer shafts').click()
             check(page.locator('#xrInsp h2').inner_text() == 'Balancer shafts', f'{tag}: parts list selects')
             page.click('#xrLbls')
-            check(page.locator('.xr-lbl:visible').count() == 1, f'{tag}: with labels off, only the selected part keeps its label')
+            check(page.evaluate('__engineXray.labelsShown()') == 1, f'{tag}: with labels off, only the selected part keeps its label')
         page.eval_on_selector('#xrEx', "e => { e.value = 100; e.dispatchEvent(new Event('input')) }")
         moved = page.evaluate("__engineXray.partRootPosition('head')")
         check(moved[1] > 0.1, f'{tag}: explode moves the head up')
