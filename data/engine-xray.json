@@ -350,7 +350,7 @@
    "label": "Throttle bodies",
    "sys": "Intake & exhaust",
    "shell": false,
-   "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). Air enters here; the injectors sit on the fuel rail just downstream. The shape is approximate.",
+   "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). Air enters here past a butterfly in each body, which the Throttle control opens. In X-ray mode the bodies are drawn see-through so the butterflies show. The shape is approximate.",
    "cite": [
     {
      "source": "media"
@@ -451,6 +451,15 @@
    }
   ],
   "text": "Each cylinder runs the same four-stroke cycle. The second cylinder runs 270° of crank rotation behind the first, matching Triumph's 270° firing interval. Effects are hidden while the engine is exploded.",
+  "cite": [
+   {
+    "source": "media"
+   }
+  ]
+ },
+ "throttle": {
+  "title": "Throttle",
+  "text": "The Throttle control stands in for the twist grip. The T120 uses ride-by-wire, so the grip sends a signal rather than pulling a cable to the throttle bodies. Here, more throttle opens the butterflies, draws in more air (pale dots), sprays more fuel, burns brighter, pushes out more exhaust and spins the engine faster, with a short lag as it revs. Hold to rev snaps it wide open until you let go. Engine speed is shown slowed down, relative to idle; it is not an rpm figure, and the throttle-to-speed relationship is illustrative.",
   "cite": [
    {
     "source": "media"

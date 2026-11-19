@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.5.0 — 19 November 2026
+- Engine X-ray: Throttle control (twist-grip stand-in, ↑/↓ keys) replaces the plain Speed slider. It drives engine speed, with a short lag as the engine revs, and works with firing on: the butterflies open, intake air is drawn in (new pale dots on each intake stroke), and fuel spray, flame and exhaust scale with throttle.
+- *Hold to rev* button (pointer or keyboard) snaps the throttle wide open until released. *Slow-mo* toggle (key S) slows the view to 0.2× for study.
+- Engine speed is shown relative to idle, never as rpm; the throttle-to-speed relationship is labelled illustrative. Explainer text cites Triumph's media kit for ride-by-wire.
+- Throttle bodies are drawn see-through in X-ray mode so the butterflies show.
+- Browser audit: checks that throttle raises engine speed, opens the butterflies, draws in intake air, and that Hold to rev releases back to the previous setting.
+
 ## 3.4.0 — 18 November 2026
 - New page `engine-xray.html`: animated 3D concept drawing of the 1200 cc twin with glass (X-ray) casings, 22 labelled parts, inspector with sources, explode/reset, isolate, solid mode and camera views. Linked from every page's navigation.
 - Part text and the facts strip come from `data/engine-xray.json`; every statement cites Triumph's launch media kit or a 2016 service-manual page. Shapes are marked illustrative on screen. No torque values, tool sizes, dimensions or part numbers on the page.

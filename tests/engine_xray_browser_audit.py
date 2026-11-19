@@ -1,5 +1,5 @@
 """Chromium audit for engine-xray.html, served over HTTP with its real CSP (ES modules need a server).
-Checks: loads without errors, WebGL draws, firing effects (spark, combustion, exhaust gas, injector spray) run, every data part has geometry, labels select parts,
+Checks: loads without errors, WebGL draws, firing effects (spark, combustion, exhaust gas, injector spray) run, throttle drives speed/butterflies/intake air, every data part has geometry, labels select parts,
 explode is reversible, modes toggle, and the toolbar fits a phone screen."""
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -63,6 +63,20 @@ with sync_playwright() as p:
         page.click('#xrReset'); page.wait_for_timeout(100)
         back = [page.evaluate(f"__engineXray.partRootPosition('{p['id']}')") for p in DATA['parts']]
         check(all(abs(v) < 1e-9 for pos in back for v in pos), f'{tag}: reset restores every part exactly')
+        page.evaluate('__engineXray.setThrottle(0)'); page.wait_for_timeout(2500)
+        idle_speed, idle_flap = page.evaluate('__engineXray.engineSpeed()'), page.evaluate('__engineXray.butterfly()')
+        page.evaluate('__engineXray.setThrottle(1)'); page.wait_for_timeout(2500)
+        wot_speed, wot_flap = page.evaluate('__engineXray.engineSpeed()'), page.evaluate('__engineXray.butterfly()')
+        check(wot_speed > idle_speed * 3, f'{tag}: throttle raises engine speed ({idle_speed:.2f} -> {wot_speed:.2f})')
+        check(wot_flap > idle_flap + 1.2, f'{tag}: throttle opens the butterflies ({idle_flap:.2f} -> {wot_flap:.2f} rad)')
+        check(page.evaluate('__engineXray.fxCounters.air') > 0, f'{tag}: intake air drawn in')
+        check(page.evaluate('__engineXray.fxCounters.sparks') > 0, f'{tag}: still firing at full throttle')
+        page.evaluate('__engineXray.setThrottle(0.3)')
+        blip = page.locator('#xrBlip')
+        if blip.is_visible():
+            bb = blip.bounding_box(); page.mouse.move(bb['x'] + bb['width'] / 2, bb['y'] + bb['height'] / 2)
+            page.mouse.down(); check(page.input_value('#xrTh') == '100', f'{tag}: hold to rev opens fully')
+            page.mouse.up(); check(page.input_value('#xrTh') == '30', f'{tag}: releasing returns to the previous throttle')
         page.click('#xrFx'); check(page.get_attribute('#xrFx', 'aria-pressed') == 'false', f'{tag}: firing toggle off')
         page.click('#xrFx')
         page.click('#xrModeS'); check(page.get_attribute('#xrModeS', 'aria-pressed') == 'true', f'{tag}: solid mode')
