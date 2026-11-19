@@ -14,8 +14,10 @@ const api = window.__engineXray = { ready:false, error:null };
 
 /* ---------- state (per-tab convenience only) ---------- */
 const KEY = 't120-engine-xray';
-const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, speed:1, labels:innerWidth < 700 ? 'internal' : 'all', isolate:false, sel:null, fx:true };
+const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, throttle:0.2, slowmo:false, labels:'off', isolate:false, sel:null, fx:true };
 try { Object.assign(state, JSON.parse(sessionStorage.getItem(KEY) || '{}')); } catch (e) {}
+delete state.speed;   // replaced by throttle in v3.5
+state.throttle = Math.min(1, Math.max(0, +state.throttle || 0));
 const save = () => { try { sessionStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
 
 /* ---------- layout (illustrative) ---------- */
@@ -33,13 +35,13 @@ const LAYOUT = {
   chain:      { anchor:[0.145,0.14,-0.035],dir:'right', explode:[0.06,0.1,0] },
   valves:     { anchor:[0.085,0.25,-0.04], dir:'up',    explode:[0,0.17,0] },
   plugs:      { anchor:[-0.06,0.31,0.06],  dir:'up',    explode:[0,0.32,0.04] },
-  gearbox:    { anchor:[-0.05,-0.075,-0.17], dir:'down', explode:[0,-0.06,-0.12] },
-  clutch:     { anchor:[0.236,-0.04,-0.13],dir:'down',  explode:[0.16,0,0] },
-  alt:        { anchor:[-0.22,-0.075,0],   dir:'down',  explode:[-0.12,0,0] },
-  sprocket:   { anchor:[-0.215,-0.1,-0.17],dir:'down',  explode:[-0.16,-0.02,0] },
+  gearbox:    { anchor:[0.05,-0.075,-0.17], dir:'down',  explode:[0,-0.06,-0.12] },
+  clutch:     { anchor:[-0.236,-0.04,-0.13],dir:'down', explode:[-0.16,0,0] },
+  alt:        { anchor:[0.22,-0.075,0],    dir:'down',  explode:[0.12,0,0] },
+  sprocket:   { anchor:[0.215,-0.1,-0.17], dir:'down',  explode:[0.16,-0.02,0] },
   crankcase:  { anchor:[0.1,0,0.165],      dir:'right', explode:[0,0,0] },
-  clutchcover:{ anchor:[0.25,0.11,-0.13],  dir:'right', explode:[0.3,0,0] },
-  altcover:   { anchor:[-0.25,0.07,0],     dir:'up',    explode:[-0.24,0,0] },
+  clutchcover:{ anchor:[-0.25,0.11,-0.13], dir:'left',  explode:[-0.3,0,0] },
+  altcover:   { anchor:[0.25,0.07,0],      dir:'up',    explode:[0.24,0,0] },
   sump:       { anchor:[0.05,-0.155,-0.03],dir:'down',  explode:[0,-0.12,0] },
   tb:         { anchor:[0.07,0.265,-0.18], dir:'up',    explode:[0,0.04,-0.16] },
   exhaust:    { anchor:[0.13,0.02,0.225],  dir:'right', explode:[0,-0.1,0.12] },
@@ -47,6 +49,10 @@ const LAYOUT = {
   fuelpump:   { anchor:[-0.03,0.5,-0.08],  dir:'up',    explode:[0,0.18,0] },
   fuelrail:   { anchor:[0.11,0.3,-0.13],   dir:'right', explode:[0,0.08,-0.06] },
 };
+// Sides (sourced in data/engine-xray.json): clutch + primary drive on the rider's LEFT; alternator,
+// front sprocket and final-drive chain on the RIGHT. These builders were drawn for the opposite
+// side, so their rigs are mirrored in x rather than re-deriving every coordinate.
+const MIRROR_X = new Set(['gearbox', 'clutch', 'clutchcover', 'alt', 'altcover', 'sprocket']);
 const SOLID = { block:0x3e4248, head:0x3e4248, crankcase:0x3e4248, sump:0x3e4248, camcover:0xc9ced4, clutchcover:0xc9ced4, altcover:0xc9ced4 };
 
 const R = 0.040, L = 0.130;           // crank throw and rod length: animation placeholders, not measurements
@@ -59,6 +65,11 @@ const pinY = a => R * Math.cos(a) + Math.sqrt(L * L - (R * Math.sin(a)) ** 2);
 const cycleDeg = (phi, i) => ((((phi * 180 / Math.PI) + (i ? 270 : 0)) % 720) + 720) % 720;   // 0 = TDC, start of intake
 const strokeOf = c => c < 180 ? 'intake' : c < 360 ? 'compression' : c < 540 ? 'power' : 'exhaust';
 const INJ = { y:0.27, z:-0.105, tilt:-0.6, len:0.04 };
+// Throttle model — ILLUSTRATIVE. The slider stands in for the twist grip. Engine speed here is a
+// slowed-down viewing speed (×1 = half a crank turn per second), not an rpm figure.
+const IDLE_SPEED = 0.35, MAX_SPEED = 3.2, SLOWMO = 0.2;
+const targetSpeed = t => IDLE_SPEED + (MAX_SPEED - IDLE_SPEED) * Math.pow(t, 1.3);
+const BUTTERFLY_CLOSED = 0.12;   // radians: a nearly closed plate at idle
 
 /* ---------- helpers ---------- */
 const std = (color, metalness, roughness) => () => new THREE.MeshStandardMaterial({ color, metalness, roughness });
@@ -86,7 +97,7 @@ const tube = (pts, r, m, seg = 80, closed = false) => new THREE.Mesh(new THREE.T
 const BUILD = {
   crank(rig, p) {
     const st = MAT.steel();
-    rig.add(mesh(cylX(0.018, -0.245, 0.205), st));
+    rig.add(mesh(cylX(0.018, -0.205, 0.245), st));
     CX.forEach((cx, i) => {
       const th = new THREE.Group(); th.rotation.x = ALPHA[i]; rig.add(th);
       th.add(mesh(cylX(0.019, cx - 0.026, cx + 0.026), st, 0, R, 0));
@@ -94,7 +105,7 @@ const BUILD = {
         th.add(mesh(new THREE.BoxGeometry(0.014, 0.075, 0.05), st, wx, 0.012, 0));
         th.add(mesh(halfDiscX(0.06, 0.014), st, wx, 0, 0)); });
     });
-    rig.add(mesh(gearGeo(0.04, 28, 0.018, 0.018), st, 0.18, 0, 0));
+    rig.add(mesh(gearGeo(0.04, 28, 0.018, 0.018), st, -0.18, 0, 0));   // primary drive gear: clutch side = rider's LEFT
     rig.add(mesh(gearGeo(0.02, 18, 0.008), st, 0.14, 0, 0));
     p.update = k => { rig.rotation.x = k.phi; };
   },
@@ -217,15 +228,21 @@ const BUILD = {
   clutchcover(rig, p) { rig.add(mesh(cylX(0.105, 0.17, 0.25, 48), p.solidMat, 0, IN.y, IN.z)); },
   altcover(rig, p) { rig.add(mesh(cylX(0.085, -0.25, -0.19, 48), p.solidMat)); },
   sump(rig, p) { rig.add(mesh(new RoundedBoxGeometry(0.3, 0.05, 0.24, 3, 0.012), p.solidMat, 0, -0.13, -0.03)); },
-  tb(rig) {
+  tb(rig, p) {
     const al = MAT.alu(), bl = MAT.black(), ru = MAT.rubber(), st = MAT.steel();
+    const bm = new THREE.MeshStandardMaterial({ color:0xcfa95f, metalness:0.85, roughness:0.3, side:THREE.DoubleSide });
+    p.flaps = [];
     CX.forEach(cx => { const s = Math.sign(cx);
+      const flap = pivot(rig, 0.228, -0.185, cx);                       // throttle butterfly on the shaft axis
+      const disc = new THREE.CircleGeometry(0.0285, 32); flap.add(mesh(disc, bm)); p.flaps.push(flap);
       const r = cylZ(0.02, 0.02, 0.04); r.translate(cx, 0.232, -0.135); rig.add(mesh(r, ru));
       const b = cylZ(0.03, 0.03, 0.07); b.translate(cx, 0.228, -0.185); rig.add(mesh(b, al));
       rig.add(mesh(new RoundedBoxGeometry(0.05, 0.032, 0.045, 3, 0.008), al, cx, 0.19, -0.185));
       rig.add(mesh(new THREE.BoxGeometry(0.012, 0.03, 0.03), bl, cx + s * 0.036, 0.228, -0.185));
       const t = cylZ(0.028, 0.034, 0.04); t.translate(cx, 0.228, -0.24); rig.add(mesh(t, ru)); });
     rig.add(mesh(cylX(0.004, -0.04, 0.04), st, 0, 0.228, -0.185));
+    p.ghost = true;   // see-through bodies in X-ray so the butterflies show
+    p.update = k => { const a = BUTTERFLY_CLOSED + k.throttle * (Math.PI / 2 - BUTTERFLY_CLOSED); p.flaps.forEach(f => { f.rotation.x = a; }); };
   },
   exhaust(rig, p) {
     const ch = MAT.chrome(); p.ghost = true;
@@ -265,11 +282,12 @@ const BUILD = {
     dots.userData.fx = true; rig.add(dots);
     const m4 = new THREE.Matrix4(), v = new THREE.Vector3(); let flow = 0;
     p.update = k => {
-      if (k.running) flow += k.dt * 0.35 * k.speed;
+      if (k.running) flow += k.dt * 0.35 * k.speed * (0.5 + k.throttle);
       for (let i = 0; i < N; i++) { path.getPointAt((flow + i / N) % 1, v); m4.makeTranslation(v.x, v.y, v.z); dots.setMatrixAt(i, m4); }
       dots.instanceMatrix.needsUpdate = true; dots.visible = k.fx;
       CX.forEach((cx, i) => { const c = cycleDeg(k.phi, i); const on = k.fx && k.running && c > 15 && c < 165;
-        p.spray[i].mat.opacity = on ? 0.55 + 0.25 * Math.sin(k.time * 40) : 0; p.spray[i].mesh.visible = on; if (on) k.counters.sprays++; });
+        p.spray[i].mat.opacity = on ? (0.35 + 0.45 * k.throttle) + 0.2 * Math.sin(k.time * 40) : 0; p.spray[i].mesh.visible = on;
+        p.spray[i].mesh.scale.set(0.7 + 0.8 * k.throttle, 0.6 + 1.0 * k.throttle, 0.7 + 0.8 * k.throttle); if (on) k.counters.sprays++; });
     };
   },
   radiator(rig, p) {
@@ -350,6 +368,7 @@ for (const d of data.parts) {
     p.edgeMat = new THREE.LineBasicMaterial({ color:xrayHex(), transparent:true, opacity:0.35, depthWrite:false });
   }
   build(rig, p);
+  if (MIRROR_X.has(d.id)) rig.scale.x = -1;
   rig.traverse(o => { if (o.isMesh && !(p.noPick && p.noPick.has(o)) && !o.userData.fx) { o.userData.partId = d.id; p.meshes.push(o); if (!d.shell) p.mats.add(o.material); } });
   if (d.shell) p.meshes.forEach(o => { o.renderOrder = 2; const l = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 32), p.edgeMat); l.renderOrder = 3; o.add(l); p.edges.push(l); });
   const b = el('button', 'xr-lbl ' + p.dir + (d.shell ? ' shell' : '')); b.type = 'button';
@@ -379,10 +398,14 @@ const fx = CX.map((cx, i) => {
   const curve = new THREE.CatmullRomCurve3([...headerPts(cx), [cx+sg*0.132,-0.165,-0.38], [cx+sg*0.134,-0.16,-0.47], [cx+sg*0.136,-0.15,-0.62]].map(q => new THREE.Vector3(...q)));
   const N = 70, gas = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 8, 6), new THREE.MeshBasicMaterial({ transparent:true, blending:THREE.AdditiveBlending, depthWrite:false }), N);
   gas.instanceMatrix.setUsage(THREE.DynamicDrawUsage); gas.setColorAt(0, new THREE.Color()); add(gas);
-  return { spark, sparkLight, glow, gm, glowLight, halo, hm, sparkHalo, curve, gas, N, puffs:Array.from({ length:N }, () => ({ on:false, t:0 })), next:0, acc:0, prevC:null, sparkT:0 };
+  const airCurve = new THREE.CatmullRomCurve3([[cx,0.228,-0.27],[cx,0.228,-0.185],[cx,0.232,-0.13],[cx,0.233,-0.09],[cx,0.222,-0.04],[cx,0.212,0]].map(q => new THREE.Vector3(...q)));
+  const AN = 40, air = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 6, 4), new THREE.MeshBasicMaterial({ color:0xbfe3ff, transparent:true, opacity:0.75, depthWrite:false }), AN);
+  air.instanceMatrix.setUsage(THREE.DynamicDrawUsage); add(air);
+  return { air, airCurve, AN, airP:Array.from({ length:AN }, () => ({ on:false, t:0 })), airNext:0, airAcc:0,
+    spark, sparkLight, glow, gm, glowLight, halo, hm, sparkHalo, curve, gas, N, puffs:Array.from({ length:N }, () => ({ on:false, t:0 })), next:0, acc:0, prevC:null, sparkT:0 };
 });
 const hot = new THREE.Color(0xff6a1a), cool = new THREE.Color(0x6b7280), tmpC = new THREE.Color(), tmpV = new THREE.Vector3(), tmpM = new THREE.Matrix4(), zeroM = new THREE.Matrix4().makeScale(0, 0, 0);
-const counters = { sparks:0, combustion:0, puffs:0, sprays:0 };
+const counters = { sparks:0, combustion:0, puffs:0, sprays:0, air:0 };
 function updateFx(k, dt) {
   const show = k.fx;
   fxGroup.visible = show;
@@ -397,22 +420,30 @@ function updateFx(k, dt) {
     f.spark.visible = sparkOn; f.sparkHalo.visible = sparkOn; f.sparkLight.intensity = sparkOn ? 1.2 : 0;
     if (sparkOn) f.spark.scale.setScalar(0.7 + Math.random() * 0.8);
     const a = k.phi + ALPHA[i], crown = pinY(a) + 0.035, gap = Math.max(0.003, 0.212 - crown);
-    const burn = c >= 358 && c < 540 ? Math.exp(-(c - 358) / 70) : 0;
+    const burn = (c >= 358 && c < 540 ? Math.exp(-(c - 358) / 70) : 0) * (0.45 + 0.55 * k.throttle);
     f.gm.opacity = Math.min(0.95, burn * 1.4); f.glow.visible = burn > 0.01;
     f.hm.opacity = burn * 0.38; f.halo.visible = burn > 0.01; f.halo.position.y = crown + gap / 2; f.halo.scale.set(0.07, Math.max(0.03, gap / 2 + 0.02), 0.07);
     f.glow.position.y = crown + gap / 2; f.glow.scale.set(0.047, Math.max(0.008, gap / 2), 0.047);
     f.glowLight.position.y = crown + gap / 2; f.glowLight.intensity = burn * 3;
     if (burn > 0.01) counters.combustion++;
     // exhaust gas: emit while this cylinder's exhaust stroke runs, then travel down the header
-    if (k.running && c >= 545) { f.acc += dt * 60 * k.speed; while (f.acc >= 1) { f.acc -= 1; const q = f.puffs[f.next]; q.on = true; q.t = 0; f.next = (f.next + 1) % f.N; counters.puffs++; } }
+    if (k.running && c >= 545) { f.acc += dt * 60 * k.speed * (0.35 + 0.9 * k.throttle); while (f.acc >= 1) { f.acc -= 1; const q = f.puffs[f.next]; q.on = true; q.t = 0; f.next = (f.next + 1) % f.N; counters.puffs++; } }
     f.puffs.forEach((q, j) => {
-      if (q.on && k.running) { q.t += dt * 0.55 * k.speed; if (q.t >= 1) q.on = false; }
+      if (q.on && k.running) { q.t += dt * 0.55 * k.speed * (0.6 + 0.6 * k.throttle); if (q.t >= 1) q.on = false; }
       if (!q.on) { f.gas.setMatrixAt(j, zeroM); return; }
       f.curve.getPointAt(q.t, tmpV); const sc = q.t > 0.82 ? 0.014 + 0.08 * (q.t - 0.82) : 0.013;
       tmpM.makeScale(sc, sc, sc).setPosition(tmpV); f.gas.setMatrixAt(j, tmpM);
       const fade = 1 - q.t; tmpC.copy(hot).lerp(cool, Math.min(1, q.t * 1.6)).multiplyScalar(0.25 + 0.55 * fade); f.gas.setColorAt(j, tmpC);
     });
     f.gas.instanceMatrix.needsUpdate = true; if (f.gas.instanceColor) f.gas.instanceColor.needsUpdate = true;
+    // intake air: drawn in through the throttle body during this cylinder's intake stroke, more with more throttle
+    if (k.running && c < 180) { f.airAcc += dt * 40 * k.speed * (0.12 + k.throttle); while (f.airAcc >= 1) { f.airAcc -= 1; const q = f.airP[f.airNext]; q.on = true; q.t = 0; f.airNext = (f.airNext + 1) % f.AN; counters.air++; } }
+    f.airP.forEach((q, j) => {
+      if (q.on && k.running) { q.t += dt * 0.9 * k.speed; if (q.t >= 1) q.on = false; }
+      if (!q.on) { f.air.setMatrixAt(j, zeroM); return; }
+      f.airCurve.getPointAt(q.t, tmpV); const sc = 0.0045; tmpM.makeScale(sc, sc, sc).setPosition(tmpV); f.air.setMatrixAt(j, tmpM);
+    });
+    f.air.instanceMatrix.needsUpdate = true;
   });
 }
 
@@ -457,7 +488,8 @@ function renderInspector() {
     insp.classList.add('empty');
     box.append(el('h2', null, 'Inspect a part'),
       el('p', null, 'Click a part or a label, or pick one from the list. In X-ray mode a click goes through the glass casings to the moving parts inside.'),
-      el('p', 'xr-hint', 'Keys: X x-ray/solid · Space run/pause · F firing · L labels · I isolate · 1–5 views · R reset · Esc deselect'));
+      el('p', 'xr-hint', 'Keys: ↑/↓ throttle · S slow-mo · X x-ray/solid · Space run/pause · F firing · L labels · I isolate · 1–5 views · R reset · Esc deselect'));
+    if (data.throttle) { box.append(el('div', 'xr-sub', data.throttle.title), el('p', 'xr-hint', data.throttle.text + ' Source: ' + data.throttle.cite.map(citeText).join('; ') + '.')); }
     if (data.cycle) {
       box.append(el('div', 'xr-sub', data.cycle.title));
       const ol = el('ol', 'xr-cycle'); for (const st of data.cycle.steps) { const li = el('li'); li.append(el('b', null, st.label + ' '), document.createTextNode(st.text)); ol.append(li); }
@@ -504,7 +536,7 @@ function applyMode() {
     p.edges.forEach(l => { l.visible = x; });
     p.xrayMat.uniforms.uOpacity.value = state.opacity; p.edgeMat.opacity = 0.12 + state.opacity * 0.55; });
   parts.forEach(p => { if (!p.ghost) return;      // see-through pipes in X-ray so the exhaust gas is visible
-    p.mats.forEach(m => { m.transparent = x; m.opacity = x ? 0.32 : 1; m.depthWrite = !x; m.needsUpdate = true; }); });
+    p.mats.forEach(m => { if (m.side === THREE.DoubleSide && p.id === 'tb') return; m.transparent = x; m.opacity = x ? 0.32 : 1; m.depthWrite = !x; m.needsUpdate = true; }); });
   $('xrModeX').setAttribute('aria-pressed', String(x)); $('xrModeS').setAttribute('aria-pressed', String(!x));
   $('xrOp').disabled = !x; $('xrOp').value = state.opacity; $('xrOpV').textContent = state.opacity.toFixed(2); save();
 }
@@ -512,11 +544,12 @@ function applyExplode() {
   parts.forEach(p => { p.root.position.set(...p.explode).multiplyScalar(state.explode); });  // from base every time: reversible
   $('xrEx').value = Math.round(state.explode * 100); $('xrExV').textContent = Math.round(state.explode * 100) + '%'; save();
 }
-const LBL = ['all', 'internal', 'off'], LBL_TXT = { all:'Labels: All', internal:'Labels: Internals', off:'Labels: Off' };
+const LBL = ['off', 'internal', 'all'],   // start clean; the selected part always keeps its label
+      LBL_TXT = { all:'Labels: All', internal:'Labels: Internals', off:'Labels: Off' };
 function applyLabels() {
   parts.forEach(p => { const show = p.root.visible && (p.id === state.sel || state.labels === 'all' || (state.labels === 'internal' && !p.shell));
     p.labelObj.visible = show; p.labelEl.style.display = show ? '' : 'none'; });
-  $('xrLbls').textContent = LBL_TXT[state.labels] || LBL_TXT.all;
+  $('xrLbls').textContent = LBL_TXT[state.labels] || LBL_TXT.off;
 }
 function setRun(v) { state.run = v; $('xrRun').setAttribute('aria-pressed', String(v)); $('xrRun').textContent = v ? 'Pause' : 'Run'; save(); }
 
@@ -542,7 +575,16 @@ $('xrModeS').addEventListener('click', () => { state.mode = 'solid'; applyMode()
 $('xrOp').addEventListener('input', e => { state.opacity = +e.target.value; applyMode(); });
 $('xrEx').addEventListener('input', e => { state.explode = +e.target.value / 100; applyExplode(); });
 $('xrRun').addEventListener('click', () => setRun(!state.run));
-$('xrSp').addEventListener('input', e => { state.speed = +e.target.value; $('xrSpV').textContent = state.speed.toFixed(1) + '×'; save(); });
+function setThrottle(v) { state.throttle = Math.min(1, Math.max(0, v)); $('xrTh').value = Math.round(state.throttle * 100); $('xrTh').setAttribute('aria-valuetext', Math.round(state.throttle * 100) + ' percent throttle'); save(); }
+$('xrTh').addEventListener('input', e => setThrottle(+e.target.value / 100));
+let blipFrom = null;
+const blipOn = e => { if (e) e.preventDefault(); if (blipFrom === null) blipFrom = state.throttle; setThrottle(1); $('xrBlip').setAttribute('aria-pressed', 'true'); };
+const blipOff = () => { if (blipFrom === null) return; setThrottle(blipFrom); blipFrom = null; $('xrBlip').setAttribute('aria-pressed', 'false'); };
+$('xrBlip').addEventListener('pointerdown', blipOn); ['pointerup', 'pointerleave', 'pointercancel', 'blur'].forEach(t => $('xrBlip').addEventListener(t, blipOff));
+$('xrBlip').addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) blipOn(e); });
+$('xrBlip').addEventListener('keyup', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); blipOff(); } });
+function setSlowmo(v) { state.slowmo = v; $('xrSlow').setAttribute('aria-pressed', String(v)); save(); }
+$('xrSlow').addEventListener('click', () => setSlowmo(!state.slowmo));
 $('xrLbls').addEventListener('click', () => { state.labels = LBL[(LBL.indexOf(state.labels) + 1) % 3]; applyLabels(); save(); });
 $('xrIso').addEventListener('click', () => setIsolate(!state.isolate));
 function setFx(v) { state.fx = v; $('xrFx').setAttribute('aria-pressed', String(v)); $('xrFx').textContent = v ? 'Firing: On' : 'Firing: Off'; save(); }
@@ -556,6 +598,9 @@ addEventListener('keydown', e => {
   else if (k === ' ' && !e.target.matches('button,a')) { e.preventDefault(); setRun(!state.run); }
   else if (k === 'l') $('xrLbls').click();
   else if (k === 'f') setFx(!state.fx);
+  else if (k === 'arrowup' && e.target.id !== 'xrTh') { e.preventDefault(); setThrottle(state.throttle + 0.05); }
+  else if (k === 'arrowdown' && e.target.id !== 'xrTh') { e.preventDefault(); setThrottle(state.throttle - 0.05); }
+  else if (k === 's') setSlowmo(!state.slowmo);
   else if (k === 'i') setIsolate(!state.isolate);
   else if (k === 'r') $('xrReset').click();
   else if (k === 'escape') select(null);
@@ -586,12 +631,14 @@ function resize() { const w = stage.clientWidth, h = stage.clientHeight; if (!w 
 sizeToViewport(); addEventListener('resize', sizeToViewport); new ResizeObserver(sizeToViewport).observe(document.querySelector('.xr-head'));
 new ResizeObserver(resize).observe(stage); resize();
 
-let phi = 0; const clock = new THREE.Clock(); const readout = $('xrReadout');
+let phi = 0, engineSpeed = targetSpeed(state.throttle); const clock = new THREE.Clock(); const readout = $('xrReadout');
 function frame() {
   const dt = Math.min(clock.getDelta(), 0.25);   // keep real-time speed on slow devices; effects below are crossing-based
-  if (state.run && !document.hidden) phi += dt * state.speed * Math.PI;
+  engineSpeed += (targetSpeed(state.throttle) - engineSpeed) * Math.min(1, dt * 2.2);   // revs rise and fall with a short lag
+  const viewSpeed = engineSpeed * (state.slowmo ? SLOWMO : 1);
+  if (state.run && !document.hidden) phi += dt * viewSpeed * Math.PI;
   const aIn = -phi * PRIMARY, running = state.run && !document.hidden;
-  const k = { phi, aIn, aOut:aIn * (0.037 / 0.043), dt, time:clock.elapsedTime, running, speed:state.speed, fx:state.fx && state.explode < 0.01, counters };
+  const k = { phi, aIn, aOut:aIn * (0.037 / 0.043), dt, time:clock.elapsedTime, running, speed:viewSpeed, throttle:state.throttle, fx:state.fx && state.explode < 0.01, counters };
   parts.forEach(p => { if (p.update) p.update(k); });
   updateFx(k, dt);
   if (tween) { tween.t = Math.min(1, tween.t + dt * 2.2); const e = 1 - Math.pow(1 - tween.t, 3);
@@ -599,15 +646,17 @@ function frame() {
   controls.update();
   const d = phi * 180 / Math.PI, c1 = ((d % 720) + 720) % 720, c2 = (((d + 270) % 720) + 720) % 720;
   const S = { intake:'Intake', compression:'Compress', power:'POWER', exhaust:'Exhaust' };
+  $('xrThV').textContent = Math.round(state.throttle * 100) + '%';
+  $('xrRpm').textContent = (viewSpeed / IDLE_SPEED).toFixed(1) + '× idle' + (state.slowmo ? ' (slow-mo)' : '');
   readout.textContent = 'Crank ' + String(Math.round(c1 % 360)).padStart(3, '0') + '°  Cyl 1 ' + S[strokeOf(c1)].padEnd(8) + '  Cyl 2 ' + S[strokeOf(c2)];
   renderer.render(scene, camera); labelRenderer.render(scene, camera);
 }
 
 buildList(); applyMode(); applyExplode(); setRun(state.run); setFx(state.fx !== false); applyVisibility();
-$('xrSp').value = state.speed; $('xrSpV').textContent = state.speed.toFixed(1) + '×';
+setThrottle(state.throttle); setSlowmo(!!state.slowmo);
 $('xrIso').setAttribute('aria-pressed', String(state.isolate));
 select(state.sel);
 if (renderer) { camera.position.copy(fit(VIEWS.q34, TARGET)); controls.update(); renderer.setAnimationLoop(frame); }
 document.addEventListener('visibilitychange', () => clock.getDelta());
 Object.assign(api, { ready:true, partCount:parts.length, dataCount:data.parts.length, select, state, webgl:!!renderer,
-  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });
+  fxState:() => fx.map(f => ({ glow:f.glow.visible, op:+f.gm.opacity.toFixed(2), y:+f.glow.position.y.toFixed(3), sy:+f.glow.scale.y.toFixed(4), spark:f.spark.visible, group:fxGroup.visible })), holdSpark:(i, sec = 3) => { fx[i].sparkT = sec; }, engineSpeed:() => engineSpeed, butterfly:() => byId.tb ? byId.tb.flaps[0].rotation.x : null, setThrottle, partSide:id => { if (!byId[id]) return null; const c = new THREE.Box3().setFromObject(byId[id].rig).getCenter(new THREE.Vector3()); return engine.worldToLocal(c).x > 0 ? 'right' : 'left'; }, fxCounters:counters, setPhase:deg => { phi = deg * Math.PI / 180; fx.forEach(f => { f.prevC = null; }); }, partRootPosition:id => byId[id] ? byId[id].root.position.toArray() : null });

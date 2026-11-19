@@ -16,6 +16,36 @@
    "short": "2016 T120 service manual",
    "title": "Bonneville T120 Motorcycle Service Manual, 04.2016 Issue 1 (2016 edition; check against a 2018 VIN). Chapter and torque-table rows as recorded in data/source-reference.json.",
    "url": null
+  },
+  "handbook-lc": {
+   "tier": "triumph",
+   "short": "Triumph owner's handbook (Street Twin, Thruxton, T120)",
+   "title": "Owner's Handbook: Street Twin, Thruxton, Thruxton R and Bonneville T120 (Triumph). Says the coolant expansion tank cap is on the right-hand side, towards the rear of the engine.",
+   "url": "https://www.triumphmotorcycles.co.uk/media-library/a3d5018edf66454eb7e1f759435b4c89.pdf"
+  },
+  "forum-covers": {
+   "tier": "forum",
+   "short": "TriumphRat: changing 1200 engine side covers",
+   "title": "TriumphRat thread quoting the service-manual removal steps: the clutch cable and the gear change actuator arm are disconnected at the clutch cover.",
+   "url": "https://www.triumphrat.net/threads/changing-out-1200-engine-side-covers.954556/"
+  },
+  "forum-clutchcover": {
+   "tier": "forum",
+   "short": "TriumphRat: removing the T120 clutch cover",
+   "title": "TriumphRat T120 thread: removing the alternator cover means moving the coolant overflow tank and the rear brake fluid reservoir.",
+   "url": "https://www.triumphrat.net/threads/anyone-have-a-line-on-instructions-to-remove-replace-clutch-cover.922482/"
+  },
+  "tec-bracket": {
+   "tier": "aftermarket",
+   "short": "TEC clutch cable bracket (liquid-cooled twins)",
+   "title": "TEC alloy clutch cable bracket for 2016-on water-cooled Bonnevilles; a fitted-owner review notes it shows on the left side of the motor.",
+   "url": "https://stagingnew.tecbikeparts.com/product/tec-alloy-clutch-cable-bracket/"
+  },
+  "photo-right": {
+   "tier": "photo",
+   "short": "Project photo: T120 right (chain) side",
+   "title": "Right-side photograph used in this project's Teardown (takenji1989, CC BY-NC-SA 2.0); the final-drive chain is on this side.",
+   "url": "https://www.flickr.com/photos/105592384@N07/51444289036"
   }
  },
  "facts": [
@@ -249,7 +279,7 @@
    "label": "Torque-assist clutch",
    "sys": "Transmission",
    "shell": false,
-   "text": "Torque-assist clutch, driven from the crank by a primary gear. Plate count and the side it sits on here are illustrative.",
+   "text": "Torque-assist clutch on the rider's LEFT side of the engine, driven from the crank by a primary gear. The left side follows from the manual's removal steps (the clutch cable and the gear change arm attach at the clutch cover) and from an owner's note that the clutch cable bracket sits on the left of the motor. Plate count is illustrative.",
    "cite": [
     {
      "source": "media"
@@ -258,6 +288,12 @@
      "source": "sm2016",
      "pages": "151–164",
      "note": "Clutch chapter"
+    },
+    {
+     "source": "forum-covers"
+    },
+    {
+     "source": "tec-bracket"
     }
    ]
   },
@@ -266,12 +302,18 @@
    "label": "Alternator",
    "sys": "Ancillaries",
    "shell": false,
-   "text": "Alternator behind its own engine cover. Rotor and stator layout and the side shown are illustrative.",
+   "text": "Alternator on the rider's RIGHT, at the crank end. Removing its cover means moving the coolant overflow tank and the rear brake fluid reservoir, and Triumph puts the coolant expansion tank on the right-hand side. Rotor and stator layout are illustrative.",
    "cite": [
     {
      "source": "sm2016",
      "pages": "60",
      "note": "Alternator cover to crankcase"
+    },
+    {
+     "source": "forum-clutchcover"
+    },
+    {
+     "source": "handbook-lc"
     }
    ]
   },
@@ -280,12 +322,15 @@
    "label": "Front sprocket",
    "sys": "Transmission",
    "shell": false,
-   "text": "Front sprocket on the gearbox output shaft, under the front sprocket cover. Size and side shown are illustrative.",
+   "text": "Front sprocket on the gearbox output shaft, under the front sprocket cover, on the rider's RIGHT, which is the final-drive chain side on this generation. The size is illustrative.",
    "cite": [
     {
      "source": "sm2016",
      "pages": "60–61",
      "note": "Front sprocket cover; front sprocket to output shaft nut"
+    },
+    {
+     "source": "photo-right"
     }
    ]
   },
@@ -308,12 +353,15 @@
    "label": "Clutch cover",
    "sys": "Castings & covers",
    "shell": true,
-   "text": "Clutch cover. The shape is approximate.",
+   "text": "Clutch cover on the rider's LEFT. The clutch cable and the gear change actuator arm attach to it. The shape is approximate.",
    "cite": [
     {
      "source": "sm2016",
      "pages": "60",
      "note": "Clutch cover to crankcase"
+    },
+    {
+     "source": "forum-covers"
     }
    ]
   },
@@ -322,12 +370,18 @@
    "label": "Alternator cover",
    "sys": "Castings & covers",
    "shell": true,
-   "text": "Alternator cover. The shape is approximate.",
+   "text": "Alternator cover on the rider's RIGHT. The shape is approximate.",
    "cite": [
     {
      "source": "sm2016",
      "pages": "60",
      "note": "Alternator cover to crankcase"
+    },
+    {
+     "source": "forum-clutchcover"
+    },
+    {
+     "source": "handbook-lc"
     }
    ]
   },
@@ -350,7 +404,7 @@
    "label": "Throttle bodies",
    "sys": "Intake & exhaust",
    "shell": false,
-   "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). Air enters here; the injectors sit on the fuel rail just downstream. The shape is approximate.",
+   "text": "Twin throttle bodies with ride-by-wire fuel injection, styled to look like carburettors (see also Rider tricks on the Dashboard). Air enters here past a butterfly in each body, which the Throttle control opens. In X-ray mode the bodies are drawn see-through so the butterflies show. The shape is approximate.",
    "cite": [
     {
      "source": "media"
@@ -451,6 +505,15 @@
    }
   ],
   "text": "Each cylinder runs the same four-stroke cycle. The second cylinder runs 270° of crank rotation behind the first, matching Triumph's 270° firing interval. Effects are hidden while the engine is exploded.",
+  "cite": [
+   {
+    "source": "media"
+   }
+  ]
+ },
+ "throttle": {
+  "title": "Throttle",
+  "text": "The Throttle control stands in for the twist grip. The T120 uses ride-by-wire, so the grip sends a signal rather than pulling a cable to the throttle bodies. Here, more throttle opens the butterflies, draws in more air (pale dots), sprays more fuel, burns brighter, pushes out more exhaust and spins the engine faster, with a short lag as it revs. Hold to rev snaps it wide open until you let go. Engine speed is shown slowed down, relative to idle; it is not an rpm figure, and the throttle-to-speed relationship is illustrative.",
   "cite": [
    {
     "source": "media"
