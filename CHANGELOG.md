@@ -5,6 +5,7 @@
 - *Hold to rev* button (pointer or keyboard) snaps the throttle wide open until released. *Slow-mo* toggle (key S) slows the view to 0.2× for study.
 - Engine speed is shown relative to idle, never as rpm; the throttle-to-speed relationship is labelled illustrative. Explainer text cites Triumph's media kit for ride-by-wire.
 - Throttle bodies are drawn see-through in X-ray mode so the butterflies show.
+- Labels start hidden for a clean view; the Labels button cycles Off → Internals → All (key L), and a selected part always keeps its label.
 - Browser audit: checks that throttle raises engine speed, opens the butterflies, draws in intake air, and that Hold to rev releases back to the previous setting.
 
 ## 3.4.0 — 18 November 2026

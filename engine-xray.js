@@ -14,7 +14,7 @@ const api = window.__engineXray = { ready:false, error:null };
 
 /* ---------- state (per-tab convenience only) ---------- */
 const KEY = 't120-engine-xray';
-const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, throttle:0.2, slowmo:false, labels:innerWidth < 700 ? 'internal' : 'all', isolate:false, sel:null, fx:true };
+const state = { mode:'xray', opacity:0.25, explode:0, run:!reduced, throttle:0.2, slowmo:false, labels:'off', isolate:false, sel:null, fx:true };
 try { Object.assign(state, JSON.parse(sessionStorage.getItem(KEY) || '{}')); } catch (e) {}
 delete state.speed;   // replaced by throttle in v3.5
 state.throttle = Math.min(1, Math.max(0, +state.throttle || 0));
@@ -539,11 +539,12 @@ function applyExplode() {
   parts.forEach(p => { p.root.position.set(...p.explode).multiplyScalar(state.explode); });  // from base every time: reversible
   $('xrEx').value = Math.round(state.explode * 100); $('xrExV').textContent = Math.round(state.explode * 100) + '%'; save();
 }
-const LBL = ['all', 'internal', 'off'], LBL_TXT = { all:'Labels: All', internal:'Labels: Internals', off:'Labels: Off' };
+const LBL = ['off', 'internal', 'all'],   // start clean; the selected part always keeps its label
+      LBL_TXT = { all:'Labels: All', internal:'Labels: Internals', off:'Labels: Off' };
 function applyLabels() {
   parts.forEach(p => { const show = p.root.visible && (p.id === state.sel || state.labels === 'all' || (state.labels === 'internal' && !p.shell));
     p.labelObj.visible = show; p.labelEl.style.display = show ? '' : 'none'; });
-  $('xrLbls').textContent = LBL_TXT[state.labels] || LBL_TXT.all;
+  $('xrLbls').textContent = LBL_TXT[state.labels] || LBL_TXT.off;
 }
 function setRun(v) { state.run = v; $('xrRun').setAttribute('aria-pressed', String(v)); $('xrRun').textContent = v ? 'Pause' : 'Run'; save(); }
 
