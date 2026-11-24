@@ -12,6 +12,14 @@ export async function compilePage(name){
  if(instrument){runtime=scripts.map(n=>serializeOuter(n)).join('\n');for(const n of scripts)remove(n);}
  if(oldHead)remove(oldHead);
  const headNodes=head.childNodes.filter(n=>!(n.tagName==='script'&&attr(n,'src')==='theme.js') && (instrument||n.tagName!=='style'&&!(n.tagName==='link'&&attr(n,'rel')==='stylesheet'&&attr(n,'href')!=='theme.css')));
+ // All remote sources are explicitly HTTPS. Preserve same-origin development
+ // URLs on loopback, which WebKit can otherwise rewrite to an unavailable TLS port.
+ for(const node of headNodes){
+  if(attr(node,'http-equiv')==='Content-Security-Policy'){
+   const policy=node.attrs.find(a=>a.name==='content');
+   policy.value=policy.value.replace(/;\s*upgrade-insecure-requests\s*;?$/,'');
+  }
+ }
  let contents=instrument?serialize(body):'';
  if(name==='exploded.html')contents='<p class="hb-model-caption"><b id="wordName">Bonneville T120</b> · <span id="wordSub">2018 workshop explorer</span></p>'+contents;
  if(name==='index.html'){

@@ -32,10 +32,12 @@ try:
         page = browser.new_page()
         page.route("**/*", lambda route: route.continue_() if route.request.url.startswith(origin) else route.abort())
         errors = []
-        page.on("pageerror", lambda e: errors.append(str(e)))
+        page.on("pageerror", lambda e: (errors.append(str(e)), print("Page error:", e, flush=True)))
+        page.on("requestfailed", lambda req: print("Local request failed:", req.url, req.failure, flush=True) if req.url.startswith(origin) else None)
         for width in [390, 768, 1280]:
             page.set_viewport_size({"width": width, "height": 840})
             for path, selector in routes.items():
+                print(engine, width, path, flush=True)
                 page.goto(origin + "/" + path)
                 page.locator(selector).first.wait_for(state="attached")
                 assert page.evaluate("document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1"), (engine, width, path)
