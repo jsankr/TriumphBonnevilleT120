@@ -45,7 +45,7 @@ function renderImage(){
   if(trustedRef&&!localUri){sourceLink.href=ref.page;sourceLink.textContent=`Source: ${ref.publisher} ↗`;}
   const im=$('photoImage');
   const empty=$('photoEmpty');
-  if(uri){im.src=uri;im.hidden=false;empty.hidden=true;
+  if(uri){if(im.getAttribute('src')!==uri)im.src=uri;im.hidden=false;empty.hidden=true;
     $('photoStatus').textContent=localUri ? 'Your local photo is loaded. You may place its real part markers.' : `External 2018 model reference (${ref.publisher}); not your own motorcycle. Open original source for licence and details.`;
   } else {im.removeAttribute('src');im.hidden=true;empty.hidden=false;
     $('photoStatus').textContent='No photo loaded for this camera angle and teardown stage.';
@@ -66,7 +66,6 @@ function markerPosition(photo,ev){
   const left=r.left+(r.width-drawnW)/2,top=r.top+(r.height-drawnH)/2;
   const x=(ev.clientX-left)/drawnW,y=(ev.clientY-top)/drawnH;
   if(x<0||x>1||y<0||y>1)return null;
-  const stageRect=$('photoStage').getBoundingClientRect();
   return {x:Math.round(x*10000)/10000,y:Math.round(y*10000)/10000};
 }
 function drawPointCoordinate(marker,img){
@@ -136,7 +135,17 @@ function exportMarkers(){const m=[...state.markers.entries()].flatMap(([viewStag
 function attachHandlers(){
  for(const id of ['photoInput','emptyPhotoInput']) $(id).addEventListener('change',e=>imageChange(e.target.files?.[0]));
  $('photoImage').addEventListener('load',renderMarkers);
- $('photoImage').addEventListener('error',()=>{if(!state.images.has(key())){ $('photoImage').hidden=true;$('photoEmpty').hidden=false;$('photoStatus').textContent='Publisher image unavailable in this browser. Use the original source link above or upload a photo.'; }});
+ $('photoImage').addEventListener('error',()=>{
+   const image=$('photoImage');
+   if(image.naturalWidth || !image.complete || !image.getAttribute('src'))return;
+   state.placing=false;
+   image.hidden=true;
+   $('photoEmpty').hidden=false;
+   $('markers').replaceChildren();
+   $('photoStatus').textContent=state.images.has(key())
+     ? 'This browser could not read the photo. Choose another JPEG, PNG, WebP or GIF.'
+     : 'Publisher image unavailable in this browser. Use the original source link above or upload a photo.';
+ });
  window.addEventListener('resize',renderMarkers);
  $('editHotspot').addEventListener('click',()=>{if(!state.images.has(key())){$('photoStatus').textContent='Upload a photo before adding a marker.';return;}
    if(!state.partId){$('photoStatus').textContent='Select a component before placing its location marker.';return;}

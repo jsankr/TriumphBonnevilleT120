@@ -1,6 +1,7 @@
 """Functional smoke checks against the built site in the three Playwright engines."""
 import functools
 import http.server
+import os
 import pathlib
 import re
 import sys
@@ -81,6 +82,21 @@ def check_engine(page, engine):
         expect(marker).not_to_have_css("transform", "none")
         assert marker.evaluate("el=>el.style.transform") != before, "Orbit drag did not move the projected part"
         expect(page.locator("#xrCaption")).to_have_text("Crankshaft")
+        if engine == "chromium" and page.viewport_size["width"] == 402:
+            # Two touch contacts spread around the centre, then release together.
+            cdp = page.context.new_cdp_session(page)
+            cdp.send("Emulation.setTouchEmulationEnabled", {"enabled": True, "maxTouchPoints": 2})
+            points = lambda dx: [{"x":x-dx,"y":y,"id":1},{"x":x+dx,"y":y,"id":2}]
+            initial = marker.evaluate("el=>el.style.transform")
+            cdp.send("Input.dispatchTouchEvent", {"type":"touchStart","touchPoints":points(25)})
+            for dx in [32,40,50]:
+                cdp.send("Input.dispatchTouchEvent", {"type":"touchMove","touchPoints":points(dx)})
+            cdp.send("Input.dispatchTouchEvent", {"type":"touchEnd","touchPoints":[]})
+            expect(marker).not_to_have_attribute("style",re.compile(re.escape(initial)))
+            expect(page.locator("#xrCaption")).to_have_text("Crankshaft")
+            cdp.send("Emulation.setTouchEmulationEnabled", {"enabled": False})
+            cdp.detach()
+            print("Two-finger pinch preserved selection", flush=True)
         print("WebGL canvas, nine hit targets and orbit drag passed", flush=True)
     else:
         assert engine != "chromium", "Chromium's WebGL test requires a renderer"
@@ -127,6 +143,7 @@ def check_viewer(page, path, engine):
             raise AssertionError("Every visible diagram marker is obstructed")
     elif path == "workshop/photo-teardown.html":
         page.locator("#photoInput").set_input_files(root/"workshop/assets/photo/t120-cranberry-hero.webp")
+        page.locator("#photoImage").evaluate("img=>img.decode()")
         page.locator("#partList button").first.click()
         page.locator("#editHotspot").click()
         photo = page.locator("#photoImage")
@@ -149,9 +166,9 @@ def check_viewer(page, path, engine):
 try:
     with sync_playwright() as pw:
         engine = sys.argv[1]
-        browser = getattr(pw, engine).launch(args=["--use-angle=swiftshader","--enable-unsafe-swiftshader"] if engine=="chromium" else [])
+        browser = getattr(pw, engine).launch(headless=not bool(os.environ.get("DISPLAY")), args=["--use-angle=swiftshader","--enable-unsafe-swiftshader"] if engine=="chromium" else [])
         page = browser.new_page()
-        page.route("**/*", lambda route: route.continue_() if route.request.url.startswith(origin) else route.abort())
+        page.route("**/*", lambda route: route.continue_() if route.request.url.startswith((origin+"/","blob:"+origin+"/","data:")) else route.abort())
         errors = []
         page.on("pageerror", lambda e: (errors.append(str(e)), print("Page error:", e, flush=True)))
         page.on("requestfailed", lambda req: print("Local request failed:", req.url, req.failure, flush=True) if req.url.startswith(origin) else None)

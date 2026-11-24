@@ -624,10 +624,23 @@ addEventListener('keydown', e => {
   else if (/^[1-5]$/.test(k)) goTo(VIEWS[['q34','left','right','front','top'][+k - 1]], TARGET);
 });
 if (renderer) {
-  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null;
-  renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
-  renderer.domElement.addEventListener('pointerup', e => {
-    if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) { down = null; return; } down = null;
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+  const activePointers = new Set();
+  let tap = null;
+  const canvas = renderer.domElement;
+  canvas.addEventListener('pointerdown', e => {
+    activePointers.add(e.pointerId);
+    tap = activePointers.size === 1 && e.button === 0 ? { id:e.pointerId, x:e.clientX, y:e.clientY } : null;
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (tap?.id === e.pointerId && Math.hypot(e.clientX - tap.x, e.clientY - tap.y) > 6) tap = null;
+  });
+  canvas.addEventListener('pointercancel', e => { activePointers.delete(e.pointerId); tap = null; });
+  canvas.addEventListener('pointerup', e => {
+    activePointers.delete(e.pointerId);
+    const pick = tap?.id === e.pointerId && Math.hypot(e.clientX - tap.x, e.clientY - tap.y) <= 6;
+    tap = null;
+    if (!pick) return;
     const r = renderer.domElement.getBoundingClientRect();
     ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, camera);
     const hits = ray.intersectObjects(parts.filter(p => p.root.visible).flatMap(p => p.meshes), false);
