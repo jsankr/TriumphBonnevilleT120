@@ -65,31 +65,64 @@ body.xr-page{margin:0;overflow:hidden}
 #xrBlip[aria-pressed="true"]{border-color:#d9822b;background:rgb(217 130 43 / .25)}
 .xr-sep{width:1px;align-self:stretch;background:var(--glass-edge)}
 
-/* 3D labels */
-.xr-lbl{pointer-events:auto;position:relative;display:flex;align-items:center;border:0;background:none;padding:0;cursor:pointer;font-family:inherit}
-.xr-lbl .t{font-size:11.5px;font-weight:550;padding:3px 8px;border-radius:7px;background:var(--glass-2);border:1px solid var(--glass-edge);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);white-space:nowrap;color:var(--fg)}
-.xr-lbl::before{content:"";position:absolute;background:var(--fg-3);opacity:.75}
-.xr-lbl::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--fg-2);box-shadow:0 0 0 2px rgb(var(--base-rgb) / .8)}
-.xr-lbl.up{flex-direction:column;padding-bottom:26px}.xr-lbl.up::before{left:50%;bottom:3px;width:1px;height:24px}.xr-lbl.up::after{left:calc(50% - 3.5px);bottom:-3px}
-.xr-lbl.down{flex-direction:column;padding-top:26px}.xr-lbl.down::before{left:50%;top:3px;width:1px;height:24px}.xr-lbl.down::after{left:calc(50% - 3.5px);top:-3px}
-.xr-lbl.left{padding-right:30px}.xr-lbl.left::before{top:50%;right:3px;height:1px;width:28px}.xr-lbl.left::after{top:calc(50% - 3.5px);right:-3px}
-.xr-lbl.right{padding-left:30px}.xr-lbl.right::before{top:50%;left:3px;height:1px;width:28px}.xr-lbl.right::after{top:calc(50% - 3.5px);left:-3px}
-.xr-lbl.shell .t{font-style:italic;color:var(--fg-2)}
-.xr-lbl.on .t{border-color:var(--line-gold);font-weight:680;box-shadow:0 0 0 1px var(--line-gold)}
-.xr-lbl.on::after{background:var(--line-gold)}
-
-@media (max-width:1180px){.xr-facts{max-width:none}}
-@media (max-width:900px){
-  #xrTreeToggle{display:inline-block}
-  .xr-facts{display:none}
-  .xr-tree{display:none;z-index:5;top:calc(var(--xr-head,60px) + 18px);bottom:auto;max-height:60%}
-  .xr-tree.open{display:flex}
-  .xr-insp{left:12px;right:12px;width:auto;top:auto;bottom:150px;max-height:34%}
-  .xr-facts{max-width:none}
-  .xr-insp.empty{display:none}
-  .xr-toolbar{left:10px;right:10px;transform:none;bottom:10px;padding:8px;gap:8px}
-  .xr-readout,.xr-spd,.xr-sep{display:none}
-  .xr-ctl{min-width:96px}
-  .xr-title h1 span{display:none}
+/* The model, controls and reading surfaces occupy separate layout cells. */
+body.xr-page { overflow:visible }
+.xr-root {
+  display:grid;
+  grid-template-columns:minmax(160px,.65fr) minmax(0,2.65fr) minmax(200px,.95fr);
+  grid-template-areas:"head head head" "tree viewer inspector";
+  align-items:start;
+  gap:clamp(12px,1.5vw,24px);
+  max-width:1640px;
+  margin:0 auto;
+  padding:clamp(12px,2vw,32px);
+  height:auto;
+  min-height:0;
+  overflow:visible;
 }
-@media (forced-colors:active){.xr-panel,.xr-lbl .t{border:1px solid CanvasText}}
+.xr-root .xr-head, .xr-root .xr-panel { position:static; inset:auto; transform:none; width:auto; min-width:0; max-width:none }
+.xr-root .xr-head { grid-area:head; pointer-events:auto }
+.xr-facts { max-width:none; min-width:0 }
+.xr-badge,.xr-fact { background:transparent }
+.xr-tree { grid-area:tree; max-height:min(74vh,50rem) }
+.xr-insp { grid-area:inspector; max-height:none; overflow:visible; overflow-wrap:anywhere; scroll-margin:5rem }
+.xr-root .xr-insp,.xr-root .xr-toolbar,.xr-root .xr-tree {
+  background:transparent; box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none;
+}
+.xr-root .xr-insp { border:0; border-inline-start:1px solid var(--glass-edge); border-radius:0 }
+.xr-workbench { grid-area:viewer; min-width:0 }
+.xr-frame { position:relative; isolation:isolate; overflow:hidden; border:1px solid var(--glass-edge); border-radius:14px; height:clamp(340px,54vh,620px) }
+.xr-frame .xr-stage { overflow:hidden }
+.xr-fallback { position:static; display:block; margin:0; padding:8px 2px; text-align:start; background:transparent }
+.xr-frame.unavailable { display:none }
+.xr-caption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:4px 12px; padding:8px 2px; color:var(--fg-2); font-size:.87rem }
+.xr-caption a { color:var(--line-gold); text-underline-offset:.2em }
+.xr-root .xr-toolbar { border:0; border-block:1px solid var(--glass-edge); border-radius:0; justify-content:flex-start; padding:12px 0; gap:8px 12px }
+.xr-btn,.xr-row .nm,.xr-row .eye { min-height:40px }
+.xr-toolbar .xr-readout { min-width:0; white-space:normal }
+.xr-toolbar .xr-ctl { min-width:96px }
+.xr-legend { display:flex; gap:6px; flex-wrap:wrap; padding:12px 0 }
+.xr-legend[hidden],.xr-legend button[hidden],.xr-caption [hidden] { display:none }
+.xr-legend button { display:inline-flex; gap:6px; align-items:center; white-space:normal; text-align:start }
+.xr-number { display:inline-grid; place-items:center; min-width:1.5em; height:1.5em; border-radius:50%; background:var(--glass-2); color:var(--fg); font:650 12px/1 system-ui,sans-serif; border:1px solid var(--glass-edge) }
+.xr-labels,.xr-labels * { pointer-events:none }
+.xr-number.on { border-color:var(--line-gold); outline:1px solid var(--line-gold) }
+@media(max-width:1100px) and (min-width:901px) {
+  .xr-root { grid-template-columns:190px minmax(0,1fr); grid-template-areas:"head head" "tree viewer" "tree inspector" }
+}
+@media(max-width:900px) {
+  .xr-root { grid-template-columns:minmax(0,1fr); grid-template-areas:"head" "tree" "viewer" "inspector"; gap:0; padding:12px clamp(10px,2.5vw,20px) 24px }
+  .xr-root .xr-head { margin-bottom:12px }
+  #xrTreeToggle { display:inline-block }
+  .xr-tree,.xr-facts,.xr-insp.empty,.xr-title h1 span,.xr-sep { display:none }
+  .xr-tree.open { display:flex; max-height:18rem; margin-bottom:12px }
+  .xr-frame { height:clamp(265px,45vh,465px); height:clamp(265px,45svh,465px) }
+  .xr-root .xr-insp { margin-top:10px; padding:12px 2px; border:0 }
+  .xr-btn { padding:6px 10px }
+  .xr-toolbar .xr-readout { font-size:11px }
+  .xr-title { gap:6px 12px }
+}
+@media(max-height:500px) and (orientation:landscape) {
+  .xr-frame { height:clamp(160px,53vh,260px) }
+}
+@media(forced-colors:active) { .xr-number,.xr-panel { border:1px solid CanvasText } }

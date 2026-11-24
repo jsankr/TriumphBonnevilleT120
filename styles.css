@@ -45,8 +45,8 @@ h1,h2,h3,h4{font-family:var(--display);margin:0;letter-spacing:-.005em}
 .hotspot::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--fg)}
 .hotspot:hover,.hotspot.is-selected{border-color:var(--line-gold);box-shadow:0 0 0 6px rgb(var(--gold-rgb) / .25)}
 .hotspot.is-selected::after{background:var(--line-gold)}
-.hotspot .tip{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;font-size:12.5px;padding:4px 9px;border-radius:8px;background:rgb(var(--base-rgb) / .85);border:1px solid var(--glass-edge);color:var(--fg);opacity:0;pointer-events:none;transition:opacity .15s}
-.hotspot:hover .tip,.hotspot:focus-visible .tip,.hotspot.is-selected .tip{opacity:1}
+.hotspot .tip{display:none}
+.part-caption{padding:4px 14px 10px;background:transparent;font-size:.9rem;color:var(--fg)}
 .hero-stage figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;border-top:1px solid var(--glass-edge);font-size:12px;color:var(--fg-3)}
 .hero-stage figcaption a{color:var(--fg-2)}
 

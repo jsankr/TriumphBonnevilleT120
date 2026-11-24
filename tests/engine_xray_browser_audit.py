@@ -63,7 +63,7 @@ with sync_playwright() as p:
             page.locator('#xrList .nm', has_text='Balancer shafts').click()
             check(page.locator('#xrInsp h2').inner_text() == 'Balancer shafts', f'{tag}: parts list selects')
             page.click('#xrLbls')
-            check(page.evaluate('__engineXray.labelsShown()') == 1, f'{tag}: with labels off, only the selected part keeps its label')
+            check(page.evaluate('__engineXray.labelsShown()') == 0, f'{tag}: with labels off, selection is described outside the model')
         page.eval_on_selector('#xrEx', "e => { e.value = 100; e.dispatchEvent(new Event('input')) }")
         moved = page.evaluate("__engineXray.partRootPosition('head')")
         check(moved[1] > 0.1, f'{tag}: explode moves the head up')
@@ -81,7 +81,7 @@ with sync_playwright() as p:
         page.evaluate('__engineXray.setThrottle(0.3)')
         blip = page.locator('#xrBlip')
         if blip.is_visible():
-            bb = blip.bounding_box(); page.mouse.move(bb['x'] + bb['width'] / 2, bb['y'] + bb['height'] / 2)
+            blip.scroll_into_view_if_needed(); bb = blip.bounding_box(); page.mouse.move(bb['x'] + bb['width'] / 2, bb['y'] + bb['height'] / 2)
             page.mouse.down(); check(page.input_value('#xrTh') == '100', f'{tag}: hold to rev opens fully')
             page.mouse.up(); check(page.input_value('#xrTh') == '30', f'{tag}: releasing returns to the previous throttle')
         page.click('#xrFx'); check(page.get_attribute('#xrFx', 'aria-pressed') == 'false', f'{tag}: firing toggle off')
