@@ -2,9 +2,6 @@
 <body class="xr-page">
 <header class="site-top"><a class="wordmark" href="index.html"><b>Bonneville T120</b><span>2018 workshop explorer</span></a><nav class="site-nav" aria-label="Sections"><a href="index.html">Dashboard</a><a href="exploded.html">Teardown</a><a href="engine-xray.html" aria-current="page">Engine X-ray</a><a href="catalogue.html">Parts catalogue</a><a href="electrical.html">Electrical</a><a href="manual-index.html">Manual index</a></nav><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme" aria-pressed="false"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button></header><div class="coachline" aria-hidden="true"></div>
 <main id="xrRoot" class="xr-root">
-  <div id="xrStage" class="xr-stage" role="img" aria-label="Animated 3D concept drawing of the T120 twin, casings shown as glass. Drag to orbit, scroll to zoom, click a part to inspect it. The same parts are listed in the Parts panel."></div>
-  <p id="xrFallback" class="xr-fallback" role="alert" hidden></p>
-
   <div class="xr-head">
     <div class="xr-title">
       <button class="xr-btn" id="xrTreeToggle" type="button" aria-expanded="false" aria-controls="xrTree">Parts</button>
@@ -13,31 +10,36 @@
     </div>
     <div class="xr-facts" id="xrFacts" aria-label="Sourced engine facts"></div>
   </div>
-
   <aside id="xrTree" class="xr-panel xr-tree" aria-label="Parts list">
     <div class="xr-tree-hd"><input type="search" id="xrSearch" placeholder="Search parts…" aria-label="Search parts"></div>
     <div id="xrList" class="xr-list"></div>
   </aside>
-
+  <section class="xr-workbench" aria-label="Interactive engine">
+    <div class="xr-frame">
+      <div id="xrStage" class="xr-stage" role="img" aria-label="Animated 3D concept drawing of the T120 twin, casings shown as glass. Drag to orbit, scroll to zoom, click a part to inspect it. The same parts are listed in the Parts panel."></div>
+    </div>
+    <p id="xrFallback" class="xr-fallback" role="alert" hidden></p>
+    <div class="xr-caption"><span id="xrCaption">Drag to rotate · Pinch or scroll to zoom</span><a href="#xrInsp" id="xrDetailLink" hidden>Part details</a></div>
+    <div class="xr-panel xr-toolbar" role="toolbar" aria-label="View controls">
+      <div class="xr-seg" role="group" aria-label="Render mode"><button class="xr-btn" id="xrModeX" type="button" aria-pressed="true">X-ray</button><button class="xr-btn" id="xrModeS" type="button" aria-pressed="false">Solid</button></div>
+      <div class="xr-ctl"><label for="xrOp">Glass <output id="xrOpV">0.25</output></label><input id="xrOp" type="range" min="0" max="1" step="0.01" value="0.25"></div>
+      <div class="xr-ctl"><label for="xrEx">Explode <output id="xrExV">0%</output></label><input id="xrEx" type="range" min="0" max="100" step="1" value="0"></div>
+      <span class="xr-sep" aria-hidden="true"></span>
+      <button class="xr-btn" id="xrRun" type="button" aria-pressed="true">Pause</button>
+      <button class="xr-btn" id="xrFx" type="button" aria-pressed="true">Firing: On</button>
+      <div class="xr-ctl xr-thr"><label for="xrTh">Throttle <output id="xrThV">20%</output></label><input id="xrTh" type="range" min="0" max="100" step="1" value="20"><span class="xr-rpm">Engine speed <output id="xrRpm">1.0× idle</output></span></div>
+      <button class="xr-btn" id="xrBlip" type="button" aria-pressed="false" title="Hold to snap the throttle wide open">Hold to rev</button>
+      <button class="xr-btn" id="xrSlow" type="button" aria-pressed="false" title="S">Slow-mo</button>
+      <span class="xr-readout" id="xrReadout" aria-hidden="true"></span>
+      <span class="xr-sep" aria-hidden="true"></span>
+      <button class="xr-btn" id="xrLbls" type="button" title="L">Labels: Off</button>
+      <button class="xr-btn" id="xrIso" type="button" aria-pressed="false">Isolate</button>
+      <div class="xr-seg" role="group" aria-label="Camera views"><button class="xr-btn" type="button" data-xr-view="q34" aria-label="Three-quarter view">¾</button><button class="xr-btn" type="button" data-xr-view="left" aria-label="Left side view">L</button><button class="xr-btn" type="button" data-xr-view="right" aria-label="Right side view">R</button><button class="xr-btn" type="button" data-xr-view="front">Front</button><button class="xr-btn" type="button" data-xr-view="top">Top</button></div>
+      <button class="xr-btn" id="xrReset" type="button">Reset</button>
+    </div>
+    <div id="xrLegend" class="xr-legend" role="group" aria-label="Parts shown on the engine" hidden></div>
+  </section>
   <aside id="xrInsp" class="xr-panel xr-insp empty" aria-live="polite"><div id="xrInspBody"></div></aside>
-
-  <div class="xr-panel xr-toolbar" role="toolbar" aria-label="View controls">
-    <div class="xr-seg" role="group" aria-label="Render mode"><button class="xr-btn" id="xrModeX" type="button" aria-pressed="true">X-ray</button><button class="xr-btn" id="xrModeS" type="button" aria-pressed="false">Solid</button></div>
-    <div class="xr-ctl"><label for="xrOp">Glass <output id="xrOpV">0.25</output></label><input id="xrOp" type="range" min="0" max="1" step="0.01" value="0.25"></div>
-    <div class="xr-ctl"><label for="xrEx">Explode <output id="xrExV">0%</output></label><input id="xrEx" type="range" min="0" max="100" step="1" value="0"></div>
-    <span class="xr-sep" aria-hidden="true"></span>
-    <button class="xr-btn" id="xrRun" type="button" aria-pressed="true">Pause</button>
-    <button class="xr-btn" id="xrFx" type="button" aria-pressed="true">Firing: On</button>
-    <div class="xr-ctl xr-thr"><label for="xrTh">Throttle <output id="xrThV">20%</output></label><input id="xrTh" type="range" min="0" max="100" step="1" value="20"><span class="xr-rpm">Engine speed <output id="xrRpm">1.0× idle</output></span></div>
-    <button class="xr-btn" id="xrBlip" type="button" aria-pressed="false" title="Hold to snap the throttle wide open">Hold to rev</button>
-    <button class="xr-btn" id="xrSlow" type="button" aria-pressed="false" title="S">Slow-mo</button>
-    <span class="xr-readout" id="xrReadout" aria-hidden="true"></span>
-    <span class="xr-sep" aria-hidden="true"></span>
-    <button class="xr-btn" id="xrLbls" type="button" title="L">Labels: Off</button>
-    <button class="xr-btn" id="xrIso" type="button" aria-pressed="false">Isolate</button>
-    <div class="xr-seg" role="group" aria-label="Camera views"><button class="xr-btn" type="button" data-xr-view="q34" aria-label="Three-quarter view">¾</button><button class="xr-btn" type="button" data-xr-view="left" aria-label="Left side view">L</button><button class="xr-btn" type="button" data-xr-view="right" aria-label="Right side view">R</button><button class="xr-btn" type="button" data-xr-view="front">Front</button><button class="xr-btn" type="button" data-xr-view="top">Top</button></div>
-    <button class="xr-btn" id="xrReset" type="button">Reset</button>
-  </div>
   <div id="xrStatus" class="sr-only" aria-live="polite"></div>
 </main>
 <script type="module" src="engine-xray.js"></script>

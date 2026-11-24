@@ -319,7 +319,7 @@ function xrayMaterial() {
 
 /* ---------- boot ---------- */
 const stage = $('xrStage');
-function fail(msg) { const f = $('xrFallback'); f.hidden = false; f.textContent = msg; api.error = msg; }
+function fail(msg) { const f = $('xrFallback'); f.hidden = false; f.textContent = msg; stage.parentElement.classList.add('unavailable'); api.error = msg; }
 
 let data;
 try {
@@ -371,12 +371,20 @@ for (const d of data.parts) {
   if (MIRROR_X.has(d.id)) rig.scale.x = -1;
   rig.traverse(o => { if (o.isMesh && !(p.noPick && p.noPick.has(o)) && !o.userData.fx) { o.userData.partId = d.id; p.meshes.push(o); if (!d.shell) p.mats.add(o.material); } });
   if (d.shell) p.meshes.forEach(o => { o.renderOrder = 2; const l = new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry, 32), p.edgeMat); l.renderOrder = 3; o.add(l); p.edges.push(l); });
-  const b = el('button', 'xr-lbl ' + p.dir + (d.shell ? ' shell' : '')); b.type = 'button';
-  b.append(el('span', 't', d.label)); b.setAttribute('aria-label', 'Select ' + d.label);
-  b.addEventListener('click', e => { e.stopPropagation(); select(d.id); });
-  const lo = new CSS2DObject(b); lo.position.fromArray(p.anchor);
-  const C = { up:[0.5,1], down:[0.5,0], left:[1,0.5], right:[0,0.5] }[p.dir]; lo.center.set(C[0], C[1]);
-  root.add(lo); p.labelObj = lo; p.labelEl = b;
+  const number = String(parts.length + 1);
+  const marker = el('span', 'xr-number', number);
+  marker.setAttribute('aria-hidden', 'true');
+  const lo = new CSS2DObject(marker);
+  lo.position.fromArray(p.anchor);
+  root.add(lo);
+  p.labelObj = lo;
+  p.labelEl = marker;
+  const button = el('button', 'xr-btn xr-lbl');
+  button.type = 'button';
+  button.append(el('span', 'xr-number', number), document.createTextNode(d.label));
+  button.addEventListener('click', () => select(d.id));
+  $('xrLegend').append(button);
+  p.legendButton = button;
   parts.push(p); byId[d.id] = p;
 }
 
@@ -487,7 +495,7 @@ function renderInspector() {
   if (!p) {
     insp.classList.add('empty');
     box.append(el('h2', null, 'Inspect a part'),
-      el('p', null, 'Click a part or a label, or pick one from the list. In X-ray mode a click goes through the glass casings to the moving parts inside.'),
+      el('p', null, 'Select a part on the model, in the numbered key or in the parts list. In X-ray mode a click goes through the glass casings to the moving parts inside.'),
       el('p', 'xr-hint', 'Keys: ↑/↓ throttle · S slow-mo · X x-ray/solid · Space run/pause · F firing · L labels · I isolate · 1–5 views · R reset · Esc deselect'));
     if (data.throttle) { box.append(el('div', 'xr-sub', data.throttle.title), el('p', 'xr-hint', data.throttle.text + ' Source: ' + data.throttle.cite.map(citeText).join('; ') + '.')); }
     if (data.cycle) {
@@ -525,6 +533,8 @@ function select(id) {
   document.querySelectorAll('#xrList .xr-row').forEach(r => r.setAttribute('aria-current', String(r.dataset.id === state.sel)));
   if (state.isolate) applyVisibility();
   renderInspector(); applyLabels(); save();
+  $('xrCaption').textContent = state.sel ? byId[state.sel].label : renderer ? 'Drag to rotate · Pinch or scroll to zoom' : 'Select a part from the parts list';
+  $('xrDetailLink').hidden = !state.sel;
   $('xrStatus').textContent = state.sel ? 'Selected ' + byId[state.sel].label : 'Selection cleared';
 }
 function applyVisibility() { parts.forEach(p => { p.root.visible = state.isolate && state.sel ? p.id === state.sel : p.visible; }); applyLabels(); }
@@ -544,11 +554,18 @@ function applyExplode() {
   parts.forEach(p => { p.root.position.set(...p.explode).multiplyScalar(state.explode); });  // from base every time: reversible
   $('xrEx').value = Math.round(state.explode * 100); $('xrExV').textContent = Math.round(state.explode * 100) + '%'; save();
 }
-const LBL = ['off', 'internal', 'all'],   // start clean; the selected part always keeps its label
+const LBL = ['off', 'internal', 'all'],
       LBL_TXT = { all:'Labels: All', internal:'Labels: Internals', off:'Labels: Off' };
 function applyLabels() {
-  parts.forEach(p => { const show = p.root.visible && (p.id === state.sel || state.labels === 'all' || (state.labels === 'internal' && !p.shell));
-    p.labelObj.visible = show; p.labelEl.style.display = show ? '' : 'none'; });
+  const showLegend = state.labels !== 'off';
+  $('xrLegend').hidden = !showLegend;
+  for (const p of parts) {
+    const show = p.root.visible && (state.labels === 'all' || (state.labels === 'internal' && !p.shell));
+    p.labelObj.visible = show;
+    p.labelEl.style.display = show ? '' : 'none';
+    p.legendButton.hidden = !show;
+    p.legendButton.setAttribute('aria-pressed', String(p.id === state.sel));
+  }
   $('xrLbls').textContent = LBL_TXT[state.labels] || LBL_TXT.off;
 }
 function setRun(v) { state.run = v; $('xrRun').setAttribute('aria-pressed', String(v)); $('xrRun').textContent = v ? 'Pause' : 'Run'; save(); }
@@ -607,10 +624,23 @@ addEventListener('keydown', e => {
   else if (/^[1-5]$/.test(k)) goTo(VIEWS[['q34','left','right','front','top'][+k - 1]], TARGET);
 });
 if (renderer) {
-  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(); let down = null;
-  renderer.domElement.addEventListener('pointerdown', e => { down = [e.clientX, e.clientY]; });
-  renderer.domElement.addEventListener('pointerup', e => {
-    if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 6) { down = null; return; } down = null;
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+  const activePointers = new Set();
+  let tap = null;
+  const canvas = renderer.domElement;
+  canvas.addEventListener('pointerdown', e => {
+    activePointers.add(e.pointerId);
+    tap = activePointers.size === 1 && e.button === 0 ? { id:e.pointerId, x:e.clientX, y:e.clientY } : null;
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (tap?.id === e.pointerId && Math.hypot(e.clientX - tap.x, e.clientY - tap.y) > 6) tap = null;
+  });
+  canvas.addEventListener('pointercancel', e => { activePointers.delete(e.pointerId); tap = null; });
+  canvas.addEventListener('pointerup', e => {
+    activePointers.delete(e.pointerId);
+    const pick = tap?.id === e.pointerId && Math.hypot(e.clientX - tap.x, e.clientY - tap.y) <= 6;
+    tap = null;
+    if (!pick) return;
     const r = renderer.domElement.getBoundingClientRect();
     ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, camera);
     const hits = ray.intersectObjects(parts.filter(p => p.root.visible).flatMap(p => p.meshes), false);
@@ -620,15 +650,8 @@ if (renderer) {
 }
 
 /* ---------- size & loop ---------- */
-function sizeToViewport() {
-  const top = $('xrRoot').getBoundingClientRect().top + scrollY;
-  document.documentElement.style.setProperty('--xr-top', Math.max(0, Math.round(top)) + 'px');
-  const head = document.querySelector('.xr-head');
-  if (head) $('xrRoot').style.setProperty('--xr-head', Math.round(head.offsetTop + head.offsetHeight - 14) + 'px');
-}
 function resize() { const w = stage.clientWidth, h = stage.clientHeight; if (!w || !h) return; camera.aspect = w / h; camera.updateProjectionMatrix();
   if (renderer) { renderer.setSize(w, h); labelRenderer.setSize(w, h); } }
-sizeToViewport(); addEventListener('resize', sizeToViewport); new ResizeObserver(sizeToViewport).observe(document.querySelector('.xr-head'));
 new ResizeObserver(resize).observe(stage); resize();
 
 let phi = 0, engineSpeed = targetSpeed(state.throttle); const clock = new THREE.Clock(); const readout = $('xrReadout');
